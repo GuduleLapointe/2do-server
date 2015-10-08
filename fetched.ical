@@ -1,0 +1,4495 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Kitely Events
+X-WR-TIMEZONE:America/Los_Angeles
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+X-LIC-LOCATION:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/Chicago
+X-LIC-LOCATION:America/Chicago
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+TZNAME:CDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+TZNAME:CST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART:20151010T190000Z
+DTEND:20151010T200000Z
+DTSTAMP:20151007T190358Z
+UID:bkosjolljb4t311969vsqguki4@google.com
+CREATED:20151007T175429Z
+DESCRIPTION:Caledonia and Shandon return to that saga of "long\, long ago i
+ n a galaxy far\, far away" with more from THE ADVENTURES OF LUKE SKYWALKER 
+ by George Lucas (yes\, THAT one!).  Another installment from this wonderful
+  novelization of the original film\, presented live in voice.
+LAST-MODIFIED:20151007T175445Z
+LOCATION:Seanchai Library - Spaceworld (grid.kitely.com:8002/Spaceworld)
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:STAR WARS SATURDAY
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20151108T200000Z
+DTEND:20151108T210000Z
+DTSTAMP:20151007T190358Z
+UID:n4kbgidvvbeltb3mh9nqfak5bg@google.com
+CREATED:20150930T001529Z
+DESCRIPTION:The Hypergrid WIP is a one hour "show & tell" of works in progr
+ ess or recently completed. All levels of builders from beginning to pro are
+  invited. \n\nThe location is on narasworld. Specific address to come.\n\nP
+ lease come and take a few minutes to show us something you have built or ar
+ e working on. This is all about community and sharing. And inspiration. And
+  support. And fun! This is a hypergrid event. People from all grids are inv
+ ited. \n\nMore details are at: https://plus.google.com/u/0/communities/1089
+ 03153844746841224\n\n
+LAST-MODIFIED:20150930T001529Z
+LOCATION:narasworld
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Hypergrid WIP (Show and Tell)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20151011T190000Z
+DTEND:20151011T200000Z
+DTSTAMP:20151007T190358Z
+UID:f95cs1tpstoiaq7fjq66n5f1f8@google.com
+CREATED:20150930T001503Z
+DESCRIPTION:The Hypergrid WIP is a one hour "show & tell" of works in progr
+ ess or recently completed. All levels of builders from beginning to pro are
+  invited. \n\nThe location is on narasworld. Specific address to come.\n\nP
+ lease come and take a few minutes to show us something you have built or ar
+ e working on. This is all about community and sharing. And inspiration. And
+  support. And fun! This is a hypergrid event. People from all grids are inv
+ ited. \n\nMore details are at: https://plus.google.com/u/0/communities/1089
+ 03153844746841224\n\n
+LAST-MODIFIED:20150930T001503Z
+LOCATION:narasworld
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Hypergrid WIP (Show and Tell)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20151025T120000
+DTEND;TZID=America/Los_Angeles:20151025T130000
+DTSTAMP:20151007T190358Z
+UID:pfc4ran84luqro59bjilki6e58@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20151009T120000
+CREATED:20150601T044122Z
+DESCRIPTION:The Hypergrid WIP is a one hour "show & tell" of works in progr
+ ess or recently completed. All levels of builders from beginning to pro are
+  invited. \n\nThe location is in the Hobo Sandbox on the Cookie II region o
+ n Kitely. grid.kitely.com:8002:Cookie II \n\nThe dates are the  2nd and 4th
+  Sunday of the month at noon. \n\nPlease come and take a few minutes to sho
+ w us something you have built or are working on. This is all about communit
+ y and sharing. And inspiration. And support. And fun! This is a hypergrid e
+ vent. People from all grids are invited. \n\nMore details are at: https://p
+ lus.google.com/u/0/communities/108903153844746841224\n\n
+LAST-MODIFIED:20150930T001359Z
+LOCATION:grid.kitely.com:8002:Cookie II
+SEQUENCE:3
+STATUS:CONFIRMED
+SUMMARY:Hypergrid WIP (Show and Tell)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20151122T200000Z
+DTEND:20151122T210000Z
+DTSTAMP:20151007T190358Z
+UID:14gj9inbspubdir96rr85gtt5g@google.com
+CREATED:20150930T001203Z
+DESCRIPTION:The Hypergrid WIP is a one hour "show & tell" of works in progr
+ ess or recently completed. All levels of builders from beginning to pro are
+  invited. \n\nThe location is in the Hobo Sandbox on the Cookie II region o
+ n Kitely. grid.kitely.com:8002:Cookie II \n\nThe dates are the  2nd and 4th
+  Sunday of the month at noon. \n\nPlease come and take a few minutes to sho
+ w us something you have built or are working on. This is all about communit
+ y and sharing. And inspiration. And support. And fun! This is a hypergrid e
+ vent. People from all grids are invited. \n\nMore details are at: https://p
+ lus.google.com/u/0/communities/108903153844746841224\n\n
+LAST-MODIFIED:20150930T001300Z
+LOCATION:grid.kitely.com:8002:Cookie II
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Hypergrid WIP (Show and Tell)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20151009T020000Z
+DTEND:20151009T030000Z
+DTSTAMP:20151007T190358Z
+UID:sc5iq4qjji4jah40f0avsce3s4@google.com
+CREATED:20150922T202509Z
+DESCRIPTION:Some short tales for the haunting season...\nbeginning with two
+  lesser know Poe fables.
+LAST-MODIFIED:20150922T202509Z
+LOCATION:In the Shadows at the Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:QUIETLY CREEPING
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150912T190000Z
+DTEND:20150912T200000Z
+DTSTAMP:20151007T190358Z
+UID:6grkp77bplbcugc0p1pcckphbs@google.com
+CREATED:20150903T132947Z
+DESCRIPTION:Caledonia and Shandon return to that saga of "long\, long ago i
+ n a galaxy far\, far away" with more from THE ADVENTURES OF LUKE SKYWALKER 
+ by George Lucas (yes\, THAT one!).  Another installment from this wonderful
+  novelization of the original film\, presented live in voice.
+LAST-MODIFIED:20150903T133005Z
+LOCATION:Seanchai Library - Spaceworld (grid.kitely.com:8002/Spaceworld)
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:STAR WARS SATURDAY
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150925T020000Z
+DTEND:20150925T030000Z
+DTSTAMP:20151007T190358Z
+UID:360ju0i9rmdbq2kp26rvfo3l9g@google.com
+CREATED:20150829T233315Z
+DESCRIPTION:"All at once the side of the mountain ferninst them opened with
+  a great crash\, an' Shaun\, with the coach an' horses\, disaypeared in a r
+ ush\, swolleyd up be the mountain\, which closed afther thim. Darby was bli
+ nkin' an' shiverin' beside the King of the Leprechauns\,when sudden\, an' w
+ ithout a sound\, the banshee stood before them."   Stories in voice.\n\n500
+ 3482\n5003487
+LAST-MODIFIED:20150903T051545Z
+LOCATION:Seanchai Library ~ grid.kitely.com:8002:Seanchai
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE BANSHEES COMB (pt2)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150918T020000Z
+DTEND:20150918T030000Z
+DTSTAMP:20151007T190358Z
+UID:94utuv527qehpm8vep46vvf6n4@google.com
+CREATED:20150829T233259Z
+DESCRIPTION:"All at once the side of the mountain ferninst them opened with
+  a great crash\, an' Shaun\, with the coach an' horses\, disaypeared in a r
+ ush\, swolleyd up be the mountain\, which closed afther thim. Darby was bli
+ nkin' an' shiverin' beside the King of the Leprechauns\,when sudden\, an' w
+ ithout a sound\, the banshee stood before them."   Stories in voice.
+LAST-MODIFIED:20150903T051537Z
+LOCATION:Seanchai Library ~ grid.kitely.com:8002:Seanchai
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE BANSHEES COMB (pt 1)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150911T020000Z
+DTEND:20150911T030000Z
+DTSTAMP:20151007T190358Z
+UID:lnscarv8i0o2117ob9um0e24q8@google.com
+CREATED:20150829T233244Z
+DESCRIPTION:If the end seemed imminent\, would you be more frightened of dy
+ ing or surviving?\n\nTONIGHT:\nRelapse\nTwo scientists disrupt the flow of 
+ time to prevent the apocalypse from occurring. But while the entire human r
+ ace is unknowingly sent ten years into the past\, one man retains his memor
+ y of the life that was taken from him. Haunted by his memories\, his only c
+ hoice is to struggle through his dark past in order to relive his bright fu
+ ture\, and once again win the heart of the woman he loves. But is he up to 
+ the task?\n\nFly The Moon To Me\nSome things never change. They are as soli
+ d as the ground beneath our feet.\n\nJulia's Garden\nSince the birth of ger
+ m theory\, they’ve been seen as parasites and invaders. Only now are we beg
+ inning to unravel the complex symbiosis between us and our internal 'flora'
+ \, and we disturb it at our peril.\n\nEditor: N.E. White\nBook: THE END - V
+ isions of Apocalypse\nASIN: B00AVNAWSG
+LAST-MODIFIED:20150903T051526Z
+LOCATION:Amongst the Rubble at Seanchai Library ~ grid.kitely.com:8002:Sean
+ chai
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE END - Visions of Apocalypse
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150904T020000Z
+DTEND:20150904T030000Z
+DTSTAMP:20151007T190358Z
+UID:rodn0asmmcintatt96vpcmguk4@google.com
+CREATED:20150829T225115Z
+DESCRIPTION:This is a story about invisible dragons\, and about gods\, and 
+ about a wise sage and a young man who seeks him.\n\nTonight you will encoun
+ ter Chrestomanci \, the enchanter who makes sure that people are not abusin
+ g their magic. He can also be found in Charmed Life\, and several other boo
+ ks. \n\nAuthor: Diana Wynne Jones\nBook: Mixed Magics: Four Tales of Chrest
+ omanci\nISBN-13: 978-0060297053\n
+LAST-MODIFIED:20150903T051510Z
+LOCATION:Mount Olympus at Seanchai Library ~ grid.kitely.com:8002:Seanchai
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE SAGE OF THEARE
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20151113T030000Z
+DTEND:20151113T040000Z
+DTSTAMP:20151007T190358Z
+UID:f5s1s06rtprgi97gp6qt8deej0@google.com
+CREATED:20150830T042957Z
+DESCRIPTION:A cornucopia of delights from an assortment of powerhouse Spani
+ sh American and Brazilian authors.\n\nEditor: Thomas Colchie\nBook: HAMMOCK
+  BENEATH THE MANGOES - stories from Latin America\nASIN: B00Y4RWR92
+LAST-MODIFIED:20150830T042957Z
+LOCATION:Puerto Guyana at the Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:HAMMOCK BENEATH THE MANGOES - stories from Latin America
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20151126T190000Z
+DTEND:20151126T193000Z
+DTSTAMP:20151007T190358Z
+UID:lrd4b26flhjkbqif4u31sf7g20@google.com
+CREATED:20150829T235433Z
+DESCRIPTION:You can get anything you want at Alice's restaurant\nYou can ge
+ t anything you want at Alice's restaurant\nWalk right in\, it's around the 
+ back\nJust a half a mile from the railroad track\nYou can get anything you 
+ want at Alice's restaurant\n\nThis song is called "Alice's Restaurant." It'
+ s about Alice\, and the \nRestaurant\, but "Alice's Restaurant" is not the 
+ name of the restaurant\, \nThat's just the name of the song. That's why I c
+ all the song "Alice's \nRestaurant."\n\nNow it all started two Thanksgiving
+ s ago... two years ago\, on Thanksgiving\, \nWhen my friend and I went up t
+ o visit Alice at the restaurant...
+LAST-MODIFIED:20150829T235433Z
+LOCATION:In the Church at the Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:ALICE'S RESTAURANT
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20151106T030000Z
+DTEND:20151106T040000Z
+DTSTAMP:20151007T190358Z
+UID:tqps4nhsnhfoi1c768p53fvdmo@google.com
+CREATED:20150829T233423Z
+DESCRIPTION:The Fianna were bands of roving warriors\, social outsiders who
+  joined together to avenge wrong doings. Some chose to live permanently as 
+ outlaws\, consorting with the faeries and now and again acting as mercenari
+ es on behalf of the clans. The Banfennid were female Celtic outlaws.\n\nAut
+ hor: Jennifer Heath\nBook: On The Edge of Dream\nISBN: 0-452-27938-0
+LAST-MODIFIED:20150829T233423Z
+LOCATION:One Day Ahead of the Moon at the Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BANFENNID - the women of celtic myth & legend
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20151030T020000Z
+DTEND:20151030T030000Z
+DTSTAMP:20151007T190358Z
+UID:ps49ti6aprfpaq8s9qgt143t4s@google.com
+CREATED:20150829T233410Z
+DESCRIPTION:TBA
+LAST-MODIFIED:20150829T233410Z
+LOCATION:In the Shadows at the Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:GHOSTIE STORIES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20151023T020000Z
+DTEND:20151023T030000Z
+DTSTAMP:20151007T190358Z
+UID:smsb98ukro99gshnt7efvdbhl4@google.com
+CREATED:20150829T233356Z
+DESCRIPTION:TBA
+LAST-MODIFIED:20150829T233356Z
+LOCATION:In the Shadows at the Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:GHOSTIE STORIES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20151016T020000Z
+DTEND:20151016T030000Z
+DTSTAMP:20151007T190358Z
+UID:sjt3cq3dvmd2tmj61hq0qao7i8@google.com
+CREATED:20150829T233344Z
+DESCRIPTION:TBA
+LAST-MODIFIED:20150829T233344Z
+LOCATION:In the Shadows at the Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:GHOSTIE STORIES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150828T020000Z
+DTEND:20150828T030000Z
+DTSTAMP:20151007T190358Z
+UID:0glkhrtmb0qvk048seh0dcj61c@google.com
+CREATED:20150829T225131Z
+DESCRIPTION:Nalo Hopkinson’s unique and vibrant sense of pacing and dialogu
+ e in Caribbean folklore ranges from passionate love to chilling horror\, im
+ plying that the extraordinary is part of the fabric of day-to-day Caribbean
+  life.\n\nASIN: B00QN352PG\n\nTonight:\nTAN-TAN AND DRY BONE \nGREEDY CHOKE
+  PUPPY \n
+LAST-MODIFIED:20150829T225131Z
+LOCATION:Domuerto Beach at Seanchai Library ~ http://maps.secondlife.com/se
+ condlife/Bradley%20University/101/208/28
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:SKIN FOLK
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150922T180000Z
+DTEND:20150922T190000Z
+DTSTAMP:20151007T190358Z
+UID:9vg0c54oo4ju0pqpaf57eoa570@google.com
+CREATED:20150817T165430Z
+DESCRIPTION:
+LAST-MODIFIED:20150817T165430Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Matthew Broyles
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150908T200000Z
+DTEND:20150908T210000Z
+DTSTAMP:20151007T190358Z
+UID:eegg6hegj236903olge05ij4fc@google.com
+CREATED:20150817T165244Z
+DESCRIPTION:
+LAST-MODIFIED:20150817T165342Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Matthew Broyles
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20150901T120000
+DTEND;TZID=America/Los_Angeles:20150901T130000
+RRULE:FREQ=WEEKLY;COUNT=2;INTERVAL=3;BYDAY=TU
+DTSTAMP:20151007T190358Z
+UID:9vn0j5fle90lvnq0seffge68eo@google.com
+CREATED:20150817T165157Z
+DESCRIPTION:hop://grid.kitely.com:8002/Thyilea/59/386/22\n\ngrid.kitely.com
+ :8002:Thyilea﻿
+LAST-MODIFIED:20150817T165212Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Joe Rizzo at Wizards Retreat II
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150811T160000Z
+DTEND:20150811T171500Z
+DTSTAMP:20151007T190358Z
+UID:7aj660ekl1k36639s8uht95eao@google.com
+CREATED:20150803T152111Z
+DESCRIPTION:Intermediate Blender Mesh 2 classes to cover Modeling a Chair a
+ nd Making a Blanket to cover the back of the chair.  Please read the inform
+ ation here\, so that the tutorial will make better sense to and for you. \n
+ \nhttp://waymarker88221.blogspot.com/2015/08/today-august-3-2015-did-you-kn
+ ow-that.html\n
+LAST-MODIFIED:20150803T152111Z
+LOCATION:grid.Kitely.com:8002:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Live Tutorial Blender Mesh Intermediate
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150804T160000Z
+DTEND:20150804T171500Z
+DTSTAMP:20151007T190358Z
+UID:6rcc7gnsksq4keerejnoqq7bq8@google.com
+CREATED:20150803T151838Z
+DESCRIPTION:Intermediate Blender Mesh 2 classes to cover Modeling a Chair a
+ nd Making a Blanket to cover the back of the chair.  Please read the inform
+ ation here\, so that the tutorial will make better sense to and for you. \n
+ \nhttp://waymarker88221.blogspot.com/2015/08/today-august-3-2015-did-you-kn
+ ow-that.html\n
+LAST-MODIFIED:20150803T151838Z
+LOCATION:grid.Kitely.com:8002:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Live Tutorial Blender Mesh Intermediate
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150729T200000Z
+DTEND:20150729T210000Z
+DTSTAMP:20151007T190358Z
+UID:4c38oa38a1di506g76hgqbi6ok@google.com
+ATTENDEE;CUTYPE=RESOURCE;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Kitely E
+ vents;X-NUM-GUESTS=0:mailto:857iq9v0nfqrg3qmt4e00n53rc@group.calendar.googl
+ e.com
+CREATED:20150727T203532Z
+DESCRIPTION:
+LAST-MODIFIED:20150727T203544Z
+LOCATION:Wizards Retreat 
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Echo Starship at Wizards Retreat
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150717T020000Z
+DTEND:20150717T030000Z
+DTSTAMP:20151007T190358Z
+UID:ro5p1q09kdsqj7cpra9urpuvpk@google.com
+CREATED:20150629T042546Z
+DESCRIPTION:A new series of stories in the oral tradition from Frank Delane
+ y...\n\nTonight: The Sea-Folk\nThe names of those seaboard counties throb w
+ ith atmosphere - Donegal\, Sligo\, Mayo\, Galway\, Clare\, Kerry\, and down
+  and around to Cork and Waterford. Who knows what creatures came ashore fro
+ m there in days so dark that their shadows had shadows? Or observed humans 
+ from out in the tide? And who knows how they interacted with the people on 
+ the land? The seanchai knew\; that was his profession - to know the unknowa
+ ble and tell it to the rest of us sitting around the fire. In some farmhous
+ e\, deep in the middle of a fertile county\, where they never hear the surf
+ \, and never even glimpse a wandering sea-gull\, they can only imagine the 
+ rampaging white horses of the waves as they gallop toward the shore\, and t
+ he sad high notes of the mermaid's fatal song.\n\n\nTonight's 7pm session w
+ ill be preceded by a special "Seanchai Prologue" at 6:45pm...\nImaginative 
+ minds give themselves permission to read mythology as history. Legends aris
+ e out of practical need\; a raider has to be repulsed\; a dragon slain\; a 
+ kingly alliance formed\, perhaps through marriage\, for mutual territorial 
+ interest.\nBut it goes deeper...
+LAST-MODIFIED:20150707T040405Z
+LOCATION:Seanchai Library in County Donegal
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE SEA-FOLK
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150731T020000Z
+DTEND:20150731T030000Z
+DTSTAMP:20151007T190358Z
+UID:2edo87es75si86ma6m66u24ubc@google.com
+CREATED:20150629T042602Z
+DESCRIPTION:A new series of stories in the oral tradition from Frank Delane
+ y...\n\nTonight: The Girl Who Lived On The Moon\n"Once upon a time there wa
+ s a girl who lived on the moon." And when she comes to earth on a moonbeam\
+ , and grants the human race insights that would delight a Jungian and calm 
+ a six-year-old to sleep\, we must wonder if times were different then\, whe
+ n "fish danced the polka on the surface of the sea and the birds said their
+  prayers out loud."\n\n\nTonight's 7pm session will be preceded by a specia
+ l "Seanchai Prologue" at 6:45pm...\nA good story\, well told\, makes childr
+ en of us all. At any age we will sit rapt and\nstill\, instantaneously tran
+ slating the storyteller's rise-and-fall words into the\nvivid pictures that
+  we see in our minds.Our own images. And only ours. The fireside storytelle
+ r did not supply his listeners with finite pictures - he gave them the pain
+ ts and the crayons and they colored in the incandescent white of the moonbe
+ am\, or the hue of space...
+LAST-MODIFIED:20150707T040405Z
+LOCATION:Seanchai Library in County Donegal
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE GIRL WHO LIVED ON THE MOON
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150710T020000Z
+DTEND:20150710T030000Z
+DTSTAMP:20151007T190358Z
+UID:f8lstcvsspc16ba1udjg0djego@google.com
+CREATED:20150629T042532Z
+DESCRIPTION:A new series of stories in the oral tradition from Frank Delane
+ y...\n\nTonight: The Druid\nLet me straighten out something at the beginnin
+ g. Our ancient times knew very few people as important as druids. They were
+  learned men who could tell you the story of the world\, and they committed
+  everything to memory\, because if it was written down somebody could steal
+  it. They were wise men whose advice was sought by kings and commoners\, be
+ cause it was usually sound advice. They were mostly true men\, who had the 
+ good of their people at heart\, but of course now and then you'd find a few
+  rogues\, a few unscrupulous tricksters. Like the man I'm going to tell you
+  about...\n\nTonight's 7pm session will be preceded by a special "Seanchai 
+ Prologue" at 6:45pm...\nThe wandering storyteller\, the seanchai.. a univer
+ sal archetype\, all our ancestors encountered the Seanchai\, or someone of 
+ the like\, in every part of the world. Imagine\, that you're sitting by the
+  fire in an Irish farmhouse kitchen any time in the last few hundred years\
+ , and an old man with a  long parchment face comes in\, shakes the weather 
+ from the shoulders of his long black coat\, sits down\, accepts a glass of 
+ whiskey\, lights his pipe and begins...
+LAST-MODIFIED:20150707T040405Z
+LOCATION:Seanchai Library in County Donegal
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE DRUID
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150724T020000Z
+DTEND:20150724T030000Z
+DTSTAMP:20151007T190358Z
+UID:60kst1cftfmopbdvbh3jrp0i08@google.com
+CREATED:20150629T042556Z
+DESCRIPTION:A new series of stories in the oral tradition from Frank Delane
+ y...\n\nTonight: Pigsong\n"Once upon a time and long ago\, when snow tasted
+  like cream\, and timber tasted like sweet cake\, and every tenth egg laid 
+ by a duck had a diamond in it\, there lived up in the North of Ireland a ve
+ ry bad man." Pigsong is charming and instructs\, seduces\, entertains and a
+ llows us to see how an oppressed culture might have learned the concept of 
+ justice through imagination.\n\n\nTonight's 7pm session will be preceded by
+  a special "Seanchai Prologue" at 6:45pm...\nFor an acknowledged 2\,500 yea
+ rs\, storytellers have been using\, among their other tricks\, a singularly
+  wonderful device - they grant to animals the gifts and qualities\, good an
+ d bad\, of human beings. Their secondary powers\, however\, carry more clou
+ t - they teach...
+LAST-MODIFIED:20150707T040405Z
+LOCATION:Seanchai Library in County Donegal
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:PIGSONG
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140704T210000
+DTEND;TZID=America/New_York:20140704T223000
+RRULE:FREQ=MONTHLY;UNTIL=20140705T005959Z;BYDAY=1FR
+DTSTAMP:20151007T190358Z
+UID:tgf3a78cu3gm0sr59ktmkbustk@google.com
+CREATED:20140623T181930Z
+DESCRIPTION:Dance at Kitely with music and other entertainment provided by 
+ Freda Frostbite.  \n\nThemes and contests\, when there are any\, will be an
+ nounced in advance.\n\n\nFrom The Web--  [u]http://www.kitely.com/virtual-w
+ orld/Freda-Frostbite/Rhapsody[/u]\nFrom any Open Sim --  grid.kitely.com:80
+ 02/Rhapsody/243/12/25
+LAST-MODIFIED:20150707T040405Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Kitely: First Friday Social Dances at Rhapsody
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20150111T150000
+DTEND;TZID=America/Chicago:20150111T160000
+RRULE:FREQ=WEEKLY;BYDAY=SU
+DTSTAMP:20151007T190358Z
+UID:rva5vi4f194tbm0ur81kkabj58@google.com
+CREATED:20150107T180649Z
+DESCRIPTION:Sundays at 1 pm California time  \n\nThe movers and shakers of 
+ the Kitely community get together to move and shake. You are welcome to joi
+ n in\, moving and shaking as you please.   Usually Ilan Tochner\, the CEO o
+ f Kitely takes the lead\, updating us on current developments in Kitely and
+  taking suggestions from the community.    This group functions like a Cham
+ ber of Commerce for Kitely.\n\nWeb:\nhttp://www.kitely.com/virtual-world/Il
+ an-Tochner/Kitely-Welcome-Center\nHop:\nhop://osgrid.kitely.com:8002/Kitely
+  Welcome Center/127/34/24\nHypergrid\ngrid.kitely.com:8002:Kitely Welcome C
+ enter
+LAST-MODIFIED:20150707T040405Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Kitely Community Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20150927T120000
+DTEND;TZID=America/Los_Angeles:20150927T130000
+DTSTAMP:20151007T190358Z
+UID:pfc4ran84luqro59bjilki6e58@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20150925T120000
+CREATED:20150601T044122Z
+DESCRIPTION:The Hypergrid WIP is a one hour "show & tell" of works in progr
+ ess or recently completed. All levels of builders from beginning to pro are
+  invited. \n\nThe location is in the Hobo Sandbox on the Cookie II region o
+ n Kitely. grid.kitely.com:8002:Cookie II The dates are the 1st and 3rd Frid
+ ay and the 2nd and 4th Sunday of the month at noon. \n\nPlease come and tak
+ e a few minutes to show us something you have built or are working on. This
+  is all about community and sharing. And inspiration. And support. And fun!
+  This is a hypergrid event. People from all grids are invited. \n\nMore det
+ ails are at: https://plus.google.com/u/0/communities/108903153844746841224\
+ n\n
+LAST-MODIFIED:20150707T040405Z
+LOCATION:grid.kitely.com:8002:Cookie II
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Hypergrid WIP (Show and Tell of Works in Progress)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20150913T120000
+DTEND;TZID=America/Los_Angeles:20150913T130000
+DTSTAMP:20151007T190358Z
+UID:pfc4ran84luqro59bjilki6e58@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20150911T120000
+CREATED:20150601T044122Z
+DESCRIPTION:The Hypergrid WIP is a one hour "show & tell" of works in progr
+ ess or recently completed. All levels of builders from beginning to pro are
+  invited. \n\nThe location is in the Hobo Sandbox on the Cookie II region o
+ n Kitely. grid.kitely.com:8002:Cookie II The dates are the 1st and 3rd Frid
+ ay and the 2nd and 4th Sunday of the month at noon. \n\nPlease come and tak
+ e a few minutes to show us something you have built or are working on. This
+  is all about community and sharing. And inspiration. And support. And fun!
+  This is a hypergrid event. People from all grids are invited. \n\nMore det
+ ails are at: https://plus.google.com/u/0/communities/108903153844746841224\
+ n\n
+LAST-MODIFIED:20150707T040405Z
+LOCATION:grid.kitely.com:8002:Cookie II
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Hypergrid WIP (Show and Tell of Works in Progress)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20150830T120000
+DTEND;TZID=America/Los_Angeles:20150830T130000
+DTSTAMP:20151007T190358Z
+UID:pfc4ran84luqro59bjilki6e58@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20150828T120000
+CREATED:20150601T044122Z
+DESCRIPTION:The Hypergrid WIP is a one hour "show & tell" of works in progr
+ ess or recently completed. All levels of builders from beginning to pro are
+  invited. \n\nThe location is in the Hobo Sandbox on the Cookie II region o
+ n Kitely. grid.kitely.com:8002:Cookie II The dates are the 1st and 3rd Frid
+ ay and the 2nd and 4th Sunday of the month at noon. \n\nPlease come and tak
+ e a few minutes to show us something you have built or are working on. This
+  is all about community and sharing. And inspiration. And support. And fun!
+  This is a hypergrid event. People from all grids are invited. \n\nMore det
+ ails are at: https://plus.google.com/u/0/communities/108903153844746841224\
+ n\n
+LAST-MODIFIED:20150707T040405Z
+LOCATION:grid.kitely.com:8002:Cookie II
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Hypergrid WIP (Show and Tell of Works in Progress)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20150816T120000
+DTEND;TZID=America/Los_Angeles:20150816T130000
+DTSTAMP:20151007T190358Z
+UID:pfc4ran84luqro59bjilki6e58@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20150814T120000
+CREATED:20150601T044122Z
+DESCRIPTION:The Hypergrid WIP is a one hour "show & tell" of works in progr
+ ess or recently completed. All levels of builders from beginning to pro are
+  invited. \n\nThe location is in the Hobo Sandbox on the Cookie II region o
+ n Kitely. grid.kitely.com:8002:Cookie II The dates are the 1st and 3rd Frid
+ ay and the 2nd and 4th Sunday of the month at noon. \n\nPlease come and tak
+ e a few minutes to show us something you have built or are working on. This
+  is all about community and sharing. And inspiration. And support. And fun!
+  This is a hypergrid event. People from all grids are invited. \n\nMore det
+ ails are at: https://plus.google.com/u/0/communities/108903153844746841224\
+ n\n
+LAST-MODIFIED:20150707T040405Z
+LOCATION:grid.kitely.com:8002:Cookie II
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Hypergrid WIP (Show and Tell of Works in Progress)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20150802T120000
+DTEND;TZID=America/Los_Angeles:20150802T130000
+DTSTAMP:20151007T190358Z
+UID:pfc4ran84luqro59bjilki6e58@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20150731T120000
+CREATED:20150601T044122Z
+DESCRIPTION:The Hypergrid WIP is a one hour "show & tell" of works in progr
+ ess or recently completed. All levels of builders from beginning to pro are
+  invited. \n\nThe location is in the Hobo Sandbox on the Cookie II region o
+ n Kitely. grid.kitely.com:8002:Cookie II The dates are the 1st and 3rd Frid
+ ay and the 2nd and 4th Sunday of the month at noon. \n\nPlease come and tak
+ e a few minutes to show us something you have built or are working on. This
+  is all about community and sharing. And inspiration. And support. And fun!
+  This is a hypergrid event. People from all grids are invited. \n\nMore det
+ ails are at: https://plus.google.com/u/0/communities/108903153844746841224\
+ n\n
+LAST-MODIFIED:20150707T040405Z
+LOCATION:grid.kitely.com:8002:Cookie II
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Hypergrid WIP (Show and Tell of Works in Progress)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20150605T120000
+DTEND;TZID=America/Los_Angeles:20150605T130000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=FR
+EXDATE;TZID=America/Los_Angeles:20151023T120000
+EXDATE;TZID=America/Los_Angeles:20160129T120000
+DTSTAMP:20151007T190358Z
+UID:pfc4ran84luqro59bjilki6e58@google.com
+CREATED:20150601T044122Z
+DESCRIPTION:The Hypergrid WIP is a one hour "show & tell" of works in progr
+ ess or recently completed. All levels of builders from beginning to pro are
+  invited. \n\nThe location is in the Hobo Sandbox on the Cookie II region o
+ n Kitely. grid.kitely.com:8002:Cookie II The dates are the 1st and 3rd Frid
+ ay and the 2nd and 4th Sunday of the month at noon. \n\nPlease come and tak
+ e a few minutes to show us something you have built or are working on. This
+  is all about community and sharing. And inspiration. And support. And fun!
+  This is a hypergrid event. People from all grids are invited. \n\nMore det
+ ails are at: https://plus.google.com/u/0/communities/108903153844746841224\
+ n\n
+LAST-MODIFIED:20150707T040405Z
+LOCATION:grid.kitely.com:8002:Cookie II
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Hypergrid WIP (Show and Tell of Works in Progress)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150703T020000Z
+DTEND:20150703T030000Z
+DTSTAMP:20151007T190358Z
+UID:8e2ma6fkgsn80im6o729cl82m8@google.com
+CREATED:20150629T042454Z
+DESCRIPTION:do You believe? maybe\, maybe not\, but these stories WILL make
+  you ask "what's out there?"
+LAST-MODIFIED:20150702T162638Z
+LOCATION:Seanchai Library at CYDONIA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:TRUE UFO STORIES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150704T130000Z
+DTEND:20150704T190000Z
+DTSTAMP:20151007T190358Z
+UID:69d9f8lqvm3a5rberp8bdqri84@google.com
+CREATED:20150622T175937Z
+DESCRIPTION:https://www.kitely.com/virtual-world/Ruby-ODegee/Brantley-No-3-
+ Shaft-2\nhttp://downundertea.blogspot.com/\n
+LAST-MODIFIED:20150702T162638Z
+LOCATION:grid.kitely:8002:Brantley No. 3 Shaft
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Brantley No. 3 Shaft Open House 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20150421T120000
+DTEND;TZID=America/Los_Angeles:20150421T130000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=TU;UNTIL=20150616T065959Z
+DTSTAMP:20151007T190358Z
+UID:rejd41a4k5o6021jne9i3u5edo@google.com
+CREATED:20150318T172225Z
+DESCRIPTION:1st and 3rd Tuesdays of the Month.\n1st and 3rd Tuesdays of the
+  Month.\n1st and 3rd Tuesdays of the Month.\n\nhop://grid.kitely.com:8002/T
+ hyilea/59/386/22\n\ngrid.kitely.com:8002:Thyilea﻿
+LAST-MODIFIED:20150618T210053Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Joe Rizzo at Wizards Retreat
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20150602T110000
+DTEND;TZID=America/Los_Angeles:20150602T120000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=TU;UNTIL=20150616T065959Z
+DTSTAMP:20151007T190358Z
+UID:ne9ma00q8rn3ki6eg12f4mla3c@google.com
+ATTENDEE;CUTYPE=RESOURCE;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Kitely E
+ vents;X-NUM-GUESTS=0:mailto:857iq9v0nfqrg3qmt4e00n53rc@group.calendar.googl
+ e.com
+CREATED:20150418T190132Z
+DESCRIPTION:
+LAST-MODIFIED:20150618T210036Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Matthew Broyles
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20150614T120000
+DTEND;TZID=America/Los_Angeles:20150614T130000
+RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=SU,FR;UNTIL=20150626T065959Z
+DTSTAMP:20151007T190358Z
+UID:joq8e0um1npjbdh5ual7lbv4m0@google.com
+CREATED:20150601T050045Z
+DESCRIPTION:The Hypergrid WIP is a one hour "show & tell" of works in progr
+ ess or recently completed. All levels of builders from beginning to pro are
+  invited. \n\nThe location is in the Hobo Sandbox on the Cookie II region o
+ n Kitely. grid.kitely.com:8002:Cookie II The dates are the 1st and 3rd Frid
+ ay and the 2nd and 4th Sunday of the month at noon. \n\nPlease come and tak
+ e a few minutes to show us something you have built or are working on. This
+  is all about community and sharing. And inspiration. And support. And fun!
+  This is a hypergrid event. People from all grids are invited. \n\nMore det
+ ails are at: https://plus.google.com/u/0/communities/108903153844746841224\
+ n\n
+LAST-MODIFIED:20150618T200550Z
+LOCATION:grid.kitely.com:8002:Cookie II
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Hypergrid WIP (Show & Tell of Works in Progress)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150626T020000Z
+DTEND:20150626T030000Z
+DTSTAMP:20151007T190358Z
+UID:serh7lmt24vr26jjc2h2dteaq0@google.com
+CREATED:20150608T051927Z
+DESCRIPTION:A young boy is approaching the gate\, Scáthach\,” announced Coc
+ har Croibhe\, the gatekeeper of Dún Scaith\, whose great fortifications ros
+ e on the Island of Shadows in Alba\, an island which today is still called 
+ the Island of Scáthach...\n\nFrom an oral history and storytelling culture 
+ dating back to the dawn of European civilization\, the Scottish peoples hav
+ e developed one of the world's most vibrant mythologies.\n\nTHE SHADOWY ONE
+ \nMAIGHDEAN-MHARA\n\nISBN: 978-1841192482
+LAST-MODIFIED:20150608T061750Z
+LOCATION:Scathach Gate at Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:SCOTTISH MYTHS & LEGENDS
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150619T020000Z
+DTEND:20150619T030000Z
+DTSTAMP:20151007T190358Z
+UID:c4rph8g32rh5fmuc8mgdnhj964@google.com
+CREATED:20150608T051940Z
+DESCRIPTION:Edgar Allan Poe\, need more be said?\nThere are certain themes 
+ of which the interest is all-absorbing\, they are with propriety handled on
+ ly when the severity and majesty of Truth sanctify and sustain them.\n\nTon
+ ights Stories:\nTHE PREMATURE BURIAL\nTo be buried while alive is\, beyond 
+ question\, the most terrific of extremes which has ever fallen to the lot o
+ f mere mortality.\n\nTHE DOMAIN OF ARNHEIM\nFrom his cradle to his grave a 
+ gale of prosperity bore my friend Ellison along.\n
+LAST-MODIFIED:20150608T051940Z
+LOCATION:The Azure Gardens at Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:EDGAR ALLAN
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150612T020000Z
+DTEND:20150612T030000Z
+DTSTAMP:20151007T190358Z
+UID:m6qn1blnlph8ss5ocafd4gfkbk@google.com
+CREATED:20150608T044936Z
+DESCRIPTION:An eclectic mix of mummy stories\, both modern and ancient!\n\n
+ http://www.kitely.com/search?q=seanchai\n\n\nWhich stories will it be tonig
+ ht?\nSYMPATHY FOR MUMMIES\, by John Gregory Betancourt\nSOME WORDS WITH A M
+ UMMY\, by Edgar Allan Poe\nTHE POWER OF WAKING\, by Nina Kiriki Hoffman\nTH
+ E MUMMY’S FOOT\, by Jessie Adelaide Middleton\nLOST IN A PYRAMID\, OR THE M
+ UMMY’S CURSE\, by Louisa May Alcott\nTHE RING OF THOTH\, by Sir Arthur Cona
+ n Doyle\nTHE ROMANCE OF A MUMMY\, by Théophile Gautier\nTHE GREEN GOD\, by 
+ William Call Spencer\nTHE BOOK OF THOTH\, by Lafcadio Hearn\nAN AZTEC MUMMY
+ \, by C. B. Cory\nLOT NO. 249\, by Sir Arthur Conan Doyle\nTHE MUMMY’S FOOT
+ \, by Théophile Gautier\nTHE STORY OF BAELBROW\, by E. and H. Heron\nA PROF
+ ESSOR OF EGYPTOLOGY\, by Guy Boothby\nMY NEW YEAR’S EVE AMONG THE MUMMIES\,
+  by Grant Allen\nWHATEVER WAS FORGOTTEN\, by Nina Kiriki Hoffman\nTHE FORSA
+ KEN TEMPLE\, by C. W. Leadbeater\nTHE DOOM OF AL ZAMERI\, by Henry Iliowizi
+ \nOBSESSION\, POSSESSION\, by Elliott O’Donnell\nTHE PERFUME OF EGYPT\, by 
+ C. W. Leadbeater\n\nASIN: B009RR85VI
+LAST-MODIFIED:20150608T044936Z
+LOCATION:The Crypt at Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:ARE YOU MY MUMMY? 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150624T210000Z
+DTEND:20150624T220000Z
+DTSTAMP:20151007T190358Z
+UID:u8tvb854k07qrdhordp1amegd4@google.com
+CREATED:20150603T170120Z
+DESCRIPTION:
+LAST-MODIFIED:20150603T170120Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Morlita Quan at Wizards Retreat\, Cookie II Region
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150613T190000Z
+DTEND:20150613T200000Z
+DTSTAMP:20151007T190358Z
+UID:22ndhmlhr0h0v84jgtltv76srs@google.com
+CREATED:20150602T023724Z
+DESCRIPTION:SMUGGLERS - TRAGIC LOVE - GHOSTLY SHIPS - MERMAIDS\nJoin us ton
+ ight for a daring adventure with legends of the sea.\n\nIf you wake at Midn
+ ight\, and hear a horse's feet\,\nDon't go drawing back the blind\, or look
+ ing in the street\,\nThem that asks no questions isn't told a lie.\n\nTonig
+ ht's Stories Include:\n-A Smuggler's Song\n-A Cornish Lullaby\n-Discussion 
+ and Definition of a Smuggler\n-The Smugglers of Penrose\n-A Legend of Pargw
+ arra\n-Mermaids and the Hooper\n-A Ghostly Ship's Bell\n-The Wreck of Admir
+ al Sir Cloudesley Shovel\n-The Wrecker and the Death Ship
+LAST-MODIFIED:20150602T023724Z
+LOCATION:Port Royal at Seanchai Library in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:SEA LEGENDS - Smugglers\, Ghost Ships\, Mermaids\, Tragic Love (K)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150606T190000Z
+DTEND:20150606T200000Z
+DTSTAMP:20151007T190358Z
+UID:17auilegnd4lc7g2gui46mtjek@google.com
+CREATED:20150601T161407Z
+DESCRIPTION:Brer Rabbit is causing trouble again for all his friends and en
+ emies. Join us for tales of Brer Fox\, Brer Bear\, Brer Wolf\, Brer Tarrypi
+ n\, Miz Cricket\, the Doodang\, and scores of others!\n\nThe Uncle Remus ta
+ les\, originally written down by Joel Chandler Harris\, were first publishe
+ d over a hundred years ago\, and serve as the largest collection of African
+ -American folklore. 
+LAST-MODIFIED:20150601T161847Z
+LOCATION:Rivers of America at SEANCHI LIBRARY in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Further Tales of Uncle Remus
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20150605T100000
+DTEND;TZID=America/Los_Angeles:20150605T113000
+RRULE:FREQ=WEEKLY;COUNT=4;BYDAY=FR
+DTSTAMP:20151007T190358Z
+UID:9a7nv2e870mlap61c4rq7kllt8@google.com
+CREATED:20150601T043047Z
+DESCRIPTION:This is a chance to chat and share screens as we all increase o
+ ur knowledge of the unique instrument of torture known as Blender.  This ev
+ ent is geared toward beginners\, but anyone with any level of Blender exper
+ ience is welcome. \n\nThis event will be in Skype voice and you will see th
+ e instructor's screen. It's low key\, fun\, and free. \n\nThe event is at t
+ he Waymarker 88221 region on the Kitely grid.  You can create a free Kitely
+  avatar at http://www.kitely.com.  If you already have an opensim avatar\, 
+ put this in your map grid.kitely.com:Waymarker 88221\n\nEmail serenejewell@
+ gmail.com if you have any questions.
+LAST-MODIFIED:20150601T043047Z
+LOCATION:grid.kitely.com:8002:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Intro to Blender Q&A
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150513T160000Z
+DTEND:20150513T170000Z
+DTSTAMP:20151007T190358Z
+UID:t4fnt839v6cbqkkq8lcc1f63ho@google.com
+CREATED:20150511T233842Z
+DESCRIPTION:Intermediary Blender Mesh - Generate Model\, Texture and Export
+  Landscape Caldera or Mountain.\ngrid.kitely.com:8002:Waymarker 88221\nhttp
+ ://waymarker88221.blogspot.com/2015/05/may-11-2015-waymarker-did-you-know-t
+ hat.html\nNo modeling or other background needed\, but should know how to n
+ avigate through Blender tools and processes.\n
+LAST-MODIFIED:20150511T234214Z
+LOCATION:
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Texture Painting - Intermediate Blender Mesh Project
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150515T190000Z
+DTEND:20150515T200000Z
+DTSTAMP:20151007T190358Z
+UID:ogpea28ekh0rvmk7radp4b675g@google.com
+CREATED:20150510T231235Z
+DESCRIPTION:The Hypergrid WIP (Works In Progress) is the 1st and 3rd Friday
+  at noon at the Cookie II region in Kitely.\n\nCome show what you are worki
+ ng on (or have recently completed.)  All levels of builders welcome. Prims\
+ , Mesh\, Textures\, Animations.  Visit the G+ group to learn more or to add
+  your name to the list of presenters for the next show.  This is all about 
+ community\, sharing\, helping each other and having some relaxing fun time.
+ \n\nG+ Group\nhttps://plus.google.com/u/0/communities/108903153844746841224
+ \n\nHypergrid address:\ngrid.kitely.com:8002:Cookie II
+LAST-MODIFIED:20150510T231933Z
+LOCATION:grid.kitely.com:8002:Cookie II
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Hypergrid WIP Show (works in progress)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20150509T120000
+DTEND;TZID=America/Los_Angeles:20150509T130000
+RRULE:FREQ=WEEKLY;COUNT=2;BYDAY=SA
+DTSTAMP:20151007T190358Z
+UID:3gcsnanbvpk33udqnehbpa5dvo@google.com
+CREATED:20150409T030031Z
+DESCRIPTION:Rub the magic lamp and make a wish... The Arabian Nights are fo
+ lk tales full of genies\, flying carpets\, and daring adventures from Asia 
+ and the Middle East. Stories of far-out places and wild imagination that ha
+ ve captivated audiences for thousands of years.\n\nASIN: B00HXQN1CS
+LAST-MODIFIED:20150508T182308Z
+LOCATION:Arabianworld via Seanchai Library (grid.kitely.com:8002/Inis Fada)
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:ARABIAN NIGHTS
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20150523T120000
+DTEND;TZID=America/Los_Angeles:20150523T130000
+RRULE:FREQ=MONTHLY;BYDAY=4SA;UNTIL=20150725T065959Z
+EXDATE;TZID=America/Los_Angeles:20150627T120000
+DTSTAMP:20151007T190358Z
+UID:5r3noqj9inbucfh30gnj396kuo@google.com
+CREATED:20150508T160832Z
+DESCRIPTION:Caledonia and Shandon return to that saga of "long\, long ago i
+ n a galaxy far\, far away" with more from THE ADVENTURES OF LUKE SKYWALKER 
+ by George Lucas (yes\, THAT one!).  Another installment from this wonderful
+  novelization of the original film\, presented live in voice.
+LAST-MODIFIED:20150508T162705Z
+LOCATION:Seanchai Library ~ Spaceworld  (grid.kitely.com:8002/Inis Eirc)
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:STAR WARS SATURDAY
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150508T170000Z
+DTEND:20150508T180000Z
+DTSTAMP:20151007T190358Z
+UID:itt3kefp7egp0l86ktentpcd8s@google.com
+CREATED:20150505T140309Z
+DESCRIPTION:Tutor Serene Jewell \nhttp://www.kitely.com/virtual-world/Ruby-
+ ODegee/Waymarker-88221 \nFor more information or scheduling times\, you can
+  check out the Waymarker blog http://waymarker88221.blogspot.com/
+LAST-MODIFIED:20150507T120109Z
+LOCATION:Waymarker 88221 Kitely Grid 
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Blender Mesh Materials Live Tutorial 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150507T170000Z
+DTEND:20150507T180000Z
+DTSTAMP:20151007T190358Z
+UID:iqd8mb40chu7lq1tha336vc8dg@google.com
+CREATED:20150505T140140Z
+DESCRIPTION:Tutor:  Serene Jewell \nhttp://www.kitely.com/virtual-world/Rub
+ y-ODegee/Waymarker-88221 \nFor more information or scheduling times\, you c
+ an check out the Waymarker blog http://waymarker88221.blogspot.com/
+LAST-MODIFIED:20150507T120003Z
+LOCATION:Waymarker 88221 Kitely Grid
+SEQUENCE:3
+STATUS:CONFIRMED
+SUMMARY:Blender Mesh Navigation 101 Live Tutorial
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20150407T110000
+DTEND;TZID=America/Los_Angeles:20150407T120000
+RRULE:FREQ=WEEKLY;COUNT=4;INTERVAL=2;BYDAY=TU
+EXDATE;TZID=America/Los_Angeles:20150505T110000
+EXDATE;TZID=America/Los_Angeles:20150421T110000
+DTSTAMP:20151007T190358Z
+UID:vngcp3oips5n005jhs48uo9n40@google.com
+ATTENDEE;CUTYPE=RESOURCE;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Kitely E
+ vents;X-NUM-GUESTS=0:mailto:857iq9v0nfqrg3qmt4e00n53rc@group.calendar.googl
+ e.com
+CREATED:20150208T004330Z
+DESCRIPTION:
+LAST-MODIFIED:20150505T211632Z
+LOCATION:
+SEQUENCE:3
+STATUS:CONFIRMED
+SUMMARY:Matthew Broyles Kitely
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150501T190000Z
+DTEND:20150501T200000Z
+DTSTAMP:20151007T190358Z
+UID:q1bgeukfq3s4knh4cljj8cpntc@google.com
+CREATED:20150424T201750Z
+DESCRIPTION:The Hypergrid WIP (Works In Progress) will be the 1st and 3rd F
+ riday at noon starting May 1.  Come show what you are working on (or have r
+ ecently completed.)  All levels of builders welcome. Prims\, Mesh\, Texture
+ s\, Animations.  Email serenejewell@gmail.com to get on the presentation li
+ st!\n\ngrid.kitely.com:8002:Cookie II
+LAST-MODIFIED:20150424T202037Z
+LOCATION:grid.kitely.com:8002:Cookie II
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Hypergrid WIP (works in progress)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150426T180000Z
+DTEND:20150426T190000Z
+DTSTAMP:20151007T190358Z
+UID:o1cegk9cml8gulh8tqlerv8i30@google.com
+CREATED:20150423T155748Z
+DESCRIPTION:Tales from THE ADVENTURES OF LUKE SKYWALKER . . . so\, where we
+ re you in 1977?  Do you remember the first time you saw the first film?  Th
+ e first 25 times you saw the first film?  Maybe you have never seen it at a
+ ll.  Join Caledonia on Seanchai Library's Spaceworld to enjoy for the first
+  time (or re-live the joy) of those first adventures from and edition penne
+ d by Director George Lucas himself!\n\nPresented Live in Voice.
+LAST-MODIFIED:20150423T155826Z
+LOCATION:Seanchai Kitely (grid.kitely.com:8002/Inis Eirc)
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE ADVENTURES OF LUKE SKYWALKER
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150417T020000Z
+DTEND:20150417T030000Z
+DTSTAMP:20151007T190358Z
+UID:9up3qvbohgonvphdhldv6e8f2o@google.com
+CREATED:20150322T200655Z
+DESCRIPTION:From the book 'Silver Birch\, Blood Moon' come stories erotic\,
+  compelling\, witty\, and altogether extraordinary. Laying bare our innermo
+ st demons and desires - imaginatively transforming our youthful fantasies i
+ nto things darker\, slyer\, and more delightfully subversive.\n\nTonight:\n
+ Carabosse - Delia Sherman\nGlass Coffin - Caitlin Kiernan\nPrecious - Nal H
+ opkinson\nLocks - Neil Gaiman\n\nBook: Silver Birch\, Blood Moon\nEditor: E
+ llen Datlow & Terri Windling\nISBN: 978-0739402092
+LAST-MODIFIED:20150413T002743Z
+LOCATION:The Coral Sea at the Seanchai Library
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:SILVER BIRCH\, BLOOD MOON
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150501T020000Z
+DTEND:20150501T030000Z
+DTSTAMP:20151007T190358Z
+UID:benhq8q5nbegesmgn5nm26sh8g@google.com
+CREATED:20150409T005345Z
+DESCRIPTION:'The Shell Box' is a conflation of Selkie and Roane stories\, s
+ ome “Bluebeard” tales\, with a bit of “The Little Mermaid.” There are also 
+ elements from a Welsh tale called “The Lady of Llyn y Fan Fach\,”\n\nWhen a
+  lonely woman receives the only offer of marriage she's ever had\, she comm
+ its to her new husband totally. In her love\, she is blind to the fact that
+  the poor fisherman she has tied herself to is a proud\, cruel and indiffer
+ ent man.\n\nAuthor: Karawynn Long\nISBN: 978-0739402092
+LAST-MODIFIED:20150409T083643Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE SHELL BOX  (75 minutes)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150508T020000Z
+DTEND:20150508T030000Z
+DTSTAMP:20151007T190358Z
+UID:lmqdvmq50r412hafb3ei2knbi4@google.com
+CREATED:20150409T005321Z
+DESCRIPTION:"The Ghost of Cwmlech Manor" is set on the border of Wales. A p
+ recocious Welsh girl named Tacy Gof has always wished to see the ghost of t
+ he manor. Tacy falls into a fantastic scenario involving steampunk automato
+ ns and\, well\, the ghost — and everything winds up hinging on her unique s
+ trengths.\n\nAuthor: Delia Sherman\nISBN: 978-0763648435
+LAST-MODIFIED:20150409T005321Z
+LOCATION:The Manor at Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE GHOST OF CWMLECH MANOR
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150502T190000Z
+DTEND:20150502T200000Z
+DTSTAMP:20151007T190358Z
+UID:7jsl4eo8omu8gr0odb2k9ecm2g@google.com
+CREATED:20150330T034605Z
+DESCRIPTION:Lore\, legends\, characters & myths that grew out of the Old We
+ st. Little-known stories and legends of the American West. Fantastically co
+ nceived hoaxes\, and new factual evidence to support the validity of storie
+ s formerly assumed to be tales.\nThe story behind California's lost Cheroke
+ e Diamond mine\, the lost secrets of super rainmaker Charles Hatfield - who
+  nearly washed San Diego off the map - twice!!  Stories in voice.\n\nISBN#0
+ 3-081867-2
+LAST-MODIFIED:20150409T001220Z
+LOCATION:Millpond Campfire in Westworld via Seanchai Library
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:LOST LEGENDS OF THE OLD WEST
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150424T020000Z
+DTEND:20150424T030000Z
+DTSTAMP:20151007T190358Z
+UID:2mrddr36seqv0nq7tttt6uith0@google.com
+CREATED:20150403T211836Z
+DESCRIPTION:THE LOST RACE\nCororuc travelling through the dark forest saves
+  a wolf from an attacking panther\, and learns the history of the Picts who
+  were driven out by the Gaels and went underground to become the source of 
+ all the faery legends.\n\nMIRRORS OF TUZUN THUNE\nKull is bored and frustra
+ ted with being king\, when he encounters a mysterious slave girl that tells
+  him of the wizard Tuzun Thune and his magic.\n\n\nBRAN MAK MORN\, THE LAST
+  KING\nAuthor: Robert E. Howard\nISBN: 978-0953425358
+LAST-MODIFIED:20150409T001041Z
+LOCATION:Shores of Valusia at the Seanchai Library
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:THE LOST RACE
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150428T153000Z
+DTEND:20150428T163000Z
+DTSTAMP:20151007T190358Z
+UID:0q0robku9oqa306p8vttubh4nk@google.com
+CREATED:20150406T171051Z
+DESCRIPTION:http://www.kitely.com/virtual-world/Ruby-ODegee/Waymarker-88221
+  \nFor more information or scheduling times\, you can check out the Waymark
+ er blog http://waymarker88221.blogspot.com/
+LAST-MODIFIED:20150406T171051Z
+LOCATION:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender Live Tutorial Hi to Lo Poly 1
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150422T153000Z
+DTEND:20150422T163000Z
+DTSTAMP:20151007T190358Z
+UID:4lcefhrcfunv5j2bfv3ncef150@google.com
+CREATED:20150406T171037Z
+DESCRIPTION:http://www.kitely.com/virtual-world/Ruby-ODegee/Waymarker-88221
+  \nFor more information or scheduling times\, you can check out the Waymark
+ er blog http://waymarker88221.blogspot.com/
+LAST-MODIFIED:20150406T171037Z
+LOCATION:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender Live Tutorial UV Unwrap & Textures
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150421T153000Z
+DTEND:20150421T163000Z
+DTSTAMP:20151007T190358Z
+UID:8p0ovp65an2ecagmdpc8lig140@google.com
+CREATED:20150406T171020Z
+DESCRIPTION:http://www.kitely.com/virtual-world/Ruby-ODegee/Waymarker-88221
+  \nFor more information or scheduling times\, you can check out the Waymark
+ er blog http://waymarker88221.blogspot.com/
+LAST-MODIFIED:20150406T171020Z
+LOCATION:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender Live Tutorial UV Unwrap & Textures
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150415T153000Z
+DTEND:20150415T163000Z
+DTSTAMP:20151007T190358Z
+UID:22sh1hlore37pgdeeedt08grss@google.com
+CREATED:20150406T170958Z
+DESCRIPTION:http://www.kitely.com/virtual-world/Ruby-ODegee/Waymarker-88221
+  \nFor more information or scheduling times\, you can check out the Waymark
+ er blog http://waymarker88221.blogspot.com/
+LAST-MODIFIED:20150406T170958Z
+LOCATION:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender Live Tutorial Mesh Modeling 2
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150414T153000Z
+DTEND:20150414T163000Z
+DTSTAMP:20151007T190358Z
+UID:9gq4ugngbjop5gki3pn3og5q5s@google.com
+CREATED:20150406T170950Z
+DESCRIPTION:http://www.kitely.com/virtual-world/Ruby-ODegee/Waymarker-88221
+  \nFor more information or scheduling times\, you can check out the Waymark
+ er blog http://waymarker88221.blogspot.com/
+LAST-MODIFIED:20150406T170950Z
+LOCATION:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender Live Tutorial Mesh Modeling 1
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150407T153000Z
+DTEND:20150407T163000Z
+DTSTAMP:20151007T190358Z
+UID:dfpot1mhkc8hm5j4ag25m62ajk@google.com
+CREATED:20150406T170026Z
+DESCRIPTION:http://www.kitely.com/virtual-world/Ruby-ODegee/Waymarker-88221
+  \nFor more information or scheduling times\, you can check out the Waymark
+ er blog http://waymarker88221.blogspot.com/
+LAST-MODIFIED:20150406T170026Z
+LOCATION:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender Live Tutorial Navigation 1
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150418T190000Z
+DTEND:20150418T200000Z
+DTSTAMP:20151007T190358Z
+UID:ek08luemhmhu5lhiljnm5r46es@google.com
+CREATED:20150307T185446Z
+DESCRIPTION:'In the day of long ago and the times that have disappeared for
+  ever...'  The very words set the the imagination racing\, heralding a stra
+ nge and wonderful tale from the dawn of Ireland's past\, when the old gods 
+ held sway and the lad was peopled by high kings and heroes.\n\nBalor of the
+  evil eye was the god of death whose one eye was said to be so malevolent t
+ hat it could destroy anyone upon whom he gazed. Tonight we recount the stor
+ y of when Balor met the Irish hero Gubbaun Saor\, "the wondersmith".\n\nSto
+ ries in Live Voice\n\nISBN: 0-285-63206-x\n
+LAST-MODIFIED:20150330T034320Z
+LOCATION:Seanchai Library
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:IRISH GODS AND HEROES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150404T190000Z
+DTEND:20150404T200000Z
+DTSTAMP:20151007T190358Z
+UID:8d3a0fdjr97omigelmsdedchqs@google.com
+CREATED:20150330T013157Z
+DESCRIPTION:Outlaws & gunfighters\, buried treasures\, running off cattle r
+ ustlers\, sitting out a winter storm in a cave-adventures like these were a
+ ll part of everyday life for the cowboy. From all corners of the great West
+ ern expanse - Montana to Mexico\, California to the Mississippi - these are
+  stories of the men of the west\, and the women who made their lives on the
+  range.\n\nBook: Classic Tales of the Old WEst\nPublisher: Wildside Press\n
+ ASIN: B00KN0FT3A\n
+LAST-MODIFIED:20150330T014032Z
+LOCATION:Westworld at the Seanchai Library in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CLASSIC TALES OF THE OLD WEST
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150327T020000Z
+DTEND:20150327T030000Z
+DTSTAMP:20151007T190358Z
+UID:5m4jkcff2o7r22fg25tjuci6ek@google.com
+CREATED:20150217T041824Z
+DESCRIPTION:A magical night of ancient Celtic tales... A wild assortment of
+  Battles\, Loves won and lost\, and Magic from the world of faery.\n\nTonig
+ ht:\nLegends of Bricriu\nBricriu\, an inveterate troublemaker\, invites the
+  nobles of the Ulaid to a feast at his new house at Dún Rudraige\, where he
+  incites three heroes\, Cúchulainn\, Conall Cernach\, and Lóegaire Búadach\
+ , to compete for the "champion's portion" of the feast.
+LAST-MODIFIED:20150324T192038Z
+LOCATION:Banks of the Boyne at the Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CELTIC MYTH & MAGICK
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150403T020000Z
+DTEND:20150403T030000Z
+DTSTAMP:20151007T190358Z
+UID:50hsbdb5epimos6hdh2nfqjb38@google.com
+CREATED:20150322T204653Z
+DESCRIPTION:Turlogh Dubh O'Brien\, an 11th century Irishman\, rescues the d
+ aughter of late Irish king Brian Boru from Vikings.
+LAST-MODIFIED:20150322T204653Z
+LOCATION:Banks of the Boyne at the Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:TURLOUGH DUBH O'BRIEN
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150321T160000Z
+DTEND:20150321T170000Z
+DTSTAMP:20151007T190358Z
+UID:pilqm62rg12dktau70sjoo3rps@google.com
+CREATED:20150307T184527Z
+DESCRIPTION:During prehistoric times in ancient Scandinavia the land was di
+ vided into a number of small parcels. Over each of these a chief or king ru
+ led. There lived a famous family of chiefs called the House of Volsung. Ton
+ ight\, join us for two tales of romance and intrigue from this ancient and 
+ noble race.\n\n- Aslog\, daughter of Sigurd & Brynhild\n- Frithiof the Bold
+  & Ingeborg the Fair\n\n
+LAST-MODIFIED:20150320T012806Z
+LOCATION:Sognefjord at Seanchai Library in Kitely
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:OLD NORSE SAGAS
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150421T200000Z
+DTEND:20150421T210000Z
+DTSTAMP:20151007T190358Z
+UID:f5lv8lol5bk2v714bmf56f3d0c@google.com
+CREATED:20150318T172432Z
+DESCRIPTION:1st and 3rd Tuesdays of the Month.\n1st and 3rd Tuesdays of the
+  Month.\n1st and 3rd Tuesdays of the Month.\n\nhop://grid.kitely.com:8002/T
+ hyilea/59/386/22\n\ngrid.kitely.com:8002:Thyilea﻿
+LAST-MODIFIED:20150318T172432Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Echo Starship
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150322T170000Z
+DTEND:20150322T180000Z
+DTSTAMP:20151007T190358Z
+UID:5fr22uusauc5fa3plmahfgtlio@google.com
+CREATED:20150317T014456Z
+DESCRIPTION:"He had been called many things\, most of which could not be re
+ peated in decent conversation. But the designation of his birth\, and his a
+ ctual purpose were depicted clearly in his true name. He was Gorak the Gobb
+ ler and he was on his way\, by invocation\, to invade young Jamie Bergstrom
+ 's life." \n\nCaledonia presents one of her newest short stories\, live in 
+ voice.
+LAST-MODIFIED:20150317T014512Z
+LOCATION:grid.kitely.com:8002/Seanchai
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:GORAK THE GOBBLER
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150320T020000Z
+DTEND:20150320T030000Z
+DTSTAMP:20151007T190358Z
+UID:fmddor9kh67jp2o7sj5235hp14@google.com
+CREATED:20150217T041814Z
+DESCRIPTION:A magical night of ancient Celtic tales... A wild assortment of
+  Battles\, Loves won and lost\, and Magic from the world of faery.\n\nTonig
+ ht:\nSecret Places of the Fae
+LAST-MODIFIED:20150316T200259Z
+LOCATION:Banks of the Boyne at the Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CELTIC MYTH & MAGICK - Secret Places of the Fae
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150325T153000Z
+DTEND:20150325T163000Z
+DTSTAMP:20151007T190358Z
+UID:2e52rtb707u6t9ted60909kkq4@google.com
+CREATED:20150315T212653Z
+DESCRIPTION:grid.kitely.com:8002:Waymarker 88221\n\nhttp://www.kitely.com/v
+ irtual-world/Ruby-ODegee/Waymarker-88221\n\nFor more information or schedul
+ ing times\, you can check out the Waymarker blog http://waymarker88221.blog
+ spot.com/. 
+LAST-MODIFIED:20150315T212653Z
+LOCATION:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender Lo Poly 2 Tutorial
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150318T153000Z
+DTEND:20150318T163000Z
+DTSTAMP:20151007T190358Z
+UID:kjanj93mmp7g0d3rjplojun310@google.com
+CREATED:20150315T212333Z
+DESCRIPTION:grid.kitely.com:8002:Waymarker 88221\n\nhttp://www.kitely.com/v
+ irtual-world/Ruby-ODegee/Waymarker-88221\n\nFor more information or schedul
+ ing times\, you can check out the Waymarker blog http://waymarker88221.blog
+ spot.com/. 
+LAST-MODIFIED:20150315T212334Z
+LOCATION:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender UV Unwrap & Tex 2 Tutorial
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150317T153000Z
+DTEND:20150317T163000Z
+DTSTAMP:20151007T190358Z
+UID:e24ffsjqld6v9n3mvd1hu3prgs@google.com
+CREATED:20150315T212320Z
+DESCRIPTION:grid.kitely.com:8002:Waymarker 88221\n\nhttp://www.kitely.com/v
+ irtual-world/Ruby-ODegee/Waymarker-88221\n\nFor more information or schedul
+ ing times\, you can check out the Waymarker blog http://waymarker88221.blog
+ spot.com/. 
+LAST-MODIFIED:20150315T212320Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender UV Unwrap & Tex 1 Tutorial
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150311T191500Z
+DTEND:20150311T201500Z
+DTSTAMP:20151007T190358Z
+UID:93fg91rr0pl5rch02jkmeq25r4@google.com
+CREATED:20150310T031558Z
+DESCRIPTION:Our current work in progress (well one of them) Celticworld is 
+ full of developing mysteries and adventures.  Caledonia reads on stream whi
+ le HG Safarians explore and seek out . . . what?  Leprechaun Gold? The secr
+ et if the Tuatha de Danaan?  The Ancient Gaels?  Wellll\, you'll have to co
+ me and find out!\n\n~ Slainte'
+LAST-MODIFIED:20150310T031558Z
+LOCATION:grid.kitely.com:8002/InisArcain
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:HG Safari Visits Seanchai Celticworld
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150311T183000Z
+DTEND:20150311T193000Z
+DTSTAMP:20151007T190358Z
+UID:n0rv910likqkb4qhcsrs4sihe0@google.com
+CREATED:20150309T121210Z
+DESCRIPTION:grid.kitely.com:8002:Waymarker 88221\nhttp://www.kitely.com/vir
+ tual-world/Ruby-ODegee/Waymarker-88221\nFor more information or scheduling 
+ times\, you can check out the Waymarker blog \n
+LAST-MODIFIED:20150309T121210Z
+LOCATION:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender Basic Mesh 1 Tutorial
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150311T153000Z
+DTEND:20150311T163000Z
+DTSTAMP:20151007T190358Z
+UID:1jiv0mm5k5n3qirgjge8k8qvhk@google.com
+CREATED:20150309T121151Z
+DESCRIPTION:grid.kitely.com:8002:Waymarker 88221\nhttp://www.kitely.com/vir
+ tual-world/Ruby-ODegee/Waymarker-88221\nFor more information or scheduling 
+ times\, you can check out the Waymarker blog http://waymarker88221.blogspot
+ .com/. 
+LAST-MODIFIED:20150309T121151Z
+LOCATION:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender Basic Mesh 2 Tutorial
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150313T020000Z
+DTEND:20150313T030000Z
+DTSTAMP:20151007T190358Z
+UID:gdir19jbtecb4hi1bncu8mre7g@google.com
+CREATED:20150217T041803Z
+DESCRIPTION:A magical night of ancient Celtic tales... A wild assortment of
+  Battles\, Loves won and lost\, and Magic from the world of faery.\n\nTonig
+ ht:\nFairy Lore and Enchantments\n
+LAST-MODIFIED:20150307T190439Z
+LOCATION:Banks of the Boyne at the Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CELTIC MYTH & MAGICK
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150306T030000Z
+DTEND:20150306T040000Z
+DTSTAMP:20151007T190358Z
+UID:ltj8efko0plq7tr42npa0j8ks8@google.com
+CREATED:20150217T032948Z
+DESCRIPTION:A magical night of ancient Celtic tales... A wild assortment of
+  Battles\, Loves won and lost\, and Magic from the world of faery.\n\nTonig
+ ht:\nHistory and tales of the Tuatha de Danaan
+LAST-MODIFIED:20150307T190431Z
+LOCATION:Banks of the Boyne at the Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CELTIC MYTH & MAGICK
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150314T160000Z
+DTEND:20150314T170000Z
+DTSTAMP:20151007T190358Z
+UID:4tech2ju08pj1uv2njkmi7msgc@google.com
+CREATED:20150307T184202Z
+DESCRIPTION:Presented for you in Live Voice by Shandon Loring\, from Ellen 
+ Datlow and Terri Windling come beguiling tales for the child-that-was and t
+ he adult-that-is\, stories from some of the most creative artists in contem
+ porary literature. Dissected here are the darker anatomies of the timeless\
+ , seemingly simple stories we have long loved. Here wonder and truth have s
+ erious bite. Lusts and jealousies\, foibles\, hatreds\, and dangerous obses
+ sions\, the things that slyly lurk in the midnight interior of oft-told tal
+ es.  Stories in Live Voice\n\nTonight: And Still She Sleeps\n\n
+LAST-MODIFIED:20150307T184202Z
+LOCATION:Seanchai Library in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BLACK HEART\, IVORY BONES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150308T180000Z
+DTEND:20150308T190000Z
+DTSTAMP:20151007T190358Z
+UID:495a5rno6i8vj1r1ok6urueb74@google.com
+CREATED:20150218T051026Z
+DESCRIPTION:The 2015 edition of Seanchai's celebration of moving poetical I
+ rish voices going back over centuries with Kayden and Caledonia.\n\n''I am 
+ of Ireland\,\nAnd the Holy Land of Ireland\,\nAnd time runs on\,' cried she
+ .\n'Come out of charity\,\nCome dance with me in Ireland.'"\n\nLive in voic
+ e.
+LAST-MODIFIED:20150306T140213Z
+LOCATION:grid.kitely.com:8002/InisArcain - Seanchai in Kitely - Celticworld
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IRELAND: LAND OF POETS
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150315T180000Z
+DTEND:20150315T190000Z
+DTSTAMP:20151007T190358Z
+UID:uo2vrn5pqjvkmmikk0ca86068o@google.com
+CREATED:20150218T050733Z
+DESCRIPTION:It is no secret that one of Caledonia's annual rituals in honor
+  of Saint Patrick's Day\, and that is her yearly reading (sometimes reading
+ ) of Maurice Walsh's short story that inspired John Ford to work fro over a
+  decade to adapt the story of Sean Kelvin and his Ellen into an academy Awa
+ rd-winning motion picture starring Maureen O'Hara and John Wayne that is be
+ loved by many.  \n\nPresented live in voice.
+LAST-MODIFIED:20150306T140138Z
+LOCATION:grid.kitely.com:8002/Seanchai - Seanchai in Kitely - White O'Morn 
+ Cottage on Glen Island
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE QUIET MAN
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150307T170000Z
+DTEND:20150307T180000Z
+DTSTAMP:20151007T190358Z
+UID:954uangdgcsog0nk5jbafgov44@google.com
+CREATED:20150222T092023Z
+DESCRIPTION:A whole faery world contained inside a handbag. A family heirlo
+ om of Grandma Zofia. Genevieve was supposed to look after it\, but now it's
+  lost\, and so is her intended boyfriend Jake\, who jumped in the handbag w
+ hen she wasn't looking...\n\nStory will be proceeded by a musical  presenta
+ tion of "The Faery Reel" by Neil Gaiman\, and a brief Introduction to the F
+ aeries\, by Teri Windling.\n
+LAST-MODIFIED:20150306T140115Z
+LOCATION:grid.kitely.com:8002/Seanchai
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE FAERIE HANDBAG
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150310T183000Z
+DTEND:20150310T193000Z
+DTSTAMP:20151007T190358Z
+UID:eq3s741hpccgt1d2ivg2k069kg@google.com
+CREATED:20150303T012816Z
+DESCRIPTION:grid.kitely.com:8002:Waymarker 88221\nhttp://www.kitely.com/vir
+ tual-world/Ruby-ODegee/Waymarker-88221\nFor more information or scheduling 
+ times\, you can check out the Waymarker blog http://waymarker88221.blogspot
+ .com/.  \n\n\n
+LAST-MODIFIED:20150303T012816Z
+LOCATION:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender Basic Mesh 2 Tutorial 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150310T153000Z
+DTEND:20150310T163000Z
+DTSTAMP:20151007T190358Z
+UID:icjr9b7nbkop68k7am1q20rs8g@google.com
+CREATED:20150303T012752Z
+DESCRIPTION:grid.kitely.com:8002:Waymarker 88221\nhttp://www.kitely.com/vir
+ tual-world/Ruby-ODegee/Waymarker-88221\nFor more information or scheduling 
+ times\, you can check out the Waymarker blog http://waymarker88221.blogspot
+ .com/.  \n\n
+LAST-MODIFIED:20150303T012752Z
+LOCATION:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender Basic Mesh 1 Tutorial
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150304T163000Z
+DTEND:20150304T173000Z
+DTSTAMP:20151007T190358Z
+UID:or274gfuph5tr4tchkc44ae464@google.com
+CREATED:20150302T230152Z
+DESCRIPTION:http://www.kitely.com/virtual-world/Ruby-ODegee/Waymarker-88221
+  \nFor more information or scheduling times\, you can check out the Waymark
+ er blog http://waymarker88221.blogspot.com/
+LAST-MODIFIED:20150302T230152Z
+LOCATION:Waymarker 88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender Nav 2 Tutorial
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150304T193000Z
+DTEND:20150304T203000Z
+DTSTAMP:20151007T190358Z
+UID:uov7pdcdj7dsd0d6gdah524ndo@google.com
+CREATED:20150302T230121Z
+DESCRIPTION:http://www.kitely.com/virtual-world/Ruby-ODegee/Waymarker-88221
+  \nFor more information or scheduling times\, you can check out the Waymark
+ er blog http://waymarker88221.blogspot.com/
+LAST-MODIFIED:20150302T230121Z
+LOCATION:Waymarker 88221 
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender Nav 1 Tutorial
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150303T193000Z
+DTEND:20150303T203000Z
+DTSTAMP:20151007T190358Z
+UID:8blr8hq50j8qrpt6337vt5hhj0@google.com
+CREATED:20150302T225953Z
+DESCRIPTION:http://www.kitely.com/virtual-world/Ruby-ODegee/Waymarker-88221
+  \nFor more information or scheduling times\, you can check out the Waymark
+ er blog http://waymarker88221.blogspot.com/
+LAST-MODIFIED:20150302T225953Z
+LOCATION:http://www.kitely.com/virtual-world/Ruby-ODegee/Waymarker-88221
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Blender Nav 2 Tutorial
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150303T163000Z
+DTEND:20150303T173000Z
+DTSTAMP:20151007T190358Z
+UID:h5v8pklh754imuthm38inpcim4@google.com
+CREATED:20150302T225527Z
+DESCRIPTION:http://www.kitely.com/virtual-world/Ruby-ODegee/Waymarker-88221
+  \nFor more information or scheduling times\, you can check out the Waymark
+ er blog http://waymarker88221.blogspot.com/
+LAST-MODIFIED:20150302T225806Z
+LOCATION:Waymarker 88221 
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Blender Nav 1 Tutorial
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150228T223000Z
+DTEND:20150301T000000Z
+DTSTAMP:20151007T190358Z
+UID:e49fksqtbt5or1iu1hh89g77so@google.com
+CREATED:20150210T150348Z
+DESCRIPTION:(Time Tentative pending confirmation)  We are hosting the Metav
+ erse Tour that afternoon\, and the region will be open to exploring with Ca
+ ledonia reading from "The Great Gatsby" on stream\, prior to a dancing to t
+ he tunes of the 1920s at Gatsby's mansion.  Check back for more details and
+  specific times closer to the event.
+LAST-MODIFIED:20150227T023904Z
+LOCATION:EXPLORESeanchai
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:EXPLORE The Great Gatsby Closing Party (time TBA)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20150115T170000
+DTEND;TZID=America/Chicago:20150115T180000
+RRULE:FREQ=WEEKLY;UNTIL=20150218T230000Z;WKST=SU;BYDAY=TH
+DTSTAMP:20151007T190358Z
+UID:ds71dj3e11qij832hqvbbbt1qo@google.com
+CREATED:20150107T154226Z
+DESCRIPTION:Contact Kat Lemieux for info
+LAST-MODIFIED:20150219T235955Z
+LOCATION:grid.kitely.com:8002/ISM2
+SEQUENCE:1
+STATUS:TENTATIVE
+SUMMARY:ISM Metadata Workshop
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150301T190000Z
+DTEND:20150301T200000Z
+DTSTAMP:20151007T190358Z
+UID:qiti9k200h3ame0nlqn3kj804s@google.com
+CREATED:20150218T050418Z
+DESCRIPTION:Caledonia shares a selection from Morgan Llewellyn's fantasy on
+  the magical lore of  Ireland\, centered on one of the great figures of myt
+ hical ancient past: Amergin\, Bard of the Milesians.\n\nToday's selection\,
+  different from the one scheduled for Seanchai in SL.  In today's story\, A
+ mergin finds the power of his bardic voice for the very first time\, saving
+  his Clan from near calamity.\n\nPresented Live in Voice
+LAST-MODIFIED:20150218T050418Z
+LOCATION:Seanchai Kitely - Celticworld
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE BARD
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150218T201500Z
+DTEND:20150218T210000Z
+DTSTAMP:20151007T190358Z
+UID:83rvl2kdm1bohdb5blp0skimfk@google.com
+CREATED:20150210T145902Z
+DESCRIPTION:Selections from "The Great Gatsby" read live\, on stream so gue
+ sts can explore the entire sim while listening to the words of F. Scott Fit
+ zgerald's "Great American Novel" . . . then a Q&A in Gallery Park before th
+ e Safari is off to its next great metaverse adventure.\n\ngrid.kitely.com:8
+ 002:EXPLORESeanchai\nAlso accessible from the Seanchai Library homeworld in
+  #Kitely - from the main landing zone use the EXPLORE teleport gate. 
+LAST-MODIFIED:20150217T161926Z
+LOCATION:EXPLORESeanchai in Kitely
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:HG SAFARI @ EXPLORE The Great Gatsby
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150227T030000Z
+DTEND:20150227T040000Z
+DTSTAMP:20151007T190358Z
+UID:8akocqpuvce5b2lseqifos4j1s@google.com
+CREATED:20150217T022238Z
+DESCRIPTION:Was Indiana Jones character lifted from the adventure pulps of 
+ the 1930's? Maybe.. Come listen to tonight's tale and you decide...\n\nPEOP
+ LE OF THE PYRAMIDS\nby P.F. Costello - 1941\nOur hero goes on a treasure hu
+ nt in the desert\, saving a damsel in distress\, captured by an evil archae
+ ologist. There are fights in the crowded market\, kidnappings\, super-techn
+ ology of the lost race\, chases and double-crossings... 
+LAST-MODIFIED:20150217T022301Z
+LOCATION:Mayan Temple at Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LOST WORLDS - People of the Pyramids (simulcast from SL)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150228T170000Z
+DTEND:20150228T180000Z
+DTSTAMP:20151007T190358Z
+UID:mj0rgokr4at965l8do7iufh6i4@google.com
+CREATED:20150215T051431Z
+DESCRIPTION:DARK SPECULATIVE HORRORS\nFor everyone who wants to believe in 
+ possibilities and yet knows that human reality is far more frightening than
+  we choose to admit.\n\nStories Presented in Voice\n\nAuthor: William Meikl
+ e\nISBN-13: 978-1940658032
+LAST-MODIFIED:20150215T051431Z
+LOCATION:Underwater Archaeology Site at Seanchai Homeworld in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:VOICE OF THE BEACH
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150220T030000Z
+DTEND:20150220T040000Z
+DTSTAMP:20151007T190358Z
+UID:nd96tiqrinptnlj2jdfekfrq4g@google.com
+CREATED:20150210T024624Z
+DESCRIPTION:Come here\, cher\, and I tell you a story.\n\nA wild dancing ch
+ angeling child thick in her own culture engages the devil in a fiddle conte
+ st in the bayou. Based on the ballad "The Bonnie Lass of Anglesey".\n\nBook
+ : Stories from the Coyote Road\nEditor: Ellen Datlow\nISBN# 978-0142413005
+LAST-MODIFIED:20150210T025720Z
+LOCATION:Bayou La Seanchai
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE FIDDLER OF BAYOU TECHE (simulcast from SL)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150221T170000Z
+DTEND:20150221T180000Z
+DTSTAMP:20151007T190358Z
+UID:eo48qrerag679dd1dol4tg8ovg@google.com
+CREATED:20150202T202926Z
+DESCRIPTION:O I forbid you\, maidens a'\,\nThat wear gowd on your hair\,\nT
+ o come or gae by Carterhaugh\,\nFor young Tam Lin is there.\n\nhttps://www.
+ youtube.com/watch?v=S_OTqw5jZGk
+LAST-MODIFIED:20150210T024742Z
+LOCATION:Elven Forest at Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:TAM LIN - A Ballad of Faerie
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150212T210000Z
+DTEND:20150212T220000Z
+DTSTAMP:20151007T190358Z
+UID:ok71b0tdgm1uqvgirk95h5rokg@google.com
+CREATED:20150118T115831Z
+DESCRIPTION:A roundtable panel on education in virtual worlds. Guest paneli
+ sts!
+LAST-MODIFIED:20150209T141219Z
+LOCATION:Hypergrid Academy grid.kitely.com:8002:Hypergrid Academy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:VLS - Education Roundtable
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150208T160000Z
+DTEND:20150208T173000Z
+DTSTAMP:20151007T190358Z
+UID:bgdrd3coja2a24sfqg1almrnso@google.com
+CREATED:20150204T134559Z
+DESCRIPTION:The monthly gathering of Devokan and other Myst-Uru-inspired St
+ orybuilders at Devokan on Kitely: \nhttp://www.kitely.com/virtual-world/Pai
+ slee-Myrtle/Devokan\n\nAll welcome!
+LAST-MODIFIED:20150204T134559Z
+LOCATION:grid.kitely.com:8002:Devokan
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Devokan Storybuilders Gathering
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150213T030000Z
+DTEND:20150213T040000Z
+DTSTAMP:20151007T190358Z
+UID:01bnn5ihn4mcf2r2j5pp9s5v1g@google.com
+CREATED:20150203T002218Z
+DESCRIPTION:Fairy tale and mythology... imperceptible landscapes... opulent
+  stories of fantasy. Bewitching\, bittersweet\, and deeply intoxicating. Fa
+ bles of history and re-created in startlingly magical ways.\n\nWonders of t
+ he Invisible World\nAuthor: Patricia A. McKillip\nISBN: 978-1616960872
+LAST-MODIFIED:20150203T002218Z
+LOCATION:The Dark Forest of the Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:WONDERS OF THE INVISIBLE WORLD (simulcast from SL)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150206T030000Z
+DTEND:20150206T040000Z
+DTSTAMP:20151007T190358Z
+UID:qhn0p09lob8hhikmk98bvquam8@google.com
+CREATED:20150202T203126Z
+DESCRIPTION:Step into the realm of the fairies\, where darkness and light c
+ ome together to create a world full of mischief and magic. A place where pi
+ xie dust and brownie favors are often counter balanced by the sinister temp
+ tations and mad schemes of the darker side. Here\, you can walk with the he
+ roes or be carried away by the fairy lover of your dreams. Just be careful 
+ not to fall too deeply\, you may never come home. \n\nTales of the Fairy An
+ thology\nEditor: Catherine Stovall\nASIN: B00L38O45U
+LAST-MODIFIED:20150202T203126Z
+LOCATION:The Dark Forest of the Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:TALES OF THE FAE (simulcast from SL)
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150207T170000Z
+DTEND:20150207T180000Z
+DTSTAMP:20151007T190358Z
+UID:300fttpgvkr4dt4fq22714lqm0@google.com
+CREATED:20150202T203010Z
+DESCRIPTION:THE COURTSHIP OF ETAIN\nTochmarc Étaine - When Midir of the Tua
+ tha Dé Danann falls in love with and marries her\, his rejected first wife 
+ Fúamnach becomes jealous and casts a series of spells on her.\n\nTHE WOOING
+  OF BEFOLA\nWe do not know where Becfola came from. Nor do we know for cert
+ ain where she went to. We do not even know her real name. This only is cert
+ ain\, that she disappeared from the world we know of\, and that she went to
+  a realm where even conjecture may not follow her.\nIt happened in the days
+  when Dermod was monarch of all Ireland.\n\nPoetry and Song will accompany 
+ today's tales...
+LAST-MODIFIED:20150202T203010Z
+LOCATION:Seanchai Library's CELTICWORLD
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE WOOING OF ETAIN
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150131T230000Z
+DTEND:20150201T000000Z
+DTSTAMP:20151007T190358Z
+UID:890q6sc45jcesflsvup553ofp8@google.com
+CREATED:20150131T173636Z
+DESCRIPTION:TODAY at EXPLORE The Great Gatsby!\ngrid.kitely.com:8002/EXPLOR
+ ESeanchai\n\nCross the bridge from the Welcome Center\, turn right in the V
+ alley of Ashes and walk towards the bridge to East Egg and the Fitzgerald G
+ allery. Gallery Park is just around the bend\, to your right\, once you cle
+ ar the ash heaps.\n\nAlso accessible from the Seanchai Library homeworld in
+  ‪#‎Kitely‬ - from the main landing zone use the EXPLORE teleport gate. \n‪
+ #‎seanchailibrary‬ ‪#‎tacomalittletheatre‬ ‪#‎thegreatgatsby‬
+LAST-MODIFIED:20150131T173658Z
+LOCATION:The Great Gatsby! Pt. IV
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:The Great Gatsby! Pt. IV
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150207T220000Z
+DTEND:20150207T230000Z
+DTSTAMP:20151007T190358Z
+UID:1evqv9437fmfkeai22gimag4ao@google.com
+CREATED:20150129T183056Z
+DESCRIPTION:http://www.kitely.com/virtual-world/Paislee-Myrtle/Time-Vault\n
+  \ngrid.kitely.com:8002:Time Vault\n\nEcho Starship aka Amplidyne Effect is
+  a trippy ambiental\, experimental\, noise\, post-rock\, improvisation musi
+ c project from Skopje\, Macedonia. Echo is constantly perfecting and seekin
+ g\, experimenting with soundscape\, guitar\, bass\, electronics\, always lo
+ oking to find new sounds and expression.\n\nAmplidyne Effect music is a imp
+ rovisational transcendence from ambient\, drone\, experimental sounds to no
+ ise-rock or even vice-versa. Experimenting with the different sounds of gui
+ tar\, synths and field recordings\, Macedonian producer\, Echo Starship cre
+ ates an interpolation of ambient and experimental crossing an amazing range
+  of disciplines and genres while firmly rooted in electronically generated 
+ music.\n\nMain themes evoke nature and space travel\, vast soundscapes of d
+ istant Universes and perhaps from not so very far away.\n\nAmplidyne Effect
+  has collaborated with musicians from Argentina\, United States and Macedon
+ ia\, sometimes over live stream improvisations\, or by simple e-mail.﻿
+LAST-MODIFIED:20150129T183056Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Echo Starship at Time Vault - A 5th Ann. Party for Devokan Trust
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150203T210000Z
+DTEND:20150203T220000Z
+DTSTAMP:20151007T190358Z
+UID:89ujb3353q23pto2ra65aqi6ms@google.com
+CREATED:20150114T214344Z
+DESCRIPTION:Kevin M. Thomas\, FUN is his middle name. He just spells it fun
+ ny. Originals and covers\, some times known for duo-streaming shows with an
+  amazing cast of characters and artists. Either way\, Solo or duo Kevin alw
+ ays has his trusty goat by his side. George is the cutest thing on the inte
+ rnet! Why\, he'll tell you that himself!\n\ngrid.kitely.com:8002:Thyilea
+LAST-MODIFIED:20150129T182815Z
+LOCATION:Wizards Retreat on Thyilea Region\, Kitely Grid 
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Kevin M. Thomas at Wizards Retreat
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150203T200000Z
+DTEND:20150203T210000Z
+DTSTAMP:20151007T190358Z
+UID:9ii4dfea5ajl993r78ckb6a81o@google.com
+CREATED:20150105T040914Z
+DESCRIPTION:Urban folk and blues from the Bay Area of San Francisco\, Calif
+ ornia. Joe is a skilled finger-picking style guitarist who also plays the b
+ ottle neck slide and harmonica as well. Joe will sometimes cut loose after 
+ setting a rhythm track on live looping equipment. Live\, your requests are 
+ welcomed. ﻿\n\nThe Sun & Moon Group's Wizards Retreat!\ngrid.kitely.com:800
+ 2:Thyilea
+LAST-MODIFIED:20150129T182808Z
+LOCATION:Thyilea Region\, Kitely Grid
+SEQUENCE:3
+STATUS:CONFIRMED
+SUMMARY:LIVE Performance: Joe Rizzo
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150203T190000Z
+DTEND:20150203T200000Z
+DTSTAMP:20151007T190358Z
+UID:qul5g8m88omo6140grb8pa7eg4@google.com
+CREATED:20150114T192215Z
+DESCRIPTION:Born and raised in rural Texas\, Matthew spent 10 years navigat
+ ing the murky waters of the North Texas music scene in a variety of rock ba
+ nds. He moved to New York in 2002 to begin a solo career as the matthew sho
+ w\, eventually moving operations back to the Dallas/Fort Worth area in 2006
+  due to hipster fatigue.\n\nHis songs have been featured on several seasons
+  of the PBS series Roadtrip Nation\, and on National Public Radio's All Son
+ gs Considered.\n\nHe performs regularly as Matthew Perreault in the virtual
+  world Second Life\, where his live concerts draw fans from around the real
+  world and throughout the metaverse.\n\ngrid.kitely.com:8002:Thyilea
+LAST-MODIFIED:20150129T182759Z
+LOCATION:grid.kitely.com:8002:Thyilea
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Live Event: Matthew Broyles at Wizards Retreat
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150129T210000Z
+DTEND:20150129T220000Z
+DTSTAMP:20151007T190358Z
+UID:2i94qdak0l7cmjvgd8epb525e8@google.com
+CREATED:20150118T115621Z
+DESCRIPTION:A Virtual Learning Series class on basic clothing creation in P
+ hotoshop. Free shirt and sock templates will be included.
+LAST-MODIFIED:20150126T112845Z
+LOCATION:Hypergrid Academy grid.kitely.com:8002:Hypergrid Academy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:VLS - Photoshop Clothing Creation - Using Templates
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150214T170000Z
+DTEND:20150214T180000Z
+DTSTAMP:20151007T190358Z
+UID:2lhbtt3hvkr5frtg0ikt3jphd8@google.com
+CREATED:20150120T044601Z
+DESCRIPTION:The world of James Cameron's Avatar - a young man named Jake be
+ comes part of an exploration team to the planet Pandora\, inhabited by the 
+ exotic Na'vi people. Scientists have created an avatar\, a body that looks 
+ like a Na'vi\, but is operated by a human's mind - Jake's mind. All Jake ha
+ s ever wanted is something worth fighting for. Now\, in the Na'vi people an
+ d their world Jake has found something worth fighting for\, and worth lovin
+ g.\n
+LAST-MODIFIED:20150120T044601Z
+LOCATION:Elven Forest at Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:AVATAR - A Love Story
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150118T200000Z
+DTEND:20150118T220000Z
+DTSTAMP:20151007T190358Z
+UID:gd1oc7c7pblqqmfg6q31gsfpu8@google.com
+CREATED:20150118T115922Z
+DESCRIPTION:Come learn to develop and manage non-player character avatars f
+ or your roleplay\, story build\, or just as a fun addition to your region. 
+ \n\nLed by Nara M\nhttp://www.narasnook.com/\nNara's Nook Grid\, Default Re
+ gion Greyville\nworld.narasnook.com:8900:greyville 
+LAST-MODIFIED:20150118T115922Z
+LOCATION:Nara's Nook Grid
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Creating and Managing NPCs
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150226T210000Z
+DTEND:20150226T220000Z
+DTSTAMP:20151007T190358Z
+UID:6dp49ueh0i05dbjn18eetlosmo@google.com
+CREATED:20150118T115844Z
+DESCRIPTION:An open discussion on how to bring more creators into opensim g
+ rids.
+LAST-MODIFIED:20150118T115844Z
+LOCATION:Hypergrid Academy grid.kitely.com:8002:Hypergrid Academy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:VLS - Bringing Creators into Opensim Grids
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150219T210000Z
+DTEND:20150219T220000Z
+DTSTAMP:20151007T190358Z
+UID:f6e0hljb0qhgbfrpf2nj03l5is@google.com
+CREATED:20150118T115837Z
+DESCRIPTION:A very basic introduction to building.
+LAST-MODIFIED:20150118T115838Z
+LOCATION:Hypergrid Academy grid.kitely.com:8002:Hypergrid Academy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:VLS - Basic Building
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150205T210000Z
+DTEND:20150205T220000Z
+DTSTAMP:20151007T190358Z
+UID:0q096eqo61shdu7mj2vrf4v8r4@google.com
+CREATED:20150118T115633Z
+DESCRIPTION:An introduction to basic roleplaying skills and character creat
+ ion in virtual worlds.
+LAST-MODIFIED:20150118T115633Z
+LOCATION:Hypergrid Academy grid.kitely.com:8002:Hypergrid Academy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:VLS - Introduction to Roleplaying
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150124T200000Z
+DTEND:20150124T210000Z
+DTSTAMP:20151007T190358Z
+UID:go0vn0vgeekf99ennbdhmjpjso@google.com
+CREATED:20150106T030403Z
+DESCRIPTION:(Repeat) Seanchai Library continues its presentation of F. Scot
+ t Fitzgerald's "Great American Novel" of illusions\, delusions\, romance\, 
+ and the decay of the american Dream in the Post- World War i "Jazz Age."  P
+ resented Live in Voice. 
+LAST-MODIFIED:20150112T061941Z
+LOCATION:EXPLORESeanchai
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:THE GREAT GATSBY ~ Part 3
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20150107T150000
+DTEND;TZID=America/Chicago:20150107T170000
+RRULE:FREQ=WEEKLY;WKST=MO;BYDAY=WE;UNTIL=20150107T210000Z
+EXDATE;TZID=America/Chicago:20150107T150000
+DTSTAMP:20151007T190358Z
+UID:78ic5vfj0juge0savnjhf60c7c@google.com
+CLASS:PUBLIC
+CREATED:20150107T012253Z
+DESCRIPTION:Wednesdays at 1 pm California time  \n\nThe movers and shakers 
+ of the Kitely community get together to move and shake. You are welcome to 
+ join in\, moving and shaking as you please.   Usually Ilan Tochner\, the CE
+ O of Kitely takes the lead\, updating us on current developments in Kitely 
+ and taking suggestions from the community.    This group functions like a C
+ hamber of Commerce for Kitely.\n\nWeb:\nhttp://www.kitely.com/virtual-world
+ /Ilan-Tochner/Kitely-Welcome-Center\nHop:\nhop://osgrid.kitely.com:8002/Kit
+ ely Welcome Center/127/34/24\nGrid \ngrid.kitely.com:8002:Kitely Welcome Ce
+ nter
+LAST-MODIFIED:20150107T180733Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Kitely Community Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150131T190000Z
+DTEND:20150131T200000Z
+DTSTAMP:20151007T190358Z
+UID:tagi43kidg3or3pi9bh30pukq0@google.com
+CREATED:20150107T161819Z
+DESCRIPTION:Streaming from hot and steamy state of Florida\, SingerGirl Mod
+ e brings you a variety of music to soothe your soul. Sultry Jazz and Love S
+ ongs set an intimate mood. High energy Rock\, Blues and Country Fun too. \n
+ \ngrid.kitely.com:8002:Thyilea\n\nhttp://singergirl.com/
+LAST-MODIFIED:20150107T161819Z
+LOCATION:grid.kitely.com:8002:Thyilea
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LIVE Performance: SingerGirl at Wizards Retreat
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20150108T170000
+DTEND;TZID=America/Chicago:20150108T180000
+RRULE:FREQ=WEEKLY;UNTIL=20150115T225959Z;WKST=SU;BYDAY=TH
+DTSTAMP:20151007T190358Z
+UID:anbh70bch0988bpfdee9iro97c@google.com
+CREATED:20150107T153605Z
+DESCRIPTION:Contact Kat Lemieux for info
+LAST-MODIFIED:20150107T154224Z
+LOCATION:grid.kitely.com:8002/ISM2
+SEQUENCE:1
+STATUS:TENTATIVE
+SUMMARY:ISM Metadata Workshop
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150110T170000Z
+DTEND:20150110T180000Z
+DTSTAMP:20151007T190358Z
+UID:qo0hbi2qtd3770pnuvvk347110@google.com
+CREATED:20141227T224432Z
+DESCRIPTION:Faeries\, or creatures like them\, can be found the world over 
+ - benevolent and terrifying\, charming and exasperating\, shifting shape fr
+ om country to country\, story to story\, and moment to moment. Tonight join
+  us for a new light on the wealth of faery lore and literature from some of
+  today's finest writers. Stories in Live Voice!\n\nPreview at:  http://bit.
+ ly/bSpZaB
+LAST-MODIFIED:20150107T153716Z
+LOCATION:In the Glen at Seanchai Library Homeworld
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:THE FAIRY REEL - Tales from the Twilight Realm with Shandon Loring
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20140918T170000
+DTEND;TZID=America/Chicago:20140918T180000
+RRULE:FREQ=WEEKLY;UNTIL=20150108T225959Z;WKST=SU;BYDAY=TH
+EXDATE;TZID=America/Chicago:20150101T170000
+EXDATE;TZID=America/Chicago:20141225T170000
+EXDATE;TZID=America/Chicago:20141218T170000
+EXDATE;TZID=America/Chicago:20141211T170000
+DTSTAMP:20151007T190358Z
+UID:3kfotifubtsd71l046rga9mku4@google.com
+CREATED:20140910T000034Z
+DESCRIPTION:Contact Kat Lemieux for info
+LAST-MODIFIED:20150107T153602Z
+LOCATION:grid.kitely.com:8002/ISM2
+SEQUENCE:2
+STATUS:TENTATIVE
+SUMMARY:ISM Metadata Workshop
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20140312T150000
+DTEND;TZID=America/Chicago:20140312T170000
+DTSTAMP:20151007T190358Z
+UID:qm6ck22cjk2ntsoqba05b871n0@google.com
+RECURRENCE-ID;TZID=America/Chicago:20140312T150000
+CLASS:PUBLIC
+CREATED:20140220T025537Z
+DESCRIPTION:Wednesdays at 1 pm California time  \n\nThe movers and shakers 
+ of the Kitely community get together to move and shake. You are welcome to 
+ join in\, moving and shaking as you please.   Usually Ilan Tochner\, the CE
+ O of Kitely takes the lead\, updating us on current developments in Kitely 
+ and taking suggestions from the community.    \n\nWeb:\nhttp://www.kitely.c
+ om/virtual-world/Ilan-Tochner/Kitely-Welcome-Center\nHop:\nhop://osgrid.kit
+ ely.com:8002/Kitely Welcome Center/127/34/24\n\nToday's topics as announced
+  by Ilan:\nWe'll start with a status update about the Kitely Market Hypergr
+ id Delivery System beta\, our ongoing logo redesign contest and the Kitely 
+ Welcome Center update project.\n\nWe'll then discuss your feedback and feat
+ ure requests.\n\nIf you haven't seen this already please view:\n1) Our logo
+  design contest in 99designs: http://www.kitely.com/forums/viewtopic.php?f=
+ 12&t=1257\n2) The Kitely Welcome Center update project: http://www.kitely.c
+ om/forums/viewtopic.php?f=12&t=1259
+LAST-MODIFIED:20150107T012251Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Kitely Community Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20140305T150000
+DTEND;TZID=America/Chicago:20140305T170000
+DTSTAMP:20151007T190358Z
+UID:qm6ck22cjk2ntsoqba05b871n0@google.com
+RECURRENCE-ID;TZID=America/Chicago:20140305T150000
+CLASS:PUBLIC
+CREATED:20140220T025537Z
+DESCRIPTION:Wednesdays at 1 pm California time  \n\nThe movers and shakers 
+ of the Kitely community get together to move and shake. You are welcome to 
+ join in\, moving and shaking as you please.   Usually Ilan Tochner\, the CE
+ O of Kitely takes the lead\, updating us on current developments in Kitely 
+ and taking suggestions from the community.    \n\nWeb:\nhttp://www.kitely.c
+ om/virtual-world/Ilan-Tochner/Kitely-Welcome-Center\nHop:\nhop://osgrid.kit
+ ely.com:8002/Kitely Welcome Center/127/34/24\n\nIlan announced in the formu
+ m: \nToday's Kitely Community Meeting will be held at 1:00pm PST in Kitely 
+ Welcome Center.\n\nWe'll start with a status update about the development o
+ f the Kitely Market Hypergrid Delivery System\, our ongoing logo redesign c
+ ontest and the Kitely Welcome Center update project.\n\nWe'll then discuss 
+ your feedback and feature requests.\n\nIf you haven't seen this already ple
+ ase view:\n1) Our logo design contest in 99designs: http://www.kitely.com/f
+ orums/viewtopic.php?f=12&t=1257\n2) The Kitely Welcome Center update projec
+ t: http://www.kitely.com/forums/viewtopic.php?f=12&t=1259
+LAST-MODIFIED:20150107T012251Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Kitely Community Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20140226T150000
+DTEND;TZID=America/Chicago:20140226T170000
+DTSTAMP:20151007T190358Z
+UID:qm6ck22cjk2ntsoqba05b871n0@google.com
+RECURRENCE-ID;TZID=America/Chicago:20140226T150000
+CLASS:PUBLIC
+CREATED:20140220T025537Z
+DESCRIPTION:Wednesdays at 1 pm California time  \n\nThe movers and shakers 
+ of the Kitely community get together to move and shake. You are welcome to 
+ join in\, moving and shaking as you please.   Usually Ilan Tochner\, the CE
+ O of Kitely takes the lead\, updating us on current developments in Kitely 
+ and taking suggestions from the community.    \n\nWeb:\nhttp://www.kitely.c
+ om/virtual-world/Ilan-Tochner/Kitely-Welcome-Center\nHop:\nhop://osgrid.kit
+ ely.com:8002/Kitely Welcome Center/127/34/24\n\nTopics today as annopunced 
+ by Ilan:\nWe'll start with a status update about the development of the Kit
+ ely Market Hypergrid Delivery System.\nNext we'll discuss our upcoming mark
+ eting push and the steps we intend to take in preparation for it.\nWe'll th
+ en discuss your feedback and feature requests.\n\nIf you haven't seen this 
+ already\, please view our logo design contest in 99designs: http://www.kite
+ ly.com/forums/viewtopic.php?f=12&t=1257
+LAST-MODIFIED:20150107T012251Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Kitely Community Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20140219T150000
+DTEND;TZID=America/Chicago:20140219T170000
+RRULE:FREQ=WEEKLY;BYDAY=WE;UNTIL=20140521T045959Z
+DTSTAMP:20151007T190358Z
+UID:qm6ck22cjk2ntsoqba05b871n0@google.com
+CLASS:PUBLIC
+CREATED:20140220T025537Z
+DESCRIPTION:Wednesdays at 1 pm California time  \n\nThe movers and shakers 
+ of the Kitely community get together to move and shake. You are welcome to 
+ join in\, moving and shaking as you please.   Usually Ilan Tochner\, the CE
+ O of Kitely takes the lead\, updating us on current developments in Kitely 
+ and taking suggestions from the community.    \n\nWeb:\nhttp://www.kitely.c
+ om/virtual-world/Ilan-Tochner/Kitely-Welcome-Center\nHop:\nhop://osgrid.kit
+ ely.com:8002/Kitely Welcome Center/127/34/24
+LAST-MODIFIED:20150107T012251Z
+LOCATION:
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Kitely Community Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Chicago:20140521T150000
+DTEND;TZID=America/Chicago:20140521T170000
+RRULE:FREQ=WEEKLY;UNTIL=20150107T205959Z;WKST=MO;BYDAY=WE
+DTSTAMP:20151007T190358Z
+UID:aag5cgpk9bntd2juk1di6b71vk@google.com
+CLASS:PUBLIC
+CREATED:20140220T025537Z
+DESCRIPTION:Wednesdays at 1 pm California time  \n\nThe movers and shakers 
+ of the Kitely community get together to move and shake. You are welcome to 
+ join in\, moving and shaking as you please.   Usually Ilan Tochner\, the CE
+ O of Kitely takes the lead\, updating us on current developments in Kitely 
+ and taking suggestions from the community.    This group functions like a C
+ hamber of Commerce for Kitely.\n\nWeb:\nhttp://www.kitely.com/virtual-world
+ /Ilan-Tochner/Kitely-Welcome-Center\nHop:\nhop://osgrid.kitely.com:8002/Kit
+ ely Welcome Center/127/34/24\nGrid \ngrid.kitely.com:8002:Kitely Welcome Ce
+ nter
+LAST-MODIFIED:20150107T012251Z
+LOCATION:
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Kitely Community Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150117T200000Z
+DTEND:20150117T210000Z
+DTSTAMP:20151007T190358Z
+UID:llsida9557g2gbjjvrbild3820@google.com
+CREATED:20150105T045724Z
+DESCRIPTION:(Repeat) The inaugural reading from F. Scott Fitzgerald's "Grea
+ t American Novel" of unrequited love and the decay of the American Dream in
+  the wild "Jazz Age" years after World War I.  \n\nPart 1 of the novel\, pr
+ esented live in voice.
+LAST-MODIFIED:20150106T030935Z
+LOCATION:EXPLORESeanchai
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:THE GREAT GATSBY - Part 1
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150119T210000Z
+DTEND:20150119T220000Z
+DTSTAMP:20151007T190358Z
+UID:vg19v0fuc539rfk1h3m3lvcoao@google.com
+CREATED:20150106T030227Z
+DESCRIPTION:Seanchai Library continues its presentation of F. Scott Fitzger
+ ald's "Great American Novel" of illusions\, delusions\, romance\, and the d
+ ecay of the american Dream in the Post- World War i "Jazz Age."  Presented 
+ Live in Voice.
+LAST-MODIFIED:20150106T030227Z
+LOCATION:EXPLORE Seanchai
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE GREAT GATSBY ~ Part 2
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150115T200000Z
+DTEND:20150115T210000Z
+DTSTAMP:20151007T190358Z
+UID:1ko4novmdaj039illpvehige7s@google.com
+CREATED:20150105T213227Z
+DESCRIPTION:Echo Starship aka Amplidyne Effect is a trippy ambiental\, expe
+ rimental\, noise\, post-rock\, free improvisation music project from Skopje
+ \, Macedonia. Live Ambient improvisations. One of the originators of Ambien
+ t music in virtual reality\; Echo Starship\, trickster and gifted artist.\n
+ \ngrid.kitely.com:8002:Thyilea\n\nhttps://www.facebook.com/AmplidyneEffect?
+ sk=wall﻿
+LAST-MODIFIED:20150105T235247Z
+LOCATION:Thyilea Region 
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Live Performance: Echo Starship at Giza
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150115T210000Z
+DTEND:20150115T220000Z
+DTSTAMP:20151007T190358Z
+UID:ms4askjh1o3bmg35ejsjmkin44@google.com
+CREATED:20150105T212904Z
+DESCRIPTION:DeceptionsDigital (DD) found her passion in creating electronic
+  music. DD started with simple sampler software. Mixing together pre-record
+ ed melodies and samples she improved her knowledge about song structure and
+  music theory.\n\nNow she is mixing and mastering sounds and using a midi k
+ eyboard with professional composing software. She makes her own samples and
+  field recordings with her own sound creation and resampling. This kind of 
+ electronic music is a mix of genres of electronic music like dubstep\, mini
+ mal house\, trance and ambient.\n\ngrid.kitely.com:8002:Thyilea
+LAST-MODIFIED:20150105T212904Z
+LOCATION:Thyilea Region   
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Live Performance: DeceptionsDigital at Giza
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150117T030000Z
+DTEND:20150117T040000Z
+DTSTAMP:20151007T190358Z
+UID:2fc6n68ta72r5qems5gm3kimrs@google.com
+CREATED:20150105T045534Z
+DESCRIPTION:The inaugural reading from F. Scott Fitzgerald's "Great America
+ n Novel" of unrequited love and the decay of the American Dream in the wild
+  "Jazz Age" years after World War I.  \n\nPart 1 of the novel\, presented l
+ ive in voice.
+LAST-MODIFIED:20150105T045534Z
+LOCATION:EXPLORESeanchai
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE GREAT GATSBY Part 1
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150115T200000Z
+DTEND:20150115T210000Z
+DTSTAMP:20151007T190358Z
+UID:c489s6gb3fgcm4r52fq4n418c0@google.com
+CREATED:20150105T045028Z
+DESCRIPTION:Seanchai Library's newest project\, EXPLORE The Stories Behind 
+ the Art\, opens with its debut work "The Great Gatsby" for Tacoma Little Th
+ eatre. The region will open to the public at Noon today with live voice pro
+ gramming beginning tomorrow (Friday)
+LAST-MODIFIED:20150105T045028Z
+LOCATION:EXPLORESeanchai
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:EXPLORE The Great Gatsby Opens!
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150110T020000Z
+DTEND:20150110T030000Z
+DTSTAMP:20151007T190358Z
+UID:kqmqfqdnphru42dn3u85505ppc@google.com
+CREATED:20141228T223022Z
+DESCRIPTION:CHRISTMAS GHOSTS: A Collection of Spooky Tales for a Winter's E
+ ve\n"Scary ghost stories and tales of the glories of Christmas' long long a
+ go."\n\ngrid.kitely.com:8002:Seanchai
+LAST-MODIFIED:20150104T030125Z
+LOCATION:Seanchai Library's Christmas Island
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Ghosts of Christmas
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150117T170000Z
+DTEND:20150117T180000Z
+DTSTAMP:20151007T190358Z
+UID:1rdn193os578rhut4qcciqp0tc@google.com
+CREATED:20150103T225940Z
+DESCRIPTION:Dexter Green is a middle-class boy who aspires to be part of th
+ e "old money" elite. \nLike the novel 'The Great Gatsby'\, for which this t
+ ale Fitzgerald stated served as a rough draft\, tonight's story examines a 
+ boy whose ambitions become identified with a selfish rich girl.\n\nAuthor: 
+ F. Scott Fitzgerald\nISBN: 978-1840227048
+LAST-MODIFIED:20150103T230040Z
+LOCATION:FALLING WATER at Seanchai Library
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:WINTER DREAMS
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150101T210000Z
+DTEND:20150101T220000Z
+DTSTAMP:20151007T190358Z
+UID:hhbn25rggr1o14cta6etpkmgp4@google.com
+CREATED:20141229T200915Z
+DESCRIPTION:DeceptionsDigital (DD) found her passion in creating electronic
+  music. DD started with simple sampler software. Mixing together pre-record
+ ed melodies and samples she improved her knowledge about song structure and
+  music theory.\n\nNow she is mixing and mastering sounds and using a midi k
+ eyboard with professional composing software. She makes her own samples and
+  field recordings with her own sound creation and resampling. This kind of 
+ electronic music is a mix of genres of electronic music like dubstep\, mini
+ mal house\, trance and ambient.\n\ngrid.kitely.com:8002:Thyilea
+LAST-MODIFIED:20141229T201657Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Live Performance! DeceptionsDigital At Wizards Retreat
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150101T193000Z
+DTEND:20150101T200000Z
+DTSTAMP:20151007T190358Z
+UID:9p3q6h898cth2m97hgsmmaohu8@google.com
+CREATED:20141229T201604Z
+DESCRIPTION:SSpooky Lane comes to Wizards Retreat with over 30 years of liv
+ e and recording experience. She'll offers a 30 minute debut set of seasonal
+  covers and original electronica. This is her first set in virtual reality.
+  Let's give her a warm welcome. \n\ngrid.kitely.com:8002:Thyilea
+LAST-MODIFIED:20141229T201604Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Live Performance! SSpookie Lane at Wizards Retreat
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20150101T200000Z
+DTEND:20150101T210000Z
+DTSTAMP:20151007T190358Z
+UID:t6g2u7tu962fd6r6649bn3im04@google.com
+CREATED:20141222T180103Z
+DESCRIPTION:Echo Starship aka Amplidyne Effect is a trippy ambiental\, expe
+ rimental\, noise\, post-rock\, free improvisation music project from Skopje
+ \, Macedonia. Live Ambient improvisations. One of the originators of Ambien
+ t music in virtual reality\; Echo Starship\, trickster and gifted artist.\n
+ \ngrid.kitely.com:8002:Thyilea\n\nhttps://www.facebook.com/AmplidyneEffect?
+ sk=wall﻿
+LAST-MODIFIED:20141229T200936Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Echo Starship at Wizards Retreat
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141218T210000Z
+DTEND:20141218T230000Z
+DTSTAMP:20151007T190358Z
+UID:o8eetn72u10e47iar184so3ivg@google.com
+CREATED:20141210T222656Z
+DESCRIPTION: \nEcho Starship! 12PM PST\n\nLive Ambient improvisations. One 
+ of the originators of Ambient music in virtual reality. Echo Starship\, tri
+ ckster and gifted artist.\n\nDeceptions Digital 1PM PST\n\nFresh music made
+  daily! DD is prolific and has a sound all her own. Ambient\, Trance\, Hous
+ e\, and her own fusion of all the above and more.\n\nPlease invite friends 
+ and family. Invite your enemies and they will become friends! The right peo
+ ple will be there. But only if we tell them about it.\n\ngrid.kitely.com:80
+ 02:Thyilea\n\nhttp://www.kitely.com/virtual-world/Roxy-Gellar/Thyilea﻿
+LAST-MODIFIED:20141210T222656Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Echo Starship (12PM) & DeceptionsDigital (1PM) PST
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141205T030000Z
+DTEND:20141205T040000Z
+DTSTAMP:20151007T190358Z
+UID:ggnpp7rodd6fukknng6ankqj98@google.com
+CREATED:20141205T025158Z
+DESCRIPTION:Ghostly Christmas tales are ideal for filling cozy winter eveni
+ ngs with delectable shivers and chills. So pour your eggnog and settle in b
+ y the fire for a jolly haunted night at the Seanchai Library!\n\nAuthor: Ma
+ rk Onspaugh\nISBN: 978-1481014427
+LAST-MODIFIED:20141205T025158Z
+LOCATION:HEARTHSIDE AT THE SEANCHAI LIBRARY
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CHRISTMAS GHOST STORIES - Winter Tales
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141206T170000Z
+DTEND:20141206T183000Z
+DTSTAMP:20151007T190358Z
+UID:ts2gu2ivj97m7j2ov7lbho2u2c@google.com
+CREATED:20141202T032057Z
+DESCRIPTION:Shandon and Cale gather hearth side at Fallingwater to ring in 
+ the month with some spooky holiday tales - perfect for a hot cup of comfort
+  and relaxing by the fire.\n\nPresented Live in Voice.
+LAST-MODIFIED:20141202T032057Z
+LOCATION:Fallingwater in the Seanchai Homeworld
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CHRISTMAS GHOST STORIES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141227T200000Z
+DTEND:20141227T210000Z
+DTSTAMP:20151007T190358Z
+UID:6i3tka356dgshqafmh3vd21pk0@google.com
+CREATED:20141126T163419Z
+DESCRIPTION:Frogg Marlowe (Jeremy Works) and Jaycatt Nico (Marc lePine) gre
+ w up just down the street from each other in the small northwestern town of
+  Eugene\, Oregon. Together they are known as Effinjay. Their repertoire con
+ sists of mostly original material and a few selected covers\, composed of a
+  mix of piano\, guitar\, vocals\, and harmonica. Their eclectic mix has bee
+ n described as acoustic organic folkjazz.\n\nhttp://www.kitely.com/virtual-
+ world/Roxy-Gellar/Thyilea\n\ngrid.kitely.com:8002:Thyilea
+LAST-MODIFIED:20141126T163420Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Effinjay at Wizards Retreat
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141219T210000Z
+DTEND:20141219T220000Z
+DTSTAMP:20151007T190358Z
+UID:brf5r5fnqk7h9nttgb6edld5fs@google.com
+CREATED:20141126T162545Z
+DESCRIPTION:Scofi Robson\, one of the most respected names in virtual reali
+ ty brings his one of a kind performance to Kitely! Joining Scofi on stage i
+ s his partner and offical dancer Zany Foxtrot!\n\nhttp://www.kitely.com/vir
+ tual-world/Roxy-Gellar/Thyilea\n\ngrid.kitely.com:8002:Thyilea
+LAST-MODIFIED:20141126T162545Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Scofi Robson at Wizards Retreat
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141208T210000Z
+DTEND:20141208T220000Z
+DTSTAMP:20151007T190358Z
+UID:7kkl5vp4k89au88irnpsvf0kns@google.com
+CREATED:20141126T162247Z
+DESCRIPTION:Morlita Quan will spin her original works and samples for the o
+ pening of Wizards Retreat - Monday\, 8 December from 1PM to 3PM SLT!\n\nhtt
+ p://www.kitely.com/virtual-world/Roxy-Gellar/Thyilea﻿\n\ngrid.kitely.com:80
+ 02:Thyilea
+LAST-MODIFIED:20141126T162309Z
+LOCATION:http://www.kitely.com/virtual-world/Roxy-Gellar/Thyilea
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Morlita Quan at Wizards Retreat
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141217T200000Z
+DTEND:20141217T213000Z
+DTSTAMP:20151007T190358Z
+UID:7f73m2cekcgu0f1f9tlkkvf0gk@google.com
+CREATED:20141122T170916Z
+DESCRIPTION:Hypergrid Safari visits Seanchai's Winterworld for a taste of a
+  holiday classic - a selection from Charles Dickens' A CHRISTMAS CAROL . . 
+ . Presented Live in Voice.\n\nNOTE: Time to be confirmed.
+LAST-MODIFIED:20141122T170932Z
+LOCATION:Seanchia Library - Winterworld
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:HYPERGRID SAFARI @ Seanchai Lib
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20141129T100000
+DTEND;TZID=America/Los_Angeles:20141129T110000
+DTSTAMP:20151007T190358Z
+UID:jdov627cekngmnocmbn0maru9k@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20141129T100000
+CREATED:20141103T045110Z
+DESCRIPTION:Caledonia shares one of her favorite authors and one of her fav
+ orite series: C.S. Forester's HORATIO HORNBLOWER series.\n\nIn 1927\, C.S. 
+ Forester purchased three volumes of The Naval Chronicle from 1790 to 1820. 
+ For the Chronicle\, officers of the Royal Navy wrote articles on strategy\,
+  seamanship\, gunnery\, and other professional topics of interest to their 
+ colleagues. The Chronicle for those years covered the wars with Napoleon. R
+ eading these volumes and traveling by freighter from California to Central 
+ America allowed the germination of the character Horatio Hornblower as a me
+ mber of the Royal Navy in the late eighteenth century. By the time Forester
+ 's journey brought him home to England\, the former medical student-turned-
+ writer had plotted Beat to Quarters\, and it was published in 1937. \n\nPre
+ sented live i voice.
+LAST-MODIFIED:20141122T170416Z
+LOCATION:Seanchai Library - Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:More HORNBLOWER ADVENTURES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141222T200000Z
+DTEND:20141222T210000Z
+DTSTAMP:20151007T190358Z
+UID:22dko96j41g1go7in5jj9aqo7k@google.com
+CREATED:20141122T165736Z
+DESCRIPTION:Caledonia shares tales from the Writings of Isaac Bashevis Sing
+ er\, as we celebrate the vital presence of light and miracles in the world.
+   Presented live in voice.
+LAST-MODIFIED:20141122T165736Z
+LOCATION:Seanchai Homeworld
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:HANUKKAH TALES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20141213T090000
+DTEND;TZID=America/Los_Angeles:20141213T110000
+RRULE:FREQ=WEEKLY;COUNT=2;BYDAY=SA
+DTSTAMP:20151007T190358Z
+UID:o08sutrci2tlggsgabuuibkjlc@google.com
+CREATED:20141122T165307Z
+DESCRIPTION:Caledonia and Shandon present a duet reading of Dicken's classi
+ c holiday Ghost story. Come cozy up to the fire and listen to the amazing j
+ ourney whereby the soul of Ebenezer Scrooge is redeemed.  Presented live in
+  Voice.
+LAST-MODIFIED:20141122T165410Z
+LOCATION:Seanchai Library - Winterworld
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:A CHRISTMAS CAROL
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141129T170000Z
+DTEND:20141129T180000Z
+DTSTAMP:20151007T190358Z
+UID:ku1fts1jtpm5ku6jvsj52bks8s@google.com
+CREATED:20141122T054023Z
+DESCRIPTION:When a young woman is sequestered at a Scottish castle\, she ac
+ cidentally completes an ancient ritual that summons a mythical prince\, who
+  turns out to be everything she's ever desired.\n\nAuthor: Melanie Jackson\
+ nASIN: B003DYGO3W
+LAST-MODIFIED:20141122T054023Z
+LOCATION:Undersea at Seanchai Homeworld
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE SELKIE
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141122T170000Z
+DTEND:20141122T180000Z
+DTSTAMP:20151007T190358Z
+UID:g514t55b7kbvfkq8q6l60602rk@google.com
+CREATED:20141122T051955Z
+DESCRIPTION:Hidden within the caves off Iceland’s dark shore\, Aeva waits t
+ o take her place as the next ruler of the Mermaids. But when Aeva uses her 
+ potent and alluring song to save a drowning human\, she disrupts a delicate
+  balance.\n\nAuthor: Lyndsay Johnson\nASIN: B00JCZQUGM
+LAST-MODIFIED:20141122T051955Z
+LOCATION:Undersea at Seanchai Homeworld
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:FIRE OF THE SEA
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20141115T100000
+DTEND;TZID=America/Los_Angeles:20141115T110000
+RRULE:FREQ=WEEKLY;COUNT=3;BYDAY=SA
+DTSTAMP:20151007T190358Z
+UID:jdov627cekngmnocmbn0maru9k@google.com
+CREATED:20141103T045110Z
+DESCRIPTION:Caledonia shares one of her favorite authors and one of her fav
+ orite series: C.S. Forester's HORATIO HORNBLOWER series.\n\nIn 1927\, C.S. 
+ Forester purchased three volumes of The Naval Chronicle from 1790 to 1820. 
+ For the Chronicle\, officers of the Royal Navy wrote articles on strategy\,
+  seamanship\, gunnery\, and other professional topics of interest to their 
+ colleagues. The Chronicle for those years covered the wars with Napoleon. R
+ eading these volumes and traveling by freighter from California to Central 
+ America allowed the germination of the character Horatio Hornblower as a me
+ mber of the Royal Navy in the late eighteenth century. By the time Forester
+ 's journey brought him home to England\, the former medical student-turned-
+ writer had plotted Beat to Quarters\, and it was published in 1937. \n\nPre
+ sented live i voice.
+LAST-MODIFIED:20141103T045110Z
+LOCATION:Seanchai Library - Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BEAT TO QUARTERS
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141115T170000Z
+DTEND:20141115T180000Z
+DTSTAMP:20151007T190358Z
+UID:221pc7g623g7kltb9lilb03d7s@google.com
+CREATED:20141103T001609Z
+DESCRIPTION:A hauntingly beautiful tale of a legend\, a locket\, and a love
+  beyond time.\n\n531 a.d.: The tiny island of Kell is said to be enchanted\
+ , inhabited by an extraordinary creature who comforts shipwrecked sailors p
+ assing into the next world. Prince Aedan of the Isles believes in no such n
+ onsense—until he awakens on Kell itself and meets the sensuous siren who re
+ scued him from the sea.\n\nThis book contains three seductive love stories\
+ , three passionate couples\, all linked by one of the most romantic myths o
+ f all. Today we will introduce you to the first part of the first story.. a
+ nd hopefully 'wet' your appetite for more!\n\nAuthor: Shana Abe\nASIN: B001
+ VESKZ6
+LAST-MODIFIED:20141103T001609Z
+LOCATION:Undersea at Seanchai Homeworld
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE LAST MERMAID by Shana Abe
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20141004T100000
+DTEND;TZID=America/Los_Angeles:20141004T110000
+RRULE:FREQ=WEEKLY;BYDAY=SA;UNTIL=20141108T180000Z
+EXDATE;TZID=America/Los_Angeles:20141108T100000
+EXDATE;TZID=America/Los_Angeles:20141018T100000
+DTSTAMP:20151007T190358Z
+UID:8p6n8vluhs5j55m1q6fc1iepf4@google.com
+CREATED:20140923T032847Z
+DESCRIPTION:Caledonia shares selected tales from Neil Gaiman's Newbery Meda
+ l\,  the Carnegie Medal winning book\, which also is a Hugo Award Winner fo
+ r Best Novel.\n\nBod is an unusual boy who inhabits an unusual place—he's t
+ he only living resident of a graveyard. Raised from infancy by the ghosts\,
+  werewolves\, and other cemetery denizens\, Bod has learned the antiquated 
+ customs of his guardians' time as well as their ghostly teachings—such as t
+ he ability to Fade so mere mortals cannot see him.\n\nCan a boy raised by g
+ hosts face the wonders and terrors of the worlds of both the living and the
+  dead? And then there are being such as ghouls that aren't really one thing
+  or the other.\n\nPresented Live in voice.
+LAST-MODIFIED:20141101T161416Z
+LOCATION:Seanchai Library
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Selections from THE GRAVEYARD BOOK
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141025T160000Z
+DTEND:20141025T170000Z
+DTSTAMP:20151007T190358Z
+UID:v6hrjos5j0d5iatiqgsjg70a64@google.com
+CREATED:20140923T031229Z
+DESCRIPTION:Dark\, daring\, utterly haunting tales of lost lovers\, predato
+ ry demons\, and vengeful ghosts.\nfrom author John Connolly of Dublin\, Ire
+ land.\n\nToday:\nThe Ritual of the Bones\nThe Bridal Bed\nThe Man from the 
+ Second Fifteen\n\nStories in Live Voice\n\nAuthor: John Connolly\nISBN-13: 
+ 978-3548264127\n
+LAST-MODIFIED:20141025T225451Z
+LOCATION:Fire Circle at Seanchai Library Homeworld in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:NOCTURNES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141101T160000Z
+DTEND:20141101T170000Z
+DTSTAMP:20151007T190358Z
+UID:hfpejuk5subgtl60u26g3o7lh4@google.com
+CREATED:20141025T225312Z
+DESCRIPTION:Dark\, daring\, utterly haunting tales of lost lovers\, predato
+ ry demons\, and vengeful ghosts.\nfrom author John Connolly of Dublin\, Ire
+ land.\n\nToday:\nThe Cycle\nMiss Froom Vampire\n\nStories in Live Voice\n\n
+ Author: John Connolly\nISBN-13: 978-3548264127\n
+LAST-MODIFIED:20141025T225312Z
+LOCATION:Fire Circle at Seanchai Library Homeworld in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:NOCTURNES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141018T170000Z
+DTEND:20141018T180000Z
+DTSTAMP:20151007T190358Z
+UID:37f96m1pvfaa0oasogi2sdppsg@google.com
+CREATED:20141015T234242Z
+DESCRIPTION:Caledonia shares selected tales from Neil Gaiman's Newbery Meda
+ l\,  the Carnegie Medal winning book\, which also is a Hugo Award Winner fo
+ r Best Novel.\n\nBod is an unusual boy who inhabits an unusual place—he's t
+ he only living resident of a graveyard. Raised from infancy by the ghosts\,
+  werewolves\, and other cemetery denizens\, Bod has learned the antiquated 
+ customs of his guardians' time as well as their ghostly teachings—such as t
+ he ability to Fade so mere mortals cannot see him.\n\nCan a boy raised by g
+ hosts face the wonders and terrors of the worlds of both the living and the
+  dead? And then there are being such as ghouls that aren't really one thing
+  or the other.\n\nPresented Live in voice.
+LAST-MODIFIED:20141015T234242Z
+LOCATION:Seanchai Firecircle - Homeworld
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Selections from THE GRAVEYARD BOOK
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140928T160000Z
+DTEND:20140928T170000Z
+DTSTAMP:20151007T190358Z
+UID:qkj374i79vih8lcbnk5s020v98@google.com
+CREATED:20140923T025355Z
+DESCRIPTION:Dark\, daring\, utterly haunting tales of lost lovers\, predato
+ ry demons\, and vengeful ghosts.\nfrom author John Connolly of Dublin\, Ire
+ land.\n\nToday:\nDeep\, Dark Green\nNocturne\nThe Erlking\n\nStories in Liv
+ e Voice\n\nAuthor: John Connolly\nISBN-13: 978-3548264127
+LAST-MODIFIED:20140926T042152Z
+LOCATION:Fire Circle at Seanchai Library Homeworld in Kitely
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:NOCTURNES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141018T160000Z
+DTEND:20141018T170000Z
+DTSTAMP:20151007T190358Z
+UID:96o08h3i9la12o8rq8cbsaq42g@google.com
+CREATED:20140923T030438Z
+DESCRIPTION:Dark\, daring\, utterly haunting tales of lost lovers\, predato
+ ry demons\, and vengeful ghosts.\nfrom author John Connolly of Dublin\, Ire
+ land.\n\nToday:\nThe Shifting of the Sands\nThe New Daughter\n\nStories in 
+ Live Voice\n\nAuthor: John Connolly\nISBN-13: 978-3548264127\n
+LAST-MODIFIED:20140923T032252Z
+LOCATION:Fire Circle at Seanchai Library Homeworld in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:NOCTURNES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141011T160000Z
+DTEND:20141011T170000Z
+DTSTAMP:20151007T190358Z
+UID:b3lsvas0l1lh5nve49q35c66ns@google.com
+CREATED:20140923T025759Z
+DESCRIPTION:Dark\, daring\, utterly haunting tales of lost lovers\, predato
+ ry demons\, and vengeful ghosts.\nfrom author John Connolly of Dublin\, Ire
+ land.\n\nToday:\nMr. Grey's Folly\nThe Wakeford Abyss\n\nStories in Live Vo
+ ice\n\nAuthor: John Connolly\nISBN-13: 978-3548264127
+LAST-MODIFIED:20140923T032243Z
+LOCATION:Fire Circle at Seanchai Library Homeworld in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:NOCTURNES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20141004T160000Z
+DTEND:20141004T170000Z
+DTSTAMP:20151007T190358Z
+UID:9opr11prak3ujea67e1c36hqao@google.com
+CREATED:20140923T025600Z
+DESCRIPTION:Dark\, daring\, utterly haunting tales of lost lovers\, predato
+ ry demons\, and vengeful ghosts.\nfrom author John Connolly of Dublin\, Ire
+ land.\n\nTonight:\nThe Inn at Shillingford\nMr. Pettinger's Demon\n\nStorie
+ s in Live Voice\n\nAuthor: John Connolly\nISBN-13: 978-3548264127
+LAST-MODIFIED:20140923T032214Z
+LOCATION:Fire Circle at Seanchai Library Homeworld in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:NOCTURNES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140920T020000Z
+DTEND:20140920T030000Z
+DTSTAMP:20151007T190358Z
+UID:1ruijj1ae38prloni9157r8pns@google.com
+CREATED:20140918T132411Z
+DESCRIPTION:Ye scurvy dogs\, 'tis time to gather round and share a tale or 
+ two of salty old pirates and their wicked doings\, arrrrr!  Shandon and Cal
+ edonia will share both bloodcurdling and amusing yarns\, live in voice!  BY
+ OP - Bring Your Own Parrot!
+LAST-MODIFIED:20140918T132411Z
+LOCATION:Port Royal Pirate Cove - Seanchai Homeworld
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:TALK LIKE A PIRATE DAY!
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140920T160000Z
+DTEND:20140920T170000Z
+DTSTAMP:20151007T190358Z
+UID:m2374oscsp4l2qci8dfvtlc2rk@google.com
+CREATED:20140831T154130Z
+DESCRIPTION:Shandon shares stories and pseudo-history from the book The Pop
+ ol Vuh.\n\nStories Presented in Voice
+LAST-MODIFIED:20140913T232925Z
+LOCATION:Temple Island on the Seanchai Homeworld
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:POPUL VUH - Mythology of the Maya
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140920T210000Z
+DTEND:20140920T220000Z
+DTSTAMP:20151007T190358Z
+UID:rj22t6gbj45f6ajij46t6c4rco@google.com
+CLASS:PUBLIC
+CREATED:20140902T223810Z
+DESCRIPTION:RezMela Photography & Machinema Contest Awards Night @ ArtSpeak
+  Cafe' & Gallery. Music by DJ Cataplexia Numbers
+LAST-MODIFIED:20140913T200524Z
+LOCATION:https://kitely/region/Alternate%20Metaverse%202\,1/394/69/22
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:RezMela Contest Awards & Party @ ArtSpeak Cafe'
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140908T220000Z
+DTEND:20140908T230000Z
+DTSTAMP:20151007T190358Z
+UID:o2680m2m81mrsku2gbbefbp6dk@google.com
+CREATED:20140903T013524Z
+DESCRIPTION:Contact Kat Lemieux for info
+LAST-MODIFIED:20140903T013722Z
+LOCATION:grid.kitely.com:8002/ISM2
+SEQUENCE:1
+STATUS:TENTATIVE
+SUMMARY:ISM Metadata Workshop
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140907T200000Z
+DTEND:20140907T220000Z
+DTSTAMP:20151007T190358Z
+UID:sou1s6usr6o4q4ttmpeljurs78@google.com
+CLASS:PUBLIC
+CREATED:20140902T232317Z
+DESCRIPTION:ArtSpeak Cafe' & Art Gallery @ Alternate Metaverse - Celebratin
+ g our Grand Opening on Sunday- September 7th @ 1 PM Kitely Time.- PST.Both 
+ music AND art provided by Cataplexia Numbers & Mike Chase. Open to all- we 
+ hope to see you here!  ArtSpeak Cafe' will be hosting occasional Open Mic\,
+  Music\, Poetry\, Stories and a big wide mouthful of art! Explore the galle
+ ry above- Dance to the music below!
+LAST-MODIFIED:20140902T233609Z
+LOCATION:https://kitely/region/Alternate%20Metaverse%202\,1/394/69/22
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Grand Opening- ArtSpeak Cafe' & Art Gallery 1-3 Kitely Time
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140906T190000Z
+DTEND:20140906T210000Z
+DTSTAMP:20151007T190358Z
+UID:u4c1ggs1512ou134816qrsi51c@google.com
+CREATED:20140902T231921Z
+DESCRIPTION:Best Dressed Contest- Masks provided at the party!\nHosted by Q
+ ueer Citizen Project\n\nJoin us at the Palace on "Queer Citizens Events" si
+ m.\nSaturday\, September 6th from 12 noon - 2pm Kitely Time - PST  (3-5 Eas
+ tern\, 8-10 GMT)\nA musical feast provided by The Minstrel- DJ Cataplexia N
+ umbers!\nFor questions please contact your host\, Leighton Marjoram
+LAST-MODIFIED:20140902T233418Z
+LOCATION:https://kitely/region/Queer%20Citizen%20Events/155/113/342
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Masquerade Ball Celebrating Queer Citizens Launch 12-2 PST
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140913T160000Z
+DTEND:20140913T170000Z
+DTSTAMP:20151007T190358Z
+UID:mkhom599qfqhg0o1cuno303qj8@google.com
+CREATED:20140831T154032Z
+DESCRIPTION:Ireland is a land of romance. Pure and simple. Tumultuous\, bat
+ tle-rife history of clans\, territories and kingdoms\; A Pantheon of heroes
+ \, goddesses\, saints and magic to rival Rome's\; Legends of the most fanta
+ stical beasts and magical creatures ever recorded\; The Tuatha De Danann\, 
+ ancient gods of Eire with their beauty\, immense strength\, and immortality
+ . Irish legend and mythology are full of the ultimate heroes and the most r
+ omantic of stories. Tales and myths and romance - full of heroes\, chivalry
+ \, courtly love and adventure!\n\nStories Presented in Voice
+LAST-MODIFIED:20140831T154032Z
+LOCATION:Celticworld in Seanchai Kitely (use the hypergate at the LZ)
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:BEYOND THE VEIL
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140903T190000Z
+DTEND:20140903T200000Z
+DTSTAMP:20151007T190358Z
+UID:mu7vgdpjsl3o7bn7tr9ou1palo@google.com
+CREATED:20140831T153807Z
+DESCRIPTION:The Hypergrid Safari kicks off today's magical mystery tour wit
+ h a brief stop at the Seanchai Library in Kitley. to see where the pencils 
+ are kept and\, perhaps\, enjoy a story or two with Shandon Loring and Caled
+ onia Skytower.
+LAST-MODIFIED:20140831T153807Z
+LOCATION:Seanchai Homeworld in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:HG SAFARI Visits Seanchai Library In Kitely
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140906T160000Z
+DTEND:20140906T170000Z
+DTSTAMP:20151007T190358Z
+UID:7rf6k5pcqedbbe3j03mk9lebts@google.com
+ATTENDEE;CUTYPE=RESOURCE;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=Kitely E
+ vents;X-NUM-GUESTS=0:mailto:857iq9v0nfqrg3qmt4e00n53rc@group.calendar.googl
+ e.com
+CREATED:20140830T173923Z
+DESCRIPTION:For many years short essays were featured on the last non-cover
+  page of the Smithsonian Magazine.  Monthly "The Last Page" presented humor
+ ous\, and thought-provoking musings by some of the Smithsonian's most promi
+ nent contributors. Today we will share a variety of selections from Cale's 
+ "Last Page" file\, in the comfort of the Fallingwater living room.\n\nCaled
+ onia presents\, live in voice.\n\nhttp://www.kitely.com/search?q=seanchai\n
+ grid.kitely.com:8002:Seanchai
+LAST-MODIFIED:20140830T173934Z
+LOCATION:Fallingwater in the Seanchai Homeworld
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Selections from THE LAST PAGE
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140830T160000Z
+DTEND:20140830T170000Z
+DTSTAMP:20151007T190358Z
+UID:la6f62jdi7auktjlo1falfnvm4@google.com
+CREATED:20140826T023708Z
+DESCRIPTION:Individuals rewriting their own pasts. Brave souls safeguarding
+  the world today from yesterday. Fools tampering with Einstein's laws of ph
+ ysics. Stories exploring the wonders and perils of time travel\, and humani
+ ty at its best and worst.
+LAST-MODIFIED:20140826T023708Z
+LOCATION:Falling Water North Annex in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:(K) OUT OF TIME
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140831T160000Z
+DTEND:20140831T170000Z
+DTSTAMP:20151007T190358Z
+UID:gam2dqltadrqapm9b1ddti7nac@google.com
+CREATED:20140824T024846Z
+DESCRIPTION:Maurice Walsh is probably best known as the author of "The Quie
+ t Man"\, which was made into an award-winning feature film in 1951 starring
+  John Wayne and Maureen O'Hara.  Walsh wrote many tales of post Black & Tan
+  War Ireland\, all are political\, but mostly they are romances that go str
+ aight to the heart of modern Ireland.\n\nCaledonia presents from Walsh's wo
+ rks\, live in voice.\n\nhttp://www.kitely.com/search?q=seanchai\ngrid.kitel
+ y.com:8002:Seanchai
+LAST-MODIFIED:20140824T024846Z
+LOCATION:Near the White O'Morn Cottage on Glen Island - Seanchai Homeworld
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE HEART OF IRELAND - "The Red Girl" Concludes
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140823T160000Z
+DTEND:20140823T170000Z
+DTSTAMP:20151007T190358Z
+UID:58j1uhvg13esg4m65u3pnibhtg@google.com
+CREATED:20140819T143847Z
+DESCRIPTION:Maurice Walsh is probably best known as the author of "The Quie
+ t Man"\, which was made into an award-winning feature film in 1951 starring
+  John Wayne and Maureen O'Hara.  Walsh wrote many tales of post Black & Tan
+  War Ireland\, all are political\, but mostly they are romances that go str
+ aight to the heart of modern Ireland.\n\nCaledonia presents from Walsh's wo
+ rks\, live in voice.\n\nhttp://www.kitely.com/search?q=seanchai\ngrid.kitel
+ y.com:8002:Seanchai
+LAST-MODIFIED:20140819T143847Z
+LOCATION:Seanchai Homeworld - Glen Island - Near the White O'Morn Cottage
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:THE HEART OF IRELAND - The Stories of Maurice Walsh
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140803T190000
+DTEND;TZID=America/New_York:20140803T200000
+RRULE:FREQ=MONTHLY;UNTIL=20140803T225959Z;BYDAY=1SU
+DTSTAMP:20151007T190358Z
+UID:4l7pbu9031kdgk1map4qb4ip94@google.com
+CREATED:20140714T153930Z
+DESCRIPTION:Spoken word performances of literature\, original and borrowed.
+   In local voice.  Please have voice enabled in your virtual worlds viewer.
+   \n\nFrom the web:  http://www.kitely.com/virtual-world/Freda-Frostbite/Po
+ esy\n\nFrom Any Open Sim:  grid.kitely.com:8002:Poesy
+LAST-MODIFIED:20140813T160225Z
+LOCATION:Babel Tower Auditorium\, Poesy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Kitely: Live Literature at Poesy Presents Big Red Coyote
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140720T200000
+DTEND;TZID=America/New_York:20140720T210000
+DTSTAMP:20151007T190358Z
+UID:mm1062836o7lv10rs7tnufoovk@google.com
+RECURRENCE-ID;TZID=America/New_York:20140720T200000
+CREATED:20140617T140140Z
+DESCRIPTION:Celtic Cajun and Tejano Music Tonight!
+LAST-MODIFIED:20140813T155954Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Kitely:  Social Dance with DJ BigRed Coyote
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140629T200000
+DTEND;TZID=America/New_York:20140629T210000
+RRULE:FREQ=WEEKLY;UNTIL=20140803T235959Z;INTERVAL=1
+DTSTAMP:20151007T190358Z
+UID:mm1062836o7lv10rs7tnufoovk@google.com
+CREATED:20140617T140140Z
+DESCRIPTION:
+LAST-MODIFIED:20140813T155954Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Kitely:  Social Dance with DJ BigRed Coyote
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140810T173000Z
+DTEND:20140810T183000Z
+DTSTAMP:20151007T190358Z
+UID:ivsntkcsimiaujql8ak012i4s8@google.com
+CREATED:20140810T141336Z
+DESCRIPTION:Join Caledonia on Glen Island for LIFE & OTHER WORKS IN PROGRES
+ S ... Cale has been busy writing and she's got some stories and essays to s
+ hare\, some of which might or might not end up published.  You can help her
+  decide.\n\nhttp://www.kitely.com/search?q=seanchai\ngrid.kitely.com:8002:S
+ eanchai
+LAST-MODIFIED:20140810T141336Z
+LOCATION:Seanchai Homeworld - Glen Island
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LIFE and Other Works in Progress
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140808T153000Z
+DTEND:20140808T163000Z
+DTSTAMP:20151007T190358Z
+UID:v7nob59p91orgl0c1hp9sccdkg@google.com
+CREATED:20140807T025739Z
+DESCRIPTION:A slow descent into madness to follow you through your day\, as
+  well as into your night. These H.P. Lovecraft inspired tales are concentra
+ ted bites of terror. These are the moments where something appproaches\, th
+ e moment where you close your eyes and hope it goes away.\n\nHis hands scat
+ ter to the ground in search of matches.\nHe finds the box\, is about to lig
+ ht one when \nhe halts and freezes\, turning his head slowly\nin the dark. 
+ Very close to him\, he can hear their breathing.
+LAST-MODIFIED:20140807T025739Z
+LOCATION:The Lonely Lighthouse at Seanchai Library in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:(K) WHISPERS FROM THE ABYSS
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140708T110000
+DTEND;TZID=America/New_York:20140708T113000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20140729T150000Z
+EXDATE;TZID=America/New_York:20140729T110000
+DTSTAMP:20151007T190358Z
+UID:u0e9ivlf4crtdmepllackshfdo@google.com
+CREATED:20140519T171155Z
+DESCRIPTION:Guided Meditations for calm focus.  Written and led by Freda Fr
+ ostbite.  In Voice.  Allow 30 minutes\, but most are shorter.  \nFrom The W
+ eb-- http://www.kitely.com/virtual-world/Freda-Frostbite/Spirit-Paths\nFrom
+  any Open Sim -- grid.kitely.com:8002:Spirit Paths 
+LAST-MODIFIED:20140805T120813Z
+LOCATION:Kitely
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Guided Meditations at Spirit Paths
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140726T010000Z
+DTEND:20140726T020000Z
+DTSTAMP:20151007T190358Z
+UID:3hu5sa2vngs2p95cqgjisvmsr0@google.com
+CREATED:20140721T205943Z
+DESCRIPTION:A poet meets a knight by a woodland lake. The knight says he ha
+ d met a beautiful\, wild-looking woman\, decked with flowers. She spoke a l
+ anguage he did not understand\, she made love with him\, and they slept. Wh
+ en he awoke the woman was gone and the knight was alone on the cold hillsid
+ e. The woman was "La Belle Dame Sans Merci" - "the beautiful woman without 
+ mercy". Tonight will be this story in both verse and in prose. Plus another
+  poem or two from Keats.\n\nWhen we're through you may wonder... who really
+  possesses loves' power - if anyone. 
+LAST-MODIFIED:20140721T205943Z
+LOCATION:Rivendell Terrace in the Elven Forest
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:O FOR A FIERY GLOOM AND THEE
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140719T010000Z
+DTEND:20140719T020000Z
+DTSTAMP:20151007T190358Z
+UID:qd2t93osahd1nfe8r30dl5f1dk@google.com
+CREATED:20140716T051542Z
+DESCRIPTION:In a far corner of the universe\, on the small desert planet of
+  Tatooine\, there is a dark\, nic-i-tain-filled cantina where you can down 
+ your favorite intoxicant while listening to the best jazz riffs in the univ
+ erse. But beware your fellow denizens of this pangalactic watering hole\, f
+ or they are cutthroats and cutpurses\, assassins and troopers\, humans and 
+ aliens\, gangsters and thieves....\n\nJabba the Hutt's cavernous\, smoky Pr
+ esence Room stank of jspilled intoxicants and sweaty body armor. Guards and
+  henchmen\, dancers and bounty hunters\, humans and Jawas and Weequays and 
+ Arcona lay where they'd toppled\, crumpled under arches or piled in semipri
+ vate cubicles or sprawled in the open. The inner portcullis yawned open. Ju
+ st another all-nighter at Jabba's palace.
+LAST-MODIFIED:20140716T051852Z
+LOCATION:Mos Eisley Cantina on Spaceworld
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:TALES FROM THE CANTINA -Star Wars Legends
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140712T010000Z
+DTEND:20140712T020000Z
+DTSTAMP:20151007T190358Z
+UID:tcteaeqaie4v6c8te1bhnlli64@google.com
+CREATED:20140710T013414Z
+DESCRIPTION:True Tales of Gunslingers\, Desperados and Lawmen. \nMost of th
+ ese folks did not live to an old age\, and those that did were probably in 
+ jail! Their escapades were daring and reckless and many paid the ultimate p
+ rice in the end. These are tales of an exciting and dangerous era in Americ
+ a's history. Whilst the events that took place are primarily true\, your st
+ oryteller might take a certain amount of creative license regarding what ma
+ y\, or may not\, have been spoken by these characters.
+LAST-MODIFIED:20140716T051613Z
+LOCATION:Westernworld in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Outlaws & Legends of the West
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140629T180000
+DTEND;TZID=America/New_York:20140629T190000
+RRULE:FREQ=WEEKLY;BYDAY=SU;UNTIL=20140720T220000Z
+EXDATE;TZID=America/New_York:20140720T180000
+DTSTAMP:20151007T190358Z
+UID:3u0o3e3vienuu038pe6f0l6icg@google.com
+CREATED:20140424T213116Z
+DESCRIPTION:Life is a journey\, and we are each of us an ever-evolving crea
+ tion: a work in progress.  Join us in the Babel Tower Auditorium on Poesy a
+ s author Freda Frostbite (aka Stephanie Mesler) shares her poetry and prose
+  in progress\, and those things inspiring her in her literary quest. Presen
+ ted live in voice.
+LAST-MODIFIED:20140714T153038Z
+LOCATION:Babel Tower Auditorium\, Poesy
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Freda In Progress\, Poesy
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140520T203000
+DTEND;TZID=America/New_York:20140520T213000
+RRULE:FREQ=WEEKLY;UNTIL=20140709T003000Z;BYDAY=TU
+DTSTAMP:20151007T190358Z
+UID:qsieted33ivuh6in27rjne86h8_R20140521T003000@google.com
+CREATED:20140418T015733Z
+DESCRIPTION:Each week\, featuring a spoken word performer of the metaverse.
+   \nFrom The Web-- http://www.kitely.com/virtual-world/Freda-Frostbite/Poes
+ y\nFrom any Open Sim -- grid.kitely.com:8002/Poesy/225/222/23
+LAST-MODIFIED:20140714T153013Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Tuesday Night Babble Open Mics
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140506T203000
+DTEND;TZID=America/New_York:20140506T213000
+DTSTAMP:20151007T190358Z
+UID:qsieted33ivuh6in27rjne86h8@google.com
+RECURRENCE-ID;TZID=America/New_York:20140506T203000
+CLASS:PUBLIC
+CREATED:20140418T015733Z
+DESCRIPTION:Poetry\, Fiction\, Drama\, Comedy\, Music.  \nIf it can be done
+  in local voice in a moderate virtual world\, we wanna see it.  \nhttp://ww
+ w.kitely.com/virtual-world/Freda-Frostbite/Poesy\n
+LAST-MODIFIED:20140714T153013Z
+LOCATION:Babel Tower\, Poesy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Tuesday Night Babble Open Mics
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140513T203000
+DTEND;TZID=America/New_York:20140513T213000
+RRULE:FREQ=WEEKLY;UNTIL=20140521T002959Z;BYDAY=TU
+DTSTAMP:20151007T190358Z
+UID:qsieted33ivuh6in27rjne86h8_R20140514T003000@google.com
+CREATED:20140418T015733Z
+DESCRIPTION:Each week\, featuring a spoken word performer of the metaverse.
+   http://www.kitely.com/virtual-world/Freda-Frostbite/Poesy
+LAST-MODIFIED:20140714T153013Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Babel On! Poetry Readings
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140506T203000
+DTEND;TZID=America/New_York:20140506T213000
+RRULE:FREQ=WEEKLY;UNTIL=20140514T002959Z;BYDAY=TU
+DTSTAMP:20151007T190358Z
+UID:qsieted33ivuh6in27rjne86h8@google.com
+CREATED:20140418T015733Z
+DESCRIPTION:
+LAST-MODIFIED:20140714T153013Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Babel On! Poetry Readings
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140720T230000Z
+DTEND:20140721T000000Z
+DTSTAMP:20151007T190358Z
+UID:q6cqp4ct4ttqlpojtsco7d3np8@google.com
+CREATED:20140714T124231Z
+DESCRIPTION:BigRed Reads O Henry\n\nFrom the web:  http://www.kitely.com/vi
+ rtual-world/Freda-Frostbite/Poesy\n\nFrom Any Open Sim:  grid.kitely.com:80
+ 02:Poesy
+LAST-MODIFIED:20140714T124231Z
+LOCATION:Babel Tower Auditorium\, Poesy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Kitely:  Live Lit Presents   BigRed Coyote
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140606T120000
+DTEND;TZID=America/New_York:20140606T130000
+RRULE:FREQ=WEEKLY;UNTIL=20140718T035959Z;BYDAY=FR
+DTSTAMP:20151007T190358Z
+UID:1bih8arelru9lpnct404i12le4_R20140606T160000@google.com
+CREATED:20140505T171220Z
+DESCRIPTION:This isn't your mama's coffee klatch and this is definitely not
+  Downton Abbey.  Join us for open discussion on a variety of topics.  Mostl
+ y\, we'll use local text to chat about our week.  The goal at Freda's Retre
+ at is to unwind\, get centered\, and be ready to face the worlds renewed.  
+  \n\nFrom The Web-- http://www.kitely.com/virtual-world/Freda-Frostbite/Fre
+ das-Retreat\nFrom any Open Sim --  grid.kitely.com:8002:Freda's Retreat 
+LAST-MODIFIED:20140711T155425Z
+LOCATION:Freda's Retreat
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Tea Talk at Freda's Retreat
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140523T120000
+DTEND;TZID=America/New_York:20140523T130000
+RRULE:FREQ=WEEKLY;UNTIL=20140606T155959Z;BYDAY=FR
+EXDATE;TZID=America/New_York:20140530T120000
+EXDATE;TZID=America/New_York:20140523T120000
+DTSTAMP:20151007T190358Z
+UID:1bih8arelru9lpnct404i12le4@google.com
+CREATED:20140505T171220Z
+DESCRIPTION:This isn't your mama's coffee klatch and this is definitely not
+  Downton Abbey.  Join us for open discussion on a variety of topics.  Mostl
+ y\, we'll use local text to chat about our week.  The goal at Freda's Retre
+ at is to unwind\, get centered\, and be ready to face the worlds renewed.  
+  
+LAST-MODIFIED:20140711T155425Z
+LOCATION:Freda's Retreat
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Tea Talk at Freda's Retreat
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140701T120000
+DTEND;TZID=America/New_York:20140701T123000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20140708T035959Z
+DTSTAMP:20151007T190358Z
+UID:o9728l5unbja83cvu3tb5neg10@google.com
+CREATED:20140519T171155Z
+DESCRIPTION:Guided Meditations for calm focus.  Written and led by Freda Fr
+ ostbite.  In Voice.  Allow 30 minutes\, but most are shorter.  \nFrom The W
+ eb-- http://www.kitely.com/virtual-world/Freda-Frostbite/Spirit-Paths\nFrom
+  any Open Sim -- grid.kitely.com:8002:Spirit Paths 
+LAST-MODIFIED:20140708T105350Z
+LOCATION:Kitely
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Guided Meditations at Spirit Paths
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140706T190000Z
+DTEND:20140706T200000Z
+DTSTAMP:20151007T190358Z
+UID:kbi1mcdpcd9jkdr1khti617qq8@google.com
+CREATED:20140630T235021Z
+DESCRIPTION:Join the Council of Elrond!  Come as your favorite character fr
+ om the LOTR Trilogy.  Caledonia shares favorite adventures from J.R.R.Tolki
+ en's epic saga.  Teleport from the main landing zone to Willow Island\, wal
+ k through the White Gate and up the Elven Path.  Who knows what fate awaits
+  you there!  \n\nPresented Live in voice.\n\nhop://osgrid.kitely.com:8002/S
+ eanchai/144/129/29\nor IM Caledonia once you arrive
+LAST-MODIFIED:20140630T235021Z
+LOCATION:The Rivendell Terrace in the Elven Forest
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LORD OF THE RINGS ~ Selections
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140610T120000
+DTEND;TZID=America/New_York:20140610T123000
+DTSTAMP:20151007T190358Z
+UID:rldu27lth4cr5s8co1idtmst28@google.com
+RECURRENCE-ID;TZID=America/New_York:20140610T110000
+CREATED:20140519T171155Z
+DESCRIPTION:Guided Meditations for calm focus.  Written and led by Freda Fr
+ ostbite.  In Voice.  Allow 30 minutes\, but most are shorter.  \nFrom The W
+ eb-- http://www.kitely.com/virtual-world/Freda-Frostbite/Spirit-Paths\nFrom
+  any Open Sim -- grid.kitely.com:8002:Spirit Paths 
+LAST-MODIFIED:20140627T190229Z
+LOCATION:Kitely
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Guided Meditations at Spirit Paths
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140603T110000
+DTEND;TZID=America/New_York:20140603T113000
+RRULE:FREQ=WEEKLY;BYDAY=TU;UNTIL=20140701T035959Z
+DTSTAMP:20151007T190358Z
+UID:rldu27lth4cr5s8co1idtmst28@google.com
+CREATED:20140519T171155Z
+DESCRIPTION:Guided Meditations for calm focus.  Written and led by Freda Fr
+ ostbite.  In Voice.  Allow 30 minutes\, but most are shorter.  \nFrom The W
+ eb-- http://www.kitely.com/virtual-world/Freda-Frostbite/Spirit-Paths\nFrom
+  any Open Sim -- grid.kitely.com:8002:Spirit Paths 
+LAST-MODIFIED:20140627T190229Z
+LOCATION:Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Guided Meditations at Spirit Paths
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20140618T120000
+DTEND;TZID=America/Los_Angeles:20140618T130000
+DTSTAMP:20151007T190358Z
+UID:eom3kdjub32nea2t3ipmpevjkk@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20140618T120000
+CREATED:20140606T221614Z
+DESCRIPTION:Weekly Dance at Kitely with music and other entertainment provi
+ ded by Freda Frostbite.  \n\nThemes and contests\, when there are any\, wil
+ l be announced in advance.\n\nThis week's theme is HEAT!\n\n\nFrom The Web-
+ -  [u]http://www.kitely.com/virtual-world/Freda-Frostbite/Rhapsody[/u]\nFro
+ m any Open Sim --  grid.kitely.com:8002/Rhapsody/243/12/25
+LAST-MODIFIED:20140623T181433Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Kitely: Social Dance at Rhapsody  HEAT
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140618T150000
+DTEND;TZID=America/New_York:20140618T160000
+RRULE:FREQ=WEEKLY;INTERVAL=1;UNTIL=20140625T190000Z
+EXDATE;TZID=America/New_York:20140625T150000
+DTSTAMP:20151007T190358Z
+UID:eom3kdjub32nea2t3ipmpevjkk@google.com
+CREATED:20140606T221614Z
+DESCRIPTION:Weekly Dance at Kitely with music and other entertainment provi
+ ded by Freda Frostbite.  \n\nThemes and contests\, when there are any\, wil
+ l be announced in advance.\n\n\nFrom The Web--  [u]http://www.kitely.com/vi
+ rtual-world/Freda-Frostbite/Rhapsody[/u]\nFrom any Open Sim --  grid.kitely
+ .com:8002/Rhapsody/243/12/25
+LAST-MODIFIED:20140623T181433Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Kitely: Social Dance at Rhapsody
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140621T170000Z
+DTEND:20140621T180000Z
+DTSTAMP:20151007T190358Z
+UID:1iei94of4rssgmcict92viuln0@google.com
+CREATED:20140618T203940Z
+DESCRIPTION:STORIES WILL BE PRESENTED BY EDGAR ALLAN POE!!\nDark fantasy\, 
+ horror\, ghosts\, and the macabre! From MANY different top authors in the f
+ ield. Touching many different topics... victims\, vengeance\, identities\, 
+ gypsies\, carnivals\, famines\, rain\, seal people\, evil rocks\, psychic v
+ ampires\, curses\, old gods\, trains\, haunted houses\, dreams\, coast guar
+ ds\, doors\, photographs\, wakes\, and occult arts.\n\nTODAY:\nStories from
+  Edgar Allan Poe\, Stephen King\, and Robert Bloch (author of Psycho!)\n\nS
+ TORIES PRESENTED IN LIVE VOICE\n\nJOIN US at OCTOBERWORLD IN KITELY\ngrid.k
+ itely.com:8002:Midnight Dreary\nhttp://www.kitely.com/search?q=seanchai\n
+LAST-MODIFIED:20140618T204321Z
+LOCATION:OCTOBERWORLD in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:STORIES from the SHADOWS
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140615T230000Z
+DTEND:20140616T000000Z
+DTSTAMP:20151007T190358Z
+UID:sr325fqudlleq8ao7u7jm366bs@google.com
+CREATED:20140425T140034Z
+DESCRIPTION:From The Web-- http://www.kitely.com/virtual-world/Freda-Frostb
+ ite/Poesy\nFrom any Open Sim – grid.kitely.com:8002/Poesy/195/196/113
+LAST-MODIFIED:20140613T115919Z
+LOCATION:Babel Tower Auditorium\, Poesy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Live Lit at Poesy-- Caledonia Skytower:  Miracles
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140615T170000Z
+DTEND:20140615T180000Z
+DTSTAMP:20151007T190358Z
+UID:r5361ce4l6nl16jrqcdlh8rte0@google.com
+CREATED:20140610T144730Z
+DESCRIPTION:Caledonia Skytower previews her newest about-to-be-released sho
+ rt story collection.\n\nBelief is essential to life.  If there is a through
+ -line to most of my work\, it is the essential need for all of us to believ
+ e in something beyond ourselves.  It does not matter what.  Simply believe.
+   By believing in something beyond yourself\, you learn to better understan
+ d your world: to believe in yourself. "Miracles: A Trio of Island Tales" in
+ cludes three adventures based on real life events which took place in the I
+ sland kingdom of Tonga\, late in the 19th Century - Miracles of Earth\, Wat
+ er\, and Fire.\n\nLive in voice.
+LAST-MODIFIED:20140611T133722Z
+LOCATION:Seanchai Library (Homeworld)
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:MIRACLES: A TRIO OF ISLAND TALES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140706T190000
+DTEND;TZID=America/New_York:20140706T200000
+RRULE:FREQ=MONTHLY;BYDAY=1SU;UNTIL=20140706T230000Z
+DTSTAMP:20151007T190358Z
+UID:k3tlvfsmikbl2vur75vgkdqqrk_R20140706T230000@google.com
+CREATED:20140609T111639Z
+DESCRIPTION:From The Web-- http://www.kitely.com/virtual-world/Freda-Frostb
+ ite/Poesy\nFrom any Open Sim – grid.kitely.com:8002/Poesy/195/196/113
+LAST-MODIFIED:20140609T111811Z
+LOCATION:Babel Tower Auditorium\, Poesy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Litely: Live LiterarturePresents BigRed Coyote
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140706T190000
+DTEND;TZID=America/New_York:20140706T200000
+RRULE:FREQ=MONTHLY;UNTIL=20140706T225959Z;BYDAY=1SU
+DTSTAMP:20151007T190358Z
+UID:k3tlvfsmikbl2vur75vgkdqqrk@google.com
+CREATED:20140609T111639Z
+DESCRIPTION:
+LAST-MODIFIED:20140609T111811Z
+LOCATION:Babel Tower Auditorium\, Poesy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Litely: Live LiterarturePresents BigRed Coyote
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140618T150000
+DTEND;TZID=America/New_York:20140618T163000
+RRULE:FREQ=WEEKLY;UNTIL=20140619T190000Z;BYDAY=FR
+EXDATE;TZID=America/New_York:20140618T150000
+DTSTAMP:20151007T190358Z
+UID:f7275177-6675-416e-8d06-f459f55478ed
+CREATED:20140606T220019Z
+DESCRIPTION:Social Dance \nWith DJ Savino van__Meirhaeghe\nFridays 10:30 am
+  Pacific  *STARTS JUNE 20*\nRhapsody Night Club\nFrom The Web--  http://www
+ .kitely.com/virtual-world/Freda-Frostbite/Rhapsody\nFrom any Open Sim --  g
+ rid.kitely.com:8002/Rhapsody/243/12/25
+LAST-MODIFIED:20140606T220141Z
+LOCATION:Rhapsody
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Social Dance at Rhapsody
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20140606T063000
+DTEND;TZID=America/Los_Angeles:20140606T080000
+DTSTAMP:20151007T190358Z
+UID:pn9n7evj3lcoenm8pvae22mtr4_R20140606T133000@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20140606T063000
+CREATED:20140519T171928Z
+DESCRIPTION:Social Dance \nWith DJ Freda\nFridays 10:30 am Pacific  \nRhaps
+ ody Night Club\n\nTropical Theme\nPrize for best Tropical Wear\nMusic by Ji
+ mmy Buffet\, Looking Glass\, Jimmy Cliff\, and others\n\nFrom The Web--  ht
+ tp://www.kitely.com/virtual-world/Freda-Frostbite/Rhapsody\nFrom any Open S
+ im --  grid.kitely.com:8002/Rhapsody/243/12/25
+LAST-MODIFIED:20140606T220019Z
+LOCATION:Rhapsody
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Social Dance at Rhapsody With A Tropical Theme
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140606T093000
+DTEND;TZID=America/New_York:20140606T110000
+RRULE:FREQ=WEEKLY;UNTIL=20140606T035959Z;BYDAY=FR
+DTSTAMP:20151007T190358Z
+UID:pn9n7evj3lcoenm8pvae22mtr4_R20140606T133000@google.com
+CREATED:20140519T171928Z
+DESCRIPTION:Social Dance \nWith DJ Savino van__Meirhaeghe\nFridays 10:30 am
+  Pacific  *STARTS JUNE 20*\nRhapsody Night Club\nFrom The Web--  http://www
+ .kitely.com/virtual-world/Freda-Frostbite/Rhapsody\nFrom any Open Sim --  g
+ rid.kitely.com:8002/Rhapsody/243/12/25
+LAST-MODIFIED:20140606T220019Z
+LOCATION:Rhapsody
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Social Dance at Rhapsody
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140606T093000
+DTEND;TZID=America/New_York:20140606T110000
+RRULE:FREQ=WEEKLY;UNTIL=20140606T035959Z;BYDAY=FR
+DTSTAMP:20151007T190358Z
+UID:pn9n7evj3lcoenm8pvae22mtr4@google.com
+CREATED:20140519T171928Z
+DESCRIPTION:Social Dance \nWith DJ ?????\nFridays 10:30 am Pacific  *STARTS
+  JUNE 20*\nRhapsody Night Club\nFrom The Web--  http://www.kitely.com/virtu
+ al-world/Freda-Frostbite/Rhapsody\nFrom any Open Sim --  grid.kitely.com:80
+ 02/Rhapsody/243/12/25
+LAST-MODIFIED:20140606T220019Z
+LOCATION:Rhapsody
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Social Dance at Rhapsody
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140606T093000
+DTEND;TZID=America/New_York:20140606T110000
+RRULE:FREQ=WEEKLY;UNTIL=20140612T133000Z;BYDAY=FR
+EXDATE;TZID=America/New_York:20140606T093000
+DTSTAMP:20151007T190358Z
+UID:h65esik3a33bogtepd2gu2t94s@google.com
+CREATED:20140519T171928Z
+DESCRIPTION:Social Dance \nWith DJ Savino van__Meirhaeghe\nFridays 10:30 am
+  Pacific  *STARTS JUNE 20*\nRhapsody Night Club\nFrom The Web--  http://www
+ .kitely.com/virtual-world/Freda-Frostbite/Rhapsody\nFrom any Open Sim --  g
+ rid.kitely.com:8002/Rhapsody/243/12/25
+LAST-MODIFIED:20140606T220019Z
+LOCATION:Rhapsody
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Social Dance at Rhapsody
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140531T010000Z
+DTEND:20140531T020000Z
+DTSTAMP:20151007T190358Z
+UID:5b5rj7ndr59hj96cnjl3p7ril8@google.com
+CREATED:20140524T203101Z
+DESCRIPTION:Special Treat: STORIES WILL BE PRESENTED BY EDGAR ALLAN POE!!\n
+ Dark fantasy\, horror\, ghosts\, and the macabre! From MANY different top a
+ uthors in the field. Touching so many different topics... victims\, vengean
+ ce\, identities\, gypsies\, carnivals\, famines\, rain\, seal people\, evil
+  rocks\, psychic vampires\, curses\, old gods\, trains\, haunted houses\, d
+ reams\, coast guards\, doors\, photographs\, wakes\, and occult arts.\nThis
+  marvelous series of stories has won several World Fantasy Awards.\n\nSTORI
+ ES PRESENTED IN LIVE VOICE\n\nJOIN US at OCTOBERWORLD IN KITELY\ngrid.kitel
+ y.com:8002:Midnight Dreary\nhttp://www.kitely.com/search?q=seanchai\n\nISBN
+ -13: 978-0872167513
+LAST-MODIFIED:20140604T061620Z
+LOCATION:OCTOBERWORLD in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:(K) STORIES from the SHADOWS
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140608T170000Z
+DTEND:20140608T180000Z
+DTSTAMP:20151007T190358Z
+UID:tf7i5qkme20prvjru472drupl4@google.com
+CREATED:20140604T061400Z
+DESCRIPTION:"The Trials of Brian Murphy"\nWhen Brian's half Fae wife is sto
+ len from the human world by Fae raiders\, Brian will risk death to follow h
+ er to the Faerie realm rather than live without the woman he loves.\n\nSTOR
+ IES PRESENTED IN LIVE VOICE\n\nJOIN US at CELTICWORLD IN KITELY\ngrid.kitel
+ y.com:8002:Inis Arcain\nhttp://www.kitely.com/search?q=seanchai\n\nISBN-13:
+  978-0762438310
+LAST-MODIFIED:20140604T061400Z
+LOCATION:CELTICWORLD in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:(K) IRISH ROMANCE
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140629T210000Z
+DTEND:20140630T013000Z
+DTSTAMP:20151007T190358Z
+UID:uhnou5u6sis0a8eo7ucjco5u00@google.com
+CREATED:20140424T213937Z
+DESCRIPTION:Sometimes art inspires literature.  Sometimes\, it's the other 
+ way around.  Either way\, it's enlightening to see them side by side.  Join
+  us for this official grand opening of the Babel Tower on Poesy.  \n\nGalle
+ ries Open\nBallroom open for Dancing and Conversation\n\nMusic Provided by 
+ BigRed Coyote\, DJ\n\nFrom The Web-- http://www.kitely.com/virtual-world/Fr
+ eda-Frostbite/Poesy\nFrom any Open Sim -- grid.kitely.com:8002/Poesy/202/16
+ 3/68
+LAST-MODIFIED:20140603T160315Z
+LOCATION:Galleries One and Two\, Ballroom\, Babel Tower\, Poesy
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:Grand Opening-- Poesy Tower and Galleries
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20140529T120000
+DTEND;TZID=America/Los_Angeles:20140529T130000
+RRULE:FREQ=WEEKLY;COUNT=5;BYDAY=TH
+DTSTAMP:20151007T190358Z
+UID:mubd31mfk4n4e6ur23n9mk3c1c@google.com
+CREATED:20140528T204100Z
+DESCRIPTION:Let's get together and see some sights.  We will meet at Kitely
+  Welcome Center. The plan is to visit one Kitely world\, then hypergrid out
+  to a world elsewhere on opensim\, then come back to visit another Kitely w
+ orld. Each world visit will last about about 20 minutes. This plan is very 
+ much open to change. Wear exportable skin\, hair and clothes. If you don't 
+ have any\, come to the welcome center early and I'll hand you some basics. 
+ Let's explore together!
+LAST-MODIFIED:20140529T181712Z
+LOCATION:Kitely Welcome Center 
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Metaverse Tour with Serene
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20140601
+DTEND;VALUE=DATE:20140602
+RRULE:FREQ=DAILY;UNTIL=20140629
+DTSTAMP:20151007T190358Z
+UID:mg9jl5oimdq7lghd7on2s4g0ac@google.com
+CREATED:20140526T201436Z
+DESCRIPTION:Read http://www.apoetsprogress.com/creativity-zone-poesy.html f
+ or more details.\n\nTeleport to the Creativity Zone in Poesy to take part i
+ n June's round robin Story-writing event!  \nFrom the web\nHG Hop -- grid.k
+ itely.com:8002:Poesy\, then choose Creativity Zome from the TP pad.  \nHop 
+ in Kitely -- hop://grid.kitely.com:8002/Poesy/239/44/61
+LAST-MODIFIED:20140526T201437Z
+LOCATION:Creativity Zone\, Poesy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Round Robin\, Short Story Writing
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140524T020000Z
+DTEND:20140524T030000Z
+DTSTAMP:20151007T190358Z
+UID:gj5tsfqko42bdg7sqd6s1bs0p4@google.com
+CREATED:20140522T030002Z
+DESCRIPTION:TONIGHT: True tale of Duppies and Zombies and Voodoo\nfrom firs
+ t hand experiences in Haiti and Jamaica.\n"For by death is wrought great ch
+ ange\, yet it hath happened that the veritable body without the spirit hath
+  walked. And it is attested of those encountering who have lived to speak t
+ hereon\, that a creature so raised up hath no natural affection\, nor remem
+ brance thereof\, but only hate."\n\nJOIN US AT THE MANOR ON SWAMPWORLD IN K
+ ITELY\ngrid.kitely.com:8002:Inis Oirr\nhttp://www.kitely.com/search?q=seanc
+ hai\n
+LAST-MODIFIED:20140523T070714Z
+LOCATION:SWAMPWORLD in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:ZOMBIES - a night with Zora Neale Hurston
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140629T230000Z
+DTEND:20140630T000000Z
+DTSTAMP:20151007T190358Z
+UID:scg2e6pb5kj9lrr1h85vu3s9gg@google.com
+CREATED:20140424T210932Z
+DESCRIPTION:From The Web-- http://www.kitely.com/virtual-world/Freda-Frostb
+ ite/Poesy\nFrom any Open Sim – grid.kitely.com:8002/Poesy/195/196/113
+LAST-MODIFIED:20140519T171525Z
+LOCATION:Poesy Presents Caledonia Skytower
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:Live Literature at Poesy Presents Caledonia Skytower
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140622T230000Z
+DTEND:20140623T000000Z
+DTSTAMP:20151007T190358Z
+UID:ak14upq0hl8ms0h3i2n3lrhih4@google.com
+CREATED:20140509T134331Z
+DESCRIPTION:From The Web-- http://www.kitely.com/virtual-world/Freda-Frostb
+ ite/Poesy\nFrom any Open Sim – grid.kitely.com:8002/Poesy/195/196/113
+LAST-MODIFIED:20140519T171514Z
+LOCATION:Poesy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Live Lit at Poesy: LLola Lane Live
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140608T230000Z
+DTEND:20140609T000000Z
+DTSTAMP:20151007T190358Z
+UID:qbplb242nu4u17cs467igbusb8@google.com
+CREATED:20140505T161253Z
+DESCRIPTION:From The Web-- http://www.kitely.com/virtual-world/Freda-Frostb
+ ite/Poesy\nFrom any Open Sim – grid.kitely.com:8002/Poesy/195/196/113
+LAST-MODIFIED:20140519T171443Z
+LOCATION:Poesy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Live Lit at Poesy-Marita DeCosta
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140525T180000
+DTEND;TZID=America/New_York:20140525T190000
+RRULE:FREQ=WEEKLY;UNTIL=20140629T035959Z;BYDAY=SU
+EXDATE;TZID=America/New_York:20140601T180000
+DTSTAMP:20151007T190358Z
+UID:q3t82tq183a2me2qkod3usho38_R20140525T220000@google.com
+CREATED:20140424T213116Z
+DESCRIPTION:Life is a journey\, and we are each of us an ever-evolving crea
+ tion: a work in progress.  Join us in the Babel Tower Auditorium on Poesy a
+ s author Freda Frostbite (aka Stephanie Mesler) shares her poetry and prose
+  in progress\, and those things inspiring her in her literary quest. Presen
+ ted live in voice.\nFrom The Web-- http://www.kitely.com/virtual-world/Fred
+ a-Frostbite/Poesy\nFrom any Open Sim --  grid.kitely.com:8002/Poesy/195/196
+ /113
+LAST-MODIFIED:20140519T171404Z
+LOCATION:Babel Tower Auditorium\, Poesy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Freda In Progress\, Poesy
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140504T180000
+DTEND;TZID=America/New_York:20140504T190000
+RRULE:FREQ=WEEKLY;UNTIL=20140525T215959Z;BYDAY=SU
+DTSTAMP:20151007T190358Z
+UID:q3t82tq183a2me2qkod3usho38_R20140504T220000@google.com
+CREATED:20140424T213116Z
+DESCRIPTION:Life is a journey\, and we are each of us an ever-evolving crea
+ tion: a work in progress.  Join us in the Babel Tower Auditorium on Poesy a
+ s author Freda Frostbite (aka Stephanie Mesler) shares her poetry and prose
+  in progress\, and those things inspiring her in her literary quest. Presen
+ ted live in voice.
+LAST-MODIFIED:20140519T171404Z
+LOCATION:Babel Tower Auditorium\, Poesy
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Freda In Progress\, Poesy
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140518T170000Z
+DTEND:20140518T180000Z
+DTSTAMP:20151007T190358Z
+UID:g8b3n0l7e2bd2sddg1gtt2j1ik@google.com
+CREATED:20140513T193457Z
+DESCRIPTION:A feisty changling girl helps a changling boy return to the "re
+ al" New York City from the parallel fairy world where they were both raised
+ . The New York Public Library's automated catalog called CATNYP is a real l
+ ion and a library page is literally an animated piece of paper that retriev
+ es books.\n\nhop://osgrid.kitely.com:8002/Seanchai/144/129/29\nhttp://www.k
+ itely.com/search?q=seanchai
+LAST-MODIFIED:20140514T133329Z
+LOCATION:Seanchai Library in Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CATNYP
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140517T020000Z
+DTEND:20140517T030000Z
+DTSTAMP:20151007T190358Z
+UID:aceee0631unjcvr5sbkqt3e0o8@google.com
+CREATED:20140513T193408Z
+DESCRIPTION:Grom is a mer-prince\, pledged to marry the mermaid princess of
+  an opposing kingdom in an effort to unite the lands under the waters. He d
+ reads this arrangement until meets the princess Nalia – both beautiful and 
+ smart\, she’s everything he ever wanted. But just when their connection gro
+ ws deeper\, tragedy strikes.\n\nhop://osgrid.kitely.com:8002/Seanchai/144/1
+ 29/29\nhttp://www.kitely.com/search?q=seanchai
+LAST-MODIFIED:20140514T133319Z
+LOCATION:Seanchai Library in Kitely - Undersea Grotto
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LEGACY LOST
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140510T020000Z
+DTEND:20140510T030000Z
+DTSTAMP:20151007T190358Z
+UID:jj5a8t4m0f92p4m3oncelf9t5c@google.com
+CREATED:20140513T025049Z
+DESCRIPTION:Ghosts. Pirates. Put the two together and you’ve got a winning 
+ combination of the most exciting stories ever told. It's enough to make any
+ one say\, "Shiver me timbers"--with delight.\nGhost pirates swashbuckle in 
+ and out of the scene\, stealing the souls of the doomed and frightening the
+  innocent. Prepare yourself for a thrilling ride.\n\nThis world is public a
+ nd open to all Kitely residents. Guests are encouraged to wander freely abo
+ ut the property exploring and discovering. So drop by any time!\nAsk Shando
+ n Loring for a Group Invite to receive all notices from the Seanchai Librar
+ y - and to gain access to our additional story-themed worlds in Kitely.\n\n
+ hop://osgrid.kitely.com:8002/Seanchai/144/129/29\nhttp://www.kitely.com/sea
+ rch?q=seanchai
+LAST-MODIFIED:20140513T025050Z
+LOCATION:Seanchai Library in Kitely - Pirate Ship
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:GHOSTLY PIRATE TALES
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140511T170000Z
+DTEND:20140511T180000Z
+DTSTAMP:20151007T190358Z
+UID:atnspn1qvask24q32iv14ne6kg@google.com
+CREATED:20140504T161633Z
+DESCRIPTION:Storm-swept\, remote light stations—and the isolated souls who 
+ man the beacons—are the perfect inspirations for tales of suspense and horr
+ or. Throughout the years\, lighthouses have served as backdrops for dark\, 
+ gothic tales of solitary\, sea-based horror. If you like a good chilling ta
+ le and you like lighthouses and the sea\, this story session is just for yo
+ u. \n\nThis world is public and open to all Kitely residents. Guests are en
+ couraged to wander freely about the property exploring and discovering. So 
+ drop by any time!\nAsk Shandon Loring for a Group Invite to receive all not
+ ices from the Seanchai Library - and to gain access to our additional story
+ -themed worlds in Kitely.\n\nhop://osgrid.kitely.com:8002/Seanchai/144/129/
+ 29
+LAST-MODIFIED:20140504T161633Z
+LOCATION:Seanchai Library in Kitely - Lighthouse Point
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LIGHTHOUSE HORRORS
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140503T013000Z
+DTEND:20140503T030000Z
+DTSTAMP:20151007T190358Z
+UID:huj20h0n5ad0d29e9qqevj55r8@google.com
+CREATED:20140424T231143Z
+DESCRIPTION:~ 6:30pm Tour of the Seanchai Estate in Kitely. \n~ 7pm Ghost s
+ tories around the fire at Seanchai Library in Kitely with Shandon Loring\n\
+ nEerie atmospherics\, a sense of foreboding\, then the unease\, a chill\, a
+  shudder\, ghosts\, terror! Conjured artfully by masters of the macabre - a
+ mong them Stephen King\, Guy de Maupassant\, Ramsey Campbell\, and Tony Ric
+ hards\, and by literary greats like Ambrose Bierce\, Washington Irving\, Si
+ r Water Scott\, and J Sheridan Le Fanu.\n\nMore to come . . . join us for t
+ his auspicious event!\n\nhttp://www.irelandslstory.blogspot.com/p/seanchai-
+ in-kitely.html
+LAST-MODIFIED:20140428T193748Z
+LOCATION:Seanchai Library Estate (Seanchai region)
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Seanchai Library Preview Story Session
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20140428
+DTEND;VALUE=DATE:20140429
+RRULE:FREQ=DAILY;COUNT=28
+DTSTAMP:20151007T190358Z
+UID:ddlcleumkq2pqvesug9c9vggqc@google.com
+CREATED:20140428T163932Z
+DESCRIPTION:Take the hop to Poesy's Creativity Zone.  Write haiku on the bo
+ ard provided.  \nhop://grid.kitely.com:8002/Poesy/239/44/61
+LAST-MODIFIED:20140428T163932Z
+LOCATION:Creativity Zone\, Poesy\, hop://grid.kitely.com:8002/Poesy/239/44/
+ 61
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Haiku Throw-Down\, Creativity Zone\, Poesy
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140427T190000Z
+DTEND:20140427T200000Z
+DTSTAMP:20151007T190358Z
+UID:kuqg94tjioe9cord8ujmtn0dh4@google.com
+CLASS:PUBLIC
+CREATED:20140426T223019Z
+DESCRIPTION:Guided tour of Donnybrook Beach world in Kitely.  Tour will inc
+ lude locations of the eggs for the April 2014 Spring Hunt.  Tour starts at 
+ main arrival point for the world and will last about 30 minutes.  This tour
+  will be from 12 PM (Noon) until 12:30 PM\, Kitely Time. (PDT)\n\nhttp://ww
+ w.kitely.com/virtual-world/Deuce-Halsey/Donnybrook-Beach\n\nThis will be th
+ e final tour offered during the April 2014 hunt. 
+LAST-MODIFIED:20140426T223019Z
+LOCATION:Donnybrook Beach\, Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Guided Tour of Donnybrook Beach world
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20140504T180000
+DTEND;TZID=America/New_York:20140504T190000
+RRULE:FREQ=WEEKLY;UNTIL=20140504T215959Z;BYDAY=SU
+DTSTAMP:20151007T190358Z
+UID:q3t82tq183a2me2qkod3usho38@google.com
+CREATED:20140424T213116Z
+DESCRIPTION:
+LAST-MODIFIED:20140424T221646Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Freda In Progress\, Poesy
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140426T010000Z
+DTEND:20140426T013000Z
+DTSTAMP:20151007T190358Z
+UID:gkbfsnpuvd5r211lnrpbm2bdis@google.com
+CLASS:PUBLIC
+CREATED:20140424T013650Z
+DESCRIPTION:Guided tour of Donnybrook Beach world in Kitely.  Tour will inc
+ lude locations of the eggs for the April 2014 Spring Hunt.  Tour starts at 
+ main arrival point for the world and will last about 30 minutes.\n\nhttp://
+ www.kitely.com/virtual-world/Deuce-Halsey/Donnybrook-Beach
+LAST-MODIFIED:20140424T013650Z
+LOCATION:Donnybrook Beach\, Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Guided Tour of Donnybrook Beach world
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140424T160000Z
+DTEND:20140424T163000Z
+DTSTAMP:20151007T190358Z
+UID:r9dt5tiif5dlphfcui340a3cec@google.com
+CLASS:PUBLIC
+CREATED:20140424T013458Z
+DESCRIPTION:Guided tour of Donnybrook Beach world in Kitely.  Tour will inc
+ lude locations of the eggs for the April 2014 Spring Hunt.  Tour starts at 
+ main arrival point for the world and will last about 30 minutes.\n\nhttp://
+ www.kitely.com/virtual-world/Deuce-Halsey/Donnybrook-Beach
+LAST-MODIFIED:20140424T013459Z
+LOCATION:Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Guided Tour of Donnybrook Beach in Kitely
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140306T210000Z
+DTEND:20140306T230000Z
+DTSTAMP:20151007T190358Z
+UID:ukvqoh63btubgbp28ndu7jtqq8@google.com
+CREATED:20140306T165145Z
+DESCRIPTION:
+LAST-MODIFIED:20140306T165145Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Kitely Community Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140309T150000Z
+DTEND:20140309T160000Z
+DTSTAMP:20151007T190358Z
+UID:oamjfnofik51co65bc9gdfl1sc@google.com
+CREATED:20140228T153613Z
+DESCRIPTION:The Devokan Storytellers Gathering on the second Sunday of each
+  month gives RP storytellers\, builders and writers inspired by the Myst/Ur
+ u genre an opportunity to share ideas\, information\, plans and concerns ab
+ out their stories\, builds and virtual worlds. \n\nNew and potential member
+ s are most welcome. \n\nOur regular gathering place is Dragons' Teeth on Ki
+ tely\, hosted by Paislee Myrtle: \nhttp://www.kitely.com/virtual-world/Pais
+ lee-Myrtle/Dragons-Teeth
+LAST-MODIFIED:20140228T153613Z
+LOCATION:Dragons' Teeth\, Kitely
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Devokan Storytellers Gathering
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140302T160000Z
+DTEND:20140302T170000Z
+DTSTAMP:20151007T190358Z
+UID:83gc8jeft0ols3ogj7jnouifik@google.com
+CLASS:PUBLIC
+CREATED:20140226T092220Z
+DESCRIPTION:Come try out wind-driven sailboats on Panthalassa (http://www.k
+ itely.com/virtual-world/Kayaker-Magic/Panthalassa). I'll try to make this a
+  regular event. I'd like to have sailboat races here\, but I need experienc
+ ed sailors! If you don't want to learn to sail\, I can give tours\, pilotin
+ g a boat around the big island. Or I can give surfing or kayaking lessons. 
+ Can't make this 8:00 AM PDT Sunday event? IM me and see if we can arrange a
+ nother time. Pantalassa is now a public world and has demo vehicles for you
+  to try out any time. (But you may be frustrated trying to sail the wind wi
+ thout some instruction first!)
+LAST-MODIFIED:20140226T092220Z
+LOCATION:http://www.kitely.com/virtual-world/Kayaker-Magic/Panthalassa
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Sailing Lessons
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140225T210000Z
+DTEND:20140225T230000Z
+DTSTAMP:20151007T190358Z
+UID:pr22dcbp5sf6ti4eelho0f95n0@google.com
+CREATED:20140222T194656Z
+DESCRIPTION:Guided tour by Min to show and discuss the concept. \nAt 1:00 P
+ M PST - Everyone welcome to join.\nhttp://www.kitely.com/virtual-world/Min-
+ Tigerpaw/MT-Design-the-Kitely-Shopping-Adventure
+LAST-MODIFIED:20140224T225459Z
+LOCATION:MT Design - the Kitely Shopping Adventure
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Guided tour by Min to show and discuss the concept.  Everyone welco
+ me to join.
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140223T160000Z
+DTEND:20140223T170000Z
+DTSTAMP:20151007T190358Z
+UID:9m4dhp7246sle5u948893tops8@google.com
+CLASS:PUBLIC
+CREATED:20140223T074054Z
+DESCRIPTION:Way too late to give notice for this\, but I will open Panthala
+ ssa (http://www.kitely.com/virtual-world/Kayaker-Magic/Panthalassa) up for 
+ public access and give lessons in sailing a wind powered sailboat. Kitely i
+ s PERFECT for sailing and Panthalassa is a 3x3 with a large island to sail 
+ around and explore.
+LAST-MODIFIED:20140223T074309Z
+LOCATION:http://www.kitely.com/virtual-world/Kayaker-Magic/Panthalassa
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Sailing Lessons
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140223T160000Z
+DTEND:20140223T170000Z
+DTSTAMP:20151007T190358Z
+UID:mke6aji2541uo9d93g4ffocqjo@google.com
+CLASS:PUBLIC
+CREATED:20140222T200811Z
+DESCRIPTION:Kayaker Magic\, one of the leading makers of boats\, kayaks and
+  water related vehicles/features in Kitely is offering sailing lessons.\n8 
+ AM PDT Sunday morning in http://www.kitely.com/virtual-world/Kayaker-Magic/
+ Panthalassa. 
+LAST-MODIFIED:20140222T200857Z
+LOCATION:http://www.kitely.com/virtual-world/Kayaker-Magic/Panthalassa
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Sailing Lessons by Kayaker Magic
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20140221T070000Z
+DTEND:20140221T080000Z
+DTSTAMP:20151007T190358Z
+UID:0123ncp2d13vprbocsddall8cc@google.com
+CREATED:20140220T230146Z
+DESCRIPTION:
+LAST-MODIFIED:20140220T230146Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Kalender - Test only  - (Not an Event )
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
