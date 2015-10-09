@@ -8,62 +8,78 @@ import datetime
 import pytz
 import icalendar
 import argparse
+import cPickle
 
 fetchers = [
-    ("thirdrockfetcher", "ThirdRockFetcher", 0),
-    ("kitelyfetcher", "KitelyFetcher", 0)
+    ("thirdrockfetcher", "ThirdRockFetcher", 5),
+    ("kitelyfetcher", "KitelyFetcher", 5)
     ]
 
 def main():
 
     parser = argparse.ArgumentParser()
 
-    parser.parse_args()
+    parser.add_argument("command", help="fetch, update or write")
 
+    args = parser.parse_args()
 
-    events = []
+    if args.command=='update':
+        print "not implemented yet"
+        sys.exit(1)
 
-    for (module_name,class_name,limit) in fetchers:
-        mod = importlib.import_module("fetcher."+module_name)
+    if args.command=='write':
 
-        fetcher = getattr(mod, class_name)()
+        datafile = file('data/events.pck')
+        events = cPickle.load(datafile)
+        datafile.close()
 
-        events = events + fetcher.fetch(limit)
+        cal = icalendar.Calendar()
 
-    events = sorted(events, key=lambda e: e.start)
+        cal.add('PRODID','-//Linkwater//Aggregator//EN')
+        cal.add('VERSION','2.0')
+        cal.add('CALSCALE','GREGORIAN')
 
-    start_after = datetime.datetime.now(pytz.utc) - datetime.timedelta(days=1)
+        i=0
 
-    end_before = start_after + datetime.timedelta(days=365)
+        start_after = datetime.datetime.now(pytz.utc) - datetime.timedelta(days=1)
+        end_before = start_after + datetime.timedelta(days=365)
 
+        for e in events:
+            if e.start > start_after and e.end < end_before:
+                ie = icalendar.Event()
+                ie.add('dtstart', e.start.astimezone(pytz.utc))
+                ie.add('dtend', e.end.astimezone(pytz.utc))
+                ie.add('dtstamp', pytz.utc.localize(datetime.datetime.utcnow()))
+                #ie.add('uid', i)
+                ie.add('summary', icalendar.vText(e.title))
+                ie.add('description', icalendar.vText(e.description))
+                ie.add('location', icalendar.vText(e.hgurl))
+                ie.add('categories', icalendar.vText("grid:"+e.grid))
+                ie.add('status',icalendar.vText('confirmed'))
+        
+                cal.add_component(ie)
 
-    cal = icalendar.Calendar()
+                i=i+1
+                #print str(e)
 
-    cal.add('PRODID','-//Linkwater//Aggregator//EN')
-    cal.add('VERSION','2.0')
-    cal.add('CALSCALE','GREGORIAN')
+        file('data/test.ical','w+').write(cal.to_ical())
 
-    i=0
+    if args.command=='fetch':
 
-    for e in events:
-        if e.start > start_after and e.end < end_before:
-            ie = icalendar.Event()
-            ie.add('dtstart', e.start.astimezone(pytz.utc))
-            ie.add('dtend', e.end.astimezone(pytz.utc))
-            ie.add('dtstamp', pytz.utc.localize(datetime.datetime.utcnow()))
-            #ie.add('uid', i)
-            ie.add('summary', icalendar.vText(e.title))
-            ie.add('description', icalendar.vText(e.description))
-            ie.add('location', icalendar.vText(e.hgurl))
-            ie.add('categories', icalendar.vText("grid:"+e.grid))
-            ie.add('status',icalendar.vText('confirmed'))
-    
-            cal.add_component(ie)
+        events = []
 
-            i=i+1
-            #print str(e)
+        for (module_name,class_name,limit) in fetchers:
+            mod = importlib.import_module("fetcher."+module_name)
 
-    file('test.ical','w+').write(cal.to_ical())
+            fetcher = getattr(mod, class_name)()
+
+            events = events + fetcher.fetch(limit)
+
+        events = sorted(events, key=lambda e: e.start)
+
+        datafile = file('data/events.pck', 'w+')
+        cPickle.dump(events, datafile, protocol=2)
+        datafile.close()
 
 if __name__ == "__main__":
     main()
