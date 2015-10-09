@@ -47,7 +47,10 @@ class IcalFetcher(object):
                     print "end time is naive"
                     e.end = self.tz_pacific.localize(e.end)
 
-                e.hgurl = event['LOCATION'].title()
+                try:
+                    e.hgurl = event['LOCATION'].title()
+                except KeyError:
+                    pass
 
                 events = events + [e]
 

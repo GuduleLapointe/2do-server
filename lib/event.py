@@ -8,6 +8,7 @@ class Event(object):
         self.description = "Undescribed event.."
         self.start = 0
         self.end = 0
+        self.categories = []
 
     def __str__(self):
         rv = "Event:\n"
@@ -17,5 +18,6 @@ class Event(object):
         rv = rv + " description " + repr(self.description) + "\n"
         rv = rv + " start       " + str(self.start) + "\n"
         rv = rv + " end         " + str(self.end) + "\n"
+        rv = rv + " categories  " + str(self.categories) + "\n"
 
         return rv       

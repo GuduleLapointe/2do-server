@@ -7,6 +7,7 @@ from time import time,gmtime,asctime
 import datetime
 import pytz
 import icalendar
+import argparse
 
 fetchers = [
     ("thirdrockfetcher", "ThirdRockFetcher", 0),
@@ -14,7 +15,11 @@ fetchers = [
     ]
 
 def main():
-    print "Hello, world..."
+
+    parser = argparse.ArgumentParser()
+
+    parser.parse_args()
+
 
     events = []
 
