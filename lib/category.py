@@ -3,9 +3,10 @@ class Category(object):
     dict = {
                 'Kunstevent'    : 'art',
                 'Social Event'  : 'social',
-                'lesung'        : 'lecture',
-                'vhs'           : 'education',
-                'Special'       : 'entertainment'
+                'Lesung'        : 'lecture',
+                'VHS'           : 'education',
+                'Special'       : 'entertainment',
+                'Live'          : 'music',
             }
 
 
@@ -19,10 +20,15 @@ class Category(object):
 
     def __str__(self):
         return self.name + "(" + self.normalize() + ")"
+
+    def __repr__(self):
+        return self.name + "(" + self.normalize() + ")"
        
 
 if __name__ == "__main__":
     print "Kunstevent -> "+ Category("Kunstevent").normalize()
     print "foo -> "+ Category("foo").normalize()
     print "education -> "+ Category("education").normalize()
+
+    print str(Category("lesung"))
 
