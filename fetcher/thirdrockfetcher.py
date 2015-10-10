@@ -5,22 +5,28 @@ from lxml import html
 import re
 import sys
 import pytz
+from lib.category import Category
+from lib.webcache import WebCache
 
 class ThirdRockEvent(Event):
     detailurl = "http://3rdrockgrid.com/new/event-details/?id="
     hgre = re.compile(".+:.+:.+")
 
-    def __init__(self):
+    def __init__(self, webcache=None):
         super(ThirdRockEvent,self).__init__()
         self.id = None
-
+        self.categories += [ Category("grid-3rdrockgrid") ]
+        self.webcache = webcache
 
     def fetch(self):
         if self.id==None:
             raise Exception("Fetch on unitialized ThirdRockEvent")
         url = self.detailurl + str(self.id)
 
-        r = requests.get(url)
+        if self.webcache==None:
+            r = requests.get(url)
+        else:
+            r = self.webcache.fetch(url)
 
         if r.status_code==200:
             tree = html.fromstring(r.text)
@@ -46,8 +52,8 @@ class ThirdRockFetcher:
     eventurl="http://3rdrockgrid.com/new/wp-content/plugins/dwg-calendar/getevents.php"
     tz_pacific = pytz.timezone('US/Pacific')
 
-    def __init__(self):
-        pass
+    def __init__(self,webcache):
+        self.webcache = webcache
 
     def fetch(self, limit=0):
         print "ThirdRockFetcher: fetch overview.."
@@ -70,9 +76,8 @@ class ThirdRockFetcher:
                 sys.stdout.flush()
                 ievent = ievent + 1
 
-                e = ThirdRockEvent()
+                e = ThirdRockEvent(self.webcache)
                 e.title = event['title']
-                e.grid = "3rd Rock Grid"
 
                 t_start = self.tz_pacific.localize(parser.parse(event['start']))
                 t_end = self.tz_pacific.localize(parser.parse(event['end']))
@@ -96,9 +101,13 @@ class ThirdRockFetcher:
 
 
 if __name__=='__main__':
-    f = ThirdRockFetcher()
+    webcache = WebCache("data/test_thirdrock.cache")
 
-    e = f.fetch()
+    f = ThirdRockFetcher(webcache)
+
+    e = f.fetch(12)
+
+    webcache.flush()
 
     for event in e:
         print str(event)

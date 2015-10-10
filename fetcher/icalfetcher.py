@@ -10,7 +10,6 @@ class IcalFetcher(object):
     def __init__(self,url=None):
         if url!=None:
             self.url = url
-        pass
 
     def fetch(self, limit=0, tz=pytz.utc):
         print "IcalFetcher: get url "+str(self.url)

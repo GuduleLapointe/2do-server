@@ -9,10 +9,13 @@ import pytz
 import icalendar
 import argparse
 import cPickle
+from lib.webcache import WebCache
 
 fetchers = [
-    ("thirdrockfetcher", "ThirdRockFetcher", 5),
-    ("kitelyfetcher", "KitelyFetcher", 5)
+    ("kitelyfetcher", "KitelyFetcher", 0),
+    ("metropolisfetcher", "MetropolisFetcher", 0),
+    ("francogridfetcher", "FrancoGridFetcher", 0),
+    ("thirdrockfetcher", "ThirdRockFetcher", 0),
     ]
 
 def main():
@@ -54,7 +57,7 @@ def main():
                 ie.add('summary', icalendar.vText(e.title))
                 ie.add('description', icalendar.vText(e.description))
                 ie.add('location', icalendar.vText(e.hgurl))
-                ie.add('categories', icalendar.vText("grid:"+e.grid))
+                ie.add('categories', ','.join(map(lambda c: c.normalize(),e.categories)))
                 ie.add('status',icalendar.vText('confirmed'))
         
                 cal.add_component(ie)
@@ -62,18 +65,22 @@ def main():
                 i=i+1
                 #print str(e)
 
-        file('data/test.ical','w+').write(cal.to_ical())
+        file('data/test.ics','w+').write(cal.to_ical())
 
     if args.command=='fetch':
+
+        webcache = WebCache("data/web.cache")
 
         events = []
 
         for (module_name,class_name,limit) in fetchers:
             mod = importlib.import_module("fetcher."+module_name)
 
-            fetcher = getattr(mod, class_name)()
+            fetcher = getattr(mod, class_name)(webcache)
 
             events = events + fetcher.fetch(limit)
+
+            webcache.flush()
 
         events = sorted(events, key=lambda e: e.start)
 

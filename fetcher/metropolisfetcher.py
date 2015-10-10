@@ -7,21 +7,26 @@ import sys
 import pytz
 import datetime
 from lib.category import Category
+from lib.webcache import WebCache
 
 class MetropolisEvent(Event):
     tz_berlin = pytz.timezone('Europe/Berlin')
     hgexp = re.compile('secondlife://hypergrid.org:8002:([^/]+)/')
 
-    def __init__(self,url=None):
+    def __init__(self,url=None,webcache=None):
         super(MetropolisEvent,self).__init__()
         self.url=url
-        self.grid="Metropolis"
+        self.categories = self.categories + [ Category("grid-metropolis") ]
+        self.webcache=webcache
 
     def fetch(self):
         if self.url == None:
             raise Exception("fetching MetropolisEvent without url set")
 
-        r = requests.get(self.url)
+        if self.webcache!=None:
+            r = self.webcache.fetch(self.url)
+        else:
+            r = requests.get(self.url)
 
         if r.status_code == 200:
             tree = html.fromstring(r.text)
@@ -68,8 +73,8 @@ class MetropolisEvent(Event):
 class MetropolisFetcher:
     eventurl="https://events.hypergrid.org/?pno="
 
-    def __init__(self):
-        pass
+    def __init__(self, webcache=None):
+        self.webcache=webcache
 
     def fetch(self, limit=0):
         pagecount = 1
@@ -99,7 +104,7 @@ class MetropolisFetcher:
                     print "MetropolisFetcher: fetch event [" + str(ievent) + "/" + str(nevents) + "]\r",
                     sys.stdout.flush()
 
-                    e = MetropolisEvent(event_url)
+                    e = MetropolisEvent(event_url,self.webcache)
 
                     e.fetch()
 
@@ -107,21 +112,29 @@ class MetropolisFetcher:
 
                     ievent = ievent + 1
 
+                    if limit > 0 and len(rv) >= limit:
+                        break
+
                 print ""
 
             pagecount = pagecount + 1
 
-            if limit > 0 and len(rv) > limit:
+            if limit > 0 and len(rv) >= limit:
                 break
+
 
         return rv
 
 
 
 if __name__=='__main__':
-    f = MetropolisFetcher()
+    cache = WebCache("data/test_metropolis.cache")
 
-    e = f.fetch(1)
+    f = MetropolisFetcher(cache)
+
+    e = f.fetch(12)
+
+    cache.flush()
 
     for event in e:
         print str(event)
