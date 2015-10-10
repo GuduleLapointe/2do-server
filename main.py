@@ -12,6 +12,8 @@ import cPickle
 from lib.webcache import WebCache
 from exporter.exporter import Exporter
 from exporter.ical import IcalExporter
+from exporter.text import TextExporter
+from exporter.web import JsonExporter
 
 fetchers = [
     ("kitelyfetcher", "KitelyFetcher", 0),
@@ -30,6 +32,7 @@ def main():
     group.add_argument("-u","--update",action="store_true")
 
     parser.add_argument("-e","--exporter",help="raw or ical")
+    parser.add_argument("-t","--timezone",help="timezone for export, defaults to utc")
 
     args = parser.parse_args()
 
@@ -41,10 +44,23 @@ def main():
         events = cPickle.load(datafile)
         datafile.close()
 
+        tz = pytz.utc
+
+        if args.timezone!=None:
+            try:
+                tz = pytz.timezone(args.timezone)
+            except pytz.exceptions.UnknownTimeZoneError:
+                print "invalid timezone " + args.timezone
+                sys.exit(1)
+
         if args.exporter=="raw":
-            exporter = Exporter(events)
+            exporter = Exporter(events, tz)
+        elif args.exporter=="text":
+            exporter = TextExporter(events, tz)
+        elif args.exporter=="json":
+            exporter = JsonExporter(events, tz)
         else: # args.exporter=="ical":
-            exporter = IcalExporter(events)
+            exporter = IcalExporter(events, tz)
 
         file('data/test.ics','w+').write(str(exporter))
     elif args.fetch:

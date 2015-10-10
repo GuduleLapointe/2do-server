@@ -7,9 +7,10 @@ import datetime
 class IcalFetcher(object):
     tz_pacific = pytz.timezone('US/Pacific')
 
-    def __init__(self,url=None):
+    def __init__(self,url=None,categories=None):
         if url!=None:
             self.url = url
+        self.categories = categories
 
     def fetch(self, limit=0, tz=pytz.utc):
         print "IcalFetcher: get url "+str(self.url)
@@ -25,9 +26,12 @@ class IcalFetcher(object):
 
             for event in cal_events:
                 e = Event()
+
+                if self.categories!=None:
+                    e.categories += self.categories
+
                 e.title = event['SUMMARY'].title()
                 e.description = event['DESCRIPTION'].title()
-
 
                 e.start = event['DTSTART'].dt
                 e.end = event['DTEND'].dt
@@ -39,11 +43,9 @@ class IcalFetcher(object):
                     e.end = datetime.datetime.combine(e.end, datetime.time())
 
                 if e.start.tzinfo==None or e.start.tzinfo.utcoffset(e.start)==None:
-                    print "start time is naive"
                     e.start = self.tz_pacific.localize(e.start)
 
                 if e.end.tzinfo==None or e.end.tzinfo.utcoffset(e.end)==None:
-                    print "end time is naive"
                     e.end = self.tz_pacific.localize(e.end)
 
                 try:
