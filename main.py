@@ -10,6 +10,8 @@ import icalendar
 import argparse
 import cPickle
 from lib.webcache import WebCache
+from exporter.exporter import Exporter
+from exporter.ical import IcalExporter
 
 fetchers = [
     ("kitelyfetcher", "KitelyFetcher", 0),
@@ -22,53 +24,30 @@ def main():
 
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("command", help="fetch, update or write")
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument("-f","--fetch",action="store_true")
+    group.add_argument("-w","--write",action="store_true")
+    group.add_argument("-u","--update",action="store_true")
+
+    parser.add_argument("-e","--exporter",help="raw or ical")
 
     args = parser.parse_args()
 
-    if args.command=='update':
+    if args.update:
         print "not implemented yet"
         sys.exit(1)
-
-    if args.command=='write':
-
+    elif args.write:
         datafile = file('data/events.pck')
         events = cPickle.load(datafile)
         datafile.close()
 
-        cal = icalendar.Calendar()
+        if args.exporter=="raw":
+            exporter = Exporter(events)
+        else: # args.exporter=="ical":
+            exporter = IcalExporter(events)
 
-        cal.add('PRODID','-//Linkwater//Aggregator//EN')
-        cal.add('VERSION','2.0')
-        cal.add('CALSCALE','GREGORIAN')
-
-        i=0
-
-        start_after = datetime.datetime.now(pytz.utc) - datetime.timedelta(days=1)
-        end_before = start_after + datetime.timedelta(days=365)
-
-        for e in events:
-            if e.start > start_after and e.end < end_before:
-                ie = icalendar.Event()
-                ie.add('dtstart', e.start.astimezone(pytz.utc))
-                ie.add('dtend', e.end.astimezone(pytz.utc))
-                ie.add('dtstamp', pytz.utc.localize(datetime.datetime.utcnow()))
-                #ie.add('uid', i)
-                ie.add('summary', icalendar.vText(e.title))
-                ie.add('description', icalendar.vText(e.description))
-                ie.add('location', icalendar.vText(e.hgurl))
-                ie.add('categories', ','.join(map(lambda c: c.normalize(),e.categories)))
-                ie.add('status',icalendar.vText('confirmed'))
-        
-                cal.add_component(ie)
-
-                i=i+1
-                #print str(e)
-
-        file('data/test.ics','w+').write(cal.to_ical())
-
-    if args.command=='fetch':
-
+        file('data/test.ics','w+').write(str(exporter))
+    elif args.fetch:
         webcache = WebCache("data/web.cache")
 
         events = []
@@ -87,6 +66,8 @@ def main():
         datafile = file('data/events.pck', 'w+')
         cPickle.dump(events, datafile, protocol=2)
         datafile.close()
+    else:
+        print "must specify at least one of -f, -w and -u"
 
 if __name__ == "__main__":
     main()
