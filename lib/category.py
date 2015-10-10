@@ -19,7 +19,7 @@ class Category(object):
         return self.name
 
     def __str__(self):
-        return self.name + "(" + self.normalize() + ")"
+        return self.normalize()
 
     def __repr__(self):
         return self.name + "(" + self.normalize() + ")"
