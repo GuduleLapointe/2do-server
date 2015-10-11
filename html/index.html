@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hypervents: Hypergrid Events across the Metaversum</title>
+  <meta name="description" content="Hypervents: Hypergrid Events across the Metaversum">
+  <meta name="author" content="linkwater">
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery-1.11.3.min.js"></script>
+  <script>
+    $(document).ready(function() {
+        $("div#events").html("<h1>Events</h1>")
+
+        $.getJSON("events.json", function(data) {
+            $("div#events").append($("<ul></ul>"));
+
+            for(var i=0;i<data.length;i++) {
+                var li  = '<li id="event' + (String(i)) + '">';
+
+                li = li + '<span class="hgevent-start">' + data[i].start + '</span>';
+                li = li + '<span class="hgevent-end">' + data[i].end + '</span>';
+                li = li + '<span class="hgevent-title">' + data[i].title + '</span>';
+                li = li + '<span class="hgevent-desc">' + data[i].description + '</span>';
+                li = li + '<span class="hgevent-hgurl">' + data[i].hgurl + '</span>';
+                li = li + '</li>';
+
+                $("div#events ul").append($(li));
+            }
+
+        });
+    });
+  </script>
+</head>
+<body>
+<div id="events">
+non-javascript client sees this
+</div>
+</body>
+</html>
