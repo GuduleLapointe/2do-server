@@ -50,11 +50,14 @@ def main():
             print "invalid timezone " + args.timezone
             sys.exit(1)
 
+    after = None
     if args.after!=None:
         after = parser.parse(args.after)
         if after.tzinfo==None or after.tzinfo.utcoffset(after)==None:
             after = tz.localize(after)
         print "after: " + after.strftime("%Y-%m-%d %H:%M %Z")
+
+    before = None
     if args.before!=None:
         before = parser.parse(args.before)
         if before.tzinfo==None or before.tzinfo.utcoffset(before)==None:
