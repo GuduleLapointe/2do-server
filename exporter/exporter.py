@@ -10,9 +10,8 @@ class Exporter(object):
         self.events = []
         for event in events:
             if before==None or event.start <= before:
-                if after!=None and event.start >= after:
+                if after==None or event.start >= after:
                     self.events += [event]
-        print str(len(events)) + " --> " + str(len(self.events))
 
     def __str__(self):
         return str(self.events)
