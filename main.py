@@ -14,27 +14,52 @@ from exporter.exporter import Exporter
 from exporter.ical import IcalExporter
 from exporter.text import TextExporter
 from exporter.web import JsonExporter
+from dateutil import parser
 
 fetchers = [
     ("kitelyfetcher", "KitelyFetcher", 0),
     ("metropolisfetcher", "MetropolisFetcher", 0),
     ("francogridfetcher", "FrancoGridFetcher", 0),
     ("thirdrockfetcher", "ThirdRockFetcher", 0),
+    ("avatarfestfetcher", "AvatarFestFetcher", 0),
     ]
 
 def main():
 
-    parser = argparse.ArgumentParser()
+    argparser = argparse.ArgumentParser()
 
-    group = parser.add_mutually_exclusive_group()
+    group = argparser.add_mutually_exclusive_group()
     group.add_argument("-f","--fetch",action="store_true")
     group.add_argument("-w","--write",action="store_true")
     group.add_argument("-u","--update",action="store_true")
 
-    parser.add_argument("-e","--exporter",help="raw or ical")
-    parser.add_argument("-t","--timezone",help="timezone for export, defaults to utc")
+    argparser.add_argument("-e","--exporter",help="raw or ical")
+    argparser.add_argument("-t","--timezone",help="timezone for export, defaults to utc")
 
-    args = parser.parse_args()
+    argparser.add_argument("-b","--before",help="only include events before (and including) specified date/time")
+    argparser.add_argument("-a","--after",help="only include events after (and including) specified date/time")
+
+    args = argparser.parse_args()
+
+    tz = pytz.utc
+
+    if args.timezone!=None:
+        try:
+            tz = pytz.timezone(args.timezone)
+        except pytz.exceptions.UnknownTimeZoneError:
+            print "invalid timezone " + args.timezone
+            sys.exit(1)
+
+    if args.after!=None:
+        after = parser.parse(args.after)
+        if after.tzinfo==None or after.tzinfo.utcoffset(after)==None:
+            after = tz.localize(after)
+        print "after: " + after.strftime("%Y-%m-%d %H:%M %Z")
+    if args.before!=None:
+        before = parser.parse(args.before)
+        if before.tzinfo==None or before.tzinfo.utcoffset(before)==None:
+            before = tz.localize(before)
+        print "before: " + before.strftime("%Y-%m-%d %H:%M %Z")
 
     if args.update:
         print "not implemented yet"
@@ -44,23 +69,14 @@ def main():
         events = cPickle.load(datafile)
         datafile.close()
 
-        tz = pytz.utc
-
-        if args.timezone!=None:
-            try:
-                tz = pytz.timezone(args.timezone)
-            except pytz.exceptions.UnknownTimeZoneError:
-                print "invalid timezone " + args.timezone
-                sys.exit(1)
-
         if args.exporter=="raw":
-            exporter = Exporter(events, tz)
+            exporter = Exporter(events, tz, before, after)
         elif args.exporter=="text":
-            exporter = TextExporter(events, tz)
+            exporter = TextExporter(events, tz, before, after)
         elif args.exporter=="json":
-            exporter = JsonExporter(events, tz)
+            exporter = JsonExporter(events, tz, before, after)
         else: # args.exporter=="ical":
-            exporter = IcalExporter(events, tz)
+            exporter = IcalExporter(events, tz, before, after)
 
         file('data/test.ics','w+').write(str(exporter))
     elif args.fetch:
