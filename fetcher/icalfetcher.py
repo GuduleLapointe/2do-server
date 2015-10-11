@@ -34,7 +34,11 @@ class IcalFetcher(object):
                 e.description = event['DESCRIPTION'].title()
 
                 e.start = event['DTSTART'].dt
-                e.end = event['DTEND'].dt
+
+                if 'DTEND' in event.keys():
+                    e.end = event['DTEND'].dt
+                else:
+                    e.end = e.start
 
                 if type(e.start)==datetime.date:
                     e.start = datetime.datetime.combine(e.start, datetime.time())
