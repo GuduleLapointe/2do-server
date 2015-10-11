@@ -39,6 +39,8 @@ def main():
     argparser.add_argument("-b","--before",help="only include events before (and including) specified date/time")
     argparser.add_argument("-a","--after",help="only include events after (and including) specified date/time")
 
+    argparser.add_argument("-o","--output",help="output file name")
+
     args = argparser.parse_args()
 
     tz = pytz.utc
@@ -55,14 +57,12 @@ def main():
         after = parser.parse(args.after)
         if after.tzinfo==None or after.tzinfo.utcoffset(after)==None:
             after = tz.localize(after)
-        print "after: " + after.strftime("%Y-%m-%d %H:%M %Z")
 
     before = None
     if args.before!=None:
         before = parser.parse(args.before)
         if before.tzinfo==None or before.tzinfo.utcoffset(before)==None:
             before = tz.localize(before)
-        print "before: " + before.strftime("%Y-%m-%d %H:%M %Z")
 
     if args.update:
         print "not implemented yet"
@@ -74,14 +74,26 @@ def main():
 
         if args.exporter=="raw":
             exporter = Exporter(events, tz, before, after)
+            filename = "data/output.raw"
         elif args.exporter=="text":
             exporter = TextExporter(events, tz, before, after)
+            filename = "data/output.txt"
         elif args.exporter=="json":
             exporter = JsonExporter(events, tz, before, after)
+            filename = "data/output.json"
         else: # args.exporter=="ical":
             exporter = IcalExporter(events, tz, before, after)
+            filename = "data/output.ics"
 
-        file('data/test.ics','w+').write(str(exporter))
+        if args.output != None:
+            filename = args.output
+
+        if filename == "-":
+            f = sys.stdout
+        else:
+            f = file(filename,'w+')
+
+        f.write(str(exporter))
     elif args.fetch:
         webcache = WebCache("data/web.cache")
 
