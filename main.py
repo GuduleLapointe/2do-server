@@ -23,6 +23,7 @@ fetchers = [
     ("thirdrockfetcher", "ThirdRockFetcher", 0),
     ("avatarfestfetcher", "AvatarFestFetcher", 0),
     ("lfgridfetcher", "LfGridFetcher", 0),
+    ("craftfetcher", "CraftFetcher", 0),
     ]
 
 def main():
