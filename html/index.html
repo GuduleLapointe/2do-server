@@ -7,24 +7,31 @@
   <meta name="author" content="linkwater">
   <link rel="stylesheet" href="style.css">
   <script src="jquery-1.11.3.min.js"></script>
+  <script src="moment.min.js"></script>
+  <script src="moment-timezone-with-data-2010-2020.js"></script>
   <script>
     $(document).ready(function() {
         $("div#events").html("<h1>Events</h1>")
 
         $.getJSON("events.json", function(data) {
-            $("div#events").append($("<ul></ul>"));
+            tzname = "Europe/Amsterdam"
+
+            $("div#events").append($('<table class="eventlist"></table>'));
 
             for(var i=0;i<data.length;i++) {
-                var li  = '<li id="event' + (String(i)) + '">';
+                start = moment(data[i].start)
+                end = moment(data[i].end)
 
-                li = li + '<span class="hgevent-start">' + data[i].start + '</span>';
-                li = li + '<span class="hgevent-end">' + data[i].end + '</span>';
-                li = li + '<span class="hgevent-title">' + data[i].title + '</span>';
-                li = li + '<span class="hgevent-desc">' + data[i].description + '</span>';
-                li = li + '<span class="hgevent-hgurl">' + data[i].hgurl + '</span>';
-                li = li + '</li>';
+                var tr  = '<tr>';
+                tr = tr + '<td class="eventtime">' + start.tz(tzname).format("ddd, MMM D, ha") + ' - ';
+                tr = tr + end.tz(tzname).format("ha") + " " + start.tz(tzname).format("z") + '</td>';
 
-                $("div#events ul").append($(li));
+                tr = tr + '<td class="eventtitle">' + data[i].title + '</td></tr>';
+
+                tr = tr + '<tr class="eventdesc"><td class="eventdesc" colspan="2">' + data[i].description + '</td></tr>';
+                tr = tr + '<tr class="eventhgurl"><td class="eventhgurl">' + data[i].hgurl + '</td><td></td></tr>';
+
+                $("div#events table").append($(tr));
             }
 
         });

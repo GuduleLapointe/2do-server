@@ -5,3 +5,9 @@ div#events {
 }
 
 
+tr.eventdesc {
+    display: none;
+}
+tr.eventhgurl {
+    display: none;
+}
