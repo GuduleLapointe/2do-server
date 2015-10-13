@@ -5,9 +5,29 @@ div#events {
 }
 
 
+tr.eventoverview {
+    cursor: pointer;
+}
+
 tr.eventdesc {
     display: none;
 }
 tr.eventhgurl {
     display: none;
+}
+td.eventhgurl {
+    padding: 1em;
+    border-left: 1px solid black;
+}
+td.eventhgurl span {
+    border: 1px solid black;
+    padding: 0.2em;
+}
+td.eventdesc {
+    border-left: 1px solid black;
+    padding-left: 1em;
+}
+
+td.eventtime {
+    width: 20em;
 }

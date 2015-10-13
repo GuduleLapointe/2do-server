@@ -22,16 +22,35 @@
                 start = moment(data[i].start)
                 end = moment(data[i].end)
 
-                var tr  = '<tr>';
+                var tr  = '<tr class="eventoverview">';
                 tr = tr + '<td class="eventtime">' + start.tz(tzname).format("ddd, MMM D, ha") + ' - ';
                 tr = tr + end.tz(tzname).format("ha") + " " + start.tz(tzname).format("z") + '</td>';
 
-                tr = tr + '<td class="eventtitle">' + data[i].title + '</td></tr>';
+                tr = tr + '<td class="eventtitle">&#9654; ' + data[i].title + '</td></tr>';
 
-                tr = tr + '<tr class="eventdesc"><td class="eventdesc" colspan="2">' + data[i].description + '</td></tr>';
-                tr = tr + '<tr class="eventhgurl"><td class="eventhgurl">' + data[i].hgurl + '</td><td></td></tr>';
+                var node1 = $(tr);
+                var node2 = $('<tr class="eventdesc"><td></td><td class="eventdesc">' + data[i].description + '</td></tr>');
+                var node3 = $('<tr class="eventhgurl"><td></td><td class="eventhgurl"><span>' + data[i].hgurl + '</span></td><td></td></tr>');
 
-                $("div#events table").append($(tr));
+                node1.attr('id','eventoverview'+String(i));
+                node1.data('eventid',i);
+                node2.attr('id','eventdesc'+String(i));
+                node2.data('eventid',i);
+                node3.attr('id','eventhgurl'+String(i));
+                node3.data('eventid',i);
+
+                node1.click(function() {
+                    //console.log($(this).data('eventid')); 
+                    $("tr#eventdesc"+String($(this).data('eventid'))).toggle();
+                    $("tr#eventhgurl"+String($(this).data('eventid'))).toggle();
+                });
+               
+                //$("div#events table").append($(tr).click(function() { console.log("foo"); }));
+
+                $("div#events table").append(node1);
+                $("div#events table").append(node3);
+                $("div#events table").append(node2);
+
             }
 
         });
