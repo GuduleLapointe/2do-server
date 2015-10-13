@@ -44,7 +44,7 @@ class MetropolisEvent(Event):
             datematch = re.search('Datum: ([0-9]+)\.([0-9]+)\.([0-9]+)', content)
 
             self.start = self.tz_berlin.localize(parser.parse("%s-%s-%s %s" % (year,month,day,timestr)))
-            self.end = self.start + datetime.timedelta(hours=3600)
+            self.end = self.start + datetime.timedelta(hours=2)
 
             langmatch = re.search("Sprache: (.*?)\s*\r", content).group(1)
             self.categories = self.categories + [Category("lang-"+langmatch)]
