@@ -17,6 +17,7 @@ from exporter.web import JsonExporter
 from dateutil import parser
 
 fetchers = [
+    ("gcgfetcher", "GcgFetcher", 0),
     ("kitelyfetcher", "KitelyFetcher", 0),
     ("metropolisfetcher", "MetropolisFetcher", 0),
     ("francogridfetcher", "FrancoGridFetcher", 0),
