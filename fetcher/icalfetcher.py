@@ -16,7 +16,7 @@ class IcalFetcher(object):
         print "IcalFetcher: get url "+str(self.url)
         print "IcalFetcher: timezone " + str(tz)
 
-        r = requests.get(self.url)
+        r = requests.get(self.url, headers={"user-agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0"})
 
         events = []
 
@@ -31,7 +31,9 @@ class IcalFetcher(object):
                     e.categories += self.categories
 
                 e.title = event['SUMMARY'].title()
-                e.description = event['DESCRIPTION'].title()
+                e.description = ""
+                if 'DESCRIPTION' in event.keys():
+                    e.description = event['DESCRIPTION'].title()
 
                 e.start = event['DTSTART'].dt
 
