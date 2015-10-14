@@ -1,6 +1,7 @@
 import json
 from exporter import Exporter
 import pytz
+from lib.hgurl import HgUrl
 
 class JsonExporter(Exporter):
     def __str__(self):
@@ -11,8 +12,8 @@ class JsonExporter(Exporter):
                 'title' : event.title.encode('utf-8'),
                 'start' : event.start.astimezone(pytz.utc).isoformat(),
                 'end' : event.end.astimezone(pytz.utc).isoformat(),
-                'description' : event.description.encode('utf-8'),
-                'hgurl' : event.hgurl.encode('utf-8'),
+                'description' : event.description.encode('utf-8').replace("\n","<br/>"),
+                'hgurl' : HgUrl.normalize(event.hgurl.encode('utf-8')),
                 'categories' : map(lambda e: str(e), event.categories),
             }
             jsonevents += [ jsonevent ]
