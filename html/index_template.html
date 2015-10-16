@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HYPEvents: Hypergrid Events across the Metaversum</title>
+  <meta name="description" content="HYPEvents: Hypergrid Events across the Metaversum">
+  <meta name="author" content="linkwater">
+  <link rel="stylesheet" href="style.css">
+  <script src="scr.js"></script>
+  <script>
+
+    function gridCatToString(cat) {
+        var rv;
+        switch(cat) {
+            case "kitely": rv = "Kitely"; break;
+            case "gcg": rv = "The Great Canadian Grid"; break;
+            case "metropolis": rv = "Metropolis"; break;
+            case "3rdrockgrid": rv = "3RD Rock Grid"; break;
+            case "francogrid": rv = "FrancoGrid"; break;
+            case "gridlittlefield": rv = "Littlefield Grid"; break;
+            default: rv = null; break;
+        }
+        return rv;
+    }
+
+    $(document).ready(function() {
+        $("div#events").html("<p>Loading events..</p>");
+        $("div#PAQ").hide();
+
+        $("a#menuevents").click(function(e) {
+            e.preventDefault();
+            $("div#PAQ").hide();
+            $("div#events").show();
+        });
+        $("a#menuPAQ").click(function(e) {
+            e.preventDefault();
+            $("div#events").hide();
+            $("div#PAQ").show();
+        });
+
+        $.getJSON("events.json", function(data) {
+            tzname = "Europe/Amsterdam"
+
+            $("div#events").html($('<table class="eventlist"></table>'));
+
+            for(var i=0;i<data.length;i++) {
+                start = moment(data[i].start)
+                end = moment(data[i].end)
+
+                var tr  = '<tr class="eventoverview">';
+                tr = tr + '<td class="eventtime">' + start.tz(tzname).format("ddd, MMM D, ha") + ' - ';
+                tr = tr + end.tz(tzname).format("ha") + " " + start.tz(tzname).format("z") + '</td>';
+
+                tr = tr + '<td class="eventtitle"><span class="eventoff" id="eventoff'+String(i)+'">&#9654;</span>';
+                tr = tr + '<span class="eventon" id="eventon'+String(i)+'">&#9660;</span> ';
+                tr = tr + '<span class="eventtitle">' + data[i].title+'</span>';
+
+                for (var catidx in data[i].categories) {
+                    var cat = data[i].categories[catidx];
+                    if (cat.substring(0,"grid-".length)=='grid-') {
+                        var grid = gridCatToString(cat.substring("grid-".length));
+                        if (grid != null) {
+                            tr = tr + ' <span class="eventgridname">(' + grid + ')</span>';
+                        }
+                    }
+                }
+
+                
+                tr = tr + '</td></tr>';
+
+                var node1 = $(tr);
+                var node2 = $('<tr class="eventdesc"><td></td><td class="eventdesc">' + data[i].description + '</td></tr>');
+                var node3 = $('<tr class="eventhgurl"><td></td><td class="eventhgurl"><span>' + data[i].hgurl + '</span></td><td></td></tr>');
+
+                node1.attr('id','eventoverview'+String(i));
+                node1.data('eventid',i);
+                node2.attr('id','eventdesc'+String(i));
+                node2.data('eventid',i);
+                node3.attr('id','eventhgurl'+String(i));
+                node3.data('eventid',i);
+
+                node1.click(function() {
+                    var eventid = String($(this).data('eventid'));
+                    $('span#eventon'+eventid).toggle();
+                    $('span#eventoff'+eventid).toggle();
+                    $("tr#eventdesc"+eventid).toggle();
+                    $("tr#eventhgurl"+eventid).toggle();
+
+                });
+               
+                //$("div#events table").append($(tr).click(function() { console.log("foo"); }));
+
+                $("div#events table").append(node1);
+                $("div#events table").append(node3);
+                $("div#events table").append(node2);
+
+            }
+
+        });
+    });
+  </script>
+</head>
+<body>
+<div class="mainrow" id="header">
+<span>HYPEvents</span>
+</div>
+<div class="mainrow" id="menu">
+<ul>
+  <li><a href="#events" id="menuevents">Events</a></li>
+  <li><a href="#PAQ" id="menuPAQ">PAQ (not a FAQ)</a></li>
+</ul>
+</div>
+<div class="mainrow" id="events">
+{{hypevents-nojs}}
+</div>
+<div class="mainrow" id="PAQ">
+<h1>Potentially Asked Questions</h1>
+<p>Since none of the questions below have been actually asked, this page is a Potentially Asked Questions and not a Frequently Asked Questions.</p>
+<h2>What is this about?</h2>
+<p>This site is an overview of events taking place in the hypergrid (also known as the metaverse).</p>
+<h2>How do you get the information for the listed events?</h2>
+We pull it from the event calendars that are published on the listed grids websites. When a grid publishes an ical feed, it is easy. But many grids have web-based event calendars. We parse those (caching sub-pages to limit load on the grid's webservers) and convert them to ical.
+<h2>What grids are listed?</h2>
+<ul>
+<li>Metropolis</li>
+<li>Great canadian grid</li>
+<li>Littlefield grid</li>
+<li>Third Rock Grid</li>
+<li>and more..</li>
+</ul>
+<h2>Why isn't grid XYZ not on the calendar?</h2>
+<p>Probably because we don't know about it! Send us an email at <a href="mailto:frost@linkwater.org">frost@linkwater.org</a> and let us know about the grid's event calendar!</p>
+</div>
+</body>
+</html>
