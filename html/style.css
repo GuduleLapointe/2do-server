@@ -61,3 +61,19 @@ td.eventdesc {
 td.eventtime {
     width: 20em;
 }
+
+
+span.eventon {
+    display: none;
+}
+span.eventoff {
+    display: inline;
+}
+span.eventtitle {
+    font-weight: bold;
+}
+span.eventgridname {
+    font-size: 0.8em;
+    color: #00f;
+    font-style: italic;
+}
