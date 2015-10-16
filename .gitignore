@@ -1,3 +1,7 @@
 *.pyc
 *.swp
 data/*
+html/events.html
+html/events.json
+html/scr.js
+html/scripts.js
