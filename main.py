@@ -14,6 +14,7 @@ from exporter.exporter import Exporter
 from exporter.ical import IcalExporter
 from exporter.text import TextExporter
 from exporter.web import JsonExporter
+from exporter.htmlexporter import HtmlExporter
 from dateutil import parser
 
 fetchers = [
@@ -36,7 +37,7 @@ def main():
     group.add_argument("-w","--write",action="store_true")
     group.add_argument("-u","--update",action="store_true")
 
-    argparser.add_argument("-e","--exporter",help="raw, ical, text or json")
+    argparser.add_argument("-e","--exporter",help="raw, ical, text, html or json")
     argparser.add_argument("-t","--timezone",help="timezone for export, defaults to utc")
 
     argparser.add_argument("-b","--before",help="only include events before (and including) specified date/time")
@@ -84,6 +85,9 @@ def main():
         elif args.exporter=="json":
             exporter = JsonExporter(events, tz, before, after)
             filename = "data/output.json"
+        elif args.exporter=="html":
+            exporter = HtmlExporter(events, tz, before, after)
+            filename = "data/output.html"
         else: # args.exporter=="ical":
             exporter = IcalExporter(events, tz, before, after)
             filename = "data/output.ics"
