@@ -17,6 +17,7 @@ from exporter.web import JsonExporter
 from dateutil import parser
 
 fetchers = [
+    ("craftfetcher", "CraftFetcher", 0),
     ("gcgfetcher", "GcgFetcher", 0),
     ("kitelyfetcher", "KitelyFetcher", 0),
     ("metropolisfetcher", "MetropolisFetcher", 0),
@@ -24,7 +25,6 @@ fetchers = [
     ("thirdrockfetcher", "ThirdRockFetcher", 0),
     ("avatarfestfetcher", "AvatarFestFetcher", 0),
     ("lfgridfetcher", "LfGridFetcher", 0),
-    ("craftfetcher", "CraftFetcher", 0),
     ]
 
 def main():
@@ -36,7 +36,7 @@ def main():
     group.add_argument("-w","--write",action="store_true")
     group.add_argument("-u","--update",action="store_true")
 
-    argparser.add_argument("-e","--exporter",help="raw or ical")
+    argparser.add_argument("-e","--exporter",help="raw, ical, text or json")
     argparser.add_argument("-t","--timezone",help="timezone for export, defaults to utc")
 
     argparser.add_argument("-b","--before",help="only include events before (and including) specified date/time")
@@ -118,6 +118,8 @@ def main():
         datafile.close()
     else:
         print "must specify at least one of -f, -w and -u"
+        print ""
+        argparser.print_help()
 
 if __name__ == "__main__":
     main()
