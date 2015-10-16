@@ -11,12 +11,24 @@
   <script src="moment-timezone-with-data-2010-2020.js"></script>
   <script>
     $(document).ready(function() {
-        $("div#events").html("<h1>Events</h1>")
+        $("div#events").html("<p>Loading events..</p>");
+        $("div#PAQ").hide();
+
+        $("a#menuevents").click(function(e) {
+            e.preventDefault();
+            $("div#PAQ").hide();
+            $("div#events").show();
+        });
+        $("a#menuPAQ").click(function(e) {
+            e.preventDefault();
+            $("div#events").hide();
+            $("div#PAQ").show();
+        });
 
         $.getJSON("events.json", function(data) {
             tzname = "Europe/Amsterdam"
 
-            $("div#events").append($('<table class="eventlist"></table>'));
+            $("div#events").html($('<table class="eventlist"></table>'));
 
             for(var i=0;i<data.length;i++) {
                 start = moment(data[i].start)
@@ -63,8 +75,8 @@
 </div>
 <div class="mainrow" id="menu">
 <ul>
-  <li><a href="#events">Events</a></li>
-  <li><a href="#PAQ">PAQ (not a FAQ)</a></li>
+  <li><a href="#events" id="menuevents">Events</a></li>
+  <li><a href="#PAQ" id="menuPAQ">PAQ (not a FAQ)</a></li>
 </ul>
 </div>
 <div class="mainrow" id="events">
