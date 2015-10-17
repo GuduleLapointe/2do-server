@@ -6,6 +6,8 @@
         'UTC' : false,
     };
 
+    var currtz = "Europe/Amsterdam";
+
     function gridCatToString(cat) {
         var rv;
         switch(cat) {
@@ -21,13 +23,21 @@
         return rv;
     }
 
+    function getTimefmt(tzname,seconds) {
+        var ampm = myTimezones[tzname];
+        var timefmt = "HH:mm";
+        if(seconds) timefmt += ":ss";
+        if(ampm) {
+            if (seconds) timefmt = "h:mm:ss a";
+            else timefmt = "h:mm a";
+        }
+        return timefmt;
+    }
+
     function renderEvents(data,tzname) {
             $("div#events").html($('<table class="eventlist"></table>'));
 
-            var ampm = myTimezones[tzname];
-
-            var timefmt = "HH:mm";
-            if(ampm) timefmt = "h:mm a";
+            timefmt = getTimefmt(tzname,false);
 
             for(var i=0;i<data.length;i++) {
                 start = moment(data[i].start);
@@ -74,8 +84,6 @@
 
                 });
                
-                //$("div#events table").append($(tr).click(function() { console.log("foo"); }));
-
                 $("div#events table").append(node1);
                 $("div#events table").append(node3);
                 $("div#events table").append(node2);
@@ -84,7 +92,32 @@
 
     }
 
+    var timer;
+
+    function renderClock() {
+        clearTimeout(timer);
+
+        $("div#clock").html(moment.tz(new Date(), currtz).format("ddd, MMM D, "+getTimefmt(currtz,true)+" z"));
+
+        timer = setTimeout(renderClock, 500);
+    }
+
+
+    var refreshTimer;
+
+    function loadEvents(event) {
+        clearTimeout(refreshTimer);
+        $.getJSON("events.json", function(data) {
+            $("div#events").data("events",data);
+            renderEvents(data, currtz);
+        });
+        refreshTimer = setTimeout(loadEvents, 1800000);
+    }
+
     $(document).ready(function() {
+        timer = setTimeout(renderClock, 500);
+        refreshTimer = setTimeout(loadEvents, 10);
+
         $("div#events").html("<p>Loading events..</p>");
         $("div#PAQ").hide();
 
@@ -94,9 +127,8 @@
         }
 
         tzselect.change(function(e) {
-            console.log(e.target.value);
-            console.log(myTimezones[e.target.value]);
-            renderEvents($("div#events").data("events"),e.target.value);
+            currtz = e.target.value;
+            renderEvents($("div#events").data("events"),currtz);
         });
 
         $("div#tzselect").append(tzselect);
@@ -112,11 +144,5 @@
             $("div#events").hide();
             $("div#tzselect").hide();
             $("div#PAQ").show();
-        });
-
-        $.getJSON("events.json", function(data) {
-            tzname = "Europe/Amsterdam"
-            $("div#events").data("events",data);
-            renderEvents(data, tzname);
         });
     });

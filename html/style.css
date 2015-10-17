@@ -42,6 +42,16 @@ div#menu a:hover {
     color: #ffffff;
 }
 
+div#timerow {
+    height: 1.5em;
+}
+div#clock {
+    float: right;
+}
+div#tzselect {
+    float: left;
+}
+
 
 tr.eventoverview {
     cursor: pointer;
@@ -67,7 +77,7 @@ td.eventdesc {
 }
 
 td.eventtime {
-    width: 20em;
+    width: 21em;
 }
 
 
