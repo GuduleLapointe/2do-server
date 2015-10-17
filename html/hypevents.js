@@ -1,13 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Hypervents: Hypergrid Events across the Metaversum</title>
-  <meta name="description" content="Hypervents: Hypergrid Events across the Metaversum">
-  <meta name="author" content="linkwater">
-  <link rel="stylesheet" href="style.css">
-  <script src="scr.js"></script>
-  <script>
+
+    var myTimezones = {
+        'Europe/Amsterdam' : false,
+        'US/Eastern' : true,
+        'US/Pacific' : true,
+        'UTC' : false,
+    };
 
     function gridCatToString(cat) {
         var rv;
@@ -24,33 +21,21 @@
         return rv;
     }
 
-    $(document).ready(function() {
-        $("div#events").html("<p>Loading events..</p>");
-        $("div#PAQ").hide();
-
-        $("a#menuevents").click(function(e) {
-            e.preventDefault();
-            $("div#PAQ").hide();
-            $("div#events").show();
-        });
-        $("a#menuPAQ").click(function(e) {
-            e.preventDefault();
-            $("div#events").hide();
-            $("div#PAQ").show();
-        });
-
-        $.getJSON("events.json", function(data) {
-            tzname = "Europe/Amsterdam"
-
+    function renderEvents(data,tzname) {
             $("div#events").html($('<table class="eventlist"></table>'));
 
+            var ampm = myTimezones[tzname];
+
+            var timefmt = "HH:mm";
+            if(ampm) timefmt = "h:mm a";
+
             for(var i=0;i<data.length;i++) {
-                start = moment(data[i].start)
-                end = moment(data[i].end)
+                start = moment(data[i].start);
+                end = moment(data[i].end);
 
                 var tr  = '<tr class="eventoverview">';
-                tr = tr + '<td class="eventtime">' + start.tz(tzname).format("ddd, MMM D, ha") + ' - ';
-                tr = tr + end.tz(tzname).format("ha") + " " + start.tz(tzname).format("z") + '</td>';
+                tr = tr + '<td class="eventtime">' + start.tz(tzname).format("ddd, MMM D, "+timefmt) + ' - ';
+                tr = tr + end.tz(tzname).format(timefmt) + " " + start.tz(tzname).format("z") + '</td>';
 
                 tr = tr + '<td class="eventtitle"><span class="eventoff" id="eventoff'+String(i)+'">&#9654;</span>';
                 tr = tr + '<span class="eventon" id="eventon'+String(i)+'">&#9660;</span> ';
@@ -97,40 +82,41 @@
 
             }
 
+    }
+
+    $(document).ready(function() {
+        $("div#events").html("<p>Loading events..</p>");
+        $("div#PAQ").hide();
+
+        tzselect = $('<select id="tzselector"></select>');
+        for(var tz in myTimezones) {
+            tzselect.append($('<option value="'+tz+'">'+tz+'</option>'));
+        }
+
+        tzselect.change(function(e) {
+            console.log(e.target.value);
+            console.log(myTimezones[e.target.value]);
+            renderEvents($("div#events").data("events"),e.target.value);
+        });
+
+        $("div#tzselect").append(tzselect);
+
+        $("a#menuevents").click(function(e) {
+            e.preventDefault();
+            $("div#PAQ").hide();
+            $("div#tzselect").show();
+            $("div#events").show();
+        });
+        $("a#menuPAQ").click(function(e) {
+            e.preventDefault();
+            $("div#events").hide();
+            $("div#tzselect").hide();
+            $("div#PAQ").show();
+        });
+
+        $.getJSON("events.json", function(data) {
+            tzname = "Europe/Amsterdam"
+            $("div#events").data("events",data);
+            renderEvents(data, tzname);
         });
     });
-  </script>
-</head>
-<body>
-<div class="mainrow" id="header">
-<span>HYPEvents</span>
-</div>
-<div class="mainrow" id="menu">
-<ul>
-  <li><a href="#events" id="menuevents">Events</a></li>
-  <li><a href="#PAQ" id="menuPAQ">PAQ (not a FAQ)</a></li>
-</ul>
-</div>
-<div class="mainrow" id="events">
-non-javascript client sees this
-</div>
-<div class="mainrow" id="PAQ">
-<h1>Potentially Asked Questions</h1>
-<p>Since none of the questions below have been actually asked, this page is a Potentially Asked Questions and not a Frequently Asked Questions.</p>
-<h2>What is this about?</h2>
-<p>This site is an overview of events taking place in the hypergrid (also known as the metaverse).</p>
-<h2>How do you get the information for the listed events?</h2>
-We pull it from the event calendars that are published on the listed grids websites. When a grid publishes an ical feed, it is easy. But many grids have web-based event calendars. We parse those (caching sub-pages to limit load on the grid's webservers) and convert them to ical.
-<h2>What grids are listed?</h2>
-<ul>
-<li>Metropolis</li>
-<li>Great canadian grid</li>
-<li>Littlefield grid</li>
-<li>Third Rock Grid</li>
-<li>and more..</li>
-</ul>
-<h2>Why isn't grid XYZ not on the calendar?</h2>
-<p>Probably because we don't know about it! Send us an email at <a href="mailto:frost@linkwater.org">frost@linkwater.org</a> and let us know about the grid's event calendar!</p>
-</div>
-</body>
-</html>

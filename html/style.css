@@ -10,6 +10,14 @@ div.mainrow {
     background-color: #ffffff;
 }
 
+div.mainrowsub {
+    border: 1px solid black;
+    width: 80%;
+    margin: auto;
+    padding: 1em;
+    background-color: #ffffff;
+}
+
 div#header span {
     font-size: 500%;
     font-style: italic;
