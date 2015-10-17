@@ -1,6 +1,10 @@
 
     var myTimezones = {
+        'Asia/Tokyo' : false,
+        'Asia/Tokyo' : false,
         'Europe/Amsterdam' : false,
+        'Europe/London' : false,
+        'US/Central' : true,
         'US/Eastern' : true,
         'US/Pacific' : true,
         'UTC' : false,
@@ -35,59 +39,66 @@
     }
 
     function renderEvents(data,tzname) {
+            categories = {};
+
             $("div#events").html($('<table class="eventlist"></table>'));
 
             timefmt = getTimefmt(tzname,false);
 
+            now = moment().tz(tzname);
+            latest = moment().tz(tzname);
+            latest.add(1, 'months');
+
             for(var i=0;i<data.length;i++) {
-                start = moment(data[i].start);
-                end = moment(data[i].end);
+                start = moment(data[i].start).tz(tzname);
+                end = moment(data[i].end).tz(tzname);
 
-                var tr  = '<tr class="eventoverview">';
-                tr = tr + '<td class="eventtime">' + start.tz(tzname).format("ddd, MMM D, "+timefmt) + ' - ';
-                tr = tr + end.tz(tzname).format(timefmt) + " " + start.tz(tzname).format("z") + '</td>';
+                if(end>now && start<latest) {
+                    var tr  = '<tr class="eventoverview">';
+                    tr = tr + '<td class="eventtime">' + start.format("ddd, MMM D, "+timefmt) + ' - ';
+                    tr = tr + end.format(timefmt) + " " + start.format("z") + '</td>';
 
-                tr = tr + '<td class="eventtitle"><span class="eventoff" id="eventoff'+String(i)+'">&#9654;</span>';
-                tr = tr + '<span class="eventon" id="eventon'+String(i)+'">&#9660;</span> ';
-                tr = tr + '<span class="eventtitle">' + data[i].title+'</span>';
+                    tr = tr + '<td class="eventtitle"><span class="eventoff" id="eventoff'+String(i)+'">&#9654;</span>';
+                    tr = tr + '<span class="eventon" id="eventon'+String(i)+'">&#9660;</span> ';
+                    tr = tr + '<span class="eventtitle">' + data[i].title+'</span>';
 
-                for (var catidx in data[i].categories) {
-                    var cat = data[i].categories[catidx];
-                    if (cat.substring(0,"grid-".length)=='grid-') {
-                        var grid = gridCatToString(cat.substring("grid-".length));
-                        if (grid != null) {
-                            tr = tr + ' <span class="eventgridname">(' + grid + ')</span>';
+                    for (var catidx in data[i].categories) {
+                        var cat = data[i].categories[catidx];
+                        if (cat.substring(0,"grid-".length)=='grid-') {
+                            var grid = gridCatToString(cat.substring("grid-".length));
+                            if (grid != null) {
+                                tr = tr + ' <span class="eventgridname">(' + grid + ')</span>';
+                            }
                         }
+                        if(!(cat in categories)) categories[cat]=true;
                     }
+
+                    tr = tr + '</td></tr>';
+
+                    var node1 = $(tr);
+                    var node2 = $('<tr class="eventdesc"><td></td><td class="eventdesc">' + data[i].description + '</td></tr>');
+                    var node3 = $('<tr class="eventhgurl"><td></td><td class="eventhgurl"><span>' + data[i].hgurl + '</span></td><td></td></tr>');
+
+                    node1.attr('id','eventoverview'+String(i));
+                    node1.data('eventid',i);
+                    node2.attr('id','eventdesc'+String(i));
+                    node2.data('eventid',i);
+                    node3.attr('id','eventhgurl'+String(i));
+                    node3.data('eventid',i);
+
+                    node1.click(function() {
+                        var eventid = String($(this).data('eventid'));
+                        $('span#eventon'+eventid).toggle();
+                        $('span#eventoff'+eventid).toggle();
+                        $("tr#eventdesc"+eventid).toggle();
+                        $("tr#eventhgurl"+eventid).toggle();
+
+                    });
+                   
+                    $("div#events table").append(node1);
+                    $("div#events table").append(node3);
+                    $("div#events table").append(node2);
                 }
-
-                
-                tr = tr + '</td></tr>';
-
-                var node1 = $(tr);
-                var node2 = $('<tr class="eventdesc"><td></td><td class="eventdesc">' + data[i].description + '</td></tr>');
-                var node3 = $('<tr class="eventhgurl"><td></td><td class="eventhgurl"><span>' + data[i].hgurl + '</span></td><td></td></tr>');
-
-                node1.attr('id','eventoverview'+String(i));
-                node1.data('eventid',i);
-                node2.attr('id','eventdesc'+String(i));
-                node2.data('eventid',i);
-                node3.attr('id','eventhgurl'+String(i));
-                node3.data('eventid',i);
-
-                node1.click(function() {
-                    var eventid = String($(this).data('eventid'));
-                    $('span#eventon'+eventid).toggle();
-                    $('span#eventoff'+eventid).toggle();
-                    $("tr#eventdesc"+eventid).toggle();
-                    $("tr#eventhgurl"+eventid).toggle();
-
-                });
-               
-                $("div#events table").append(node1);
-                $("div#events table").append(node3);
-                $("div#events table").append(node2);
-
             }
 
     }
@@ -123,7 +134,10 @@
 
         tzselect = $('<select id="tzselector"></select>');
         for(var tz in myTimezones) {
-            tzselect.append($('<option value="'+tz+'">'+tz+'</option>'));
+            option = '<option value="'+tz+'"';
+            if (tz==currtz) option += ' selected';
+            option += '>'+tz+'</option>';
+            tzselect.append($(option));
         }
 
         tzselect.change(function(e) {
