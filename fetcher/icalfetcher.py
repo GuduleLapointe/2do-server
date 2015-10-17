@@ -12,6 +12,9 @@ class IcalFetcher(object):
             self.url = url
         self.categories = categories
 
+    def customizeEvent(self, event):
+        return event
+
     def fetch(self, limit=0, tz=pytz.utc):
         print "IcalFetcher: get url "+str(self.url)
         print "IcalFetcher: timezone " + str(tz)
@@ -59,7 +62,7 @@ class IcalFetcher(object):
                 except KeyError:
                     pass
 
-                events = events + [e]
+                events = events + [self.customizeEvent(e)]
 
                 if limit>0 and len(events)>=limit:
                     break
