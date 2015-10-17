@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="mainrow" id="header">
-<span>HYPEvents</span>
+<span id="headerHYP">HYP</span><span id="headerEvents">Events</span>
 </div>
 <div class="mainrow" id="menu">
 <ul>
@@ -29,19 +29,24 @@
 <h1>Potentially Asked Questions</h1>
 <p>Since none of the questions below have been actually asked, this page is a Potentially Asked Questions and not a Frequently Asked Questions.</p>
 <h2>What is this about?</h2>
-<p>This site is an overview of events taking place in the hypergrid (also known as the metaverse).</p>
+<p>This site is an overview of events taking place in the hypergrid (also known as the metaverse). If you are unfamiliar with the hypergrid, we advice to <a href="http://linkwater.org/pages/hypergrid.html">read up on the subject</a>. This site collects events from all over the hypergrid, and lists them in a single easy to comprehend overview.</p>
 <h2>How do you get the information for the listed events?</h2>
-We pull it from the event calendars that are published on the listed grids websites. When a grid publishes an ical feed, it is easy. But many grids have web-based event calendars. We parse those (caching sub-pages to limit load on the grid's webservers) and convert them to ical.
+<p>HYPEvents pulls information from the event calendars that are published on the listed grids websites. When a grid publishes an ical feed, it is easy. But many grids have web-based event calendars. We parse those (caching sub-pages to limit load on the grid's webservers) and convert them to ical.</p>
+<p>To make it easy to see what's going on right now and provide easy access, HYPEvents runs algorithms to extract hypergrid url's and times from the event calendars. This is not always easy, as various grids have different ways of indicating the location of the event. Sometimes the information is in the description, sometimes it is just a region name, sometimes it is a hypergrid url.</p>
 <h2>What grids are listed?</h2>
 <ul>
-<li>Metropolis</li>
-<li>Great canadian grid</li>
-<li>Littlefield grid</li>
-<li>Third Rock Grid</li>
-<li>and more..</li>
+<li><a href="http://3rdrockgrid.com/">Third Rock Grid</a></li>
+<li><a href="http://avatarfest.net/">AVATARfest</a></li>
+<li><a href="http://www.craft-world.org/">Craft World</a></li>
+<li><a href="http://francogrid.org/">FrancoGrid</a></li>
+<li><a href="http://greatcanadiangrid.ca/">Great Canadian Grid</a></li>
+<li><a href="http://www.kitely.com/">Kitely</a></li>
+<li><a href="https://hypergrid.org/">Metropolis</a></li>
+<li><a href="http://www.littlefieldgrid.com/">Littlefield grid</a></li>
 </ul>
 <h2>Why isn't grid XYZ not on the calendar?</h2>
-<p>Probably because we don't know about it! Send us an email at <a href="mailto:frost@linkwater.org">frost@linkwater.org</a> and let us know about the grid's event calendar!</p>
+<p>Probably because we don't know about it! Send us an email at <a href="mailto:tomfrost@linkwater.org">tomfrost@linkwater.org</a> and send us a link to the grid's event calendar! Ical feed works best, but we can also build a custom scraper and parser for web-based event calendars.</p>
+<p>HYPEvents lists only events on hypergrid-enabled grids.</p>
 </div>
 </body>
 </html>

@@ -2,6 +2,10 @@ body {
     background-color: #000055;
 }
 
+#headerHYP {
+    color: #666;
+}
+
 div.mainrow {
     border: 1px solid black;
     width: 80%;
