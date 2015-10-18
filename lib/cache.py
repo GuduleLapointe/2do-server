@@ -1,4 +1,14 @@
 import cPickle
+from time import time
+
+class CachedObject(object):
+    def __init__(self, data, expiry=None):
+        self.data = data
+        self.expiry = expiry
+
+    def __str__(self):
+        return "expiry: "+str(self.expiry)
+    
 
 class Cache(object):
     def __init__(self, filename):
@@ -17,17 +27,22 @@ class Cache(object):
         if self.cache == None:
             self.cache = {}
 
-    def store(self,key,value):
-        self.cache[key] = value
+    def store(self,key,value,expiry=None):
+        self.cache[key] = CachedObject(value,time() + expiry)
 
     def exists(self,key):
-        if key in self.cache.keys():
+        if self.retrieve(key)!=None:
             return True
         return False
 
     def retrieve(self,key):
         if key in self.cache.keys():
-            return self.cache[key]
+            cachedObject = self.cache[key]
+            if cachedObject.expiry!=None:
+                if cachedObject.expiry > time():
+                    return cachedObject.data
+                else:
+                    self.evict(key)
         return None
 
     def evict(self,key):
