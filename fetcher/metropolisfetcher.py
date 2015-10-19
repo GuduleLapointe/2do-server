@@ -116,6 +116,8 @@ class MetropolisFetcher:
                         break
 
                 print ""
+            else:
+                break
 
             pagecount = pagecount + 1
 
