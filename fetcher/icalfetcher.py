@@ -3,6 +3,13 @@ from lib.event import Event
 import icalendar
 import pytz
 import datetime
+from dateutil import rrule
+from copy import copy
+
+def fixDateTime(dt):
+    if type(dt)==datetime.date:
+        return pytz.utc.localize(datetime.datetime.combine(dt, datetime.time()))
+    return dt
 
 class IcalFetcher(object):
     tz_pacific = pytz.timezone('US/Pacific')
@@ -64,6 +71,62 @@ class IcalFetcher(object):
 
                 events = events + [self.customizeEvent(e)]
 
+                if "RRULE" in event.keys():
+                    rule = event.get('RRULE')
+                    print "have rrule: " + str(rule)
+                    print "event: " + str(e.title)
+
+                        # calc event length
+                    eventlen = e.end - e.start
+
+                        # fix until
+                    until = rule.get('UNTIL')
+                    if until!=None:
+                        newuntil = []
+                        for entry in until:
+                            #print "entry: "+str(entry)
+                            #print type(entry)
+                            if type(entry)==datetime.date:
+                                entry = datetime.datetime.combine(entry, datetime.time())
+                                entry = pytz.utc.localize(entry)
+                            newuntil += [entry]
+                        rule['UNTIL'] = newuntil
+
+                        print "new rule: "+str(rule)
+
+                    rrlimit = pytz.utc.localize(datetime.datetime.now()) + datetime.timedelta(days=30)
+
+                    rrset = rrule.rruleset()
+                    rrset.rrule( rrule.rrulestr( rule.to_ical(), dtstart = e.start ) )
+
+                    exdate = event.get('EXDATE')
+                    print "exdate: "+str(exdate)
+
+                    if type(exdate)==type([]):
+                        if exdate!=None:
+                            for date in exdate:
+                                #print "l---> "+str(date.dts)
+                                for dd in date.dts:
+                                    #print "l----> "+str(dd.dt)+" ("+str(type(dd.dt))+")"
+                                    rrset.exdate(fixDateTime(dd.dt))
+                    elif type(exdate)==icalendar.prop.vDDDLists:
+                                #print "s---> "+str(exdate.dts)
+                                for dd in exdate.dts:
+                                    #print "s----> "+str(fixDateTime(dd.dt))
+                                    rrset.exdate(fixDateTime(dd.dt))
+
+
+                    for instance in rrset:
+                        print "==> " + str(instance)
+                        if instance > rrlimit:
+                            break
+                        revent = copy(e)
+                        revent.start = instance
+                        revent.end = instance + eventlen
+                        events = events + [self.customizeEvent(revent)]
+                        if limit>0 and len(events)>=limit:
+                            break
+        
                 if limit>0 and len(events)>=limit:
                     break
 
