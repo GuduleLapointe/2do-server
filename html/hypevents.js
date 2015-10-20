@@ -62,6 +62,8 @@
                     tr = tr + '<span class="eventon" id="eventon'+String(i)+'">&#9660;</span> ';
                     tr = tr + '<span class="eventtitle">' + data[i].title+'</span>';
 
+                    var rawcats="";
+
                     for (var catidx in data[i].categories) {
                         var cat = data[i].categories[catidx];
                         if (cat.substring(0,"grid-".length)=='grid-') {
@@ -69,8 +71,10 @@
                             if (grid != null) {
                                 tr = tr + ' <span class="eventgridname">(' + grid + ')</span>';
                             }
+                        } else {
+                            if(!(cat in categories)) categories[cat]=true;
+                            rawcats += "<li>"+cat+"</li>";
                         }
-                        if(!(cat in categories)) categories[cat]=true;
                     }
 
                     tr = tr + '</td></tr>';
@@ -78,6 +82,7 @@
                     var node1 = $(tr);
                     var node2 = $('<tr class="eventdesc"><td></td><td class="eventdesc">' + data[i].description + '</td></tr>');
                     var node3 = $('<tr class="eventhgurl"><td></td><td class="eventhgurl"><span>' + data[i].hgurl + '</span></td><td></td></tr>');
+                    var node4 = $('<tr class="eventcats"><td></td><td class="eventcats"><ul id="eventcats">'+rawcats+'</ul></td><td></td></tr>');
 
                     node1.attr('id','eventoverview'+String(i));
                     node1.data('eventid',i);
@@ -85,6 +90,8 @@
                     node2.data('eventid',i);
                     node3.attr('id','eventhgurl'+String(i));
                     node3.data('eventid',i);
+                    node4.attr('id','eventcats'+String(i));
+                    node4.data('eventid',i);
 
                     node1.click(function() {
                         var eventid = String($(this).data('eventid'));
@@ -92,12 +99,14 @@
                         $('span#eventoff'+eventid).toggle();
                         $("tr#eventdesc"+eventid).toggle();
                         $("tr#eventhgurl"+eventid).toggle();
+                        $("tr#eventcats"+eventid).toggle();
 
                     });
                    
                     $("div#events table").append(node1);
                     $("div#events table").append(node3);
                     $("div#events table").append(node2);
+                    $("div#events table").append(node4);
                 }
             }
 

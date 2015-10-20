@@ -67,6 +67,9 @@ tr.eventdesc {
 tr.eventhgurl {
     display: none;
 }
+tr.eventcats {
+    display: none;
+}
 td.eventhgurl {
     padding: 1em;
     border-left: 1px solid black;
@@ -75,9 +78,21 @@ td.eventhgurl span {
     border: 1px solid black;
     padding: 0.2em;
 }
+td.eventcats {
+    border-left: 1px solid black;
+    padding: 0.2em;
+}
 td.eventdesc {
     border-left: 1px solid black;
     padding-left: 1em;
+}
+
+ul#eventcats li {
+    display: inline;
+    list-style: none;
+    padding: 0.2em;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 td.eventtime {
