@@ -10,46 +10,6 @@ from lib.category import Category
 from lib.webcache import WebCache
 from helper.craft import CraftHelper
 
-class ThirdRockEvent(Event):
-    detailurl = "http://3rdrockgrid.com/new/event-details/?id="
-    hgre = re.compile(".+:.+:.+")
-
-    def __init__(self, webcache=None):
-        super(ThirdRockEvent,self).__init__()
-        self.id = None
-        self.categories += [ Category("grid-3rdrockgrid") ]
-        self.webcache = webcache
-
-    def fetch(self):
-        if self.id==None:
-            raise Exception("Fetch on unitialized ThirdRockEvent")
-        url = self.detailurl + str(self.id)
-
-        if self.webcache==None:
-            r = requests.get(url)
-        else:
-            r = self.webcache.fetch(url)
-
-        if r.status_code==200:
-            tree = html.fromstring(r.text)
-            self.description = ' '.join(tree.xpath('//div[@class="entry"]/div[5]/text()')).strip()
-
-            region = ' '.join(tree.xpath('//div[@class="entry"]/div[6]/text()')).strip()
-            location = ' '.join(tree.xpath('//div[@class="entry"]/div[7]/text()')).strip()
-
-            if self.hgre.match(region):
-                self.hgurl = region
-            elif self.hgre.match(location):
-                self.hgurl = location
-            else:
-                self.hgurl = region + " " + location
-
-    def __str__(self):
-        rv = super(ThirdRockEvent,self).__str__()
-
-        return rv
-
-
 class CraftFetcher:
     eventurl="http://www.craft-world.org/page/en/living-in-craft/events.php"
     tz_rome = pytz.timezone('Europe/Rome')
