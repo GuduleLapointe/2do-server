@@ -95,6 +95,7 @@ class ThirdRockFetcher:
 
                 if limit>0 and ievent>=limit:
                     break
+            print ""
 
         return rv
 
