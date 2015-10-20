@@ -1,5 +1,4 @@
 from exporter import Exporter
-from lib.hgurl import HgUrl
 
 class HtmlExporter(Exporter):
     def __str__(self):

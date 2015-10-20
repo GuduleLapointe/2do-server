@@ -1,5 +1,4 @@
 from exporter import Exporter
-from lib.hgurl import HgUrl
 
 class TextExporter(Exporter):
     def __str__(self):
@@ -14,7 +13,7 @@ class TextExporter(Exporter):
             rv = rv + " " + start.strftime("%Z") + ")"
             
             rv = rv + " " + event.title.encode('utf-8')
-            rv = rv + " [" + HgUrl.normalize(event.hgurl.encode('utf-8')) + "] {"
+            rv = rv + " [" + event.hgurl.encode('utf-8') + "] {"
             rv = rv + ','.join(map(lambda e: str(e), event.categories)) + "}"
 
             rv = rv + "\n"
