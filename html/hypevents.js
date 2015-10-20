@@ -82,7 +82,7 @@
                     var node1 = $(tr);
                     var node2 = $('<tr class="eventdesc"><td></td><td class="eventdesc">' + data[i].description + '</td></tr>');
                     var node3 = $('<tr class="eventhgurl"><td></td><td class="eventhgurl"><span>' + data[i].hgurl + '</span></td><td></td></tr>');
-                    var node4 = $('<tr class="eventcats"><td></td><td class="eventcats"><ul id="eventcats">'+rawcats+'</ul></td><td></td></tr>');
+                    var node4 = $('<tr class="eventcats"><td></td><td class="eventcats"><ul id="eventcats"><li></li>'+rawcats+'<li></li></ul></td><td></td></tr>');
 
                     node1.attr('id','eventoverview'+String(i));
                     node1.data('eventid',i);
