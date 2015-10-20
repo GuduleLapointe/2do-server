@@ -23,3 +23,9 @@ kitely
 ------
 
 2015-10-19 message sent to contact@kitely.com
+
+opensimworld
+------------
+
+2015-10-20 message sent via http://opensimworld.com/feedback/
+
