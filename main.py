@@ -19,6 +19,7 @@ from exporter.lslexporter import LslExporter
 from dateutil import parser
 
 fetchers = [
+    ("miscfetcher", "MiscFetcher", 0),
     ("craftfetcher", "CraftFetcher", 0),
     ("gcgfetcher", "GcgFetcher", 0),
     ("kitelyfetcher", "KitelyFetcher", 0),
