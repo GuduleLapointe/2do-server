@@ -7,6 +7,7 @@ import sys
 import pytz
 from lib.category import Category
 from lib.webcache import WebCache
+from helper.thirdrock import ThirdRockHelper
 
 class ThirdRockEvent(Event):
     detailurl = "http://3rdrockgrid.com/new/event-details/?id="
@@ -54,6 +55,7 @@ class ThirdRockFetcher:
 
     def __init__(self,webcache):
         self.webcache = webcache
+        self.helper = ThirdRockHelper()
 
     def fetch(self, limit=0):
         print "ThirdRockFetcher: fetch overview.."
@@ -89,12 +91,10 @@ class ThirdRockFetcher:
 
                 e.fetch()
 
-                rv = rv + [e]
+                rv = rv + [self.helper.customizeEvent(e)]
 
                 if limit>0 and ievent>=limit:
                     break
-
-        print ""
 
         return rv
 

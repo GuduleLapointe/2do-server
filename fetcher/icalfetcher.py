@@ -14,12 +14,14 @@ def fixDateTime(dt):
 class IcalFetcher(object):
     tz_pacific = pytz.timezone('US/Pacific')
 
-    def __init__(self,url=None,categories=None):
-        if url!=None:
-            self.url = url
+    def __init__(self,url=None,categories=None,helper=None):
+        self.url = url
         self.categories = categories
+        self.helper = helper
 
     def customizeEvent(self, event):
+        if self.helper!=None:
+            return self.helper.customizeEvent(event)
         return event
 
     def fetch(self, limit=0, tz=pytz.utc):

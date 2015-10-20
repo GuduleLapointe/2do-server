@@ -21,13 +21,13 @@ from dateutil import parser
 fetchers = [
     ("miscfetcher", "MiscFetcher", 0),
     ("craftfetcher", "CraftFetcher", 0),
-    ("gcgfetcher", "GcgFetcher", 0),
     ("kitelyfetcher", "KitelyFetcher", 0),
     ("metropolisfetcher", "MetropolisFetcher", 0),
     ("francogridfetcher", "FrancoGridFetcher", 0),
     ("thirdrockfetcher", "ThirdRockFetcher", 0),
     ("avatarfestfetcher", "AvatarFestFetcher", 0),
     ("lfgridfetcher", "LfGridFetcher", 0),
+    ("gcgfetcher", "GcgFetcher", 0),
     ]
 
 def main():

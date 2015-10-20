@@ -3,13 +3,14 @@ from lib.event import Event
 from fetcher.icalfetcher import IcalFetcher
 import icalendar
 from lib.category import Category
-from fetcher.icalhelpedfetcher import IcalHelpedFetcher
+from fetcher.icalfetcher import IcalFetcher
 from helper.gcg import GcgHelper
 
-class GcgFetcher(IcalHelpedFetcher):
+class GcgFetcher(IcalFetcher):
     def __init__(self,webcache=None):
-        super(GcgFetcher,self).__init__("http://www.brownbearsw.com/cal/gcgevents?Op=iCalSubscribe",[ Category("grid-gcg") ], GcgHelper())
+        super(GcgFetcher,self).__init__("http://www.brownbearsw.com/cal/gcgevents?Op=iCalSubscribe",[ Category("grid-gcg") ])
         self.webcache = webcache
+        self.helper = GcgHelper()
 
     def customizeEvent(self,event):
         if self.helper!=None:

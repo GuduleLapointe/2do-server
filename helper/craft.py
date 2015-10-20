@@ -11,6 +11,12 @@ class CraftHelper(object):
                 return region
         return None
 
+    def customizeEvent(self, event):
+        hgurl = self.findRegion(event.hgurl)
+        if hgurl!=None:
+            event.hgurl = hgurl
+        return event
+
 
 if __name__=='__main__':
     import requests
