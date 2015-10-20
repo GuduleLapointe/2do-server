@@ -73,8 +73,6 @@ class IcalFetcher(object):
 
                 if "RRULE" in event.keys():
                     rule = event.get('RRULE')
-                    print "have rrule: " + str(rule)
-                    print "event: " + str(e.title)
 
                         # calc event length
                     eventlen = e.end - e.start
@@ -84,15 +82,11 @@ class IcalFetcher(object):
                     if until!=None:
                         newuntil = []
                         for entry in until:
-                            #print "entry: "+str(entry)
-                            #print type(entry)
                             if type(entry)==datetime.date:
                                 entry = datetime.datetime.combine(entry, datetime.time())
                                 entry = pytz.utc.localize(entry)
                             newuntil += [entry]
                         rule['UNTIL'] = newuntil
-
-                        print "new rule: "+str(rule)
 
                     rrlimit = pytz.utc.localize(datetime.datetime.now()) + datetime.timedelta(days=30)
 
@@ -100,24 +94,19 @@ class IcalFetcher(object):
                     rrset.rrule( rrule.rrulestr( rule.to_ical(), dtstart = e.start ) )
 
                     exdate = event.get('EXDATE')
-                    print "exdate: "+str(exdate)
 
                     if type(exdate)==type([]):
                         if exdate!=None:
                             for date in exdate:
-                                #print "l---> "+str(date.dts)
                                 for dd in date.dts:
-                                    #print "l----> "+str(dd.dt)+" ("+str(type(dd.dt))+")"
                                     rrset.exdate(fixDateTime(dd.dt))
                     elif type(exdate)==icalendar.prop.vDDDLists:
-                                #print "s---> "+str(exdate.dts)
                                 for dd in exdate.dts:
-                                    #print "s----> "+str(fixDateTime(dd.dt))
                                     rrset.exdate(fixDateTime(dd.dt))
 
 
                     for instance in rrset:
-                        print "==> " + str(instance)
+                        instance = instance.tzinfo.normalize(instance)
                         if instance > rrlimit:
                             break
                         revent = copy(e)
