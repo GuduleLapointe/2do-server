@@ -3,8 +3,8 @@ import requests
 from random import randrange
 
 class WebCache(Cache):
-    min_expiry = 1*3600
-    max_expiry = 6*3600
+    min_expiry = 3*3600
+    max_expiry = 12*3600
 
     def fetch(self, url):
         if self.exists(url):
