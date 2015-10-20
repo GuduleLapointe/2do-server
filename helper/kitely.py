@@ -15,6 +15,8 @@ class KitelyHelper(object):
             event.hgurl = "grid.kitely.com:8002:Kitely Hypergrid Merchant Fair"
         elif event.hgurl in KitelyHelper.dictionary.keys():
             event.hgurl = KitelyHelper.dictionary[event.hgurl]
+        elif event.hgurl == "":
+            event.hgurl = "grid.kitely.com:8002:Kitely Welcome Center"
 
         return event
 
