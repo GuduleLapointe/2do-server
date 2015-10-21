@@ -18,7 +18,7 @@ class WebCache(Cache):
 
         self.miss += 1
 
-        r = requests.get(url)
+        r = requests.get(url, headers={"user-agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0"})
 
         if r.status_code==200:
             if max_expiry!=None and min_expiry!=None:
