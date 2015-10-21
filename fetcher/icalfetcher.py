@@ -75,15 +75,6 @@ class IcalFetcher(object):
                 except KeyError:
                     pass
 
-                #storeEvent = copy(e)
-
-                #customizedEvent = self.customizeEvent(storeEvent)
-      
-                print ">" + e.title 
-                #print ">" + str(customizedEvent.start)
- 
-                # events = events + [customizedEvent]
-
                 if "RRULE" in event.keys():
                     rule = event.get('RRULE')
 
