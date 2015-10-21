@@ -3,6 +3,7 @@ from lib.event import Event
 from fetcher.icalfetcher import IcalFetcher
 import icalendar
 from lib.category import Category
+from lib.webcache import WebCache
 
 class MiscFetcher(IcalFetcher):
     def __init__(self,webcache=None):
@@ -10,9 +11,13 @@ class MiscFetcher(IcalFetcher):
         self.webcache = webcache
 
 if __name__=='__main__':
-    f = MiscFetcher()
+    cache = WebCache('data/test_miscfetcher.pck')
+
+    f = MiscFetcher(cache)
 
     e = f.fetch()
+
+    cache.flush()
 
     for ev in e:
         print str(ev)
