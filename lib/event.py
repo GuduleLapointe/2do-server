@@ -21,3 +21,11 @@ class Event(object):
         rv = rv + " categories  " + str(self.categories) + "\n"
 
         return rv       
+
+    def addCategory(self,newcat):
+        if type(newcat)==type([]):
+            for cat in newcat:
+                self.addCategory(cat)
+        else:
+            if not newcat in self.categories.keys():
+                self.categories += [newcat]
