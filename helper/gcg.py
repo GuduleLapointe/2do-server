@@ -17,7 +17,7 @@ class GcgHelper(object):
     def customizeEvent(self, event):
         hgurl = self.findRegion(event.hgurl)
         if hgurl!=None:
-            event.hgurl = hgurl
+            event.hgurl = 'login.greatcanadiangrid.ca:8002:' + hgurl
 
         event.start = event.start + timedelta(hours=3)
         event.end = event.end + timedelta(hours=3)
