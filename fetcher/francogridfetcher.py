@@ -6,7 +6,7 @@ from lib.category import Category
 
 class FrancoGridFetcher(IcalFetcher):
     def __init__(self,webcache=None):
-        super(FrancoGridFetcher,self).__init__("http://francogrid.org/evenements/ical",[ Category("grid-francogrid") ])
+        super(FrancoGridFetcher,self).__init__("http://francogrid.org/evenements/ical",[ Category("grid-francogrid") ],webcache)
         self.webcache = webcache
 
 if __name__=='__main__':

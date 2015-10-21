@@ -6,13 +6,32 @@ class WebCache(Cache):
     min_expiry = 3*3600
     max_expiry = 24*3600
 
-    def fetch(self, url):
+    def __init__(self, filename):
+        super(WebCache,self).__init__(filename)
+        self.hits = 0
+        self.miss = 0
+
+    def fetch(self, url, min_expiry=None, max_expiry=None):
         if self.exists(url):
+            self.hits += 1
             return self.retrieve(url)
+
+        self.miss += 1
+
         r = requests.get(url)
+
         if r.status_code==200:
-            self.store(url, r, randrange(WebCache.min_expiry, WebCache.max_expiry))
+            if max_expiry!=None and min_expiry!=None:
+                expiry = randrange(min_expiry,max_expiry)
+            else:
+                expiry = randrange(WebCache.min_expiry, WebCache.max_expiry)
+
+            self.store(url, r, expiry)
+
         return r
+
+    def __str__(self):
+        return "hits: " + str(self.hits) + ", miss: " + str(self.miss)
 
 if __name__ == "__main__":
     c = WebCache("data/test_web.cache")

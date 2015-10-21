@@ -14,10 +14,13 @@ def fixDateTime(dt):
 class IcalFetcher(object):
     tz_pacific = pytz.timezone('US/Pacific')
 
-    def __init__(self,url=None,categories=None,helper=None):
+    def __init__(self,url=None,categories=None,webcache=None,helper=None):
         self.url = url
         self.categories = categories
         self.helper = helper
+        self.cache = webcache
+        self.minexpiry = 1800
+        self.maxexpiry = 3600
 
     def customizeEvent(self, event):
         if self.helper!=None:
@@ -28,7 +31,8 @@ class IcalFetcher(object):
         print "IcalFetcher: get url "+str(self.url)
         print "IcalFetcher: timezone " + str(tz)
 
-        r = requests.get(self.url, headers={"user-agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0"})
+        #r = requests.get(self.url, headers={"user-agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0"})
+        r = self.cache.fetch(self.url, self.minexpiry, self.maxexpiry)
 
         events = []
 
@@ -71,7 +75,9 @@ class IcalFetcher(object):
                 except KeyError:
                     pass
 
-                events = events + [self.customizeEvent(e)]
+                storeEvent = copy(e)
+        
+                events = events + [self.customizeEvent(storeEvent)]
 
                 if "RRULE" in event.keys():
                     rule = event.get('RRULE')

@@ -5,21 +5,15 @@ import icalendar
 from lib.category import Category
 from fetcher.icalfetcher import IcalFetcher
 from helper.gcg import GcgHelper
+from datetime import timedelta
 
 class GcgFetcher(IcalFetcher):
     def __init__(self,webcache=None):
-        super(GcgFetcher,self).__init__("http://www.brownbearsw.com/cal/gcgevents?Op=iCalSubscribe",[ Category("grid-gcg") ])
+        super(GcgFetcher,self).__init__("http://www.brownbearsw.com/cal/gcgevents?Op=iCalSubscribe",[ Category("grid-gcg") ],webcache)
         self.webcache = webcache
         self.helper = GcgHelper()
-
-    def customizeEvent(self,event):
-        if self.helper!=None:
-            normalized = self.helper.findRegion(event.hgurl)
-            if normalized!=None:
-                event.hgurl = "login.greatcanadiangrid.ca:8002:" + normalized
-
-        return event
-
+        self.minexpiry = 3000
+        self.maxexpiry = 5000
 
 if __name__=='__main__':
     f = GcgFetcher()

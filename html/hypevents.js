@@ -1,5 +1,7 @@
 
     var myTimezones = {
+        'America/Toronto' : false,
+        'America/Vancouver' : false,
         'Asia/Tokyo' : false,
         'Asia/Tokyo' : false,
         'Europe/Amsterdam' : false,
@@ -140,6 +142,7 @@
 
         $("div#events").html("<p>Loading events..</p>");
         $("div#PAQ").hide();
+        $("div#extlinks").hide();
 
         tzselect = $('<select id="tzselector"></select>');
         for(var tz in myTimezones) {
@@ -159,6 +162,7 @@
         $("a#menuevents").click(function(e) {
             e.preventDefault();
             $("div#PAQ").hide();
+            $("div#extlinks").hide();
             $("div#tzselect").show();
             $("div#events").show();
         });
@@ -166,6 +170,14 @@
             e.preventDefault();
             $("div#events").hide();
             $("div#tzselect").hide();
+            $("div#extlinks").hide();
             $("div#PAQ").show();
+        });
+        $("a#menuextlinks").click(function(e) {
+            e.preventDefault();
+            $("div#events").hide();
+            $("div#tzselect").hide();
+            $("div#PAQ").hide();
+            $("div#extlinks").show();
         });
     });

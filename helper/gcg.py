@@ -1,5 +1,6 @@
 import re
 import cPickle
+from datetime import timedelta
 
 class GcgHelper(object):
     def __init__(self):
@@ -17,6 +18,10 @@ class GcgHelper(object):
         hgurl = self.findRegion(event.hgurl)
         if hgurl!=None:
             event.hgurl = hgurl
+
+        event.start = event.start + timedelta(hours=3)
+        event.end = event.end + timedelta(hours=3)
+
         return event
 
 

@@ -8,14 +8,19 @@ class LslExporter(Exporter):
 
         nevents = 0
 
+        tz_slt = pytz.timezone("US/Pacific")
+
         for event in self.events:
-            lslevents += event.title.encode('utf-8') + "\n"
-            lslevents += event.start.astimezone(pytz.utc).strftime("%s") + "\n"
-            lslevents += event.hgurl.encode('utf-8') + "\n"
+            if len(event.title)!=0 and len(event.hgurl)!=0:
+                start = tz_slt.normalize(event.start.astimezone(tz_slt))
 
-            nevents = nevents + 1
+                lslevents += event.title.encode('utf-8') + "\n"
+                lslevents += start.strftime("%I:%M%p") + "\n"
+                lslevents += event.hgurl.encode('utf-8') + "\n"
 
-            if nevents==10:
+                nevents = nevents + 1
+
+            if nevents==14:
                 break
             
         return lslevents

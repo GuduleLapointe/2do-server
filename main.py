@@ -19,13 +19,13 @@ from exporter.lslexporter import LslExporter
 from dateutil import parser
 
 fetchers = [
+    ("avatarfestfetcher", "AvatarFestFetcher", 0),
     ("miscfetcher", "MiscFetcher", 0),
     ("craftfetcher", "CraftFetcher", 0),
     ("kitelyfetcher", "KitelyFetcher", 0),
     ("metropolisfetcher", "MetropolisFetcher", 0),
     ("francogridfetcher", "FrancoGridFetcher", 0),
     ("thirdrockfetcher", "ThirdRockFetcher", 0),
-    ("avatarfestfetcher", "AvatarFestFetcher", 0),
     ("lfgridfetcher", "LfGridFetcher", 0),
     ("gcgfetcher", "GcgFetcher", 0),
     ]
@@ -119,6 +119,8 @@ def main():
             events = events + fetcher.fetch(limit)
 
             webcache.flush()
+
+            print "webcache status = " + str(webcache)
 
         events = sorted(events, key=lambda e: e.start)
 

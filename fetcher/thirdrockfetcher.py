@@ -27,7 +27,7 @@ class ThirdRockEvent(Event):
         if self.webcache==None:
             r = requests.get(url)
         else:
-            r = self.webcache.fetch(url)
+            r = self.webcache.fetch(url,36000,72000)
 
         if r.status_code==200:
             tree = html.fromstring(r.text)
@@ -62,7 +62,7 @@ class ThirdRockFetcher:
 
         rv = []
 
-        r = requests.get(self.eventurl)
+        r = self.webcache.fetch(self.eventurl,1800,3600)
 
         if r.status_code==200:
             nevents = len(r.json())

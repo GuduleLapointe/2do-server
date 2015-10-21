@@ -84,7 +84,7 @@ class MetropolisFetcher:
         while True:
             print "MetropolisFetcher: fetch overview page " + str(pagecount)
 
-            r = requests.get(self.eventurl+str(pagecount))
+            r = self.webcache.fetch(self.eventurl+str(pagecount),1000,1800)
 
             if r.status_code==200:
                 tree = html.fromstring(r.text)

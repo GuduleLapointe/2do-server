@@ -8,8 +8,10 @@ from helper.kitely import KitelyHelper
 
 class KitelyFetcher(IcalFetcher):
     def __init__(self,webcache=None):
-        super(KitelyFetcher,self).__init__("https://www.google.com/calendar/ical/857iq9v0nfqrg3qmt4e00n53rc%40group.calendar.google.com/public/basic.ics", [Category("grid-kitely")], KitelyHelper())
+        super(KitelyFetcher,self).__init__("https://www.google.com/calendar/ical/857iq9v0nfqrg3qmt4e00n53rc%40group.calendar.google.com/public/basic.ics", [Category("grid-kitely")], webcache, KitelyHelper())
         self.webcache = webcache
+        self.minexpiry = 1000
+        self.maxexpirty = 1800
 
     def customizeEvent(self, event):
         if event.title=="Kitely Merchant Fair":
