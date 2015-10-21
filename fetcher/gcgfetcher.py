@@ -6,6 +6,7 @@ from lib.category import Category
 from fetcher.icalfetcher import IcalFetcher
 from helper.gcg import GcgHelper
 from datetime import timedelta
+from lib.webcache import WebCache
 
 class GcgFetcher(IcalFetcher):
     def __init__(self,webcache=None):
@@ -16,7 +17,11 @@ class GcgFetcher(IcalFetcher):
         self.maxexpiry = 5000
 
 if __name__=='__main__':
-    f = GcgFetcher()
+    cache = WebCache('data/test_gcgfetcher.pck')
+
+    f = GcgFetcher(cache)
+
+    cache.flush()
 
     e = f.fetch()
 
