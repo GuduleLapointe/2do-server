@@ -111,7 +111,6 @@ class IcalFetcher(object):
 
                     for instance in rrset:
                         instance = instance.tzinfo.normalize(instance)
-                        print "- " + str(instance)
                         if instance > rrlimit:
                             break
                         revent = copy(e)
