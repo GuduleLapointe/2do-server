@@ -1,4 +1,4 @@
-import cPickle
+import pickle
 from time import time
 
 class CachedObject(object):
@@ -18,7 +18,7 @@ class Cache(object):
  
         try:
             cachefile = file(filename)
-            self.cache = cPickle.load(cachefile)
+            self.cache = pickle.load(cachefile)
             cachefile.close()
             print "cache file "+filename+" loaded"
         except IOError:
@@ -51,7 +51,7 @@ class Cache(object):
 
     def flush(self):
         cachefile = file(self.filename,'w+')
-        cPickle.dump(self.cache, cachefile, protocol=2)
+        pickle.dump(self.cache, cachefile, protocol=2)
         cachefile.close()
 
 

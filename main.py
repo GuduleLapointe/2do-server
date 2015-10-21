@@ -8,7 +8,7 @@ import datetime
 import pytz
 import icalendar
 import argparse
-import cPickle
+import pickle
 from lib.webcache import WebCache
 from exporter.exporter import Exporter
 from exporter.ical import IcalExporter
@@ -75,7 +75,7 @@ def main():
         sys.exit(1)
     elif args.write:
         datafile = file('data/events.pck')
-        events = cPickle.load(datafile)
+        events = pickle.load(datafile)
         datafile.close()
 
         if args.exporter=="raw":
@@ -125,7 +125,7 @@ def main():
         events = sorted(events, key=lambda e: e.start)
 
         datafile = file('data/events.pck', 'w+')
-        cPickle.dump(events, datafile, protocol=2)
+        pickle.dump(events, datafile, protocol=2)
         datafile.close()
     else:
         print "must specify at least one of -f, -w and -u"

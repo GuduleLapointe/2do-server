@@ -1,9 +1,9 @@
 import re
-import cPickle
+import pickle
 
 class CraftHelper(object):
     def __init__(self):
-        self.regions = cPickle.loads(file('data/craftregions.pck').read())
+        self.regions = pickle.loads(file('data/craftregions.pck').read())
 
     def findRegion(self, data):
         for region in self.regions:
@@ -25,4 +25,4 @@ if __name__=='__main__':
 
     if page.status_code==200:
         matches = map(lambda m: m.group(1), re.finditer('new MapWindow\("Region Name: (.*?)<br', page.text))
-        file('data/craftregions.pck','w+').write(cPickle.dumps(matches))
+        file('data/craftregions.pck','w+').write(pickle.dumps(matches))

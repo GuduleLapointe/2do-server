@@ -1,10 +1,10 @@
 import re
-import cPickle
+import pickle
 from datetime import timedelta
 
 class GcgHelper(object):
     def __init__(self):
-        self.regions = cPickle.loads(file('data/gcgregions.pck').read())
+        self.regions = pickle.loads(file('data/gcgregions.pck').read())
 
     def findRegion(self, data):
         if re.search("marina bay beach club", data, flags=re.I):
@@ -32,4 +32,4 @@ if __name__=='__main__':
 
     if page.status_code==200:
         matches = map(lambda m: m.group(1), re.finditer('new MapWindow\("Region Name: (.*?)<br', page.text))
-        file('data/gcgregions.pck','w+').write(cPickle.dumps(matches))
+        file('data/gcgregions.pck','w+').write(pickle.dumps(matches))

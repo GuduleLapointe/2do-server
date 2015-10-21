@@ -1,5 +1,4 @@
 import re
-import cPickle
 
 class KitelyHelper(object):
 
