@@ -75,9 +75,14 @@ class IcalFetcher(object):
                 except KeyError:
                     pass
 
-                storeEvent = copy(e)
-        
-                events = events + [self.customizeEvent(storeEvent)]
+                #storeEvent = copy(e)
+
+                #customizedEvent = self.customizeEvent(storeEvent)
+      
+                print ">" + e.title 
+                #print ">" + str(customizedEvent.start)
+ 
+                # events = events + [customizedEvent]
 
                 if "RRULE" in event.keys():
                     rule = event.get('RRULE')
@@ -115,6 +120,7 @@ class IcalFetcher(object):
 
                     for instance in rrset:
                         instance = instance.tzinfo.normalize(instance)
+                        print "- " + str(instance)
                         if instance > rrlimit:
                             break
                         revent = copy(e)
