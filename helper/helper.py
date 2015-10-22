@@ -31,6 +31,7 @@ class Helper(object):
             re.compile('\smeet\s', flags=re.I)  : 'social',
             re.compile('\sstory\s', flags=re.I)  : 'literature',
             re.compile('avatar repertory theat', flags=re.I)  : 'art',
+            re.compile('community', flags=re.I)  : 'social',
         },
     }
 
