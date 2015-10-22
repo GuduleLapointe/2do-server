@@ -24,6 +24,9 @@ class Category(object):
 
     def __repr__(self):
         return self.name + "(" + self.normalize() + ")"
+
+    def __eq__(self, other):
+        return self.name == other.name
        
 
 if __name__ == "__main__":

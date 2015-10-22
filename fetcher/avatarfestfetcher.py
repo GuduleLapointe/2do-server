@@ -4,6 +4,7 @@ from fetcher.icalfetcher import IcalFetcher
 import icalendar
 from lib.category import Category
 from helper.avatarfest import AvatarFestHelper
+from lib.webcache import WebCache
 
 class AvatarFestFetcher(IcalFetcher):
     def __init__(self,webcache=None):
@@ -17,9 +18,13 @@ class AvatarFestFetcher(IcalFetcher):
         self.maxexpiry = 1800
 
 if __name__=='__main__':
-    f = AvatarFestFetcher()
+    webcache = WebCache('data/test_avatarfest.pck')
+
+    f = AvatarFestFetcher(webcache)
 
     e = f.fetch()
+
+    webcache.flush()
 
     for ev in e:
         print str(ev)

@@ -98,6 +98,8 @@ class OpenSimWorldFetcher:
             for url in eventurls:
                 print "\rOpenSimWorldFetcher: ["+str(ievent+1)+"/"+str(nevents)+"]        ",
                 print "\r",
+                sys.stdout.flush()
+
                 ievent = ievent + 1
 
                 e = OpenSimWorldEvent(self.webcache, "http://opensimworld.com" + url)

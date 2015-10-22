@@ -1,5 +1,6 @@
 import re
 from helper import Helper
+from lib.category import Category
 
 class KitelyHelper(Helper):
 
@@ -19,6 +20,9 @@ class KitelyHelper(Helper):
             event.hgurl = "grid.kitely.com:8002:Kitely Hypergrid Merchant Fair"
         elif event.hgurl in KitelyHelper.dictionary.keys():
             event.hgurl = KitelyHelper.dictionary[event.hgurl]
+
+        if event.hgurl == "grid.kitely.com:8002:Seanchai":
+            event.addCategory(Category('literature'))
 
         return event
 

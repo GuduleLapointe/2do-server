@@ -1,4 +1,5 @@
 from time import gmtime,asctime
+from lib.category import Category
 
 class Event(object):
     def __init__(self):

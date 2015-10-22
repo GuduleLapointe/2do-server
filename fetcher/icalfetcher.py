@@ -75,7 +75,9 @@ class IcalFetcher(object):
                 except KeyError:
                     pass
 
-                if "RRULE" in event.keys():
+                if not "RRULE" in event.keys():
+                    events = events + [self.helper.customizeEvent(e)]
+                else:
                     rule = event.get('RRULE')
 
                         # calc event length

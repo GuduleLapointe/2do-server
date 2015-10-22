@@ -13,11 +13,6 @@ class KitelyFetcher(IcalFetcher):
         self.minexpiry = 1000
         self.maxexpirty = 1800
 
-    def customizeEvent(self, event):
-        if event.title=="Kitely Merchant Fair":
-            event.hgurl = "grid.kitely.com:8002:Kitely Hypergrid Merchant Fair"
-        return event
-
 if __name__=='__main__':
     cache = WebCache("data/test_kitely.cache")
 
