@@ -24,6 +24,7 @@
             case "francogrid": rv = "FrancoGrid"; break;
             case "littlefield": rv = "Littlefield Grid"; break;
             case "avatarfest": rv = "AVATARfest"; break;
+            case "opensimworld": rv = "OpenSimWorld"; break;
             default: rv = null; break;
         }
         return rv;

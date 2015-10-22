@@ -19,6 +19,7 @@ from exporter.lslexporter import LslExporter
 from dateutil import parser
 
 fetchers = [
+    ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
     ("avatarfestfetcher", "AvatarFestFetcher", 0),
     ("miscfetcher", "MiscFetcher", 0),
     ("craftfetcher", "CraftFetcher", 0),

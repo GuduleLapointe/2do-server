@@ -1,5 +1,6 @@
 import requests
 from lib.event import Event
+from datetime import timedelta
 from dateutil import parser
 from lxml import html
 import re
@@ -23,6 +24,17 @@ class OpenSimWorldEvent(Event):
         self.webcache = webcache
         self.url = url
 
+    def fetchHGUrl(self,url):
+        fullurl = "http://opensimworld.com" + url
+        if self.webcache==None:
+            r = requests.get(fullurl)
+        else:
+            r = self.webcache.fetch(fullurl,24*3600,48*3600)
+
+        if r.status_code==200:
+            tree = html.fromstring(r.text)
+
+            self.hgurl = tree.xpath('//div[@class="span5"]//input/@value')[0]
 
     def fetch(self):
         if self.url==None:
@@ -45,9 +57,10 @@ class OpenSimWorldEvent(Event):
 
             timematch = OpenSimWorldEvent.timere.search(details)
             self.start = OpenSimWorldEvent.tz_pacific.localize(parser.parse(timematch.group(1)))
+            self.end = self.start + timedelta(hours=2)
 
-
-            regionurl = tree.xpath('//div[@class="bbox"]//div[@class="cont"]/a[1]/@href')[0]
+            regionurl = tree.xpath('//div[@class="cont"]/a[1]/@href')[0]
+            self.fetchHGUrl(regionurl)
 
     def __str__(self):
         rv = super(OpenSimWorldEvent,self).__str__()
@@ -84,7 +97,7 @@ class OpenSimWorldFetcher:
 
             for url in eventurls:
                 print "\rOpenSimWorldFetcher: ["+str(ievent+1)+"/"+str(nevents)+"]        ",
-                print "\r"
+                print "\r",
                 ievent = ievent + 1
 
                 e = OpenSimWorldEvent(self.webcache, "http://opensimworld.com" + url)
