@@ -9,6 +9,7 @@ class Helper(object):
             re.compile('.*\sfair\s.*', flags=re.I)          : 'fair',
             re.compile('.*office hours*', flags=re.I)          : 'social',
             re.compile('.*literary.*', flags=re.I)          : 'art',
+            re.compile('.*zombie infection.*', flags=re.I)          : 'fair',
         },
         'description' : {
             re.compile('(^DJ.*)|(.*\sDJs?\s)', flags=re.I)    : 'music',
@@ -22,6 +23,8 @@ class Helper(object):
             re.compile('.*music.*', flags=re.I)  : 'music',
             re.compile('.*karaoke.*', flags=re.I)  : 'music',
             re.compile('.*\sooc\s.*', flags=re.I)  : 'roleplay',
+            re.compile('.*\s.talk\s.*', flags=re.I)  : 'social',
+            re.compile('.*\s.meet\s.*', flags=re.I)  : 'social',
         },
     }
 
