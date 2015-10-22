@@ -21,5 +21,4 @@ upload:	index.html scr.js style.css events.json
 		scp index.html gmc@httpd-c1.sonologic.net:htdocs/hypevents.net/
 		scp scr.js gmc@httpd-c1.sonologic.net:htdocs/hypevents.net/
 		scp style.css gmc@httpd-c1.sonologic.net:htdocs/hypevents.net/
-		scp events.json gmc@httpd-c1.sonologic.net:htdocs/hypevents.net/
 
