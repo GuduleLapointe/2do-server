@@ -4,11 +4,13 @@ from datetime import timedelta
 from helper import Helper
 
 class GcgHelper(Helper):
+    hgre = re.compile("^[^:]+:[0-9]+:[^:]+$")
+
     def __init__(self):
         self.regions = pickle.loads(file('data/gcgregions.pck').read())
 
     def findRegion(self, data):
-        if re.search("marina bay beach club", data, flags=re.I):
+        if re.search("marina bay", data, flags=re.I):
             return "Marina Bay"
         for region in self.regions:
             if re.search(region, data, flags=re.I):
@@ -18,9 +20,10 @@ class GcgHelper(Helper):
     def customizeEvent(self, event):
         event = super(GcgHelper, self).customizeEvent(event)
 
-        hgurl = self.findRegion(event.hgurl)
-        if hgurl!=None:
-            event.hgurl = 'login.greatcanadiangrid.ca:8002:' + hgurl
+        if GcgHelper.hgre.match(event.hgurl)==None:
+            hgurl = self.findRegion(event.hgurl)
+            if hgurl!=None:
+                event.hgurl = 'login.greatcanadiangrid.ca:8002:' + hgurl
 
         event.start = event.start + timedelta(hours=3)
         event.end = event.end + timedelta(hours=3)
