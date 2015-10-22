@@ -1,8 +1,9 @@
 import re
 import pickle
 from datetime import timedelta
+from helper import Helper
 
-class GcgHelper(object):
+class GcgHelper(Helper):
     def __init__(self):
         self.regions = pickle.loads(file('data/gcgregions.pck').read())
 
@@ -15,6 +16,8 @@ class GcgHelper(object):
         return None
 
     def customizeEvent(self, event):
+        event = super(GcgHelper, self).customizeEvent(event)
+
         hgurl = self.findRegion(event.hgurl)
         if hgurl!=None:
             event.hgurl = 'login.greatcanadiangrid.ca:8002:' + hgurl

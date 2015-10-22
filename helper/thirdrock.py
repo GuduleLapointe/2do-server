@@ -1,6 +1,7 @@
 import re
+from helper import Helper
 
-class ThirdRockHelper(object):
+class ThirdRockHelper(Helper):
     dictionary = {
         'grid.3rdrockgrid.com:8002 Enerdhil (113, 116, 38)' : 'grid.3rdrockgrid.com:8002:Enerdhil',
         'grid.3rdrockgrid.com:8002 Enerdhil Enerdhil (113, 116, 38)' : 'grid.3rdrockgrid.com:8002:Enerdhil',
@@ -12,6 +13,8 @@ class ThirdRockHelper(object):
     }
 
     def customizeEvent(self, event):
+        event = super(ThirdRockHelper, self).customizeEvent(event)
+
         if event.hgurl in ThirdRockHelper.dictionary.keys():
             event.hgurl = ThirdRockHelper.dictionary[event.hgurl]
         return event

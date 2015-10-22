@@ -1,7 +1,8 @@
 import re
 import pickle
+from helper import Helper
 
-class CraftHelper(object):
+class CraftHelper(Helper):
     def __init__(self):
         self.regions = pickle.loads(file('data/craftregions.pck').read())
 
@@ -12,6 +13,8 @@ class CraftHelper(object):
         return None
 
     def customizeEvent(self, event):
+        event = super(CraftHelper, self).customizeEvent(event)
+
         hgurl = self.findRegion(event.hgurl)
         if hgurl!=None:
             event.hgurl = hgurl

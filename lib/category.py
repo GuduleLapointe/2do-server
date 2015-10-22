@@ -1,5 +1,6 @@
 class Category(object):
 
+    # art, social, lecture, education, entertainment, music, fair, reading, roleplay
     dict = {
                 'Kunstevent'    : 'art',
                 'Social Event'  : 'social',

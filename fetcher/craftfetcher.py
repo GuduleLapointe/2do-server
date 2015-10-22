@@ -51,7 +51,7 @@ class CraftFetcher:
                 if region!=None:
                     e.hgurl = "craft-world.org:8002:"+region
 
-                rv += [e]
+                rv += [self.helper.customizeEvent(e)]
 
             print ""
 

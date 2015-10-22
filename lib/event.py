@@ -27,5 +27,5 @@ class Event(object):
             for cat in newcat:
                 self.addCategory(cat)
         else:
-            if not newcat in self.categories.keys():
+            if not newcat in self.categories:
                 self.categories += [newcat]

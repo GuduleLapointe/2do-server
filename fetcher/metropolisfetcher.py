@@ -8,6 +8,7 @@ import pytz
 import datetime
 from lib.category import Category
 from lib.webcache import WebCache
+from helper.helper import Helper
 
 class MetropolisEvent(Event):
     tz_berlin = pytz.timezone('Europe/Berlin')
@@ -75,6 +76,7 @@ class MetropolisFetcher:
 
     def __init__(self, webcache=None):
         self.webcache=webcache
+        self.helper=Helper()
 
     def fetch(self, limit=0):
         pagecount = 1
@@ -108,7 +110,7 @@ class MetropolisFetcher:
 
                     e.fetch()
 
-                    rv = rv + [e]
+                    rv = rv + [self.helper.customizeEvent(e)]
 
                     ievent = ievent + 1
 

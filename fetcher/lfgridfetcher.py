@@ -4,10 +4,11 @@ from fetcher.icalfetcher import IcalFetcher
 import icalendar
 from lib.category import Category
 from lib.webcache import WebCache
+from helper.helper import Helper
 
 class LfGridFetcher(IcalFetcher):
     def __init__(self,webcache=None):
-        super(LfGridFetcher,self).__init__("http://www.localendar.com/public/lfgrid?style=X2", [Category("grid-littlefield")], webcache)
+        super(LfGridFetcher,self).__init__("http://www.localendar.com/public/lfgrid?style=X2", [Category("grid-littlefield")], webcache, Helper())
         self.webcache = webcache
 
 if __name__=='__main__':

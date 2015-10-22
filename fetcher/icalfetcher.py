@@ -4,7 +4,7 @@ import icalendar
 import pytz
 import datetime
 from dateutil import rrule
-from copy import copy
+from copy import copy,deepcopy
 
 def fixDateTime(dt):
     if type(dt)==datetime.date:
@@ -113,7 +113,7 @@ class IcalFetcher(object):
                         instance = instance.tzinfo.normalize(instance)
                         if instance > rrlimit:
                             break
-                        revent = copy(e)
+                        revent = deepcopy(e)
                         revent.start = instance
                         revent.end = instance + eventlen
                         events = events + [self.customizeEvent(revent)]
