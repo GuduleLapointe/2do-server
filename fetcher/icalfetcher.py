@@ -46,10 +46,11 @@ class IcalFetcher(object):
                 if self.categories!=None:
                     e.categories += self.categories
 
-                e.title = event['SUMMARY'].title()
+                e.title = event.get('summary')
+
                 e.description = ""
                 if 'DESCRIPTION' in event.keys():
-                    e.description = event['DESCRIPTION'].title()
+                    e.description = event.get('description')
 
                 e.start = event['DTSTART'].dt
 
