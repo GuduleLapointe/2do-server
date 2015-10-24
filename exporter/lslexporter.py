@@ -14,7 +14,11 @@ class LslExporter(Exporter):
             if len(event.title)!=0 and len(event.hgurl)!=0:
                 start = tz_slt.normalize(event.start.astimezone(tz_slt))
 
-                lslevents += event.title.encode('utf-8') + "\n"
+		title = event.title
+		title = title.replace("\n", " ")
+		title = title.replace("\r", " ")
+
+                lslevents += title.encode('utf-8') + "\n"
                 lslevents += start.strftime("%I:%M%p") + "\n"
                 lslevents += event.hgurl.encode('utf-8') + "\n"
 
