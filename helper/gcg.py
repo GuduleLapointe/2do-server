@@ -12,6 +12,8 @@ class GcgHelper(Helper):
     def findRegion(self, data):
         if re.search("marina bay", data, flags=re.I):
             return "Marina Bay"
+        if re.search("Hot Rod 50s Diner"):
+            return "Dreamland"
         for region in self.regions:
             if re.search(region, data, flags=re.I):
                 return region
@@ -25,8 +27,9 @@ class GcgHelper(Helper):
             if hgurl!=None:
                 event.hgurl = 'login.greatcanadiangrid.ca:8002:' + hgurl
 
-        event.start = event.start + timedelta(hours=3)
-        event.end = event.end + timedelta(hours=3)
+        # todo: correct for DST dynamically (ugh)
+        event.start = event.start + timedelta(hours=4)
+        event.end = event.end + timedelta(hours=4)
 
         return event
 
