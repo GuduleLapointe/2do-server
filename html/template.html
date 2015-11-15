@@ -35,15 +35,31 @@
 <p>HYPEvents pulls information from the event calendars that are published on the listed grids websites. When a grid publishes an ical feed, it is easy. But many grids have web-based event calendars. We parse those (caching sub-pages to limit load on the grid's webservers) and convert them to ical.</p>
 <p>To make it easy to see what's going on right now and provide easy access, HYPEvents runs algorithms to extract hypergrid url's and times from the event calendars. This is not always easy, as various grids have different ways of indicating the location of the event. Sometimes the information is in the description, sometimes it is just a region name, sometimes it is a hypergrid url.</p>
 <h2>What can a grid or event organizer do to make sure the events are listed correctly?</h2>
-<p>First of all, make sure the source data (event calendar, website) is correct. It helps if the information is easily parseable by a computer program. There are a number of options, in order of preference:</p>
+<p>First of all, make sure the source data (event calendar, website) is correct. It helps if the information is easily parseable by a computer program (see below).</p>
+<p>Here are some guidelines to ensure most accurate listings:</p>
+<ul>
+  <li>Put the location information in the location field of your calendar software. HYPEvents prefers hgurls (of the form 'hg.url.com:8002:Region Name'), but if you list local region names (of the form 'Region Name') HYPEvents will be able to tag on the 'hg.url.com:8002:' part itself.</li>
+  <li>Use a consistent form for the location information. For example, if you use local region names, make sure they are real region names and not something like 'The far end of the most beautiful Foobar region' but just 'Foobar'. If you use hop url's, use them consistently; don't mix 'Foobar/123/43/22' with 'Foobar (123,43,22)'.</li>
+  <li>Be consistent with timezones. HYPEvents will parse times and timezones correctly, and represent the event times correctly in whatever timezone the user of HYPEvents selects. But if you set the timezone of your calendar to, say, EDT (US/New York) but then put times in it that are grid times, you will confuse the parser and your events will likely be listed incorrectly. Don't do that (it will confuse your users as well!). Set the calendar to 'US/Pacific' (which is grid time) and then put in the events in grid time.</li>
+  <li>When the event moves to some other place, make sure to update the event on your grid event calendar. And to be sure that people can find your event even if they have the old time or location, put some kind of beacon that will hand out a landmark to the new location at the old location.</li>
+</ul>
+<h2>What is the preferred format for event data?</h2>
+<p>It helps if the information is easily parseable by a computer program. The explanation of how to accomplish this is a bit technical. Website builders should be able to grasp what is explained below, but if you have any questions do not hesitate to ask at <a href="mailto:hypevents@linkwater.org">hypevents@linkwater.org</a>.</p>
+<p>There are a number of options, in order of preference:</p>
 <p><b>Machine-readable, structured calendar (ical, json, ...)</b></p>
 <p>Parsing event data works best when it is available in a structured, machine-readable format. The de-facto format for publishing calendar information on the internet is <a href="https://en.wikipedia.org/wiki/ICalendar">iCalendar (.ics)</a>. Many websites with event-support can generate an ical feed. Another easily parseable format is <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>. JSON is often used to convey data from a web server to a browser, but can also be used for sharing information in a structured way to third-party applications.</p>
+<p>An easy way to create an iCalendar is to use <a href="https://calendar.google.com/">Google Calendar</a>. Google calendars can be easily embedded on existing websites, and have an option to export an iCal feed.</p>
 <p><b>Machine-optimized human-readable websites</b></p>
-<p></p>
+If, for some reason, an ical feed or json provider is not an option (or there is already a website and you don't want to abandon that), there are some tips to make a website more easily parseable by the HYPEvents algorithms:</p>
+<ul>
+  <li>Don't put all the event info in one paragraph that is not structured with html tags, that makes it really hard to parse the info accurately and correctly.</li>
+  <li>Use elements (div, span, h1, h2, ...) to structure information. For example, put the title of the event in it's own element, put the start date in an element, etc..</li>
+  <li>Annotate the html tags to make them easily identifiable by computers. You can do this by adding an id on the tag, or a class. Id's work best for big elements, for example a main div that surrounds all the events, or the table that surrounds all the events. Classes work well for repeating elements, such as titles, times, descriptions, etc..</li>
+  </li>
+</ul>
+<p>If you have a web-designer who makes your website, pass along the above info and he/she should be able to structure the information for you.</p>
 <p><b>Unstructered webpages</b></p>
-<p></p>
-<p><b>Make it easy for your visitors</b></p>
-<p>And when the event moves to some other place, make sure to update the event on your grid event calendar. And to be sure that people can find your event, put some kind of beacon that will hand out a landmark to the new location at the old location.</p>
+<p>While it is possible to parse an unstructered webpage (where the event info is all in one element for example), it usually doesn't work well and breaks easily. For example, some grids have a completely free-form text-field to give all the event info with start and end times written in different forms. The hgurl will be part of the text, and sometimes is just a region name or a specific club without even listing the region name. HYPEvents is unable to parse these pages.</p>
 <h2>What grids are listed?</h2>
 <ul>
 <li><a href="http://3rdrockgrid.com/">Third Rock Grid</a></li>
@@ -56,7 +72,7 @@
 <li><a href="http://www.littlefieldgrid.com/">Littlefield grid</a></li>
 </ul>
 <h2>Why isn't grid XYZ not on the calendar?</h2>
-<p>Probably because we don't know about it! Send us an email at <a href="mailto:tomfrost@linkwater.org">tomfrost@linkwater.org</a> and send us a link to the grid's event calendar! Ical feed works best, but we can also build a custom scraper and parser for web-based event calendars.</p>
+<p>Probably because we don't know about it! Send us an email at <a href="mailto:hypevents@linkwater.org">tomfrost@linkwater.org</a> and send us a link to the grid's event calendar! Ical feed works best, but we can also build a custom scraper and parser for web-based event calendars.</p>
 <p>HYPEvents lists only events on hypergrid-enabled grids.</p>
 </div>
 <div class="mainrow" id="extlinks">
