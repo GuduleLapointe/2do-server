@@ -20,9 +20,9 @@ if __name__=='__main__':
 
     f = GcgFetcher(cache)
 
-    cache.flush()
-
     e = f.fetch()
+
+    cache.flush()
 
     for ev in e:
         print str(ev)
