@@ -35,7 +35,14 @@
 <p>HYPEvents pulls information from the event calendars that are published on the listed grids websites. When a grid publishes an ical feed, it is easy. But many grids have web-based event calendars. We parse those (caching sub-pages to limit load on the grid's webservers) and convert them to ical.</p>
 <p>To make it easy to see what's going on right now and provide easy access, HYPEvents runs algorithms to extract hypergrid url's and times from the event calendars. This is not always easy, as various grids have different ways of indicating the location of the event. Sometimes the information is in the description, sometimes it is just a region name, sometimes it is a hypergrid url.</p>
 <h2>What can a grid or event organizer do to make sure the events are listed correctly?</h2>
-<p>Several things. </p>
+<p>First of all, make sure the source data (event calendar, website) is correct. It helps if the information is easily parseable by a computer program. There are a number of options, in order of preference:</p>
+<p><b>Machine-readable, structured calendar (ical, json, ...)</b></p>
+<p>Parsing event data works best when it is available in a structured, machine-readable format. The de-facto format for publishing calendar information on the internet is <a href="https://en.wikipedia.org/wiki/ICalendar">iCalendar (.ics)</a>. Many websites with event-support can generate an ical feed. Another easily parseable format is <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>. JSON is often used to convey data from a web server to a browser, but can also be used for sharing information in a structured way to third-party applications.</p>
+<p><b>Machine-optimized human-readable websites</b></p>
+<p></p>
+<p><b>Unstructered webpages</b></p>
+<p></p>
+<p><b>Make it easy for your visitors</b></p>
 <p>And when the event moves to some other place, make sure to update the event on your grid event calendar. And to be sure that people can find your event, put some kind of beacon that will hand out a landmark to the new location at the old location.</p>
 <h2>What grids are listed?</h2>
 <ul>
