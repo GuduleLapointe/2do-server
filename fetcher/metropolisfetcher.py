@@ -48,10 +48,16 @@ class MetropolisEvent(Event):
                 self.end = self.start + datetime.timedelta(hours=2)
             else:
                 timematch = re.search('Uhrzeit: ([0-9]+:[0-9]+)\s*-\s*([0-9]+:[0-9]+)\s*Uhr', content)
-                timestr = timematch.group(1)
-                self.start = self.tz_berlin.localize(parser.parse("%s-%s-%s %s" % (year,month,day,timestr)))
-                timestr = timematch.group(2)
-                self.end = self.tz_berlin.localize(parser.parse("%s-%s-%s %s" % (year,month,day,timestr)))
+		if timematch==None:
+                	timematch = re.search('Uhrzeit: All Day Uhr', content)
+			if timematch!=None:
+				self.start = self.tz_berlin.localize(parser.parse("%s-%s-%s 00:00" % (year,month,day)))
+				self.end = self.tz_berlin.localize(parser.parse("%s-%s-%s 23:59" % (year,month,day)))
+		else:
+                	timestr = timematch.group(1)
+                	self.start = self.tz_berlin.localize(parser.parse("%s-%s-%s %s" % (year,month,day,timestr)))
+                	timestr = timematch.group(2)
+                	self.end = self.tz_berlin.localize(parser.parse("%s-%s-%s %s" % (year,month,day,timestr)))
                 
 
             datematch = re.search('Datum: ([0-9]+)\.([0-9]+)\.([0-9]+)', content)
