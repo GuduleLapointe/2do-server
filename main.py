@@ -130,16 +130,16 @@ def main():
         dedup = []
         for i in range(0,len(events)):
             event = events[i]
+            duplicate = False
             if Category("grid-opensimworld") in event.categories:
-                duplicate = False
                 for j in range(i+1,len(events)):
                     cmpevent = events[j]
                     if event.hgurl == cmpevent.hgurl and event.start == cmpevent.start and event.end == cmpevent.end:
                         print "remove duplicate opensim event: " + repr(event.title)
                         duplicate = True
                         break
-                if not duplicate:
-                    dedup += [ event ]
+            if not duplicate:
+                dedup += [ event ]
 
         events = dedup
 
