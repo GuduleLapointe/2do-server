@@ -17,6 +17,7 @@ from exporter.web import JsonExporter
 from exporter.htmlexporter import HtmlExporter
 from exporter.lslexporter import LslExporter
 from dateutil import parser
+from lib.category import Category
 
 fetchers = [
     ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
@@ -124,6 +125,23 @@ def main():
             print "webcache status = " + str(webcache)
 
         events = sorted(events, key=lambda e: e.start)
+
+        # remove duplicate opensim events
+        dedup = []
+        for i in range(0,len(events)):
+            event = events[i]
+            if Category("grid-opensimworld") in event.categories:
+                duplicate = False
+                for j in range(i+1,len(events)):
+                    cmpevent = events[j]
+                    if event.hgurl == cmpevent.hgurl and event.start == cmpevent.start and event.end == cmpevent.end:
+                        print "remove duplicate opensim event: " + repr(event.title)
+                        duplicate = True
+                        break
+                if not duplicate:
+                    dedup += [ event ]
+
+        events = dedup
 
         datafile = file('data/events.pck', 'w+')
         pickle.dump(events, datafile, protocol=2)
