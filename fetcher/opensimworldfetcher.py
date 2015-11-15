@@ -8,7 +8,7 @@ import sys
 import pytz
 from lib.category import Category
 from lib.webcache import WebCache
-from helper.helper import Helper
+from helper.opensimworld import OpensimworldHelper
 
 class OpenSimWorldEvent(Event):
     tz_pacific = pytz.timezone('US/Pacific')
@@ -74,7 +74,7 @@ class OpenSimWorldFetcher:
 
     def __init__(self,webcache):
         self.webcache = webcache
-        self.helper = Helper()
+        self.helper = OpensimworldHelper()
 
     def fetch(self, limit=0):
         print "OpenSimWorldFetcher: fetch overview.."
