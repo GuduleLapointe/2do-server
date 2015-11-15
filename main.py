@@ -135,7 +135,7 @@ def main():
                 for j in range(0,len(events)):
                     if j!=i:
                         cmpevent = events[j]
-                        if event.hgurl == cmpevent.hgurl and event.start == cmpevent.start and event.end == cmpevent.end:
+                        if event.hgurl == cmpevent.hgurl and event.start == cmpevent.start:
                             print "remove duplicate opensim event: " + repr(event.title)
                             duplicate = True
                             break
