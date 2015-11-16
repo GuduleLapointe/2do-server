@@ -12,7 +12,7 @@
         'UTC' : false,
     };
 
-    var currtz = "Europe/Amsterdam";
+    var currtz = "US/Pacific";
 
     function gridCatToString(cat) {
         var rv;
