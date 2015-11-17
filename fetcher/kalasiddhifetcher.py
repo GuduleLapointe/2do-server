@@ -4,11 +4,11 @@ from fetcher.icalfetcher import IcalFetcher
 import icalendar
 from lib.category import Category
 from lib.webcache import WebCache
-from helper.helper import Helper
+from helper.kalasiddhi import KalasiddhiHelper
 
 class KalasiddhiFetcher(IcalFetcher):
     def __init__(self,webcache=None):
-        super(KalasiddhiFetcher,self).__init__("https://www.google.com/calendar/ical/kalasiddhigrid%40group.calendar.google.com/public/basic.ics", [Category("grid-kalasiddhi")], webcache, Helper())
+        super(KalasiddhiFetcher,self).__init__("https://calendar.google.com/calendar/ical/kalasiddhigrid@gmail.com/public/basic.ics", [Category("grid-kalasiddhi")], webcache, KalasiddhiHelper())
         self.webcache = webcache
         self.minexpiry = 1000
         self.maxexpirty = 1800
