@@ -2,6 +2,12 @@ http://login.skylifegrid.com/backend/index.php/events/event-listings
 
 https://calendar.google.com/calendar/embed?src=shawnkmaloney@gmail.com&ctz=America/Chicago
 
+http://www.gridtalk.de/calendar.php
+
+tangle
+
+https://www.google.com/calendar/ical/johnsimmonshypertext.com_j3h9nteue42li3qbpujh9o9doc%40group.calendar.google.com/public/basic.ics
+
 
 
 
