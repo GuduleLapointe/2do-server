@@ -31,6 +31,7 @@ fetchers = [
     ("lfgridfetcher", "LfGridFetcher", 0),
     ("gcgfetcher", "GcgFetcher", 0),
     ("kalasiddhifetcher", "KalasiddhiFetcher", 0),
+    ("phaandoriafetcher", "PhaandoriaFetcher", 0),
     ]
 
 def main():
