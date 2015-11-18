@@ -28,8 +28,8 @@ class GcgHelper(Helper):
                 event.hgurl = 'login.greatcanadiangrid.ca:8002:' + hgurl
 
         # todo: correct for DST dynamically (ugh)
-        event.start = event.start + timedelta(hours=4)
-        event.end = event.end + timedelta(hours=4)
+        event.start = event.start + timedelta(hours=3)
+        event.end = event.end + timedelta(hours=3)
 
         return event
 
