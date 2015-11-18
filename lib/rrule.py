@@ -1,31 +1,29 @@
-from datetime import datetime,timedelta
+import datetime
 from dateutil import rrule
 import pytz
 from icalendar.caselessdict import CaselessDict
 from icalendar.prop import vRecur,vDDDLists
 
+def fixDateTime(dt):
+    if type(dt)==datetime.date:
+        return datetime.datetime.combine(dt, datetime.time())
+    return dt.replace(tzinfo=None)
+
 class RRULEExpander:
-    def __init__(self, rule, start, end, rrlimit=None, exdate=None):
+    def __init__(self, rule, start, exdate=None, rrlimit=None):
         self.rule = rule
 
-        self.tz = start.tzinfo.zone
+        self.tz = pytz.timezone(start.tzinfo.zone)
 
         # TODO: what if zones differ? replace end w/ len in function signature
-        #self.start = start.replace(tzinfo=None)
-        #self.end = end.replace(tzinfo=None)
-        self.start = start
-        self.end = end
+        self.start = start.replace(tzinfo=None)
 
         if rrlimit==None:
-            rrlimit = pytz.utc.localize(datetime.now()) + timedelta(days=30)
-
-        self.rrlimit = rrlimit.replace(tzinfo=None)
+            rrlimit = pytz.utc.localize(datetime.datetime.now()) + datetime.timedelta(days=30)
 
         self.rrlimit = rrlimit
-        self.exdate = exdate
 
-            # calc event length
-        eventlen = end - start
+        self.exdate = exdate
 
             # fix until
         until = rule.get('UNTIL')
@@ -34,10 +32,15 @@ class RRULEExpander:
             newuntil = []
             for entry in until:
                 if type(entry)==datetime.date:
-                    entry = datetime.combine(entry, datetime.time())
-                    entry = pytz.utc.localize(entry)
+                    entry = datetime.datetime.combine(entry, datetime.time())
+                else:
+                    entry = entry.replace(tzinfo=None)
                 newuntil += [entry]
             rule['UNTIL'] = newuntil
+        else:
+            # work around for https://bugs.launchpad.net/dateutil/+bug/1517568
+            rule['UNTIL'] = [rrlimit.replace(tzinfo=None)]
+
 
         rrset = rrule.rruleset()
         rrset.rrule( rrule.rrulestr( rule.to_ical(), dtstart = self.start ) )
@@ -61,6 +64,8 @@ class RRULEExpander:
     def next(self):
         instance = self.rrset.next()
 
+        instance = self.tz.localize(instance)
+
         #instance = instance.tzinfo.normalize(instance)
 
         if instance > self.rrlimit:
@@ -71,17 +76,17 @@ class RRULEExpander:
 
 if __name__=='__main__':
     pacific = pytz.timezone('US/Pacific')
+    eastern = pytz.timezone('US/Eastern')
+    central = pytz.timezone('US/Central')
 
 
     print "----------------------------------------------"
 
-    start = datetime(2015, 10, 1, 19, 0, tzinfo=pacific)
-    end = datetime(2015, 10, 1, 21, 0, tzinfo=pacific)
+    start = datetime.datetime(2015, 1, 11, 15, 0, tzinfo=central)
 
     e = RRULEExpander(
-            vRecur({'BYDAY': ['TH'], 'FREQ': ['MONTHLY'], 'UNTIL': [datetime(2015, 12, 31, 23, 0, tzinfo=pytz.utc)]}),
+            vRecur({'BYDAY': ['SU'], 'FREQ': ['WEEKLY']}),
             start,
-            end
         )
 
     for d in e:
@@ -89,13 +94,23 @@ if __name__=='__main__':
 
     print "----------------------------------------------"
 
-    start = datetime(2015, 10, 1, 19, 0, tzinfo=pacific)
-    end = datetime(2015, 10, 1, 21, 0, tzinfo=pacific)
+    start = datetime.datetime(2015, 10, 1, 19, 0, tzinfo=pacific)
+
+    e = RRULEExpander(
+            vRecur({'BYDAY': ['TH'], 'FREQ': ['MONTHLY'], 'UNTIL': [datetime.datetime(2015, 12, 31, 23, 0, tzinfo=pacific)]}),
+            start,
+        )
+
+    for d in e:
+        print "> " + str(d) + " - " + str(d.tzinfo.normalize(d))
+
+    print "----------------------------------------------"
+
+    start = datetime.datetime(2015, 10, 1, 19, 0, tzinfo=pacific)
 
     e = RRULEExpander(
             vRecur({'BYDAY': ['TH'], 'FREQ': ['WEEKLY']}),
             start,
-            end
         )
 
     for d in e:

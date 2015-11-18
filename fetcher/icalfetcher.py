@@ -5,11 +5,7 @@ import pytz
 import datetime
 from dateutil import rrule
 from copy import copy,deepcopy
-
-def fixDateTime(dt):
-    if type(dt)==datetime.date:
-        return pytz.utc.localize(datetime.datetime.combine(dt, datetime.time()))
-    return dt
+from lib.rrule import RRULEExpander
 
 class IcalFetcher(object):
     tz_pacific = pytz.timezone('US/Pacific')
@@ -76,50 +72,31 @@ class IcalFetcher(object):
                 except KeyError:
                     pass
 
+                # this doesn't work correctly with daylight savings time (it will
+                # offset the recurring event by one hour for half the year)
+                # convert to naive first, then iterate and convert back to 
+                # aware..
+                # http://stackoverflow.com/questions/12504247/how-to-handle-dst-and-tz-in-recurring-events
                 if not "RRULE" in event.keys():
-                    events = events + [self.helper.customizeEvent(e)]
+                    customized = self.helper.customizeEvent(e)
+                    if customized!=None:
+                        events = events + [customized]
                 else:
                     rule = event.get('RRULE')
+
+                    expander = RRULEExpander(event.get('RRULE'), e.start, event.get('EXDATE'))
+
 
                         # calc event length
                     eventlen = e.end - e.start
 
-                        # fix until
-                    until = rule.get('UNTIL')
-                    if until!=None:
-                        newuntil = []
-                        for entry in until:
-                            if type(entry)==datetime.date:
-                                entry = datetime.datetime.combine(entry, datetime.time())
-                                entry = pytz.utc.localize(entry)
-                            newuntil += [entry]
-                        rule['UNTIL'] = newuntil
-
-                    rrlimit = pytz.utc.localize(datetime.datetime.now()) + datetime.timedelta(days=30)
-
-                    rrset = rrule.rruleset()
-                    rrset.rrule( rrule.rrulestr( rule.to_ical(), dtstart = e.start ) )
-
-                    exdate = event.get('EXDATE')
-
-                    if type(exdate)==type([]):
-                        if exdate!=None:
-                            for date in exdate:
-                                for dd in date.dts:
-                                    rrset.exdate(fixDateTime(dd.dt))
-                    elif type(exdate)==icalendar.prop.vDDDLists:
-                                for dd in exdate.dts:
-                                    rrset.exdate(fixDateTime(dd.dt))
-
-
-                    for instance in rrset:
-                        instance = instance.tzinfo.normalize(instance)
-                        if instance > rrlimit:
-                            break
+                    for instance in expander:
                         revent = deepcopy(e)
                         revent.start = instance
                         revent.end = instance + eventlen
-                        events = events + [self.customizeEvent(revent)]
+                        customized = self.customizeEvent(revent)
+                        if customized != None:
+                            events = events + [customized]
                         if limit>0 and len(events)>=limit:
                             break
         
