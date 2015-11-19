@@ -14,6 +14,10 @@
 
     var currtz = "US/Pacific";
 
+    var numNewsItems = 0;
+    var currentNewsItem = 0;
+    var newsItemRefresh = 60000;
+
     function gridCatToString(cat) {
         var rv;
         switch(cat) {
@@ -131,6 +135,7 @@
 
     var refreshTimer;
 
+
     function loadEvents(event) {
         clearTimeout(refreshTimer);
         $.getJSON("events.json", function(data) {
@@ -140,13 +145,43 @@
         refreshTimer = setTimeout(loadEvents, 1800000);
     }
 
+    var newsTimer;
+
+    function refreshNews() {
+        clearTimeout(newsTimer);
+
+        var oldNewsItem = currentNewsItem;
+
+        currentNewsItem++;
+        if(currentNewsItem>=numNewsItems) {
+            currentNewsItem = 0;
+        }
+
+        $("div.newsitem").eq(oldNewsItem).fadeOut(function () {
+            $("div.newsitem").eq(currentNewsItem).fadeIn();
+        });
+
+        newsTimer = setTimeout(refreshNews, newsItemRefresh);
+    }
+
     $(document).ready(function() {
         timer = setTimeout(renderClock, 500);
         refreshTimer = setTimeout(loadEvents, 10);
+        newsTimer = 
 
         $("div#events").html("<p>Loading events..</p>");
         $("div#PAQ").hide();
         $("div#extlinks").hide();
+        $("div.newsitem").hide();
+
+        numNewsItems = $("div.newsitem").size();
+
+        if(numNewsItems>0) {
+            $("div.newsitem").eq(0).show();
+            if(numNewsItems>1) {
+                newsTimer = setTimeout(refreshNews, newsItemRefresh);
+            }
+        }
 
         tzselect = $('<select id="tzselector"></select>');
         for(var tz in myTimezones) {
