@@ -20,6 +20,7 @@ from dateutil import parser
 from lib.category import Category
 
 fetchers = [
+    ("piratesatollfetcher", "PiratesAtollFetcher", 0),
     ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
     ("avatarfestfetcher", "AvatarFestFetcher", 0),
     ("miscfetcher", "MiscFetcher", 0),

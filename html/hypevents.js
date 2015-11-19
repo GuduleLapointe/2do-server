@@ -27,6 +27,7 @@
             case "opensimworld": rv = "OpenSimWorld"; break;
             case "kalasiddhi": rv = "Kalasiddhi Grid"; break;
             case "phaandoria": rv = "Phaandoria Grid"; break;
+            case "digiworldz": rv = "Digiworldz"; break;
             default: rv = null; break;
         }
         return rv;

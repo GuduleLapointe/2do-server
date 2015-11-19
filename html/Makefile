@@ -6,7 +6,7 @@ else
   YUICMD = yui-compressor
 endif
 
-JS_FILES=jquery-1.11.3.min.js moment.min.js moment-timezone-with-data-2010-2020.js hypevents.js
+JS_FILES=jquery-1.11.3.min.js moment.min.js moment-timezone-with-data-2010-2020.js hypevents.js jstz.js
 
 all:	index.html index_dev.html scr.js
 
