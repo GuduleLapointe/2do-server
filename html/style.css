@@ -26,6 +26,10 @@ div#news {
     height: 1em;
 }
 
+div#news:hover {
+    cursor: pointer;
+}
+
 div#header span {
     font-size: 500%;
     font-style: italic;

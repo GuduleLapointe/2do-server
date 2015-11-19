@@ -167,7 +167,6 @@
     $(document).ready(function() {
         timer = setTimeout(renderClock, 500);
         refreshTimer = setTimeout(loadEvents, 10);
-        newsTimer = 
 
         $("div#events").html("<p>Loading events..</p>");
         $("div#PAQ").hide();
@@ -179,6 +178,10 @@
         if(numNewsItems>0) {
             $("div.newsitem").eq(0).show();
             if(numNewsItems>1) {
+                $("div#news").click(function() {
+                    clearTimeout(newsTimer);
+                    refreshNews();
+                });
                 newsTimer = setTimeout(refreshNews, newsItemRefresh);
             }
         }
