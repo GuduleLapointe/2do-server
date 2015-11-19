@@ -59,13 +59,24 @@
             latest = moment().tz(tzname);
             latest.add(1, 'months');
 
+            var lastDate = "";
+
             for(var i=0;i<data.length;i++) {
                 start = moment(data[i].start).tz(tzname);
                 end = moment(data[i].end).tz(tzname);
 
                 if(end>now && start<latest) {
+                    date = start.format("ddd, MMM D");
+
+                    dateClass = "";
+                    if(date!=lastDate) {
+                        dateClass = " eventdatehi";
+                        lastDate = date;
+                    }
+
                     var tr  = '<tr class="eventoverview">';
-                    tr = tr + '<td class="eventtime">' + start.format("ddd, MMM D, "+timefmt) + ' - ';
+                    tr = tr + '<td class="eventdate'+dateClass+'">' + date + "</td>";
+                    tr = tr + '<td class="eventtime">' + start.format(timefmt) + ' - ';
                     tr = tr + end.format(timefmt) + " " + start.format("z") + '</td>';
 
                     tr = tr + '<td class="eventtitle"><span class="eventoff" id="eventoff'+String(i)+'">&#9654;</span>';
@@ -90,9 +101,9 @@
                     tr = tr + '</td></tr>';
 
                     var node1 = $(tr);
-                    var node2 = $('<tr class="eventdesc"><td></td><td class="eventdesc">' + data[i].description + '</td></tr>');
-                    var node3 = $('<tr class="eventhgurl"><td></td><td class="eventhgurl"><span>' + data[i].hgurl + '</span></td><td></td></tr>');
-                    var node4 = $('<tr class="eventcats"><td></td><td class="eventcats"><ul id="eventcats"><li></li>'+rawcats+'<li></li></ul></td><td></td></tr>');
+                    var node2 = $('<tr class="eventdesc"><td></td><td></td><td class="eventdesc">' + data[i].description + '</td></tr>');
+                    var node3 = $('<tr class="eventhgurl"><td></td><td></td><td class="eventhgurl"><span>' + data[i].hgurl + '</span></td><td></td></tr>');
+                    var node4 = $('<tr class="eventcats"><td></td><td></td><td class="eventcats"><ul id="eventcats"><li></li>'+rawcats+'<li></li></ul></td><td></td></tr>');
 
                     node1.attr('id','eventoverview'+String(i));
                     node1.data('eventid',i);
@@ -134,7 +145,6 @@
 
 
     var refreshTimer;
-
 
     function loadEvents(event) {
         clearTimeout(refreshTimer);

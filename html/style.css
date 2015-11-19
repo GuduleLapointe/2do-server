@@ -103,8 +103,15 @@ ul#eventcats li {
     border-right: 1px solid black;
 }
 
+td.eventdate {
+    width: 7em;
+    color: #888;
+}
+td.eventdatehi {
+    color: #000;
+}
 td.eventtime {
-    width: 21em;
+    width: 13em;
 }
 
 
