@@ -1,4 +1,5 @@
 from exporter import Exporter
+import cgi
 
 class HtmlExporter(Exporter):
     def __str__(self):
@@ -13,13 +14,13 @@ class HtmlExporter(Exporter):
             rv = rv + "    <td>"+start.strftime("%Y-%m-%d %H:%M") + " - " + end.strftime("%H:%M")
             rv = rv + start.strftime(" %Z") + "</td>\n"
 
-            rv = rv + "    <td>" + event.title.encode('utf-8') + "</td>\n"
+            rv = rv + "    <td>" + cgi.escape(event.title.encode('utf-8')) + "</td>\n"
 
-            rv = rv + "    <td>" + event.hgurl.encode('utf-8') + "</td>\n"
+            rv = rv + "    <td>" + cgi.escape(event.hgurl.encode('utf-8')) + "</td>\n"
 
-            rv = rv + "    <td>" + event.description.encode('utf-8') + "</td>\n"
+            rv = rv + "    <td>" + cgi.escape(event.description.encode('utf-8')).replace("\n", "<br/>") + "</td>\n"
 
-            rv = rv + "    <td>" + ','.join(map(lambda e: str(e), event.categories)) + "</td>\n"
+            rv = rv + "    <td>" + ','.join(map(lambda e: cgi.escape(str(e)), event.categories)) + "</td>\n"
 
             rv = rv + "  </tr>\n"
 
