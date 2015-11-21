@@ -1,4 +1,5 @@
 import requests
+import re
 from lib.event import Event
 import icalendar
 import pytz
@@ -44,7 +45,7 @@ class IcalFetcher(object):
 
                 e.title = event.get('summary')
 
-                e.description = ""
+                e.description = "No description provided by event organizer."
                 if 'DESCRIPTION' in event.keys():
                     e.description = event.get('description')
 
@@ -72,11 +73,10 @@ class IcalFetcher(object):
                 except KeyError:
                     pass
 
-                # this doesn't work correctly with daylight savings time (it will
-                # offset the recurring event by one hour for half the year)
-                # convert to naive first, then iterate and convert back to 
-                # aware..
-                # http://stackoverflow.com/questions/12504247/how-to-handle-dst-and-tz-in-recurring-events
+                # TODO: log event w/o location and ignore
+                if e.hgurl == None:
+                    e.hgurl = "-"
+
                 if not "RRULE" in event.keys():
                     customized = self.helper.customizeEvent(e)
                     if customized!=None:
