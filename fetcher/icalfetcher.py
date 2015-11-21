@@ -68,7 +68,7 @@ class IcalFetcher(object):
                     e.end = self.tz_pacific.localize(e.end)
 
                 try:
-                    e.hgurl = event['LOCATION'].title()
+                    e.hgurl = event.get('LOCATION')
                 except KeyError:
                     pass
 
