@@ -1,0 +1,67 @@
+HYPEvents.net launches hypergrid event directory
+================================================
+
+At AVATARFest 2015, a virtual festival celebrating life on the hypergrid,
+HYPEvents.net launched a website that lists events from all over the hypergrid
+so avatars can find out what is going on right now, and where.
+
+The website, http://HYPEvents.net/, scrapes the web and parses event info from
+grid event calendars. The site provides a single overview of the events found,
+with easy timezone conversion and the location (as a hypergrid url) of each
+event.
+
+Initiator Tom Frost said, "I was fed up with missing events. There is so much
+going on, but the information about what is happening where and when is
+scattered. There really is no single directory, no overview of all the events
+in one uniform format. Until now.".
+
+Instead of creating yet another site that event organisers have to post each
+individual event on, Frost created HYPEvents to pull in the information that is
+already published on grid websites and public calendars.
+
+Frost is always on the look-out for new event calendars that are not yet
+included on the site, and encourages grid-owners to publish their events in an
+easy-to-parse format:
+
+"Many grids don't publish their events, or publish them only in-world or on
+internal forums that are only for members. If you are not a member of such a
+grid, you won't know about the nice events that are going on! And the events
+miss out on a large potential audience. Publishing an event calendar is a
+win-win for everyone.", Frost says.
+
+Grid owners or event organisers that maintain an event calendar can let the
+site know about their calendar to have it added. Information on registering a
+calendar, or on how to set up an event calendar if there is none yet, can be
+found on the website.
+
+Frost says, "The website is still under construction, and probably always will
+be. I have many features I want to add, so in the spirit of google, consider
+the site a permanent beta."
+
+The website also has an in-world event board. By simply clicking on an event,
+the avatar will teleport directly to the event region. The HYPEvents exhibit on
+the AVATARFest region (hgurl avatarfest.net:6000:) has a version of the board
+with full permissions.
+
+
+- Background information and inquiries:
+
+The hypergrid is a network of connected opensimulator grids.
+
+Opensimulator (http://opensimulator.org/) is free and open source software to
+run virtual worlds, also called 'regions'. Opensimulator was created in the
+spirit of Second Life, but has added novel innovations to the original concept.
+
+A grid is a collection of regions that share the same user-base and have a
+central server to manage inventory. Traditional grids don't enable travel
+between grids. Hypergrid-enabled grids allow avatars to travel from their
+home-grid to any of the thousands of opensimulator grids that are in existance
+today.
+
+The website http://HYPEvents.net/ is a not-for-profit initiative by Tom Frost
+with the goal of bringing closer the hypergrid community.
+
+For more information, visit http://HYPEvents.net/. For inquiries send an email
+to HYPEvents@linkwater.org.
+
+
