@@ -32,6 +32,7 @@
             case "kalasiddhi": rv = "Kalasiddhi Grid"; break;
             case "phaandoria": rv = "Phaandoria Grid"; break;
             case "digiworldz": rv = "Digiworldz"; break;
+            case "lhp": rv = "Lighthouse Point"; break;
             default: rv = null; break;
         }
         return rv;
