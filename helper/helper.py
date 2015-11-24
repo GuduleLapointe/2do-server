@@ -37,6 +37,24 @@ class Helper(object):
 
     catexpr = re.compile('\[\[Category:[^]]+\]\]', flags=re.I)
 
+    # hgurl extraction
+    hgexpr = [
+        # (expr, group, prepend)
+        ( re.compile('(Taxi|Location)\s*:?\s*(hop://)?([^:]+:[0-9]+(:|/).*)$', re.I | re.M), 3, ""),
+        ( re.compile('(Taxi|Location)\s*:?\s*(hop://)?([^:]+:[0-9]+(:|/).*)$', re.I | re.M), 3, ""),
+        ( re.compile('hop://([^:]+:[0-9]+(:|/)[^/]*)$', re.I | re.M), 1, ""),
+        ( re.compile('hop://([^:]+:[0-9]+(:|/)[^/]*)/', re.I | re.M), 1, ""),
+        ( re.compile('OSGrid\s*-\sRegion\s+([^\n]+)$', re.I | re.M), 1, "hg.osgrid.org:80:"),
+        ( re.compile('^([^:\n]+:[0-9]+:)(\s|$)', re.I | re.M), 1, ""),
+    ]
+
+    def getLocationFromDescription(self, event):
+        for (expr, group, prepend) in Helper.hgexpr:
+            match = expr.search(event.description)
+            if match!=None:
+                return prepend + match.group(group).replace('/',':')
+        return None
+
     def customizeEvent(self, event):
         for expr in Helper.expr['title'].keys():
             if expr.search(event.title)!=None:
@@ -46,5 +64,8 @@ class Helper(object):
                 event.addCategory(Category(Helper.expr['description'][expr]))
 
         event.description = Helper.catexpr.sub('', event.description)
+
+        if event.hgurl==None or event.hgurl=='-' or event.hgurl=='':
+            event.hgurl=self.getLocationFromDescription(event)
         
         return event
