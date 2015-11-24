@@ -36,6 +36,7 @@
             case "nextlife": rv = "Nextlife-World"; break;
             case "dorenas": rv = "Dorenas World"; break;
             case "anettes": rv = "Anettes Welt"; break;
+            case "exolife": rv = "Exo-Life Virtual World"; break;
             default: rv = null; break;
         }
         return rv;

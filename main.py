@@ -22,6 +22,7 @@ from lib.skiplist import Skiplist
 
 fetchers = [
 #    ("gridtalkfetcher", "GridTalkFetcher", 0),
+    ("exolifefetcher", "ExoLifeFetcher", 0),
     ("nextlifefetcher", "NextLifeFetcher", 0),
     ("lighthousepointfetcher", "LightHousePointFetcher", 0),
     ("piratesatollfetcher", "PiratesAtollFetcher", 0),
