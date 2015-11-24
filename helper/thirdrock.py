@@ -17,6 +17,10 @@ class ThirdRockHelper(Helper):
     }
 
     def customizeEvent(self, event):
+        # event has moved, but calendar not updated (yet?)
+        if event.title=='Starfleet Boogie-Majel':
+            return None
+
         event = super(ThirdRockHelper, self).customizeEvent(event)
 
         if event.hgurl != None:
