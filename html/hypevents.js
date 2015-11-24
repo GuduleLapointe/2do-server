@@ -33,6 +33,9 @@
             case "phaandoria": rv = "Phaandoria Grid"; break;
             case "digiworldz": rv = "Digiworldz"; break;
             case "lhp": rv = "Lighthouse Point"; break;
+            case "nextlife": rv = "Nextlife-World"; break;
+            case "dorenas": rv = "Dorenas World"; break;
+            case "anettes": rv = "Anettes Welt"; break;
             default: rv = null; break;
         }
         return rv;
