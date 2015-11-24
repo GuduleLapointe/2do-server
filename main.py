@@ -18,9 +18,11 @@ from exporter.htmlexporter import HtmlExporter
 from exporter.lslexporter import LslExporter
 from dateutil import parser
 from lib.category import Category
+from lib.skiplist import Skiplist
 
 fetchers = [
 #    ("gridtalkfetcher", "GridTalkFetcher", 0),
+    ("nextlifefetcher", "NextLifeFetcher", 0),
     ("lighthousepointfetcher", "LightHousePointFetcher", 0),
     ("piratesatollfetcher", "PiratesAtollFetcher", 0),
     ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
@@ -54,6 +56,8 @@ def main():
 
     argparser.add_argument("-o","--output",help="output file name")
 
+    argparser.add_argument("-ns","--noskiplist",help="do not process skiplist",action="store_true")
+
     args = argparser.parse_args()
 
     tz = pytz.utc
@@ -76,6 +80,10 @@ def main():
         before = parser.parse(args.before)
         if before.tzinfo==None or before.tzinfo.utcoffset(before)==None:
             before = tz.localize(before)
+
+    useskiplist = True
+    if args.noskiplist:
+        useskiplist = False
 
     if args.update:
         print "not implemented yet"
@@ -114,6 +122,10 @@ def main():
 
         f.write(str(exporter))
     elif args.fetch:
+        skiplist = None
+        if useskiplist:
+            skiplist = Skiplist('skiplist')
+
         webcache = WebCache("data/web.cache")
 
         events = []
@@ -133,11 +145,12 @@ def main():
         events = []
 
         for event in inevents:
-            if event.start!=None and event.end!=None and event.hgurl!=None:
-                events += [event]
-            else:
-                print "WARNING dropping invalid event:"
-                print str(event)
+            if not skiplist.contains(event):
+                if event.start!=None and event.end!=None and event.hgurl!=None:
+                    events += [event]
+                else:
+                    print "WARNING dropping invalid event:"
+                    print str(event)
 
         events = sorted(events, key=lambda e: e.start)
 
