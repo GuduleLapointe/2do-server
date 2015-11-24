@@ -8,6 +8,8 @@ class PiratesAtollHelper(Helper):
     hgre_obscured = re.compile("^(.*[^\s])\s*(@|on)\s*Pirates.*$",re.I)
 
     def findRegion(self, data):
+        if data==None:
+            return None
 	if PiratesAtollHelper.hgre.search(data)!=None:
 		return data
 	match = PiratesAtollHelper.hgre_obscured.search(data)

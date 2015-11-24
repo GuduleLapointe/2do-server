@@ -10,7 +10,7 @@ class FrancoGridHelper(Helper):
         self.regions = pickle.loads(file('data/gcgregions.pck').read())
 
     def findRegion(self, data):
-        if data=='-' or data==' ':
+        if data=='None' or data=='-' or data==' ':
             return 'francogrid.org:8002:'
         return None
 

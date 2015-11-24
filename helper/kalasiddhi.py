@@ -7,7 +7,7 @@ class KalasiddhiHelper(Helper):
     hgre = re.compile("^[^:]+:[0-9]+:[^:]+$")
 
     def findRegion(self, data):
-        if data=='' or data=='-':
+        if data==None or data=='' or data=='-':
             return 'kalasiddhigrid.com:8002:'
         return None
 

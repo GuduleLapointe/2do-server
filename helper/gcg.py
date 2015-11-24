@@ -10,6 +10,8 @@ class GcgHelper(Helper):
         self.regions = pickle.loads(file('data/gcgregions.pck').read())
 
     def findRegion(self, data):
+        if data==None:
+            return None
         if re.search("marina bay", data, flags=re.I):
             return "Marina Bay"
         if re.search("Hot Rod 50s Diner", data, flags=re.I):
@@ -22,7 +24,7 @@ class GcgHelper(Helper):
     def customizeEvent(self, event):
         event = super(GcgHelper, self).customizeEvent(event)
 
-        if GcgHelper.hgre.match(event.hgurl)==None:
+        if event.hgurl!=None and GcgHelper.hgre.match(event.hgurl)==None:
             hgurl = self.findRegion(event.hgurl)
             if hgurl!=None:
                 event.hgurl = 'login.greatcanadiangrid.ca:8002:' + hgurl

@@ -8,7 +8,7 @@ class LfHelper(Helper):
     def customizeEvent(self, event):
         event = super(LfHelper, self).customizeEvent(event)
 
-        if event.hgurl.strip()=="":
+        if event.hgurl!=None and event.hgurl.strip()=="":
             if LfHelper.bondagere.search(event.title):
                 event.hgurl = "Lfgrid.Com:8002:Bondage Ranch"
 

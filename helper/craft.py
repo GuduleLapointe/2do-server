@@ -7,9 +7,10 @@ class CraftHelper(Helper):
         self.regions = pickle.loads(file('data/craftregions.pck').read())
 
     def findRegion(self, data):
-        for region in self.regions:
-            if re.search(region, data, flags=re.I):
-                return region
+        if data!=None:
+            for region in self.regions:
+                if re.search(region, data, flags=re.I):
+                    return region
         return None
 
     def customizeEvent(self, event):

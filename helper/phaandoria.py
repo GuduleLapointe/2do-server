@@ -19,12 +19,12 @@ class PhaandoriaHelper(Helper):
             event.hgurl = "phaandoria.de:8002:Der Krater"
         else:
             for exp in PhaandoriaHelper.dictionary.keys():
-                if exp.search(event.hgurl):
+                if event.hgurl!=None and exp.search(event.hgurl):
                     event.hgurl = PhaandoriaHelper.dictionary[exp]
 
         if event.hgurl == "" or event.hgurl == "-":
             return None
-        else:
+        elif event.hgurl!=None:
             match = PhaandoriaHelper.hgexp.search(event.hgurl)
             if match == None:
                 event.hgurl="phaandoria.de:8002:Phaandoria Welcome"

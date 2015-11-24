@@ -15,10 +15,12 @@ class KitelyHelper(Helper):
 
         if event.title=="Kitely Merchant Fair":
             event.hgurl = "grid.kitely.com:8002:Kitely Hypergrid Merchant Fair"
-        else:
+        elif event.hgurl!=None:
             for exp in KitelyHelper.dictionary.keys():
                 if exp.search(event.hgurl):
                     event.hgurl = KitelyHelper.dictionary[exp]
+        else:
+            event.hgurl = "grid.kitely.com:8002:Kitely Welcome Center"
 
         if event.hgurl == "grid.kitely.com:8002:Seanchai":
             event.addCategory(Category('literature'))
