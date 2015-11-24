@@ -12,12 +12,20 @@ class ThirdRockHelper(Helper):
         'Peapodyne' : 'grid.3rdrockgrid.com:8002:Peapodyne',
     }
 
+    expr = {
+        re.compile('UF Starfleet Astraios', re.I) : 'grid.3rdrockgrid.com:8002:Starfleet Astraios',
+    }
+
     def customizeEvent(self, event):
         event = super(ThirdRockHelper, self).customizeEvent(event)
 
         if event.hgurl != None:
             if event.hgurl in ThirdRockHelper.dictionary.keys():
                 event.hgurl = ThirdRockHelper.dictionary[event.hgurl]
+            else:
+                for exp in self.expr:
+                    if exp.search(event.hgurl):
+                        event.hgurl = self.expr[exp]
 
         return event
 
