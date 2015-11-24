@@ -1,5 +1,6 @@
 from time import gmtime,asctime
 from lib.category import Category
+import hashlib
 
 class Event(object):
     def __init__(self):
@@ -11,8 +12,12 @@ class Event(object):
         self.end = 0
         self.categories = []
 
+    def hash(self):
+        msg = repr(self.title) + str(self.start) + repr(self.hgurl)
+        return hashlib.md5(msg).hexdigest()
+
     def __str__(self):
-        rv = "Event:\n"
+        rv = "Event "+self.hash()+" :\n"
         rv = rv + " title       " + repr(self.title) + "\n"
         rv = rv + " hgurl       " + repr(self.hgurl) + "\n"
         rv = rv + " grid        " + repr(self.grid) + "\n"
