@@ -1,5 +1,6 @@
 import re
 from lib.category import Category
+import datetime
 
 class Helper(object):
 
@@ -14,6 +15,7 @@ class Helper(object):
             re.compile('tutorial', flags=re.I)          : 'education',
             re.compile('speedbuild', flags=re.I)          : 'social',
             re.compile('hangout', flags=re.I)          : 'social',
+            re.compile('lesung', flags=re.I)          : 'literature',
         },
         'description' : {
             re.compile('(^DJ.*)|(.*\sDJs?\s)', flags=re.I)    : 'music',
@@ -48,6 +50,22 @@ class Helper(object):
         ( re.compile('^([^:\n]+:[0-9]+:)(\s|$)', re.I | re.M), 1, ""),
     ]
 
+    # grid extraction
+    gridexpr = {
+        re.compile('nextlife-world.de', re.I) : Category('grid-nextlife'),
+        re.compile('dorenas-world.de', re.I) : Category('grid-dorenas'),
+        re.compile('anettes-welt.de', re.I) : Category('grid-anettes'),
+    }
+        
+
+    # guess grid from hgurl
+    def getGridFromHgurl(self, event):
+        for expr in Helper.gridexpr:
+            if expr.search(event.hgurl)!=None:
+                event.addCategory(Helper.gridexpr[expr])
+                break
+        return event
+
     def getLocationFromDescription(self, event):
         for (expr, group, prepend) in Helper.hgexpr:
             match = expr.search(event.description)
@@ -65,7 +83,12 @@ class Helper(object):
 
         event.description = Helper.catexpr.sub('', event.description)
 
+        event = self.getGridFromHgurl(event)
+
         if event.hgurl==None or event.hgurl=='-' or event.hgurl=='':
             event.hgurl=self.getLocationFromDescription(event)
+
+        if event.start!=None and event.end!=None and event.start==event.end:
+            event.end += datetime.timedelta(hours=2)
         
         return event
