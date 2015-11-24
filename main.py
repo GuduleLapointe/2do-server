@@ -20,6 +20,7 @@ from dateutil import parser
 from lib.category import Category
 
 fetchers = [
+#    ("gridtalkfetcher", "GridTalkFetcher", 0),
     ("lighthousepointfetcher", "LightHousePointFetcher", 0),
     ("piratesatollfetcher", "PiratesAtollFetcher", 0),
     ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
@@ -127,6 +128,16 @@ def main():
             webcache.flush()
 
             print "webcache status = " + str(webcache)
+
+        inevents = events
+        events = []
+
+        for event in inevents:
+            if event.start!=None and event.end!=None and event.hgurl!=None:
+                events += [event]
+            else:
+                print "WARNING dropping invalid event:"
+                print str(event)
 
         events = sorted(events, key=lambda e: e.start)
 
