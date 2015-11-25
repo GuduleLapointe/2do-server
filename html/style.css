@@ -118,7 +118,7 @@ td.eventtime {
     width: 13em;
 }
 td.eventtitle {
-    vertical-align: bottom;
+    vertical-align: top;
 }
 
 
