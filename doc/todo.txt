@@ -2,3 +2,4 @@
 - log events without location
 - catch exceptions of individual fetcher, log, continue with next fetcher
 - add secondlife:// hop:// etc urls
+- make update of webcache atomic
