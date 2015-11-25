@@ -6,6 +6,10 @@ body {
     color: #666;
 }
 
+.gray {
+    color: #888;
+}
+
 div.mainrow {
     border: 1px solid black;
     width: 80%;
@@ -112,6 +116,9 @@ td.eventdatehi {
 }
 td.eventtime {
     width: 13em;
+}
+td.eventtitle {
+    vertical-align: bottom;
 }
 
 

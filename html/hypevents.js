@@ -66,12 +66,17 @@
 
             var lastDate = "";
 
+            var oneDayDuration = moment.duration(1, 'days');
+
             for(var i=0;i<data.length;i++) {
                 start = moment(data[i].start).tz(tzname);
                 end = moment(data[i].end).tz(tzname);
 
+                multiDay = (end-start) > oneDayDuration;
+
                 if(end>now && start<latest) {
                     date = start.format("ddd, MMM D");
+                    endDate = end.format("ddd, MMM D");
 
                     dateClass = "";
                     if(date!=lastDate) {
@@ -80,9 +85,20 @@
                     }
 
                     var tr  = '<tr class="eventoverview">';
-                    tr = tr + '<td class="eventdate'+dateClass+'">' + date + "</td>";
-                    tr = tr + '<td class="eventtime">' + start.format(timefmt) + ' - ';
-                    tr = tr + end.format(timefmt) + " " + start.format("z") + '</td>';
+                    tr = tr + '<td class="eventdate'+dateClass+'">' + date + (multiDay?('<br/><span class="gray">'+endDate+'</span>'):"") + "</td>";
+                    tr = tr + '<td class="eventtime">' + start.format(timefmt);
+
+                    if(multiDay) {
+                        tr = tr + ' ' + start.format("z") + ' - <br/><span class="gray">';
+                    } else {
+                        tr = tr + ' - ';
+                    }
+                    tr = tr + end.format(timefmt) + " " + start.format("z");
+                    if(multiDay) {
+                        tr = tr + '</span>';
+                    }
+                    tr = tr + '</td>';
+
 
                     tr = tr + '<td class="eventtitle"><span class="eventoff" id="eventoff'+String(i)+'">&#9654;</span>';
                     tr = tr + '<span class="eventon" id="eventon'+String(i)+'">&#9660;</span> ';
