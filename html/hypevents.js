@@ -12,7 +12,20 @@
         'UTC' : false,
     };
 
+    var categories = [
+        'all categories',
+        'art',
+        'education',
+        'fair',
+        'lecture',
+        'literature',
+        'music',
+        'roleplay',
+        'social',
+    ];
+
     var currtz = "US/Pacific";
+    var currentCategory = 'all categories';
 
     var numNewsItems = 0;
     var currentNewsItem = 0;
@@ -53,7 +66,14 @@
         return timefmt;
     }
 
-    function renderEvents(data,tzname) {
+    function hasCategory(e, cat) {
+        for(var i in e.categories) {
+            if(e.categories[i]==cat) return true;
+        }
+        return false;
+    }
+
+    function renderEvents(data,tzname,catname) {
             categories = {};
 
             $("div#events").html($('<table class="eventlist"></table>'));
@@ -69,6 +89,11 @@
             var oneDayDuration = moment.duration(1, 'days');
 
             for(var i=0;i<data.length;i++) {
+
+                if(catname!='all categories') {
+                    if(!hasCategory(data[i], catname)) continue;
+                }
+
                 start = moment(data[i].start).tz(tzname);
                 end = moment(data[i].end).tz(tzname);
 
@@ -171,7 +196,7 @@
         clearTimeout(refreshTimer);
         $.getJSON("events.json", function(data) {
             $("div#events").data("events",data);
-            renderEvents(data, currtz);
+            renderEvents(data, currtz, currentCategory);
         });
         refreshTimer = setTimeout(loadEvents, 1800000);
     }
@@ -217,6 +242,7 @@
             }
         }
 
+        // create timezone select
         tzselect = $('<select id="tzselector"></select>');
         for(var tz in myTimezones) {
             option = '<option value="'+tz+'"';
@@ -227,11 +253,30 @@
 
         tzselect.change(function(e) {
             currtz = e.target.value;
-            renderEvents($("div#events").data("events"),currtz);
+            renderEvents($("div#events").data("events"),currtz, currentCategory);
         });
 
         $("div#tzselect").append(tzselect);
 
+        // create category select
+        catselect = $('<select id="catselector"></select>');
+        for(var catidx in categories) {
+            cat = categories[catidx];
+            option = '<option value="'+cat+'"';
+            if (cat==currentCategory) option += ' selected';
+            option += '>'+cat+'</option>';
+            catselect.append($(option));
+        }
+
+        catselect.change(function(e) {
+            currentCategory = e.target.value;
+            renderEvents($("div#events").data("events"),currtz, currentCategory);
+        });
+
+        $("div#catselect").append(catselect);
+
+
+        // main menu navigation
         $("a#menuevents").click(function(e) {
             e.preventDefault();
             $("div#PAQ").hide();

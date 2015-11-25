@@ -67,6 +67,10 @@ div#clock {
 div#tzselect {
     float: left;
 }
+div#catselect {
+    float: left;
+    margin-left: 1em;
+}
 
 
 tr.eventoverview {
