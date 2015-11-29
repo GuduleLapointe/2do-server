@@ -221,6 +221,19 @@
     }
 
     $(document).ready(function() {
+
+            // add timezones from jstz olson database
+        for(var tz in jstz.olson.timezones) {
+            myTimezones[jstz.olson.timezones[tz]] = false;
+        }
+
+        detectedTZ = jstz.determine()
+
+        if(detectedTZ != null) {
+            currtz = detectedTZ.name();
+        }
+            
+
         timer = setTimeout(renderClock, 500);
         refreshTimer = setTimeout(loadEvents, 10);
 
