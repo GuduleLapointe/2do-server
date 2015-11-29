@@ -144,3 +144,7 @@ span.eventgridname {
     color: #00f;
     font-style: italic;
 }
+
+div#hgbanner {
+    background: white;
+}
