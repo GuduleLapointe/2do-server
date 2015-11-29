@@ -4,11 +4,11 @@ from fetcher.icalfetcher import IcalFetcher
 import icalendar
 from lib.category import Category
 from lib.webcache import WebCache
-from helper.helper import Helper
+from helper.nextlife import NextLifeHelper
 
 class NextLifeFetcher(IcalFetcher):
     def __init__(self,webcache=None):
-        super(NextLifeFetcher,self).__init__("https://calendar.google.com/calendar/ical/atdiamant%40web.de/public/basic.ics", [], webcache, Helper())
+        super(NextLifeFetcher,self).__init__("https://calendar.google.com/calendar/ical/atdiamant%40web.de/public/basic.ics", [], webcache, NextLifeHelper())
         self.webcache = webcache
         self.minexpiry = 1000
         self.maxexpirty = 1800
