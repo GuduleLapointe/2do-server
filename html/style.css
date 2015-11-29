@@ -29,6 +29,10 @@ div.mainrowsub {
 div#news {
     height: 1em;
 }
+div.newsitem {
+    overflow: hidden;
+    white-space: nowrap;
+}
 
 div#news:hover {
     cursor: pointer;
