@@ -12,6 +12,10 @@ class PhaandoriaHelper(Helper):
         re.compile('Mango', re.I) : 'phaandoria.de:8002:Mango',
     }
 
+    descexp = {
+        re.compile('Der Krater', re.I) : 'phaandoria.de:8002:Der Krater',
+    }
+
     def customizeEvent(self, event):
         event = super(PhaandoriaHelper, self).customizeEvent(event)
 
@@ -22,8 +26,14 @@ class PhaandoriaHelper(Helper):
                 if event.hgurl!=None and exp.search(event.hgurl):
                     event.hgurl = PhaandoriaHelper.dictionary[exp]
 
-        if event.hgurl == "" or event.hgurl == "-":
-            return None
+        if event.hgurl == "" or event.hgurl == "-" or event.hgurl == None:
+            matched = False
+            for exp in PhaandoriaHelper.descexp:
+                if exp.search(event.description):
+                    event.hgurl = PhaandoriaHelper.descexp[exp]
+                    matched = True
+            if not matched:
+                return None
         elif event.hgurl!=None:
             match = PhaandoriaHelper.hgexp.search(event.hgurl)
             if match == None:
