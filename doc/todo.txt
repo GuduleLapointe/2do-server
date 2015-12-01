@@ -1,3 +1,4 @@
+- ical export (forward to shawn)
 - add js timezone detection
 - add source url to events, to link back to original page
 - log events without location
