@@ -51,6 +51,7 @@
             case "anettes": rv = "Anettes Welt"; break;
             case "exolife": rv = "Exo-Life Virtual World"; break;
             case "zangrid": rv = "ZanGrid"; break;
+            case "oscc15": rv = "OSCC 2015"; break;
             default: rv = null; break;
         }
         return rv;

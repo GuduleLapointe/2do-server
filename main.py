@@ -22,13 +22,14 @@ from lib.skiplist import Skiplist
 
 fetchers = [
 #    ("gridtalkfetcher", "GridTalkFetcher", 0),
+    ("oscc15fetcher", "OSCC15Fetcher", 0),
     ("zangridfetcher", "ZanGridFetcher", 0),
     ("exolifefetcher", "ExoLifeFetcher", 0),
     ("nextlifefetcher", "NextLifeFetcher", 0),
     ("lighthousepointfetcher", "LightHousePointFetcher", 0),
     ("piratesatollfetcher", "PiratesAtollFetcher", 0),
     ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
-    ("avatarfestfetcher", "AvatarFestFetcher", 0),
+#    ("avatarfestfetcher", "AvatarFestFetcher", 0),
     ("miscfetcher", "MiscFetcher", 0),
     ("craftfetcher", "CraftFetcher", 0),
     ("kitelyfetcher", "KitelyFetcher", 0),
@@ -175,6 +176,29 @@ def main():
                 dedup += [ event ]
 
         events = dedup
+
+
+        # TEMPORARY: remove duplicate oscc15 events
+        dedup = []
+        for i in range(0,len(events)):
+            event = events[i]
+            duplicate = False
+            if Category("grid-oscc15") in event.categories:
+                for j in range(0,len(events)):
+                    if j!=i:
+                        cmpevent = events[j]
+                        hgurl = event.hgurl.lower()
+                        cmphgurl = cmpevent.hgurl.lower()
+                        if hgurl == cmphgurl and event.start == cmpevent.start:
+                            print "remove duplicate oscc15 event: " + repr(event.title)
+                            duplicate = True
+                            break
+            if not duplicate:
+                dedup += [ event ]
+
+        events = dedup
+
+
 
         datafile = file('data/events.pck', 'w+')
         pickle.dump(events, datafile, protocol=2)
