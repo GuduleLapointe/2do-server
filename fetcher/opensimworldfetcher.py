@@ -106,7 +106,10 @@ class OpenSimWorldFetcher:
 
                 e.fetch()
 
-                rv = rv + [self.helper.customizeEvent(e)]
+                e = self.helper.customizeEvent(e)
+
+                if e!=None:
+                    rv = rv + [e]
 
                 if limit>0 and ievent>=limit:
                     break
