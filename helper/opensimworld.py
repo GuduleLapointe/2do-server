@@ -12,6 +12,10 @@ class OpensimworldHelper(Helper):
         re.compile("Cajun Country", flags=re.I)     : "login.greatcanadiangrid.ca:8002:Dreamland",
     }
 
+    blacklist = [
+        re.compile("hg.zangrid.ch:8002:PartyLand", flags=re.I),
+    ]
+
     def findRegion(self, data):
         if data==None:
             return None
@@ -27,6 +31,10 @@ class OpensimworldHelper(Helper):
 
         if hgurl != None:
             event.hgurl = hgurl
+
+        for exp in OpensimworldHelper.blacklist:
+            if exp.search(event.hgurl):
+                return None
 
         return event
 
