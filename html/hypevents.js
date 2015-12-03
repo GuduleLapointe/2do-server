@@ -50,6 +50,7 @@
             case "dorenas": rv = "Dorenas World"; break;
             case "anettes": rv = "Anettes Welt"; break;
             case "exolife": rv = "Exo-Life Virtual World"; break;
+            case "zangrid": rv = "ZanGrid"; break;
             default: rv = null; break;
         }
         return rv;
