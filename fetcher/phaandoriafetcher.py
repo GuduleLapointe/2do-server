@@ -8,7 +8,7 @@ from helper.phaandoria import PhaandoriaHelper
 
 class PhaandoriaFetcher(IcalFetcher):
     def __init__(self,webcache=None):
-        super(PhaandoriaFetcher,self).__init__("https://www.google.com/calendar/ical/ath2lhne44mfcsmqp66p0iu2jo%40group.calendar.google.com/public/basic.ics", [Category("grid-phaandoria")], webcache, PhaandoriaHelper())
+        super(PhaandoriaFetcher,self).__init__("https://calendar.google.com/calendar/ical/ath2lhne44mfcsmqp66p0iu2jo%40group.calendar.google.com/public/basic.ics", [Category("grid-phaandoria")], webcache, PhaandoriaHelper())
         self.webcache = webcache
         self.minexpiry = 1000
         self.maxexpirty = 1800
