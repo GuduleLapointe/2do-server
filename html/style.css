@@ -94,9 +94,17 @@ td.eventhgurl {
     padding: 1em;
     border-left: 1px solid black;
 }
-td.eventhgurl span {
+tr.eventhgurl div {
+    display: inline;
+}
+input.hgurl {
     border: 1px solid black;
     padding: 0.2em;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    width: 20em;
+    text-align: center;
 }
 td.eventcats {
     border-left: 1px solid black;

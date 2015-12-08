@@ -221,9 +221,26 @@
 
                     tr = tr + '</td></tr>';
 
+                    // hgurl and hop/sl/etc.. links 
+                    
+                    hgsplit = data[i].hgurl.split(":");
+
+                    hop = 'hop://' + hgsplit[0] + ':' + hgsplit[1] + '/' + ((hgsplit.length>2)?hgsplit[2]:'');
+                    slhg = 'secondlife://' + hgsplit[0] + ':' + hgsplit[1] + '/' + ((hgsplit.length>2)?hgsplit[2]:'');
+                    sllocal = 'secondlife://' + ((hgsplit.length>2)?hgsplit[2]:'');
+
+
+                    hgtr  = '<tr class="eventhgurl"><td></td><td></td><td class="eventhgurl"><input type="text" onclick="this.select()" readonly class="hgurl" value="' + data[i].hgurl + '"/>';
+                    hgtr += ' <div class="hghop"><a href="'+hop+'">hop</a></div>';
+                    hgtr += ' <div class="slhg"><a href="'+slhg+'">hypergrid</a></div>';
+                    if(hgsplit.length > 2)
+                        hgtr += ' <div class="sllocal"><a href="'+sllocal+'">same grid</a></div>';
+                    hgtr += '</td><td></td></tr>';
+
+
                     var node1 = $(tr);
                     var node2 = $('<tr class="eventdesc"><td></td><td></td><td class="eventdesc">' + data[i].description + '</td></tr>');
-                    var node3 = $('<tr class="eventhgurl"><td></td><td></td><td class="eventhgurl"><span>' + data[i].hgurl + '</span></td><td></td></tr>');
+                    var node3 = $(hgtr);
                     var node4 = $('<tr class="eventcats"><td></td><td></td><td class="eventcats"><ul id="eventcats"><li></li>'+rawcats+'<li></li></ul></td><td></td></tr>');
 
                     node1.attr('id','eventoverview'+String(i));
