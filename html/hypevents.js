@@ -10,6 +10,79 @@
         'US/Eastern' : true,
         'US/Pacific' : true,
         'UTC' : false,
+
+        // from jstz.olson:
+
+        'Etc/GMT+12': false,
+        'Pacific/Pago_Pago' : false,
+        'Pacific/Apia' : false, // Why? Because windows... cry!
+        'America/Adak' : true,
+        'Pacific/Honolulu' : true,
+        'Pacific/Marquesas' : false,
+        'Pacific/Gambier' : false,
+        'America/Anchorage' : true ,
+        'America/Los_Angeles' : true,
+        'Pacific/Pitcairn' : true,
+        'America/Phoenix' : true,
+        'America/Denver' : true,
+        'America/Guatemala' : false,
+        'America/Chicago' : true,
+        'Pacific/Easter' : false,
+        'America/Bogota' : false,
+        'America/New_York' : true,
+        'America/Caracas' : false,
+        'America/Halifax' : false,
+        'America/Santo_Domingo' : false,
+        'America/Asuncion' : false,
+        'America/St_Johns' : true,
+        'America/Godthab' : false,
+        'America/Argentina/Buenos_Aires' : false,
+        'America/Montevideo' : false,
+        'America/Noronha' : false,
+        'Atlantic/Azores' : false,
+        'Atlantic/Cape_Verde' : false,
+        'UTC' : false,
+        'Europe/London' : true,
+        'Europe/Berlin' : false,
+        'Africa/Lagos' : false,
+        'Africa/Windhoek' : false,
+        'Asia/Beirut' : false,
+        'Africa/Johannesburg' : false,
+        'Asia/Baghdad' : false,
+        'Europe/Moscow' : false,
+        'Asia/Tehran' : false,
+        'Asia/Dubai' : false,
+        'Asia/Baku' : false,
+        'Asia/Kabul' : false,
+        'Asia/Yekaterinburg' : false,
+        'Asia/Karachi' : false,
+        'Asia/Kolkata' : false,
+        'Asia/Kathmandu' : false,
+        'Asia/Dhaka' : false,
+        'Asia/Omsk' : false,
+        'Asia/Rangoon' : false,
+        'Asia/Krasnoyarsk' : false,
+        'Asia/Jakarta' : false,
+        'Asia/Shanghai' : false,
+        'Asia/Irkutsk' : false,
+        'Australia/Eucla' : true,
+        'Asia/Yakutsk' : false,
+        'Asia/Tokyo' : true,
+        'Australia/Darwin' : true,
+        'Australia/Adelaide' : true,
+        'Australia/Brisbane' : true,
+        'Asia/Vladivostok' : false,
+        'Australia/Sydney' : true,
+        'Australia/Lord_Howe' : true,
+        'Asia/Kamchatka' : false,
+        'Pacific/Noumea' : false,
+        'Pacific/Norfolk' : true,
+        'Pacific/Auckland' : true,
+        'Pacific/Majuro' : false,
+        'Pacific/Chatham' : true,
+        'Pacific/Tongatapu' : false,
+        'Pacific/Apia' : false,
+        'Pacific/Kiritimati' : false,
     };
 
     var categories = [
@@ -223,11 +296,6 @@
     }
 
     $(document).ready(function() {
-
-            // add timezones from jstz olson database
-        for(var tz in jstz.olson.timezones) {
-            myTimezones[jstz.olson.timezones[tz]] = false;
-        }
 
         detectedTZ = jstz.determine()
 
