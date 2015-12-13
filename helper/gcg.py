@@ -17,7 +17,7 @@ class GcgHelper(Helper):
         if re.search("Hot Rod 50s Diner", data, flags=re.I):
             return "Dreamland"
         for region in self.regions:
-            if re.search(region, data, flags=re.I):
+            if region!='Welcome' and re.search(region, data, flags=re.I):
                 return region
         return None
 
@@ -26,8 +26,13 @@ class GcgHelper(Helper):
 
         if event.hgurl!=None and GcgHelper.hgre.match(event.hgurl)==None:
             hgurl = self.findRegion(event.hgurl)
+            if hgurl==None:
+                hgurl = self.findRegion(event.description)
+                
             if hgurl!=None:
                 event.hgurl = 'login.greatcanadiangrid.ca:8002:' + hgurl
+            else:
+                event.hgurl = None
 
         # todo: correct for DST dynamically (ugh)
         event.start = event.start + timedelta(hours=3)
