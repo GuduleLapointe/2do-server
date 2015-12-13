@@ -62,7 +62,7 @@ class ThirdRockFetcher:
 
         rv = []
 
-        r = self.webcache.fetch(self.eventurl,1800,3600)
+        r = self.webcache.fetch(self.eventurl,300,600)
 
         if r.status_code==200:
             nevents = len(r.json())
