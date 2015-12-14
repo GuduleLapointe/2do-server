@@ -3,18 +3,17 @@ from helper import Helper
 
 class ThirdRockHelper(Helper):
     dictionary = {
-        'grid.3rdrockgrid.com:8002 Enerdhil (113, 116, 38)' : 'grid.3rdrockgrid.com:8002:Enerdhil',
-        'grid.3rdrockgrid.com:8002 Enerdhil Enerdhil (113, 116, 38)' : 'grid.3rdrockgrid.com:8002:Enerdhil',
-        'ROB\'s Rock Island(HG enabled) >grid.3rdrockgrid.com:8002:ROBs Rock Island' : 'grid.3rdrockgrid.com:8002:ROBs Rock Island',
-        'Eldoland 1 (128,15,30)' : 'grid.3rdrockgrid.com:8002:Eldoland 1',
-        'grid.3rdrockgrid.com:8002:ROBs Rock Island ,ROB\'s One World' : 'grid.3rdrockgrid.com:8002:ROBs Rock Island',
-        'Roll Over Beethovens ' : 'grid.3rdrockgrid.com:8002:ROBs Rock Island',
-        'Peapodyne' : 'grid.3rdrockgrid.com:8002:Peapodyne',
+        re.compile('Enerdhil', flags=re.I)              : 'grid.3rdrockgrid.com:8002:Enerdhil',
+        re.compile('ROB\'s Rock Island', flags=re.I)    : 'grid.3rdrockgrid.com:8002:ROBs Rock Island',
+        re.compile('ROBs Rock Island', flags=re.I)      : 'grid.3rdrockgrid.com:8002:ROBs Rock Island',
+        re.compile('Eldoland 1', flags=re.I)            : 'grid.3rdrockgrid.com:8002:Eldoland 1',
+        re.compile('ROB\'s One World', flags=re.I)      : 'grid.3rdrockgrid.com:8002:ROBs Rock Island',
+        re.compile('Roll Over Beethovens', flags=re.I)  : 'grid.3rdrockgrid.com:8002:ROBs Rock Island',
+        re.compile('Peapodyne', flags=re.I)             : 'grid.3rdrockgrid.com:8002:Peapodyne',
+        re.compile('UF Starfleet Astraios', re.I)       : 'grid.3rdrockgrid.com:8002:Starfleet Astraios',
     }
 
-    expr = {
-        re.compile('UF Starfleet Astraios', re.I) : 'grid.3rdrockgrid.com:8002:Starfleet Astraios',
-    }
+    hgexp = re.compile('[^:]+:[0-9]+(:[^:]*)?')
 
     def customizeEvent(self, event):
         # event has moved, but calendar not updated (yet?)
@@ -23,13 +22,17 @@ class ThirdRockHelper(Helper):
 
         event = super(ThirdRockHelper, self).customizeEvent(event)
 
-        if event.hgurl != None:
-            if event.hgurl in ThirdRockHelper.dictionary.keys():
-                event.hgurl = ThirdRockHelper.dictionary[event.hgurl]
-            else:
-                for exp in self.expr:
-                    if exp.search(event.hgurl):
-                        event.hgurl = self.expr[exp]
+        if event.title == 'UF Starfleet Astraios Mission':
+            event.hgurl = 'grid.3rdrockgrid.com:8002:Starfleet Astraios'
+        elif event.hgurl != None:
+            hgurl = None
+            for exp in ThirdRockHelper.dictionary:
+                if exp.search(event.hgurl)!=None:
+                    hgurl = ThirdRockHelper.dictionary[exp]
+            event.hgurl = hgurl
+
+        if event.hgurl!=None and ThirdRockHelper.hgexp.match(event.hgurl)==None:
+            event.hgurl = None
 
         return event
 
