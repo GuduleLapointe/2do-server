@@ -125,6 +125,9 @@
             case "exolife": rv = "Exo-Life Virtual World"; break;
             case "zangrid": rv = "ZanGrid"; break;
             case "oscc15": rv = "OSCC 2015"; break;
+            case "digiworldz": rv = "DigiWorldz"; break;
+            case "refuge": rv = "Refuge Grid"; break;
+            case "narasnook": rv = "Nara's Nook"; break;
             default: rv = null; break;
         }
         return rv;

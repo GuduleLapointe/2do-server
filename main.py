@@ -43,6 +43,7 @@ fetchers = [
     ("exolifefetcher", "ExoLifeFetcher", 0),
     ("nextlifefetcher", "NextLifeFetcher", 0),
     ("piratesatollfetcher", "PiratesAtollFetcher", 0),
+    ("narasnookfetcher", "NarasNookFetcher", 0),
     ("miscfetcher", "MiscFetcher", 0),
     ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
     ]
