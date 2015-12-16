@@ -71,6 +71,11 @@ class Helper(object):
         re.compile('nextlife-world.de', re.I) : Category('grid-nextlife'),
         re.compile('dorenas-world.de', re.I) : Category('grid-dorenas'),
         re.compile('anettes-welt.de', re.I) : Category('grid-anettes'),
+        re.compile('world.narasnook.com', re.I) : Category('grid-narasnook'),
+        re.compile('login.digiworldz.com', re.I) : Category('grid-digiworldz'),
+        re.compile('refugegrid.com', re.I) : Category('grid-refuge'),
+        re.compile('hg.lighthousepoint.co.uk', re.I) : Category('grid-lhp'),
+        re.compile('hypergrid.org', re.I) : Category('grid-metropolis'),
     }
         
 
