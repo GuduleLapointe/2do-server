@@ -8,3 +8,4 @@ html/scripts.js
 html/index.html
 html/index_dev.html
 html/events.lsl
+*.log
