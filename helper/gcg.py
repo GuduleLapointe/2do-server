@@ -6,19 +6,29 @@ from helper import Helper
 class GcgHelper(Helper):
     hgre = re.compile("^[^:]+:[0-9]+:[^:]+$")
 
+    hgexpr = {
+        re.compile("marina bay", flags=re.I)          : "Marina Bay",
+        re.compile("hot rod 50s diner", flags=re.I)   : "Dreamland",
+        re.compile("Manitou market", flags=re.I)        : "West Manitoulin Island",
+        re.compile("Starlight Ballroom", flags=re.I)  : "Alabo Falls",
+        re.compile("Starlight Mall", flags=re.I)   : "Alabo Falls",
+    }
+
     def __init__(self):
         self.regions = pickle.loads(file('data/gcgregions.pck').read())
 
     def findRegion(self, data):
         if data==None:
             return None
-        if re.search("marina bay", data, flags=re.I):
-            return "Marina Bay"
-        if re.search("Hot Rod 50s Diner", data, flags=re.I):
-            return "Dreamland"
+
+        for exp in GcgHelper.hgexpr:
+            if exp.search(data)!=None:
+                return GcgHelper.hgexpr[exp]
+
         for region in self.regions:
-            if region!='Welcome' and re.search(region, data, flags=re.I):
+            if re.search(region, data, flags=re.I):
                 return region
+
         return None
 
     def customizeEvent(self, event):
@@ -28,8 +38,13 @@ class GcgHelper(Helper):
             hgurl = self.findRegion(event.hgurl)
             if hgurl==None:
                 hgurl = self.findRegion(event.description)
-                
-            if hgurl!=None:
+
+                if hgurl=='Light':
+                    hgurl = None
+        
+            if hgurl=='Atlantia':
+                event.hgurl = None        
+            elif hgurl!=None:
                 event.hgurl = 'login.greatcanadiangrid.ca:8002:' + hgurl
             else:
                 event.hgurl = None
