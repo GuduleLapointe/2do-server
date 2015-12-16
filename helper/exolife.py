@@ -5,6 +5,11 @@ class ExoLifeHelper(Helper):
     hgexp = re.compile('(.*)\s+hop://hg\.exo-life\.onl:8032')
 
     def customizeEvent(self, event):
+        if event.title == 'Regions backed up on the stand alone hard drive':
+            return None
+        if event.title == 'Monthly Region Back-Up':
+            return None
+
         event = super(ExoLifeHelper, self).customizeEvent(event)
 
         if event.hgurl!=None:
