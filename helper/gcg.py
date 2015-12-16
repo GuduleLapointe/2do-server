@@ -42,9 +42,7 @@ class GcgHelper(Helper):
                 if hgurl=='Light':
                     hgurl = None
         
-            if hgurl=='Atlantia':
-                event.hgurl = None        
-            elif hgurl!=None:
+            if hgurl!=None:
                 event.hgurl = 'login.greatcanadiangrid.ca:8002:' + hgurl
             else:
                 event.hgurl = None
