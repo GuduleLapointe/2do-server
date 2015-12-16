@@ -24,7 +24,7 @@ class EventList:
         event_start = (new_event.start - new_event.start.utcoffset()).replace(tzinfo=pytz.utc)
 
         if type(new_event.hgurl)==vText:
-            hgurl = str(new_event.hgurl.title.encode('ascii', 'ignore')).lower()
+            hgurl = str(new_event.hgurl.title().encode('ascii', 'ignore')).lower()
         else:
             hgurl = str(new_event.hgurl.encode('ascii', 'ignore')).lower()
 
