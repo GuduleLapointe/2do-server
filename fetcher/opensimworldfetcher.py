@@ -42,7 +42,7 @@ class OpenSimWorldEvent(Event):
         if self.webcache==None:
             r = requests.get(self.url)
         else:
-            r = self.webcache.fetch(self.url,3600,7200)
+            r = self.webcache.fetch(self.url,1800,3600)
 
         if r.status_code==200:
             tree = html.fromstring(r.text)
@@ -79,7 +79,7 @@ class OpenSimWorldFetcher:
     def fetch(self, limit=0):
         print "OpenSimWorldFetcher: fetch overview.."
 
-        r = self.webcache.fetch(self.eventurl,1800,3600)
+        r = self.webcache.fetch(self.eventurl,900,1800)
 
         if r.status_code==200:
             tree = html.fromstring(r.text)
