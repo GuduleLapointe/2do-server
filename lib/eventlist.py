@@ -22,15 +22,16 @@ class EventList:
             return
         
         event_start = (new_event.start - new_event.start.utcoffset()).replace(tzinfo=pytz.utc)
+
         if type(new_event.hgurl)==vText:
-            hgurl = repr(new_event.hgurl.title)
+            hgurl = str(new_event.hgurl.title.encode('ascii', 'ignore')).lower()
         else:
-            hgurl = repr(new_event.hgurl)
+            hgurl = str(new_event.hgurl.encode('ascii', 'ignore')).lower()
 
         #print new_event.hgurl
-        new_hash = hashlib.md5( str(event_start) + str(hgurl).lower() ).hexdigest()
+        new_hash = hashlib.md5( str(event_start) + hgurl ).hexdigest()
 
-        #print repr(new_event.title) + " " + str(event_start) + " " + str(hgurl).lower() + " " + new_hash
+        #print repr(new_event.title) + ": '" + str(event_start) + "' '" + hgurl + "' " + new_hash
 
         if not new_hash in self.hashes:
             self.events += [ new_event ]
