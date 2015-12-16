@@ -11,6 +11,7 @@ class Event(object):
         self.start = 0
         self.end = 0
         self.categories = []
+        self.uid = None
 
     def hash(self):
         msg = repr(self.title) + str(self.start) + repr(self.hgurl)
@@ -25,6 +26,7 @@ class Event(object):
         rv = rv + " start       " + str(self.start) + "\n"
         rv = rv + " end         " + str(self.end) + "\n"
         rv = rv + " categories  " + str(self.categories) + "\n"
+        rv = rv + " uid         " + str(self.uid) + "\n"
 
         return rv       
 

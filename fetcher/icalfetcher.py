@@ -73,6 +73,11 @@ class IcalFetcher(object):
                 except KeyError:
                     pass
 
+                try:
+                    e.uid = event.get('UID')
+                except KeyError:
+                    pass
+
                 # TODO: log event w/o location and ignore
                 if e.hgurl == None:
                     e.hgurl = "-"
@@ -85,7 +90,6 @@ class IcalFetcher(object):
                     rule = event.get('RRULE')
 
                     expander = RRULEExpander(event.get('RRULE'), e.start, event.get('EXDATE'))
-
 
                         # calc event length
                     eventlen = e.end - e.start
