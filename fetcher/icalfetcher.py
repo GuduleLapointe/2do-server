@@ -11,10 +11,11 @@ from lib.rrule import RRULEExpander
 class IcalFetcher(object):
     tz_pacific = pytz.timezone('US/Pacific')
 
-    def __init__(self,url=None,categories=None,webcache=None,helper=None):
+    def __init__(self,url,categories,eventlist,webcache=None,helper=None):
         self.url = url
         self.categories = categories
         self.helper = helper
+        self.eventlist = eventlist
         self.cache = webcache
         self.minexpiry = 1800
         self.maxexpiry = 3600
@@ -83,9 +84,9 @@ class IcalFetcher(object):
                     e.hgurl = "-"
 
                 if not "RRULE" in event.keys():
-                    customized = self.helper.customizeEvent(e)
+                    customized = self.customizeEvent(e)
                     if customized!=None:
-                        events = events + [customized]
+                        self.eventlist.add(customized)
                 else:
                     rule = event.get('RRULE')
 
@@ -100,19 +101,26 @@ class IcalFetcher(object):
                         revent.end = instance + eventlen
                         customized = self.customizeEvent(revent)
                         if customized != None:
-                            events = events + [customized]
+                            self.eventlist.add(customized)
                         if limit>0 and len(events)>=limit:
                             break
         
                 if limit>0 and len(events)>=limit:
                     break
 
-        return events
-
 if __name__=='__main__':
-    f = IcalFetcher("https://www.google.com/calendar/ical/857iq9v0nfqrg3qmt4e00n53rc%40group.calendar.google.com/public/basic.ics")
+    from lib.eventlist import EventList
+    from lib.webcache import WebCache
 
-    e = f.fetch()
+    eventlist = EventList()
 
-    for ev in e:
+    cache = WebCache("data/test_phaandoria.cache")
+
+    f = IcalFetcher("https://www.google.com/calendar/ical/857iq9v0nfqrg3qmt4e00n53rc%40group.calendar.google.com/public/basic.ics", [], eventlist, cache)
+
+    f.fetch()
+
+    cache.flush()
+
+    for ev in eventlist:
         print str(ev)

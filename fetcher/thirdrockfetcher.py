@@ -6,7 +6,6 @@ import re
 import sys
 import pytz
 from lib.category import Category
-from lib.webcache import WebCache
 from helper.thirdrock import ThirdRockHelper
 
 class ThirdRockEvent(Event):
@@ -53,14 +52,13 @@ class ThirdRockFetcher:
     eventurl="http://3rdrockgrid.com/new/wp-content/plugins/dwg-calendar/getevents.php"
     tz_pacific = pytz.timezone('US/Pacific')
 
-    def __init__(self,webcache):
+    def __init__(self, eventlist, webcache):
         self.webcache = webcache
+        self.eventlist = eventlist
         self.helper = ThirdRockHelper()
 
     def fetch(self, limit=0):
         print "ThirdRockFetcher: fetch overview.."
-
-        rv = []
 
         r = self.webcache.fetch(self.eventurl,300,600)
 
@@ -94,24 +92,25 @@ class ThirdRockFetcher:
                 e = self.helper.customizeEvent(e)
 
                 if e!=None:
-                    rv = rv + [e]
+                    self.eventlist.add(e)
 
                 if limit>0 and ievent>=limit:
                     break
             print ""
 
-        return rv
-
-
-
 if __name__=='__main__':
+    from lib.webcache import WebCache
+    from lib.eventlist import EventList
+
+    eventlist = EventList()
+
     webcache = WebCache("data/test_thirdrock.cache")
 
-    f = ThirdRockFetcher(webcache)
+    f = ThirdRockFetcher(eventlist, webcache)
 
-    e = f.fetch(12)
+    f.fetch(12)
 
     webcache.flush()
 
-    for event in e:
+    for event in eventlist:
         print str(event)

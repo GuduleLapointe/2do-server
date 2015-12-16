@@ -7,7 +7,6 @@ import re
 import sys
 import pytz
 from lib.category import Category
-from lib.webcache import WebCache
 from helper.opensimworld import OpensimworldHelper
 
 class OpenSimWorldEvent(Event):
@@ -72,14 +71,13 @@ class OpenSimWorldFetcher:
     eventurl="http://opensimworld.com/events"
     tz_pacific = pytz.timezone('US/Pacific')
 
-    def __init__(self,webcache):
+    def __init__(self, eventlist, webcache):
+        self.eventlist = eventlist
         self.webcache = webcache
         self.helper = OpensimworldHelper()
 
     def fetch(self, limit=0):
         print "OpenSimWorldFetcher: fetch overview.."
-
-        rv = []
 
         r = self.webcache.fetch(self.eventurl,1800,3600)
 
@@ -109,24 +107,25 @@ class OpenSimWorldFetcher:
                 e = self.helper.customizeEvent(e)
 
                 if e!=None:
-                    rv = rv + [e]
+                    self.eventlist.add(e)
 
                 if limit>0 and ievent>=limit:
                     break
             print ""
 
-        return rv
-
-
-
 if __name__=='__main__':
+    from lib.webcache import WebCache
+    from lib.eventlist import EventList
+
+    eventlist = EventList()
+
     webcache = WebCache("data/test_opensimworld.cache")
 
-    f = OpenSimWorldFetcher(webcache)
+    f = OpenSimWorldFetcher(eventlist, webcache)
 
-    e = f.fetch()
+    f.fetch()
 
     webcache.flush()
 
-    for event in e:
+    for event in eventlist:
         print str(event)

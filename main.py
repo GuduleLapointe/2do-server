@@ -19,18 +19,18 @@ from exporter.lslexporter import LslExporter
 from dateutil import parser
 from lib.category import Category
 from lib.skiplist import Skiplist
+from lib.eventlist import EventList
 
+# sorted in order of preference
+# fetchers are run from begin of list to end, and events
+# added by later fetchers that are already fetched earlier
+# will be discarded
 fetchers = [
 #    ("gridtalkfetcher", "GridTalkFetcher", 0),
     ("oscc15fetcher", "OSCC15Fetcher", 0),
     ("zangridfetcher", "ZanGridFetcher", 0),
-    ("exolifefetcher", "ExoLifeFetcher", 0),
-    ("nextlifefetcher", "NextLifeFetcher", 0),
     ("lighthousepointfetcher", "LightHousePointFetcher", 0),
-    ("piratesatollfetcher", "PiratesAtollFetcher", 0),
-    ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
 #    ("avatarfestfetcher", "AvatarFestFetcher", 0),
-    ("miscfetcher", "MiscFetcher", 0),
     ("craftfetcher", "CraftFetcher", 0),
     ("kitelyfetcher", "KitelyFetcher", 0),
     ("metropolisfetcher", "MetropolisFetcher", 0),
@@ -40,6 +40,11 @@ fetchers = [
     ("gcgfetcher", "GcgFetcher", 0),
     ("kalasiddhifetcher", "KalasiddhiFetcher", 0),
     ("phaandoriafetcher", "PhaandoriaFetcher", 0),
+    ("exolifefetcher", "ExoLifeFetcher", 0),
+    ("nextlifefetcher", "NextLifeFetcher", 0),
+    ("piratesatollfetcher", "PiratesAtollFetcher", 0),
+    ("miscfetcher", "MiscFetcher", 0),
+    ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
     ]
 
 def main():
@@ -131,77 +136,35 @@ def main():
 
         webcache = WebCache("data/web.cache")
 
-        events = []
+        eventlist = EventList(skiplist)
 
         for (module_name,class_name,limit) in fetchers:
             mod = importlib.import_module("fetcher."+module_name)
 
-            fetcher = getattr(mod, class_name)(webcache)
+            fetcher = getattr(mod, class_name)(eventlist, webcache)
 
-            events = events + fetcher.fetch(limit)
+            try:
+                fetcher.fetch(limit)
+            except Exception as e:
+                print "! fetcher "+module_name+" failed with exception:"
+                print str(e)
 
             webcache.flush()
 
             print "webcache status = " + str(webcache)
 
-        inevents = events
-        events = []
+        #for event in inevents:
+        #    if not skiplist.contains(event):
+        #        if event.start!=None and event.end!=None and event.hgurl!=None:
+        #            events += [event]
+        #        else:
+        #            print "WARNING dropping invalid event:"
+        #            print str(event)
 
-        for event in inevents:
-            if not skiplist.contains(event):
-                if event.start!=None and event.end!=None and event.hgurl!=None:
-                    events += [event]
-                else:
-                    print "WARNING dropping invalid event:"
-                    print str(event)
-
-        events = sorted(events, key=lambda e: e.start)
-
-        # remove duplicate opensim events
-        dedup = []
-        for i in range(0,len(events)):
-            event = events[i]
-            duplicate = False
-            if Category("grid-opensimworld") in event.categories:
-                for j in range(0,len(events)):
-                    if j!=i:
-                        cmpevent = events[j]
-                        hgurl = event.hgurl.lower()
-                        cmphgurl = cmpevent.hgurl.lower()
-                        if hgurl == cmphgurl and event.start == cmpevent.start:
-                            print "remove duplicate opensim event: " + repr(event.title)
-                            duplicate = True
-                            break
-            if not duplicate:
-                dedup += [ event ]
-
-        events = dedup
-
-
-        # TEMPORARY: remove duplicate oscc15 events
-        dedup = []
-        for i in range(0,len(events)):
-            event = events[i]
-            duplicate = False
-            if Category("grid-oscc15") in event.categories:
-                for j in range(0,len(events)):
-                    if j!=i:
-                        cmpevent = events[j]
-                        hgurl = event.hgurl.lower()
-                        cmphgurl = cmpevent.hgurl.lower()
-                        if hgurl == cmphgurl and event.start == cmpevent.start:
-                            print "remove duplicate oscc15 event: " + repr(event.title)
-                            duplicate = True
-                            break
-            if not duplicate:
-                dedup += [ event ]
-
-        events = dedup
-
-
+        eventlist.sort()
 
         datafile = file('data/events.pck', 'w+')
-        pickle.dump(events, datafile, protocol=2)
+        eventlist.write(datafile)
         datafile.close()
     else:
         print "must specify at least one of -f, -w and -u"

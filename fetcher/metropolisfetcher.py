@@ -7,7 +7,6 @@ import sys
 import pytz
 import datetime
 from lib.category import Category
-from lib.webcache import WebCache
 from helper.helper import Helper
 
 class MetropolisEvent(Event):
@@ -90,14 +89,15 @@ class MetropolisEvent(Event):
 class MetropolisFetcher:
     eventurl="https://events.hypergrid.org/?pno="
 
-    def __init__(self, webcache=None):
+    def __init__(self, eventlist, webcache=None):
+        self.eventlist=eventlist
         self.webcache=webcache
         self.helper=Helper()
 
     def fetch(self, limit=0):
         pagecount = 1
 
-        rv = []
+        eventcount = 0
 
         while True:
             print "MetropolisFetcher: fetch overview page " + str(pagecount)
@@ -126,11 +126,14 @@ class MetropolisFetcher:
 
                     e.fetch()
 
-                    rv = rv + [self.helper.customizeEvent(e)]
+                    customized = self.helper.customizeEvent(e)
+                    if customized != None:
+                        self.eventlist.add(customized)
 
                     ievent = ievent + 1
+                    eventcount = eventcount + 1
 
-                    if limit > 0 and len(rv) >= limit:
+                    if limit > 0 and eventcount >= limit:
                         break
 
                 print ""
@@ -139,22 +142,23 @@ class MetropolisFetcher:
 
             pagecount = pagecount + 1
 
-            if limit > 0 and len(rv) >= limit:
+            if limit > 0 and eventcount >= limit:
                 break
 
 
-        return rv
-
-
-
 if __name__=='__main__':
+    from lib.webcache import WebCache
+    from lib.eventlist import EventList
+
+    eventlist = EventList()
+
     cache = WebCache("data/test_metropolis.cache")
 
-    f = MetropolisFetcher(cache)
+    f = MetropolisFetcher(eventlist, cache)
 
-    e = f.fetch(12)
+    f.fetch(12)
 
     cache.flush()
 
-    for event in e:
+    for event in eventlist:
         print str(event)

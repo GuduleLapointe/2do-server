@@ -7,14 +7,14 @@ import re
 import sys
 import pytz
 from lib.category import Category
-from lib.webcache import WebCache
 from helper.craft import CraftHelper
 
 class CraftFetcher:
     eventurl="http://www.craft-world.org/page/en/living-in-craft/events.php"
     tz_rome = pytz.timezone('Europe/Rome')
 
-    def __init__(self,webcache):
+    def __init__(self, eventlist, webcache):
+        self.eventlist = eventlist
         self.webcache = webcache
         self.helper = CraftHelper()
 
@@ -51,7 +51,9 @@ class CraftFetcher:
                 if region!=None:
                     e.hgurl = "craft-world.org:8002:"+region
 
-                rv += [self.helper.customizeEvent(e)]
+                customized = self.helper.customizeEvent(e)
+                if customized!=None:
+                    self.eventlist.add(customized)
 
             print ""
 
@@ -60,13 +62,18 @@ class CraftFetcher:
 
 
 if __name__=='__main__':
+    from lib.webcache import WebCache
+    from lib.eventlist import EventList
+
+    eventlist = EventList()
+
     webcache = WebCache("data/test_craft.cache")
 
-    f = CraftFetcher(webcache)
+    f = CraftFetcher(eventlist, webcache)
 
-    e = f.fetch(12)
+    f.fetch(12)
 
     webcache.flush()
 
-    for event in e:
+    for event in eventlist:
         print str(event)
