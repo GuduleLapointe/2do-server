@@ -108,7 +108,7 @@ if __name__=='__main__':
 
     f = ThirdRockFetcher(eventlist, webcache)
 
-    f.fetch(12)
+    f.fetch()
 
     webcache.flush()
 
