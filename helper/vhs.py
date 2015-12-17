@@ -16,6 +16,9 @@ class VHSHelper(Helper):
     def customizeEvent(self, event):
         event = super(VHSHelper, self).customizeEvent(event)
 
+        if event.hgurl == 'auf dem:Infopfad':
+            return None
+
         for exp in VHSHelper.removeexp:
             event.title = exp.sub('', event.title)
 
