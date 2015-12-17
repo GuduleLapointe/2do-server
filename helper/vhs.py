@@ -10,6 +10,7 @@ class VHSHelper(Helper):
         re.compile('^SL\+MG:\s*', flags=re.I),
         re.compile('^SL\+OG:\s*', flags=re.I),
         re.compile('^OSGrid \+ Metropolis Grid:\s*', flags=re.I),
+        re.compile('^OSGrid:\s*', flags=re.I),
     ]
 
     def customizeEvent(self, event):
@@ -17,6 +18,9 @@ class VHSHelper(Helper):
 
         for exp in VHSHelper.removeexp:
             event.title = exp.sub('', event.title)
+
+        if event.title == u'TEMPELRITTERambiente bei der Teststrecke fuer Avatare in Deutsch':
+            return None
 
         return event
 
