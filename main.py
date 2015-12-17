@@ -40,6 +40,7 @@ fetchers = [
     ("gcgfetcher", "GcgFetcher", 0),
     ("kalasiddhifetcher", "KalasiddhiFetcher", 0),
     ("phaandoriafetcher", "PhaandoriaFetcher", 0),
+    ("vhsfetcher", "VHSFetcher", 0),
     ("exolifefetcher", "ExoLifeFetcher", 0),
     ("nextlifefetcher", "NextLifeFetcher", 0),
     ("piratesatollfetcher", "PiratesAtollFetcher", 0),

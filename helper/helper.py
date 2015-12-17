@@ -15,6 +15,8 @@ class Helper(object):
             re.compile('speedbuild', flags=re.I)          : 'social',
             re.compile('hangout', flags=re.I)          : 'social',
             re.compile('lesung', flags=re.I)          : 'literature',
+            re.compile('write-in', flags=re.I)          : 'literature',
+            re.compile('in Deutsch', flags=re.I)          : 'lang-Deutsch',
         },
         'description' : {
             re.compile('\[\[Category:Art\]\]', flags=re.I)  : 'art',
