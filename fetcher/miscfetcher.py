@@ -18,6 +18,9 @@ class MiscFetcher(IcalFetcher):
             Helper()
         )
         self.webcache = webcache
+        self.minexpiry = 600
+        self.maxexpiry = 1000
+
 
 if __name__=='__main__':
     from lib.webcache import WebCache
