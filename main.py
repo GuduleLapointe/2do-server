@@ -30,7 +30,7 @@ fetchers = [
     ("japanopenfetcher", "JapanOpenFetcher", 0),
     ("oscc15fetcher", "OSCC15Fetcher", 0),
     ("zangridfetcher", "ZanGridFetcher", 0),
-    ("lighthousepointfetcher", "LightHousePointFetcher", 0),
+#    ("lighthousepointfetcher", "LightHousePointFetcher", 0),
 #    ("avatarfestfetcher", "AvatarFestFetcher", 0),
     ("craftfetcher", "CraftFetcher", 0),
     ("kitelyfetcher", "KitelyFetcher", 0),
