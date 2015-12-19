@@ -128,6 +128,7 @@
             case "digiworldz": rv = "DigiWorldz"; break;
             case "refuge": rv = "Refuge Grid"; break;
             case "narasnook": rv = "Nara's Nook"; break;
+            case "jog": rv = "Japan Open Grid"; break;
             default: rv = null; break;
         }
         return rv;
