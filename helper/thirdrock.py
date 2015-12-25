@@ -29,7 +29,8 @@ class ThirdRockHelper(Helper):
             for exp in ThirdRockHelper.dictionary:
                 if exp.search(event.hgurl)!=None:
                     hgurl = ThirdRockHelper.dictionary[exp]
-            event.hgurl = hgurl
+            if hgurl!=None:
+            	event.hgurl = hgurl
 
         if event.hgurl!=None and ThirdRockHelper.hgexp.match(event.hgurl)==None:
             event.hgurl = None
