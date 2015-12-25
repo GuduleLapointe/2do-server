@@ -13,7 +13,7 @@ class OpensimworldHelper(Helper):
     }
 
     blacklist = [
-        #re.compile("hg.zangrid.ch:8002:PartyLand", flags=re.I),
+        re.compile("zangrid.ch", flags=re.I),
     ]
 
     def findRegion(self, data):
