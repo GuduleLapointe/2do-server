@@ -15,9 +15,10 @@ class RegionHelper(Helper):
         fname = 'data/' + self.__class__.__name__ + '.pck'
 
         if not os.path.isfile(fname):
-            self.__class__.fetchRegions()
-
-        self.regions = pickle.loads(file(fname).read())
+            self.regions = self.__class__.fetchRegions()
+            file(fname,'w+').write(pickle.dumps(self.regions))
+        else:
+            self.regions = pickle.loads(file(fname).read())
 
     def fetchRegions(self):
         raise Exception("fetchRegions not overridden in " + self.__class__.__name__)
@@ -25,6 +26,9 @@ class RegionHelper(Helper):
     def findRegion(self, data):
         longest = 0
         region_match = None
+
+        if data==None:
+            return None
 
         for region in self.regions:
             if re.search(region, data, flags=re.I):

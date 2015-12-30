@@ -1,9 +1,10 @@
 import re
 import pickle
 from datetime import timedelta
-from helper import Helper
+from regionhelper import RegionHelper
+import requests
 
-class GcgHelper(Helper):
+class GcgHelper(RegionHelper):
     hgre = re.compile("^[^:]+:[0-9]+:[^:]+$")
 
     hgexpr = {
@@ -14,9 +15,6 @@ class GcgHelper(Helper):
         re.compile("Starlight Mall", flags=re.I)   : "Alabo Falls",
     }
 
-    def __init__(self):
-        self.regions = pickle.loads(file('data/gcgregions.pck').read())
-
     def findRegion(self, data):
         if data==None:
             return None
@@ -25,11 +23,7 @@ class GcgHelper(Helper):
             if exp.search(data)!=None:
                 return GcgHelper.hgexpr[exp]
 
-        for region in self.regions:
-            if re.search(region, data, flags=re.I):
-                return region
-
-        return None
+        return super(GcgHelper, self).findRegion(data)
 
     def customizeEvent(self, event):
         event = super(GcgHelper, self).customizeEvent(event)
@@ -53,12 +47,16 @@ class GcgHelper(Helper):
 
         return event
 
+    @classmethod
+    def fetchRegions(cls):
+        page = requests.get("http://map.greatcanadiangrid.ca/")
 
-if __name__=='__main__':
-    import requests
-    
-    page = requests.get("http://map.greatcanadiangrid.ca/")
+        if page.status_code==200:
+            matches = map(lambda m: m.group(1), re.finditer('new MapWindow\("Region Name: (.*?)<br', page.text))
+            return matches
+        else:
+            raise Exception("Unable to retrieve region list, status "+str(page.status_code))
 
-    if page.status_code==200:
-        matches = map(lambda m: m.group(1), re.finditer('new MapWindow\("Region Name: (.*?)<br', page.text))
-        file('data/gcgregions.pck','w+').write(pickle.dumps(matches))
+if __name__=="__main__":
+    # trigger region list update
+    helper = GcgHelper()
