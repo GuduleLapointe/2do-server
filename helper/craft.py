@@ -1,32 +1,28 @@
 import re
 import pickle
-from helper import Helper
+from regionhelper import RegionHelper
+import requests
 
-class CraftHelper(Helper):
-    def __init__(self):
-        self.regions = pickle.loads(file('data/craftregions.pck').read())
-
-    def findRegion(self, data):
-        if data!=None:
-            for region in self.regions:
-                if re.search(region, data, flags=re.I):
-                    return region
-        return None
+class CraftHelper(RegionHelper):
 
     def customizeEvent(self, event):
         event = super(CraftHelper, self).customizeEvent(event)
 
         hgurl = self.findRegion(event.hgurl)
         if hgurl!=None:
-            event.hgurl = hgurl
+            event.hgurl = 'craft-world.org:8002:' + hgurl
         return event
 
+    @classmethod
+    def fetchRegions(cls):
+        page = requests.get("http://webapp.craft-world.org/moodle/blocks/modlos/helper/world_map.php")
+
+        if page.status_code==200:
+            matches = map(lambda m: m.group(1), re.finditer('new MapWindow\("Region Name: (.*?)<br', page.text))
+            return matches
+        else:
+            raise Exception("Unable to retrieve region list, status "+str(page.status_code))
 
 if __name__=='__main__':
-    import requests
-    
-    page = requests.get("http://webapp.craft-world.org/moodle/blocks/modlos/helper/world_map.php")
+    helper = CraftHelper()
 
-    if page.status_code==200:
-        matches = map(lambda m: m.group(1), re.finditer('new MapWindow\("Region Name: (.*?)<br', page.text))
-        file('data/craftregions.pck','w+').write(pickle.dumps(matches))
