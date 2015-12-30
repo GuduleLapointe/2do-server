@@ -3,11 +3,25 @@ from exceptions import IOError
 import os.path
 import re
 import pickle
+from time import time
+import logging
 
 class RegionHelper(Helper):
+    REGION_LIST_EXPIRY  = 24*3600
+
     def __init__(self):
         super(RegionHelper, self).__init__()
         self.loadRegions()
+
+    def refreshRegions(self, fname):
+        logging.info('Reloading regionlist for '+self.__class__.__name__)
+        regions = self.__class__.fetchRegions()
+        file(fname,'w+').write(pickle.dumps({
+            'expiry'  : time() + RegionHelper.REGION_LIST_EXPIRY,
+            'regions' : regions
+        }))
+        return regions
+
 
     def loadRegions(self):
         fetchFile = False
@@ -15,10 +29,13 @@ class RegionHelper(Helper):
         fname = 'data/' + self.__class__.__name__ + '.pck'
 
         if not os.path.isfile(fname):
-            self.regions = self.__class__.fetchRegions()
-            file(fname,'w+').write(pickle.dumps(self.regions))
+            self.regions = self.refreshRegions(fname)
         else:
-            self.regions = pickle.loads(file(fname).read())
+            raw = pickle.loads(file(fname).read())
+            if raw['expiry'] <= time():
+                self.regions = self.refreshRegions(fname)
+            else:
+                self.regions = raw['regions']
 
     def fetchRegions(self):
         raise Exception("fetchRegions not overridden in " + self.__class__.__name__)
