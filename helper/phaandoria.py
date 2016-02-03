@@ -3,7 +3,7 @@ from helper import Helper
 from lib.category import Category
 
 class PhaandoriaHelper(Helper):
-    hgexp = re.compile('phaandoria.de:8002:([^/]+)')
+    hgexp = re.compile('[^:]+:[0-9]+:([^/]+)')
 
     dictionary = {
         re.compile('Phaandoria Der Krater', re.I) : 'phaandoria.de:8002:Der Krater',
