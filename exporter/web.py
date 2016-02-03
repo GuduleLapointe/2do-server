@@ -15,6 +15,7 @@ class JsonExporter(Exporter):
                 'description' : cgi.escape( event.description.encode('utf-8') ).replace("\n","<br/>"),
                 'hgurl' : cgi.escape( event.hgurl.encode('utf-8') ),
                 'categories' : map(lambda e: cgi.escape(str(e)), event.categories),
+		'hash' : event.hash(),
             }
             jsonevents += [ jsonevent ]
             
