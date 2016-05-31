@@ -8,8 +8,8 @@ from helper.piratesatoll import PiratesAtollHelper
 class PiratesAtollFetcher(IcalFetcher):
     def __init__(self, eventlist, webcache=None):
         super(PiratesAtollFetcher,self).__init__(
-            "https://www.google.com/calendar/ical/johnsimmonshypertext.com_j3h9nteue42li3qbpujh9o9doc%40group.calendar.google.com/public/basic.ics",
-            [Category("grid-digitworldz")],
+            "https://calendar.google.com/calendar/ical/johnsimmonshypertext.com_j3h9nteue42li3qbpujh9o9doc%40group.calendar.google.com/public/basic.ics",
+            [Category("grid-digiworldz")],
             eventlist,
             webcache,
             PiratesAtollHelper()
