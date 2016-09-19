@@ -130,6 +130,7 @@
             case "narasnook": rv = "Nara's Nook"; break;
             case "jog": rv = "Japan Open Grid"; break;
             case "arcana": rv = "Arcana"; break;
+            case "thirdlife": rv = "3rdLifeGrid"; break;
             default: rv = null; break;
         }
         return rv;

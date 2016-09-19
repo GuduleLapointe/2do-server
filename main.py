@@ -27,6 +27,7 @@ from lib.eventlist import EventList
 # will be discarded
 fetchers = [
 #    ("gridtalkfetcher", "GridTalkFetcher", 0),
+    ("thirdlifefetcher", "ThirdLifeFetcher", 0),
     ("arcanafetcher", "ArcanaFetcher", 0),
     ("japanopenfetcher", "JapanOpenFetcher", 0),
     ("oscc15fetcher", "OSCC15Fetcher", 0),
