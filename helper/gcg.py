@@ -26,6 +26,13 @@ class GcgHelper(RegionHelper):
         return super(GcgHelper, self).findRegion(data)
 
     def customizeEvent(self, event):
+        # these are not real events:
+        if event.title == "GCG Marketplace":
+            return None
+
+        if event.title == "(open 24/7) Labyrinth Walk by Dragon Ronin":
+            return None
+
         event = super(GcgHelper, self).customizeEvent(event)
 
         if event.hgurl!=None and GcgHelper.hgre.match(event.hgurl)==None:
