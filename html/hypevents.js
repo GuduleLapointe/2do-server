@@ -190,7 +190,7 @@
                         lastDate = date;
                     }
 
-                    var tr  = '<tr class="eventoverview">';
+                    var tr  = '<tr class="eventoverview" data-event-hash="' + data[i].hash + '">';
                     tr = tr + '<td class="eventdate'+dateClass+'">' + date + (multiDay?('<br/><span class="gray">'+endDate+'</span>'):"") + "</td>";
                     tr = tr + '<td class="eventtime">' + start.format(timefmt);
 
