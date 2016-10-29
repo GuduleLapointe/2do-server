@@ -34,15 +34,11 @@ class ThirdRockHelper(Helper):
             	event.hgurl = hgurl
 
         if event.hgurl!=None:
-            print "===="
-            print event.hgurl
             m = ThirdRockHelper.hgexp.search(event.hgurl)
-            print m
             if m!=None:
                 event.hgurl = m.group(1)
                 return event
             m = ThirdRockHelper.hgexp2.search(event.hgurl)
-            print m
             if m!=None:
                 event.hgurl = m.group(1) + ":" + m.group(2)
                 return event
