@@ -38,7 +38,7 @@ class Lsl2Exporter(Exporter):
 
                 nevents = nevents + 1
 
-            if nevents==14:
+            if nevents==25:
                 break
             
         return lslevents
