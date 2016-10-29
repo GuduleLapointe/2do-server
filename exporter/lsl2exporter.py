@@ -5,7 +5,7 @@ import datetime
 
 class Lsl2Exporter(Exporter):
     def __str__(self):
-        lslevents = ""
+        lslevents = "0.8\n"
 
         nevents = 0
 
