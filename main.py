@@ -16,6 +16,7 @@ from exporter.text import TextExporter
 from exporter.web import JsonExporter
 from exporter.htmlexporter import HtmlExporter
 from exporter.lslexporter import LslExporter
+from exporter.lsl2exporter import Lsl2Exporter
 from dateutil import parser
 from lib.category import Category
 from lib.skiplist import Skiplist
@@ -61,7 +62,7 @@ def main():
     group.add_argument("-w","--write",action="store_true")
     group.add_argument("-u","--update",action="store_true")
 
-    argparser.add_argument("-e","--exporter",help="raw, ical, text, lsl, html or json")
+    argparser.add_argument("-e","--exporter",help="raw, ical, text, lsl, lsl2, html or json")
     argparser.add_argument("-t","--timezone",help="timezone for export, defaults to utc")
 
     argparser.add_argument("-b","--before",help="only include events before (and including) specified date/time")
@@ -121,6 +122,9 @@ def main():
         elif args.exporter=="lsl":
             exporter = LslExporter(events, tz, before, after)
             filename = "data/output.lsl"
+        elif args.exporter=="lsl2":
+            exporter = Lsl2Exporter(events, tz, before, after)
+            filename = "data/output.lsl2"
         else: # args.exporter=="ical":
             exporter = IcalExporter(events, tz, before, after)
             filename = "data/output.ics"
