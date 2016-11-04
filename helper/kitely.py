@@ -10,6 +10,8 @@ class KitelyHelper(Helper):
         re.compile('^\s*$', re.I) : 'grid.kitely.com:8002:Kitely Welcome Center',
         re.compile('^grid.kitely.com:8002:Never%20Ending%20Story$', re.I) : 'grid.kitely.com:8002:Never Ending Story',
         re.compile('^Blues at the Junkyard with DJ Thunder$', re.I) : 'grid.kitely.com:8002:Cookie II',
+        re.compile('^SLexit island in Kitely$', re.I) : 'grid.kitely.com:8002:SLexit',
+        re.compile('^grid.kitely.com:8002:Panthalassa take', re.I) : 'grid.kitely.com:8002:Panthalassa',
     }
 
     titledict = {
