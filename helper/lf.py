@@ -3,7 +3,7 @@ from helper import Helper
 from lib.category import Category
 
 class LfHelper(Helper):
-    hgexp = re.compile('lfgrid.com:8002:([^:]+)', flags=re.I)
+    hgexp = re.compile('^lfgrid.com:8002:([^:]+)', flags=re.I)
 
     expr = {
         re.compile("bondage ranch",flags=re.I)      : 'lfgrid.com:8002:Bondage Ranch',
