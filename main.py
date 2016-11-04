@@ -32,6 +32,7 @@ fetchers = [
     ("arcanafetcher", "ArcanaFetcher", 0),
     ("japanopenfetcher", "JapanOpenFetcher", 0),
     ("oscc15fetcher", "OSCC15Fetcher", 0),
+    ("islandoasisfetcher", "IslandOasisFetcher", 0),
     ("zangridfetcher", "ZanGridFetcher", 0),
 #    ("lighthousepointfetcher", "LightHousePointFetcher", 0),
     ("avatarfestfetcher", "AvatarFestFetcher", 0),

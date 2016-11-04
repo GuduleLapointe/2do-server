@@ -131,6 +131,7 @@
             case "jog": rv = "Japan Open Grid"; break;
             case "arcana": rv = "Arcana"; break;
             case "thirdlife": rv = "3rdLifeGrid"; break;
+            case "islandoasis": rv = "Island Oasis Grid"; break;
             default: rv = null; break;
         }
         return rv;

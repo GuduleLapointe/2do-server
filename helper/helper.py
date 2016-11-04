@@ -84,7 +84,7 @@ class Helper(object):
     # guess grid from hgurl
     def getGridFromHgurl(self, event):
         for expr in Helper.gridexpr:
-            if expr.search(event.hgurl)!=None:
+            if event.hgurl!=None and expr.search(event.hgurl)!=None:
                 event.addCategory(Helper.gridexpr[expr])
                 break
         return event
