@@ -16,6 +16,9 @@ class VHSHelper(Helper):
     def customizeEvent(self, event):
         event = super(VHSHelper, self).customizeEvent(event)
 
+        if event.title == 'Teleport-Gates zu vielen Freebie shopping und Entdeckerorten im Hypergrid':
+            return None
+
         if event.hgurl == 'auf dem:Infopfad':
             return None
 
