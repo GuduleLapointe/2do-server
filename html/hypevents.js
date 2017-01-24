@@ -128,6 +128,7 @@
             case "digiworldz": rv = "DigiWorldz"; break;
             case "refuge": rv = "Refuge Grid"; break;
             case "narasnook": rv = "Nara's Nook"; break;
+            case "onemoregrid": rv = "OneMoreGrid"; break;
             case "jog": rv = "Japan Open Grid"; break;
             case "arcana": rv = "Arcana"; break;
             case "thirdlife": rv = "3rdLifeGrid"; break;
