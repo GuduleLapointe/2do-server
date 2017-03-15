@@ -15,6 +15,10 @@ class GcgHelper(RegionHelper):
         re.compile("Starlight Mall", flags=re.I)   : "Alabo Falls",
     }
 
+    bad_title = [
+        re.compile("Submission Deadline", flags=re.I),
+    ]
+
     def findRegion(self, data):
         if data==None:
             return None
@@ -32,6 +36,10 @@ class GcgHelper(RegionHelper):
 
         if event.title == "(open 24/7) Labyrinth Walk by Dragon Ronin":
             return None
+
+        for exp in GcgHelper.bad_title:
+            if exp.search(event.title)!=None:
+                return None
 
         event = super(GcgHelper, self).customizeEvent(event)
 

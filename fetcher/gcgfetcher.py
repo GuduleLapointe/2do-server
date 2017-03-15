@@ -10,15 +10,15 @@ from datetime import timedelta
 class GcgFetcher(IcalFetcher):
     def __init__(self, eventlist, webcache=None):
         super(GcgFetcher,self).__init__(
-            "http://www.brownbearsw.com/cal/gcgevents?Op=iCalSubscribe",
+            "https://calendar.google.com/calendar/ical/l1ubkuairsuu4icjm2574j5n8o%40group.calendar.google.com/public/basic.ics",
             [ Category("grid-gcg") ],
             eventlist,
             webcache, 
             GcgHelper()
         )
         self.webcache = webcache
-        self.minexpiry = 3000
-        self.maxexpiry = 5000
+        self.minexpiry = 1000
+        self.maxexpiry = 1800
 
 if __name__=='__main__':
     from lib.webcache import WebCache
