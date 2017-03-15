@@ -15,7 +15,7 @@ class KitelyHelper(Helper):
     }
 
     titledict = {
-        re.compile('^LEN\s+-\s+English Drama', re.I) : 'grid.kitely.com:8002:Learn English Network Academy',
+        re.compile('^LEN\s+-\s+', re.I) : 'grid.kitely.com:8002:Learn English Network Academy',
     }
 
     def customizeEvent(self, event):
