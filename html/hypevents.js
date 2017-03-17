@@ -134,6 +134,7 @@
             case "thirdlife": rv = "3rdLifeGrid"; break;
             case "islandoasis": rv = "Island Oasis Grid"; break;
             case "theencoreescape": rv = "The Encore Escape"; break;
+            case "craft": rv = "Craft-World"; break;
             default: rv = null; break;
         }
         return rv;
