@@ -40,7 +40,7 @@ class CraftFetcher:
 
                 e = Event()
 
-                e.categories = [ Category("grid-metropolis") ]
+                e.categories = [ Category("grid-craft") ]
 
                 e.title = event.xpath('.//span[@class="title"]')[0].text
 
