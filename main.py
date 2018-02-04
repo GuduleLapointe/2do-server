@@ -51,6 +51,7 @@ fetchers = [
     ("narasnookfetcher", "NarasNookFetcher", 0),
     ("omgfetcher", "OneMoreGridFetcher", 0),
     ("miscfetcher", "MiscFetcher", 0),
+    ("opensimlifefetcher", "OpenSimLifeFetcher", 0),
     ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
     ]
 
