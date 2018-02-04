@@ -36,6 +36,7 @@ fetchers = [
     ("theencoreescapefetcher", "TheEncoreEscapeFetcher", 0),
     ("avatarfestfetcher", "AvatarFestFetcher", 0),
     ("craftfetcher", "CraftFetcher", 0),
+    ("opensimlifefetcher", "OpenSimLifeFetcher", 0),
     ("kitelyfetcher", "KitelyFetcher", 0),
     ("metropolisfetcher", "MetropolisFetcher", 0),
     ("francogridfetcher", "FrancoGridFetcher", 0),
@@ -51,7 +52,6 @@ fetchers = [
     ("narasnookfetcher", "NarasNookFetcher", 0),
     ("omgfetcher", "OneMoreGridFetcher", 0),
     ("miscfetcher", "MiscFetcher", 0),
-    ("opensimlifefetcher", "OpenSimLifeFetcher", 0),
     ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
     ]
 
