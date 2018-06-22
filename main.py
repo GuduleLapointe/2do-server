@@ -35,7 +35,6 @@ fetchers = [
     ("islandoasisfetcher", "IslandOasisFetcher", 0),
     ("theencoreescapefetcher", "TheEncoreEscapeFetcher", 0),
     ("avatarfestfetcher", "AvatarFestFetcher", 0),
-    ("craftfetcher", "CraftFetcher", 0),
     ("opensimlifefetcher", "OpenSimLifeFetcher", 0),
     ("kitelyfetcher", "KitelyFetcher", 0),
     ("metropolisfetcher", "MetropolisFetcher", 0),
