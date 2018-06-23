@@ -136,6 +136,7 @@
             case "theencoreescape": rv = "The Encore Escape"; break;
             case "craft": rv = "Craft-World"; break;
             case "opensimlife": rv = "OpenSimLife"; break;
+            case "discovery": rv = "Discovery Grid"; break;
             default: rv = null; break;
         }
         return rv;
