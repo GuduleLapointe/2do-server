@@ -50,7 +50,6 @@ fetchers = [
     ("nextlifefetcher", "NextLifeFetcher", 0),
     ("piratesatollfetcher", "PiratesAtollFetcher", 0),
     ("narasnookfetcher", "NarasNookFetcher", 0),
-    ("omgfetcher", "OneMoreGridFetcher", 0),
     ("miscfetcher", "MiscFetcher", 0),
     ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
     ]
