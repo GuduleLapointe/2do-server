@@ -7,8 +7,8 @@ from helper.helper import Helper
 
 class OpenSimLifeFetcher(IcalFetcher):
     def __init__(self, eventlist, webcache=None):
-        url="https://calendar.google.com/calendar/ical/4q1c0qvrlteuja2dgn95qt2gj9r1hgbl%40import.calendar.google.com/public/basic.ics"
-        #url="http://events.time.ly/oz6nl2n/export?format=ics&no_html=true"
+        #url="https://calendar.google.com/calendar/ical/4q1c0qvrlteuja2dgn95qt2gj9r1hgbl%40import.calendar.google.com/public/basic.ics"
+        url="http://events.time.ly/oz6nl2n/export?format=ics&no_html=true"
         super(OpenSimLifeFetcher,self).__init__(
             url,
             [Category("grid-opensimlife")],
