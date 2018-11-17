@@ -137,6 +137,7 @@
             case "craft": rv = "Craft-World"; break;
             case "opensimlife": rv = "OpenSimLife"; break;
             case "discovery": rv = "Discovery Grid"; break;
+            case "sniky": rv = "Sniky Grid"; break;
             default: rv = null; break;
         }
         return rv;
