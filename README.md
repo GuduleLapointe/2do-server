@@ -1,3 +1,9 @@
+Unmaintained
+============
+
+This project is unmaintained, and made available for reference purposes
+only. Feel free to fork and use, but don't expect any updates or support.
+
 Dependencies
 ============
 
