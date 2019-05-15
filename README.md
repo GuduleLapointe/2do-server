@@ -1,8 +1,10 @@
 Unmaintained
 ============
 
-This project is unmaintained, and made available for reference purposes
-only. Feel free to fork and use, but don't expect any updates or support.
+This is a fork of an unmaintained project, in the hope of working on it. As of
+May 15th 2019 I disn't start.
+
+The original project is at https://gitlab.com/sonologic/hypevents
 
 Dependencies
 ============
