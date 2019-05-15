@@ -1,8 +1,8 @@
 Unmaintained
 ============
 
-This is a fork of an unmaintained project, in the hope of working on it. As of
-May 15th 2019 I disn't start.
+This is a fork of an unmaintained project, in the hope of working on it. I
+don't know when I will. As of May 14th 2019 I do anything yet.
 
 The original project is at https://gitlab.com/sonologic/hypevents
 
