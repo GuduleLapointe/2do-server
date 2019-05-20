@@ -95,4 +95,6 @@ mv -v "${OUTPUT}/style.css.new" "${OUTPUT}/style.css"
 mv -v "${OUTPUT}/scr.js.new" "${OUTPUT}/scr.js"
 mv -v "${OUTPUT}/index.html.new" "${OUTPUT}/index.html"
 
+echo "=======> `date`"
+echo "$PGM: end processing"
 # done
