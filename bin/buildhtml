@@ -86,10 +86,8 @@ cp style.css "${OUTPUT}/style.css.new"
 cp scr.js "${OUTPUT}/scr.js.new"
 cp index.html "${OUTPUT}/index.html.new"
 
-mv "${OUTPUT}/style.css.new" "${OUTPUT}/style.css"
-mv "${OUTPUT}/scr.js.new" "${OUTPUT}/scr.js"
-mv "${OUTPUT}/index.html.new" "${OUTPUT}/index.html"
-
-sleep 300
+mv -v "${OUTPUT}/style.css.new" "${OUTPUT}/style.css"
+mv -v "${OUTPUT}/scr.js.new" "${OUTPUT}/scr.js"
+mv -v "${OUTPUT}/index.html.new" "${OUTPUT}/index.html"
 
 # done
