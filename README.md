@@ -8,7 +8,7 @@ The original project is at https://gitlab.com/sonologic/hypevents
 Dependencies
 ============
 
-sudo apt-get install python-icalendar python-lxml python-pystache yui-compressor
+sudo apt-get install python-icalendar python-lxml python-pystache yui-compressor make
 
 
 Running
