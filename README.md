@@ -1,14 +1,14 @@
-Gudz HYPEvents server
+2DO events server
 =====================
-Server-side part of the HYPEvents project. 
+Server-side part of the 2DO events project.
 Fetch calendars from different sources and generate the pages for the web interface and for the boards synchronisation.
 
 Most users would be interested only by the the in-world board,
-[Gudz HYPEvents board](https://git.magiiic.com/opensimulator/hypevents-board),
+[2DO events board](https://git.magiiic.com/opensimulator/2doevents-board),
 which is intended to be used on any grid.
 
 To use the events board on your grid, the easiest way is to ask us to add your events on Speculoos events server.
-You will find instructions on https://www.speculoos.world/events/
+You will find instructions on https://www.2do.events/events/
 
 Installation of this server is useful only if you want to manage your own events
 from other sources.
@@ -24,7 +24,7 @@ Installation
 ------------
 * clone this repository and put it in a convenient place (not inside the website root folder)
 * copy html/banner*png to your web folder (or create your own)
-* from hypevents folder, run `./bin/update-pages.sh /var/www/html/events/`
+* from 2doevents folder, run `./bin/update-pages.sh /var/www/html/events/`
   (or any existing folder in your web document root)
 
 Running
@@ -41,8 +41,7 @@ Roadmap
 
 Licence
 -------
-(c) 2018-2019 Gudule Lapointe <gudule@speculoos.world>.
-Based on the initial work of Koen Martens / Tom Frost <tomfrost@linkwater.org>.
-The original (stopped and not functional) project is at https://gitlab.com/sonologic/hypevents
+(c) 2018-2019 Gudule Lapointe <gudule@2do.events>.
+Based on HYPEvents project by Koen Martens <tomfrost@linkwater.org>  https://gitlab.com/sonologic/hypevents
 
 Licence: GPLv3

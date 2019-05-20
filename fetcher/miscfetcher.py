@@ -5,7 +5,7 @@ import icalendar
 from lib.category import Category
 from helper.helper import Helper
 
-# hypevents.net own calendar
+# hypevents.net calendar
 #
 
 class MiscFetcher(IcalFetcher):

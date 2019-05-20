@@ -26,7 +26,6 @@ index_dev.html:	template.html events.html index_scr_dev.html
 		./makehtml.py template.html events.html index_scr_dev.html > index_dev.html
 
 upload:	index.html scr.js style.css events.json
-		scp index.html gmc@httpd-c1.sonologic.net:htdocs/hypevents.net/
-		scp scr.js gmc@httpd-c1.sonologic.net:htdocs/hypevents.net/
-		scp style.css gmc@httpd-c1.sonologic.net:htdocs/hypevents.net/
-
+		scp index.html $user@$host:$documentroot/
+		scp scr.js $user@$host:$documentroot/
+		scp style.css $user@$host:$documentroot/

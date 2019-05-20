@@ -1,5 +1,5 @@
 body {
-    background-color: #000055;
+    background-color: #eeeeee;
 }
 
 #headerHYP {
@@ -11,10 +11,10 @@ body {
 }
 
 div.mainrow {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 80%;
     margin: auto;
-    padding: 1em;
+    padding: 0 1em;
     background-color: #ffffff;
 }
 
