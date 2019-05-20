@@ -97,7 +97,7 @@
         'social',
     ];
 
-    var currtz = "US/Pacific";
+    var currtz = "America/Los_Angeles";
     var currentCategory = 'all categories';
 
     var numNewsItems = 0;
@@ -234,8 +234,8 @@
 
                     tr = tr + '</td></tr>';
 
-                    // hgurl and hop/sl/etc.. links 
-                    
+                    // hgurl and hop/sl/etc.. links
+
                     hgsplit = data[i].hgurl.split(":");
 
                     hop = 'hop://' + hgsplit[0] + ':' + hgsplit[1] + '/' + ((hgsplit.length>2)?hgsplit[2]:'');
@@ -274,7 +274,7 @@
                         $("tr#eventcats"+eventid).toggle();
 
                     });
-                   
+
                     $("div#events table").append(node1);
                     $("div#events table").append(node3);
                     $("div#events table").append(node2);
@@ -327,12 +327,12 @@
 
     $(document).ready(function() {
 
-        detectedTZ = jstz.determine()
+        // detectedTZ = jstz.determine()
+        //
+        // if(detectedTZ != null) {
+        //     currtz = detectedTZ.name();
+        // }
 
-        if(detectedTZ != null) {
-            currtz = detectedTZ.name();
-        }
-            
 
         timer = setTimeout(renderClock, 500);
         refreshTimer = setTimeout(loadEvents, 10);
