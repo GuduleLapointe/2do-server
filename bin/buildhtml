@@ -16,7 +16,7 @@ BASEDIR=$(dirname $BINDIR)
 [ ! -f "$BASEDIR/main.py" ] && echo "Program not found in $BASEDIR" && exit 1
 
 [ ! "$OUTPUT" ] && OUTPUT="$BASEDIR/html"
-
+OUTPUT=$(realpath $OUTPUT)
 cd "$OUTPUT"  || exit $?
 cd $BASEDIR || exit $?
 
@@ -24,13 +24,15 @@ echo "BINDIR: $BINDIR"
 echo "BASEDIR: $BASEDIR"
 echo "OUTPUT: $OUTPUT"
 echo "ARGS: $@"
-export PATH=$PATH:$BINDIR:$BASEDIR
+# export PATH=$PATH:$BINDIR:$BASEDIR
+exit
 
 echo "=======> `date`"
 echo "       > start fetch"
 
 set -eu
 
+echo "$PGM: ./main.py -f"
 ./main.py -f
 
 now=`date +%s`
@@ -41,29 +43,43 @@ echo "now ${now} last ${last}"
 
 echo "write json"
 
-after=`date -r ${first} +%Y-%m-%d`
-[ ! "$after" ] && continue
+OS=`uname -a | cut -d " " -f 1 | sed "s/[^a-zA-Z0-9]//g"`
+case $OS in
+  "Darwin"|"FreeBSD")
+  datefirst=`date -r ${first} +%Y-%m-%d`
+  ;;
+  *)
+  datefirst=`date -d @${first} +%Y-%m-%d`
+  ;;
+esac
+datenow=$(date)
+echo "$PGM: datefirst $datefirst"
+# [ "$after" = "" ] && exit 1
 
-./main.py -w -e json -o "${OUTPUT}/events.json.new" -a "$after" -b `date -r ${last} +%Y-%m-%d`
+# echo "$PGM: ./main.py -w -e json -o ${OUTPUT}/events.json.new -a $after -b "$datefirst"
+./main.py -w -e json -o "${OUTPUT}/events.json.new" -a "$datefirst" -b "$datefirst"
 
-mv ${OUTPUT}/events.json.new ${OUTPUT}/events.json
+mv -v ${OUTPUT}/events.json.new ${OUTPUT}/events.json
 
-echo "write lsl"
+echo "$PGM: write lsl"
 
-./main.py -w -e lsl -o "${OUTPUT}/events.lsl.new" -a "`date`"
-./main.py -w -e lsl2 -o "${OUTPUT}/events.lsl2.new" -a "`date`"
+./main.py -w -e lsl -o "${OUTPUT}/events.lsl.new" -a "$datenow"
+./main.py -w -e lsl2 -o "${OUTPUT}/events.lsl2.new" -a "$datenow"
 
-mv ${OUTPUT}/events.lsl.new ${OUTPUT}/events.lsl
-mv ${OUTPUT}/events.lsl2.new ${OUTPUT}/events.lsl2
+mv -v ${OUTPUT}/events.lsl.new ${OUTPUT}/events.lsl
+mv -v ${OUTPUT}/events.lsl2.new ${OUTPUT}/events.lsl2
 
-echo "write html"
+echo "$PGM: write html"
+echo "$PGM: ./main.py -w -e html -o "html/events.html" -a `date`"
 
-./main.py -w -e html -o "html/events.html" -a "`date`"
+./main.py -w -e html -o "html/events.html" -a "$datenow"
 
 cd html
 
+echo "$PGM: make"
 gmake
 
+echo "$PGM: copyin"
 cp style.css "${OUTPUT}/style.css.new"
 cp scr.js "${OUTPUT}/scr.js.new"
 cp index.html "${OUTPUT}/index.html.new"
