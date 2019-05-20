@@ -1,10 +1,11 @@
 #!/bin/bash
 
+DATEBEFORE=1
+DATEAFTER=30
+
 [ "$1" ] && [ -d "$1" ] && OUTPUT="$1" && shift
 
 # set -eu
-
-which gmake || alias gmake=make
 
 # while true; do
 
@@ -35,34 +36,35 @@ echo "$PGM: ./main.py -f"
 ./main.py -f
 
 now=`date +%s`
-last=`expr ${now} + 2592000`
-first=`expr ${now} - 86400`
+first=`expr ${now} - $(($DATEBEFORE * 86400))`
+last=`expr ${now} + $(($DATEAFTER * 86400))`
 
 echo "now ${now} last ${last}"
 
 echo "write json"
 
+
+dateformat="%Y-%m-%d %H:%M:%S"
 OS=`uname -a | cut -d " " -f 1 | sed "s/[^a-zA-Z0-9]//g"`
 case $OS in
   "Darwin"|"FreeBSD")
-  datefirst=`date -r ${first} +%Y-%m-%d`
+  datefirst=$(date -r ${first} +"$dateformat")
+  datelast=$(date -r ${last} +"$dateformat")
   ;;
   *)
-  datefirst=`date -d @${first} +%Y-%m-%d`
+  datefirst=$(date -d @${first} +"$dateformat")
+  datelast=$(date -d @${last} +"$dateformat")
   ;;
 esac
-datenow=$(date)
+datenow=$(date  +"$dateformat")
 echo "$PGM: datefirst $datefirst"
 # [ "$after" = "" ] && exit 1
 
-# echo "$PGM: ./main.py -w -e json -o ${OUTPUT}/events.json.new -a $after -b "$datefirst"
-./main.py -w -e json -o "${OUTPUT}/events.json.new" -a "$datefirst" -b "$datefirst"
+./main.py -w -e json -o "${OUTPUT}/events.json.new" -a "$datefirst" -b "$datelast"
 
 mv -v ${OUTPUT}/events.json.new ${OUTPUT}/events.json
 
 echo "$PGM: write lsl"
-
-echo "$PGM: ./main.py -w -e lsl -o "${OUTPUT}/events.lsl.new" -a "$datenow""
 
 ./main.py -w -e lsl -o "${OUTPUT}/events.lsl.new" -a "$datenow"
 ./main.py -w -e lsl2 -o "${OUTPUT}/events.lsl2.new" -a "$datenow"
@@ -71,14 +73,13 @@ mv -v ${OUTPUT}/events.lsl.new ${OUTPUT}/events.lsl
 mv -v ${OUTPUT}/events.lsl2.new ${OUTPUT}/events.lsl2
 
 echo "$PGM: write html"
-echo "$PGM: ./main.py -w -e html -o "html/events.html" -a `date`"
 
 ./main.py -w -e html -o "html/events.html" -a "$datenow"
 
 cd html
 
 echo "$PGM: make"
-gmake
+make
 
 echo "$PGM: copyin"
 cp style.css "${OUTPUT}/style.css.new"
