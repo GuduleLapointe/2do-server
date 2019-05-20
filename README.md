@@ -4,12 +4,12 @@ Version 1.1.0
 
 Fetch calendars from different sources and generate the pages for the web interface and for the boards synchronisation.
 
-Most users would be interested only by the the in-world board,
-[2DO events board](https://git.magiiic.com/opensimulator/2doevents-board),
-which is intended to be used on any grid.
-
 To use the events board on your grid, the easiest way is to ask us to add your events on Speculoos events server.
-You will find instructions on https://www.2do.pm/events/
+You will find instructions on the live board https://www.2do.pm/events/
+
+In most cases, you only need by the the in-world board,
+[2DO board](https://git.magiiic.com/opensimulator/2do-board),
+which is intended to be used on any grid.
 
 Installation of this server is useful only if you want to manage your own events
 from other sources.
