@@ -15,6 +15,9 @@ body {
   color: #666;
   letter-spacing: -0.075em;
   line-height: 1em;
+  text-transform: uppercase;
+  margin-right: -0.05em;
+  /* font-variant: small-caps; */
   /* font-weight: 200; */
 }
 #header .brand b {
@@ -24,7 +27,7 @@ body {
 #header .ext {
   font-size: 2em;
   letter-spacing: -0.05em;
-  margin-right: 1em;
+  margin-right: 0.5em;
   /* margin-left: -0.25em; */
   /* font-weight: 200; */
 }
