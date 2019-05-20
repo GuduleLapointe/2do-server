@@ -1,7 +1,10 @@
 #!/bin/bash
 
-DATEBEFORE=1
-DATEAFTER=30
+# Fetch delta in days
+FETCHFROM=1
+FETCHTO=30
+# shown delta in shown
+SHOWFROM=3
 
 [ "$1" ] && [ -d "$1" ] && OUTPUT="$1" && shift
 
@@ -36,8 +39,9 @@ echo "$PGM: ./main.py -f"
 ./main.py -f
 
 now=`date +%s`
-first=`expr ${now} - $(($DATEBEFORE * 86400))`
-last=`expr ${now} + $(($DATEAFTER * 86400))`
+first=`expr ${now} - $(($FETCHFROM * 86400))`
+shown=`expr ${now} - $(($SHOWFROM * 3600))`
+last=`expr ${now} + $(($FETCHTO * 86400))`
 
 echo "now ${now} last ${last}"
 
@@ -49,14 +53,15 @@ OS=`uname -a | cut -d " " -f 1 | sed "s/[^a-zA-Z0-9]//g"`
 case $OS in
   "Darwin"|"FreeBSD")
   datefirst=$(date -r ${first} +"$dateformat")
+  datefirst=$(date -r ${shown} +"$dateformat")
   datelast=$(date -r ${last} +"$dateformat")
   ;;
   *)
   datefirst=$(date -d @${first} +"$dateformat")
+  datenow=$(date -d @${shown} +"$dateformat")
   datelast=$(date -d @${last} +"$dateformat")
   ;;
 esac
-datenow=$(date  +"$dateformat")
 echo "$PGM: datefirst $datefirst"
 # [ "$after" = "" ] && exit 1
 
