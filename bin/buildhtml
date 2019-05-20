@@ -6,74 +6,72 @@
 
 which gmake || alias gmake=make
 
-while true; do
+# while true; do
 
-  echo ${PATH}
-  echo `pwd`
 
-  PGM=$(basename $0)
-  TMP=/tmp/$PGM.$$
-  BINDIR=$(dirname $(realpath $0))
-  BASEDIR=$(dirname $BINDIR)
-  [ ! -f "$BASEDIR/main.py" ] && echo "Program not found in $BASEDIR" && exit 1
+PGM=$(basename $0)
+TMP=/tmp/$PGM.$$
+BINDIR=$(dirname $(realpath $0))
+BASEDIR=$(dirname $BINDIR)
+[ ! -f "$BASEDIR/main.py" ] && echo "Program not found in $BASEDIR" && exit 1
 
-  [ ! "$OUTPUT" ] && OUTPUT="$BASEDIR/html"
+[ ! "$OUTPUT" ] && OUTPUT="$BASEDIR/html"
 
-  cd "$OUTPUT"  || exit $?
-  cd $BASEDIR || exit $?
+cd "$OUTPUT"  || exit $?
+cd $BASEDIR || exit $?
 
-  echo "BINDIR: $BINDIR"
-  echo "BASEDIR: $BASEDIR"
-  echo "OUTPUT: $OUTPUT"
-  echo "ARGS: $@"
-  export PATH=$PATH:$BINDIR:$BASEDIR
+echo "BINDIR: $BINDIR"
+echo "BASEDIR: $BASEDIR"
+echo "OUTPUT: $OUTPUT"
+echo "ARGS: $@"
+export PATH=$PATH:$BINDIR:$BASEDIR
 
-  echo "=======> `date`"
-  echo "       > start fetch"
+echo "=======> `date`"
+echo "       > start fetch"
 
-  set -eu
+set -eu
 
-  ./main.py -f
+./main.py -f
 
-  now=`date +%s`
-  last=`expr ${now} + 2592000`
-  first=`expr ${now} - 86400`
+now=`date +%s`
+last=`expr ${now} + 2592000`
+first=`expr ${now} - 86400`
 
-  echo "now ${now} last ${last}"
+echo "now ${now} last ${last}"
 
-  echo "write json"
+echo "write json"
 
-  after=`date -r ${first} +%Y-%m-%d`
-  [ ! "$after" ] && continue
+after=`date -r ${first} +%Y-%m-%d`
+[ ! "$after" ] && continue
 
-  ./main.py -w -e json -o "${OUTPUT}/events.json.new" -a "$after" -b `date -r ${last} +%Y-%m-%d`
+./main.py -w -e json -o "${OUTPUT}/events.json.new" -a "$after" -b `date -r ${last} +%Y-%m-%d`
 
-  mv ${OUTPUT}/events.json.new ${OUTPUT}/events.json
+mv ${OUTPUT}/events.json.new ${OUTPUT}/events.json
 
-  echo "write lsl"
+echo "write lsl"
 
-  ./main.py -w -e lsl -o "${OUTPUT}/events.lsl.new" -a "`date`"
-  ./main.py -w -e lsl2 -o "${OUTPUT}/events.lsl2.new" -a "`date`"
+./main.py -w -e lsl -o "${OUTPUT}/events.lsl.new" -a "`date`"
+./main.py -w -e lsl2 -o "${OUTPUT}/events.lsl2.new" -a "`date`"
 
-  mv ${OUTPUT}/events.lsl.new ${OUTPUT}/events.lsl
-  mv ${OUTPUT}/events.lsl2.new ${OUTPUT}/events.lsl2
+mv ${OUTPUT}/events.lsl.new ${OUTPUT}/events.lsl
+mv ${OUTPUT}/events.lsl2.new ${OUTPUT}/events.lsl2
 
-  echo "write html"
+echo "write html"
 
-  ./main.py -w -e html -o "html/events.html" -a "`date`"
+./main.py -w -e html -o "html/events.html" -a "`date`"
 
-  cd html
+cd html
 
-  gmake
+gmake
 
-  cp style.css "${OUTPUT}/style.css.new"
-  cp scr.js "${OUTPUT}/scr.js.new"
-  cp index.html "${OUTPUT}/index.html.new"
+cp style.css "${OUTPUT}/style.css.new"
+cp scr.js "${OUTPUT}/scr.js.new"
+cp index.html "${OUTPUT}/index.html.new"
 
-  mv "${OUTPUT}/style.css.new" "${OUTPUT}/style.css"
-  mv "${OUTPUT}/scr.js.new" "${OUTPUT}/scr.js"
-  mv "${OUTPUT}/index.html.new" "${OUTPUT}/index.html"
+mv "${OUTPUT}/style.css.new" "${OUTPUT}/style.css"
+mv "${OUTPUT}/scr.js.new" "${OUTPUT}/scr.js"
+mv "${OUTPUT}/index.html.new" "${OUTPUT}/index.html"
 
-  sleep 300
+sleep 300
 
-done
+# done
