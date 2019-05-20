@@ -1,9 +1,40 @@
 body {
-    background-color: #eeeeee;
+  background-color: #eeeeee;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-#headerHYP {
-    color: #666;
+#header {
+  /* font-family: sans-serif; */
+  /* font-weight: normal; */
+}
+
+#header .brand {
+  font-size: 5em;
+  margin: 0;
+  padding: 0;
+  color: #666;
+  letter-spacing: -0.075em;
+  line-height: 1em;
+  /* font-weight: 200; */
+}
+#header .brand b {
+  color: black;
+  /* font-weight: 200; */
+}
+#header .ext {
+  font-size: 2em;
+  letter-spacing: -0.05em;
+  margin-right: 1em;
+  /* margin-left: -0.25em; */
+  /* font-weight: 200; */
+}
+#header .subtitle {
+  font-size: 3em;
+  /* float: right; */
+  /* font-family: sans-serif; */
+  /* font-weight: normal; */
+  line-height: 1.5em;
+  margin
 }
 
 .gray {
@@ -14,7 +45,7 @@ div.mainrow {
     /* border: 1px solid black; */
     width: 80%;
     margin: auto;
-    padding: 0 1em;
+    padding: 0 10px;
     background-color: #ffffff;
 }
 
@@ -38,12 +69,6 @@ div#news:hover {
     cursor: pointer;
 }
 
-div#header span {
-    font-size: 500%;
-    font-style: italic;
-    font-family: sans-serif;
-    font-weight: bold;
-}
 
 div#menu li {
     list-style: none;
