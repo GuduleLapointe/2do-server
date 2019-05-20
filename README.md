@@ -9,7 +9,7 @@ Most users would be interested only by the the in-world board,
 which is intended to be used on any grid.
 
 To use the events board on your grid, the easiest way is to ask us to add your events on Speculoos events server.
-You will find instructions on https://www.2do.events/events/
+You will find instructions on https://www.2do.pm/events/
 
 Installation of this server is useful only if you want to manage your own events
 from other sources.
@@ -42,7 +42,7 @@ Roadmap
 
 Licence
 -------
-(c) 2018-2019 Gudule Lapointe <gudule@2do.events>.
+(c) 2018-2019 Olivier van Helden <dev@2do.pm>
 Based on HYPEvents project by Koen Martens <tomfrost@linkwater.org>  https://gitlab.com/sonologic/hypevents
 
 Licence: GPLv3
