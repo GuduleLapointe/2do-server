@@ -1,5 +1,7 @@
 2DO events server
-=====================
+=================
+Version: 1.1.0
+
 Server-side part of the 2DO events project.
 Fetch calendars from different sources and generate the pages for the web interface and for the boards synchronisation.
 
