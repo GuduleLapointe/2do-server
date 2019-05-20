@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 2DO events server
 =================
 Version: 1.1.0
 
 Server-side part of the 2DO events project.
+=======
+Gudz HYPEvents server
+=====================
+Version: 1.0.1
+
+Server-side part of the HYPEvents project. 
+>>>>>>> 34c5d3c479e34577439c460491a57bb5411bc49b
 Fetch calendars from different sources and generate the pages for the web interface and for the boards synchronisation.
 
 Most users would be interested only by the the in-world board,
