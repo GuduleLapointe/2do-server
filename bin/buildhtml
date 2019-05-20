@@ -43,7 +43,10 @@ echo "now ${now} last ${last}"
 
 echo "write json"
 
-./main.py -w -e json -o "${OUTPUT}/events.json.new" -a `date -r ${first} +%Y-%m-%d` -b `date -r ${last} +%Y-%m-%d`
+after=`date -r ${first} +%Y-%m-%d`
+[ ! "$after" ] && continue
+
+./main.py -w -e json -o "${OUTPUT}/events.json.new" -a "$after" -b `date -r ${last} +%Y-%m-%d`
 
 mv ${OUTPUT}/events.json.new ${OUTPUT}/events.json
 
