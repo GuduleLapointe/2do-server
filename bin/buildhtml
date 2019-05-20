@@ -4,6 +4,8 @@
 
 # set -eu
 
+which gmake || alias gmake=make
+
 while true; do
 
 echo ${PATH}
@@ -28,6 +30,8 @@ export PATH=$PATH:$BINDIR:$BASEDIR
 
 echo "=======> `date`"
 echo "       > start fetch"
+
+set -eu
 
 ./main.py -f
 
