@@ -25,7 +25,6 @@ echo "BASEDIR: $BASEDIR"
 echo "OUTPUT: $OUTPUT"
 echo "ARGS: $@"
 # export PATH=$PATH:$BINDIR:$BASEDIR
-exit
 
 echo "=======> `date`"
 echo "       > start fetch"
@@ -62,6 +61,8 @@ echo "$PGM: datefirst $datefirst"
 mv -v ${OUTPUT}/events.json.new ${OUTPUT}/events.json
 
 echo "$PGM: write lsl"
+
+echo "$PGM: ./main.py -w -e lsl -o "${OUTPUT}/events.lsl.new" -a "$datenow""
 
 ./main.py -w -e lsl -o "${OUTPUT}/events.lsl.new" -a "$datenow"
 ./main.py -w -e lsl2 -o "${OUTPUT}/events.lsl2.new" -a "$datenow"
