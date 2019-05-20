@@ -2,7 +2,7 @@
 =================
 Version 1.1.0
 
-Fetch calendars from different sources and generate the pages for the web interface and for the boards synchronisation.
+Fetch hypegrid calendars from different sources and generate the pages for the web interface and for the boards synchronisation.
 
 To use the events board on your grid, the easiest way is to ask us to add your events on Speculoos events server.
 You will find instructions on the live board https://www.2do.pm/events/
