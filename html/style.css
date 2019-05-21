@@ -42,16 +42,6 @@ body {
 img, object, embed, video, audio {
   max-width: 100%;
 }
-@media screen and (max-width: 880px) {
-  #header .catchword {
-    display: none;
-  }
-  div#tzselect,
-  div#catselect,
-  div#clock {
-    float: none;
-  }
-}
 .gray {
     color: #888;
 }
@@ -191,4 +181,21 @@ span.eventgridname {
     font-size: 0.8em;
     color: #00f;
     font-style: italic;
+}
+
+@media screen and (max-width: 880px) {
+  #header .catchword {
+    display: none;
+  }
+  div#tzselect,
+  div#catselect,
+  div#clock {
+    float: none;
+  }
+  div#menu ul,
+  div#menu li {
+    /* display: inline; */
+    list-style: none;
+    padding: 0 10px;
+  }
 }
