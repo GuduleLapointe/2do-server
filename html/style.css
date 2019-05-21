@@ -39,7 +39,14 @@ body {
   /* font-weight: normal; */
   line-height: 1.5em;
 }
-
+img, object, embed, video, audio {
+  max-width: 100%;
+}
+@media screen and (max-width: 880px) {
+  #header .catchword {
+    display: none;
+  }
+}
 .gray {
     color: #888;
 }
