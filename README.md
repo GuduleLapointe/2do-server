@@ -9,7 +9,7 @@ You will find instructions on the live board https://www.2do.pm/events/
 
 In most cases you don't need this, you only need the the in-world board, which is intended to be used on any grid.
 It is available here:
-  * [Speculoos grid, Lab region](hop://speculoos.world:8002/Lab)
+  * [Speculoos grid, Lab region](hop://speculoos.world:8002/Lab/128/128/22)
 or here for the builders:
   * [2DO board](https://git.magiiic.com/opensimulator/2do-board),
 
