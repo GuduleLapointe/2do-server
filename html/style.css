@@ -46,6 +46,11 @@ img, object, embed, video, audio {
   #header .catchword {
     display: none;
   }
+  div#tzselect,
+  div#catselect,
+  div#clock {
+    float: none;
+  }
 }
 .gray {
     color: #888;
