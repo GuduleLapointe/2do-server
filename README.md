@@ -1,18 +1,19 @@
 2DO events server
 =================
-Version 1.1.0
+Version 1.2.0
 
 Fetch hypegrid calendars from different sources and generate the pages for the web interface and for the boards synchronisation.
 
 To use the events board on your grid, the easiest way is to ask us to add your events on Speculoos events server.
 You will find instructions on the live board https://www.2do.pm/events/
 
-In most cases, you only need by the the in-world board,
-[2DO board](https://git.magiiic.com/opensimulator/2do-board),
-which is intended to be used on any grid.
+In most cases you don't need this, you only need the the in-world board, which is intended to be used on any grid.
+It is available here:
+  * [Speculoos grid, Lab region](hop://speculoos.world:8002/Lab)
+or here for the builders:
+  * [2DO board](https://git.magiiic.com/opensimulator/2do-board),
 
-Installation of this server is useful only if you want to manage your own events
-from other sources.
+Installation of this server is only relevant if you want to manage your own events from other sources.
 
 Dependencies
 ------------
