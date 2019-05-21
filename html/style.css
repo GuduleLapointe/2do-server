@@ -4,11 +4,14 @@ body {
 }
 
 #header {
+  /* display: table-row; */
   /* font-family: sans-serif; */
   /* font-weight: normal; */
 }
 
-#header .brand {
+#header h1 {
+  display: none;
+  position: absolute;
   font-size: 5em;
   margin: 0;
   padding: 0;
@@ -20,24 +23,21 @@ body {
   /* font-variant: small-caps; */
   /* font-weight: 200; */
 }
-#header .brand b {
-  color: black;
-  /* font-weight: 200; */
+#header .logo {
+  display: inline;
+  padding-right: 10px;
+  /* position: absolute;
+  top: 10px; */
 }
-#header .ext {
-  font-size: 2em;
-  letter-spacing: -0.05em;
-  margin-right: 0.5em;
-  /* margin-left: -0.25em; */
-  /* font-weight: 200; */
-}
-#header .subtitle {
+#header .catchword {
+  display: inline;
   font-size: 3em;
+  position: absolute;
+  top: 10px;
   /* float: right; */
   /* font-family: sans-serif; */
   /* font-weight: normal; */
   line-height: 1.5em;
-  margin
 }
 
 .gray {
