@@ -31,7 +31,7 @@ fetchers = [
     ("discoverygridfetcher", "DiscoveryGridFetcher", 0),
     ("thirdlifefetcher", "ThirdLifeFetcher", 0),
     ("arcanafetcher", "ArcanaFetcher", 0),
-    ("japanopenfetcher", "JapanOpenFetcher", 0),
+    # ("japanopenfetcher", "JapanOpenFetcher", 0),
     ("oscc15fetcher", "OSCC15Fetcher", 0),
     ("islandoasisfetcher", "IslandOasisFetcher", 0),
     ("theencoreescapefetcher", "TheEncoreEscapeFetcher", 0),
@@ -184,4 +184,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

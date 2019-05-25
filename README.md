@@ -1,6 +1,6 @@
 2DO events server
 =================
-Version 1.2.0
+Version 1.2.1
 
 Fetch hypegrid calendars from different sources and generate the pages for the web interface and for the boards synchronisation.
 
@@ -36,9 +36,10 @@ Running
 
 Roadmap
 -------
-* installation script, including crontab script generation
 * integration with in-world search
+* installation script, including crontab script generation
 * web interface enhancements
+* embed page for websites
 * integration with [OpenSim Wordpress plugin](https://git.magiiic.com/opensimulator/w4os)
 
 Licence

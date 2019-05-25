@@ -5,7 +5,7 @@ import datetime
 
 class Lsl2Exporter(Exporter):
     def __str__(self):
-        lslevents = "1.3.0\n"
+        lslevents = "1.4.0 Recommended update\n"
 
         nevents = 0
 
