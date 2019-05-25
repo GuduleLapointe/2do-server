@@ -1,0 +1,10 @@
+# Fix malformed urls with some OpenSimulator versions (due to User-Agent headers)
+# rename .htaccess and place on the root of the website or in the event.lsl2 folder
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^events.lsl(.*) /events/events.lsl2?$1          [NC]
+RewriteRule events.lsl2(.*HTTP/1.*) events.lsl2?p=%$1          [NC]
+</IfModule>
