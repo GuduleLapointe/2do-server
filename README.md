@@ -36,11 +36,13 @@ Running
 
 Roadmap
 -------
+* ical export
+* embed page for websites
+* better web interface enhancements
 * integration with in-world search
 * installation script, including crontab script generation
-* web interface enhancements
-* embed page for websites
-* integration with [OpenSim Wordpress plugin](https://git.magiiic.com/opensimulator/w4os)
+* Wordpress mudule (integration with [OpenSim Wordpress plugin](https://git.magiiic.com/opensimulator/w4os))
+* Drupal module
 
 Licence
 -------

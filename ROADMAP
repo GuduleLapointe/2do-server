@@ -1,0 +1,22 @@
+2DO server Roadmap
+==================
+
+Fixes
+-----
+*  don't break main.py on fetcher error (cf japanopengrid)
+
+New features
+------------
+* ical export
+* embed page for websites
+* better web interface enhancements
+* integration with in-world search
+* installation script, including crontab script generation
+* Wordpress mudule (integration with [OpenSim Wordpress plugin](https://git.magiiic.com/opensimulator/w4os))
+* Drupal module
+
+v2.0
+----
+* images integration
+* individual events
+* integration with [OpenSim Wordpress plugin](https://git.magiiic.com/opensimulator/w4os)
