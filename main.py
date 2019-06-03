@@ -27,11 +27,10 @@ from lib.eventlist import EventList
 # added by later fetchers that are already fetched earlier
 # will be discarded
 fetchers = [
-#    ("gridtalkfetcher", "GridTalkFetcher", 0),
+    ("tranquilitygridfetcher", "TranquilityGridFetcher", 0),
     ("discoverygridfetcher", "DiscoveryGridFetcher", 0),
     ("thirdlifefetcher", "ThirdLifeFetcher", 0),
     ("arcanafetcher", "ArcanaFetcher", 0),
-    # ("japanopenfetcher", "JapanOpenFetcher", 0),
     ("oscc15fetcher", "OSCC15Fetcher", 0),
     ("islandoasisfetcher", "IslandOasisFetcher", 0),
     ("theencoreescapefetcher", "TheEncoreEscapeFetcher", 0),
@@ -53,6 +52,8 @@ fetchers = [
     ("snikyfetcher", "SnikyFetcher", 0),
     ("miscfetcher", "MiscFetcher", 0),
     ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
+    # ("gridtalkfetcher", "GridTalkFetcher", 0),
+    # ("japanopenfetcher", "JapanOpenFetcher", 0),
     ]
 
 def main():

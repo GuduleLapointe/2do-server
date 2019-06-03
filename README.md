@@ -1,6 +1,6 @@
 2DO events server
 =================
-Version 1.2.1
+Version 1.2.2
 
 Fetch hypegrid calendars from different sources and generate the pages for the web interface and for the boards synchronisation.
 
