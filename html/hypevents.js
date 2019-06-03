@@ -113,6 +113,7 @@
             case "3rdrockgrid": rv = "3RD Rock Grid"; break;
             case "francogrid": rv = "FrancoGrid"; break;
             case "littlefield": rv = "Littlefield Grid"; break;
+            case "tranquility": rv = "Tranquility Grid"; break;
             case "avatarfest": rv = "AVATARfest"; break;
             case "opensimworld": rv = "OpenSimWorld"; break;
             case "kalasiddhi": rv = "Kalasiddhi Grid"; break;
