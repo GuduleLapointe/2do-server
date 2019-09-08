@@ -73,6 +73,7 @@ echo "$PGM: write lsl"
 
 ./main.py -w -e lsl -o "${OUTPUT}/events.lsl.new" -a "$datenow"
 ./main.py -w -e lsl2 -o "${OUTPUT}/events.lsl2.new" -a "$datenow"
+sed -i "s/%20/ /g" "${OUTPUT}/events.lsl.new" "${OUTPUT}/events.lsl2.new"
 
 mv -v ${OUTPUT}/events.lsl.new ${OUTPUT}/events.lsl
 mv -v ${OUTPUT}/events.lsl2.new ${OUTPUT}/events.lsl2
