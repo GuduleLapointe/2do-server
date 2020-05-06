@@ -41,7 +41,6 @@ fetchers = [
     ("francogridfetcher", "FrancoGridFetcher", 0),
     ("thirdrockfetcher", "ThirdRockFetcher", 0),
     ("lfgridfetcher", "LfGridFetcher", 0),
-    ("gcgfetcher", "GcgFetcher", 0),
     ("kalasiddhifetcher", "KalasiddhiFetcher", 0),
     ("phaandoriafetcher", "PhaandoriaFetcher", 0),
     ("vhsfetcher", "VHSFetcher", 0),
@@ -55,6 +54,7 @@ fetchers = [
     ("oceangridfetcher", "OceanGridFetcher", 0),
     # ("gridtalkfetcher", "GridTalkFetcher", 0),
     # ("japanopenfetcher", "JapanOpenFetcher", 0),
+    # ("gcgfetcher", "GcgFetcher", 0),
     ]
 
 def main():
