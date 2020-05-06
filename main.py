@@ -52,6 +52,7 @@ fetchers = [
     ("snikyfetcher", "SnikyFetcher", 0),
     ("miscfetcher", "MiscFetcher", 0),
     ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
+    ("oceangridfetcher", "OceanGridFetcher", 0),
     # ("gridtalkfetcher", "GridTalkFetcher", 0),
     # ("japanopenfetcher", "JapanOpenFetcher", 0),
     ]
