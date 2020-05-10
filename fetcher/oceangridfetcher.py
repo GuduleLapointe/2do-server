@@ -8,7 +8,7 @@ from helper.oceangrid import OceanGridHelper
 class OceanGridFetcher(IcalFetcher):
     def __init__(self,eventlist,webcache=None):
         super(OceanGridFetcher,self).__init__(
-            "https://calendar.google.com/calendar/ical/oceangridgrid@gmail.com/public/basic.ics",
+            "https://calendar.google.com/calendar/ical/htteso105ff96d6soqvnmou934%40group.calendar.google.com/public/basic.ics",
             [Category("grid-oceangrid")],
             eventlist,
             webcache,
