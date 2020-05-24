@@ -21,6 +21,12 @@ Dependencies
 sudo apt-get update
 sudo apt-get install python-icalendar python-lxml python-pystache python-requests yui-compressor make
 ```
+or
+``` shell
+pip install icalendar lxml pystache requests urllib3==1.23
+```
+
+Note: these scripts are not compatible with urllib3 version 1.24 or above. This has to be fixed, but in the meantime, we force installing 1.23.
 
 Installation
 ------------
