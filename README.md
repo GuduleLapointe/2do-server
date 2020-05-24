@@ -15,6 +15,10 @@ or here for the builders:
 
 Installation of this server is only relevant if you want to manage your own events from other sources.
 
+Related projects
+----------------
+* [OutWorldz OpensimEvents](https://github.com/Outworldz/OpensimEvents) in-world search module has been updated to use 2DO events
+
 Dependencies
 ------------
 ``` shell
