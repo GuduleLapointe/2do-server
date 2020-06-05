@@ -27,6 +27,8 @@ from lib.eventlist import EventList
 # added by later fetchers that are already fetched earlier
 # will be discarded
 fetchers = [
+    ("virtualgaypridefetcher", "VirtualGayPrideFetcher", 0),
+    ("oceangridfetcher", "OceanGridFetcher", 0),
     ("tranquilitygridfetcher", "TranquilityGridFetcher", 0),
     ("discoverygridfetcher", "DiscoveryGridFetcher", 0),
     ("thirdlifefetcher", "ThirdLifeFetcher", 0),
@@ -51,7 +53,8 @@ fetchers = [
     ("snikyfetcher", "SnikyFetcher", 0),
     ("miscfetcher", "MiscFetcher", 0),
     ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
-    ("oceangridfetcher", "OceanGridFetcher", 0),
+
+    ## disabled, not working
     # ("gridtalkfetcher", "GridTalkFetcher", 0),
     # ("japanopenfetcher", "JapanOpenFetcher", 0),
     # ("gcgfetcher", "GcgFetcher", 0),
