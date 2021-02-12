@@ -108,6 +108,16 @@
         var rv;
         switch(cat) {
             case "speculoosworld": rv = "Speculoos World"; break;
+            case "thefactory": rv = "The Factory"; break;
+            case "virtualgaypride": rv = "Virtual Gay Pride"; break;
+            case "oceangrid": rv = "Ocean Grid"; break;
+            case "tranquilitygrid": rv = "Tranquility Grid"; break;
+            case "discoverygrid": rv = "Discovery Grid"; break;
+            case "thirdrock": rv = "Third Rock"; break;
+            case "lfgrid": rv = "Littlefield Grid"; break;
+            case "piratesatoll": rv = "Pirate's Atoll"; break;
+            case "gridtalk": rv = "Grid Talk"; break;
+            case "japanopen": rv = "Japan Open"; break;
             case "kitely": rv = "Kitely"; break;
             case "gcg": rv = "The Great Canadian Grid"; break;
             case "metropolis": rv = "Metropolis"; break;
