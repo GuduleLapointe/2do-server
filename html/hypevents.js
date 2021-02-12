@@ -107,6 +107,7 @@
     function gridCatToString(cat) {
         var rv;
         switch(cat) {
+            case "speculoosworld": rv = "Speculoos World"; break;
             case "kitely": rv = "Kitely"; break;
             case "gcg": rv = "The Great Canadian Grid"; break;
             case "metropolis": rv = "Metropolis"; break;
