@@ -27,6 +27,7 @@ from lib.eventlist import EventList
 # added by later fetchers that are already fetched earlier
 # will be discarded
 fetchers = [
+    ("speculoosworldfetcher", "SpeculoosWorldFetcher", 0),
     ("thefactoryfetcher", "TheFactoryFetcher", 0),
     ("virtualgaypridefetcher", "VirtualGayPrideFetcher", 0),
     ("oceangridfetcher", "OceanGridFetcher", 0),
