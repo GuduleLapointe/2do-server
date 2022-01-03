@@ -20,6 +20,10 @@ Installation of this server is only relevant if you want to manage your own even
 
 ## Dependencies
 
+**Note**: this project requires Python2 (aka python), not Python3\. Update for python3 is not planned in a near future, as I plan to rewrite it from scratch in PHP instead.
+
+Also, the scripts are not compatible with urllib3 version 1.24 or above. This could to be fixed, but, as said before... In the meantime, we force installing 1.23.
+
 ```shell
 sudo apt-get update
 sudo apt-get install python-icalendar python-lxml python-pystache python-requests yui-compressor make
@@ -30,8 +34,6 @@ or
 ```shell
 pip install icalendar lxml pystache requests urllib3==1.23
 ```
-
-Note: these scripts are not compatible with urllib3 version 1.24 or above. This has to be fixed, but in the meantime, we force installing 1.23.
 
 ## Installation
 
