@@ -54,7 +54,7 @@ fetchers = [
     ("narasnookfetcher", "NarasNookFetcher", 0),
     ("snikyfetcher", "SnikyFetcher", 0),
     ("miscfetcher", "MiscFetcher", 0),
-    ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
+    # ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
 
     ## disabled, not working
     # ("gridtalkfetcher", "GridTalkFetcher", 0),
