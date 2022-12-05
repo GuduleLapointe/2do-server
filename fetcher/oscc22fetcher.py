@@ -3,16 +3,16 @@ from lib.event import Event
 from fetcher.icalfetcher import IcalFetcher
 import icalendar
 from lib.category import Category
-from helper.speculoosworld import SpeculoosWorldHelper
+from helper.oscc22 import OSCC22Helper
 
-class SpeculoosWorldFetcher(IcalFetcher):
+class OSCC22Fetcher(IcalFetcher):
     def __init__(self,eventlist,webcache=None):
-        super(SpeculoosWorldFetcher,self).__init__(
-            "https://speculoos.world/?mec-ical-feed=1",
-            [Category("grid-speculoosworld")],
+        super(OSCC22Fetcher,self).__init__(
+            "http://2do.pm/oscc22-mec-events-20221205UTC0156.ics",
+            [Category("grid-oscc22")],
             eventlist,
             webcache,
-            SpeculoosWorldHelper()
+            OSCC22Helper()
         )
         self.webcache = webcache
         self.minexpiry = 1000
@@ -24,9 +24,9 @@ if __name__=='__main__':
 
     eventlist = EventList()
 
-    cache = WebCache("data/test_speculoosworld.cache")
+    cache = WebCache("data/test_oscc22.cache")
 
-    f = SpeculoosWorldFetcher(eventlist, cache)
+    f = OSCC22Fetcher(eventlist, cache)
 
     f.fetch()
 

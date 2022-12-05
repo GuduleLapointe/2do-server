@@ -108,6 +108,8 @@
         var rv;
         switch(cat) {
             case "speculoosworld": rv = "Speculoos World"; break;
+            case "oscc22": rv = "OpenSimulator Community Conference 2022"; break;
+            case "oscc": rv = "OpenSimulator Community Conference"; break;
             case "thefactory": rv = "The Factory"; break;
             case "virtualgaypride": rv = "Virtual Gay Pride"; break;
             case "oceangrid": rv = "Ocean Grid"; break;
@@ -136,7 +138,6 @@
             case "anettes": rv = "Anettes Welt"; break;
             case "exolife": rv = "Exo-Life Virtual World"; break;
             case "zangrid": rv = "ZanGrid"; break;
-            case "oscc15": rv = "OSCC 2015"; break;
             case "digiworldz": rv = "DigiWorldz"; break;
             case "refuge": rv = "Refuge Grid"; break;
             case "narasnook": rv = "Nara's Nook"; break;

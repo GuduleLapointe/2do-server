@@ -11,6 +11,7 @@ class Helper(object):
             re.compile('.*office hours*', flags=re.I)          : 'social',
             re.compile('.*literary.*', flags=re.I)          : 'literature',
             re.compile('.*zombie infection.*', flags=re.I)          : 'fair',
+            re.compile('OSCC', flags=re.I)          : 'education',
             re.compile('tutorial', flags=re.I)          : 'education',
             re.compile('speedbuild', flags=re.I)          : 'social',
             re.compile('hangout', flags=re.I)          : 'social',
@@ -79,7 +80,7 @@ class Helper(object):
         re.compile('hg.lighthousepoint.co.uk', re.I) : Category('grid-lhp'),
         re.compile('hypergrid.org', re.I) : Category('grid-metropolis'),
     }
-        
+
 
     # guess grid from hgurl
     def getGridFromHgurl(self, event):
@@ -119,5 +120,5 @@ class Helper(object):
 
         if event.start!=None and event.end!=None and event.start==event.end:
             event.end += datetime.timedelta(hours=2)
-        
+
         return event
