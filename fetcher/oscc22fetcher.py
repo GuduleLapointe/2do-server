@@ -8,7 +8,7 @@ from helper.oscc22 import OSCC22Helper
 class OSCC22Fetcher(IcalFetcher):
     def __init__(self,eventlist,webcache=None):
         super(OSCC22Fetcher,self).__init__(
-            "http://2do.pm/oscc22-mec-events-20221205UTC0156.ics",
+            "https://conference.opensimulator.org/?mec-ical-feed=1",
             [Category("grid-oscc22")],
             eventlist,
             webcache,
