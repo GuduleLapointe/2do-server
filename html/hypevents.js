@@ -108,6 +108,7 @@
         var rv;
         switch(cat) {
             case "speculoosworld": rv = "Speculoos World"; break;
+            case "omnopolis": rv = "Omnopolis"; break;
             case "oscc22": rv = "OpenSimulator Community Conference 2022"; break;
             case "oscc": rv = "OpenSimulator Community Conference"; break;
             case "thefactory": rv = "The Factory"; break;
