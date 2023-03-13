@@ -249,15 +249,15 @@
                     tr = tr + '</td></tr>';
 
                     // hgurl and hop/sl/etc.. links
-
-                    hgsplit = data[i].hgurl.split(":");
+                    // cleanurl = data[i].hgurl.replace("#.*://#", "");
+                    cleanurl = data[i].hgurl.replace(/(^\w+:|^)\/\//, '');
+                    hgsplit = cleanurl.split(":");
 
                     hop = 'hop://' + hgsplit[0] + ':' + hgsplit[1] + '/' + ((hgsplit.length>2)?hgsplit[2]:'');
                     slhg = 'secondlife://' + hgsplit[0] + ':' + hgsplit[1] + '/' + ((hgsplit.length>2)?hgsplit[2]:'');
                     sllocal = 'secondlife://' + ((hgsplit.length>2)?hgsplit[2]:'');
 
-
-                    hgtr  = '<tr class="eventhgurl"><td></td><td></td><td class="eventhgurl"><input type="text" onclick="this.select()" readonly class="hgurl" value="' + data[i].hgurl + '"/>';
+                    hgtr  = '<tr class="eventhgurl"><td></td><td></td><td class="eventhgurl"><input type="text" onclick="this.select()" readonly class="hgurl" value="' + cleanurl + '"/>';
                     hgtr += ' <div class="hghop"><a href="'+hop+'">hop</a></div>';
                     hgtr += ' <div class="slhg"><a href="'+slhg+'">hypergrid</a></div>';
                     if(hgsplit.length > 2)
