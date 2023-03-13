@@ -1,7 +1,9 @@
-// import $ from "jquery";
-import '../html/jquery-1.11.3.min.js';
-import moment from 'moment';
-import 'moment-timezone';
+import $ from "jquery";
+// import '../html/jquery-1.11.3.min.js';
+// import moment from 'moment';
+// import 'moment-timezone';
+// const dayjs = require('dayjs')
+import dayjs from 'dayjs';
 import jstz from 'jstz';
 import './hypevents.scss';
 
@@ -362,7 +364,7 @@ $(document).ready(function() {
     $("div#extlinks").hide();
     $("div.newsitem").hide();
 
-    numNewsItems = $("div.newsitem").size();
+    numNewsItems = $("div.newsitem").length;
 
     if(numNewsItems>0) {
       $("div.newsitem").eq(0).show();

@@ -26,10 +26,9 @@
   "author": "Olivier van Helden",
   "license": "GPL-3.0-or-later",
   "dependencies": {
+    "dayjs": "^1.11.7",
     "jquery": "^3.6.4",
-    "jstz": "^2.1.1",
-    "moment": "^2.29.4",
-    "moment-timezone": "^0.5.41"
+    "jstz": "^2.1.1"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
