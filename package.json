@@ -1,0 +1,52 @@
+{
+  "name": "2do-server",
+  "version": "1.2.2",
+  "description": "Fetch hypergrid calendars from different sources and generate the pages for the web interface and for the boards synchronisation",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.magiiic.com:opensimulator/2do-server.git"
+  },
+  "keywords": [
+    "opensimulator",
+    "hypergrid",
+    "events",
+    "calendar",
+    "agenda",
+    "helpers"
+  ],
+  "author": "Olivier van Helden",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "jquery": "^3.6.4",
+    "jstz": "^2.1.1",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.41"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "csv-loader": "^3.0.5",
+    "express": "^4.18.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.3",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-middleware": "^6.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0",
+    "xml-loader": "^1.2.1"
+  }
+}
