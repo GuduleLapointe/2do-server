@@ -1,0 +1,112 @@
+<html>
+<head>
+  <title>2do directory - OpenSimulator in-world search</title>
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+  pre, code {
+    background: hsl(360, 0%, 90%);
+    padding: 0.1em 0.4em;
+    border-radius: 0.25em;
+  }
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+  </style>
+</head>
+<body>
+  <div style="max-width:100%;width:960px;margin:auto auto">
+    <h1>2do directory</h1>
+
+    <p><strong>2do.directory</strong> is a public, hypergrid search engine for OpenSimulator.
+      It provides results for in-world search places, land for sale, classifieds and events.
+      Data are collected from several OpenSimulator grids.</p>
+
+    <p><center>
+      <a href="events/"><button>View calendar online</button></a>
+    </center></p>
+
+    <p>This page gives grid owners instructions to enable <a href="#search">in-world search</a> and <a href="#events">events</a> on their own grid.</p>
+
+    <h2 id="search">Enable in-world search in your grid</h2>
+
+    <p>To enable in-world search in your grid without installing the web application:</p>
+    <ol>
+      <li><p>Download <a href="https://github.com/GuduleLapointe/flexible_helper_scripts/tree/master/bin">OpenSimSearch.Module.dll</a> and put it inside your OpenSim bin/ folder.</p></li>
+      <li><p>For each simulator, add the following settings in <b>OpenSim.ini</b> file
+        (<em>even for grids, this config goes in regions OpenSim.ini, not in Robust.ini</em>). Don't forget to replace <code>Your Grid</code> and <code>yourgrid.org:8002</code> with your own values).</p>
+
+        <pre>
+[Search]
+  ;; Set this section to enable in-world search
+  SearchURL = "http://2do.directory/helpers/query.php?gk=http://yourgrid.org:8002"
+  ;; the gk parameter is needed to avoid hypergrid issues and must be set to your grid Gatekeeper URL
+
+[DataSnapshot]
+  ;; Set this section to include your grid places, land for sale and classifieds in search results
+  index_sims = true
+  gridname = "Your Grid"
+  snapshot_cache_directory = "./DataSnapshot"
+  DATA_SRV_2do = http://2do.directory/helpers/register.php
+
+  ;; You can register to multiple search engines:
+  ;DATA_SRV_MISearch = http://metaverseink.com/cgi-bin/register.py
+  ;DATA_SRV_OtherEngine = http://example.org/helpers/register.py
+        </pre>
+      </li>
+      <li><p>Restart all simulators.</p></li>
+    </ol>
+
+    <p align=right><a href="#"><button>Back to top</button></a></p>
+
+    <h2 id="events">Include your grid events in 2do.directory</h2>
+
+    <p>Please send a mail to <a href=mailto:dev@2do.pm>dev@2do.pm</a>, including the <strong>public URL of your calendar</strong> and your grid <strong>default landing area</strong>
+      <em>(which will be used when the destination an event is not set or not properly formatted)</em>.</p>
+
+    <p>The easiest format is iCal standard (.ics), so any calendar service allowing an ics URL shoud do the trick (including Google Agenda).</p>
+
+    <ul>
+      <li>
+        <strong>Times must be set correctly according to your calendar time zone</strong>. 2do engine will take care of the conversion to grid time (PST/PDT).
+        <br><em>Example: If your events is at noon grid-time (00:00 PM PST/PDT) but your own calendar is on Europe/Paris time zone, set your event the local time in Paris (20:00 or 21:00 depending on daylight saving).</em>
+        </li>
+      <li>
+        <strong>Think about daylight saving time</strong>, particularly for recurring events. Daylight Saving Time follow differrent rules depending on countries, even the date of the switch varies. So a given time in your local area will not always correspond to the same grid time (unless you live in Los Angeles of course). E.g.:
+        <ul>
+          <li>If you your recurring events happens at noon, grid-time, whatever day of the year, you should set your own calendar timezone to PST/PDT (and your local time might vary).</li>
+          <li>If you want your local time to remain unchanged, set your calendar to your local time zone (and the grid-time might vary).</li>
+        </ul>
+      <li><strong>Location</strong> should be set to the teleport URL of the destination, e.g. <code>yougrid.org:8002:Welcome Area</code></li>
+      <li>
+        <strong>Category</strong> can be set different ways:
+        <ul>
+          <li>If your calendar handles categories, use this feature.</li>
+          <li>
+            Otherwisse, you can insert a tag in the description, in the form: <code>[[Category:Music]]</code>
+          </li>
+          <li>If none of the above apply, 2do engine will try to guess from the event title and description.
+        </ul>
+        <p>
+          Current categories are inherited from original HYPEvents project
+          <br><em>Art, Education, Fair, Lecture, Literature, Music, Roleplay, Social</em>
+        </p><p>
+          Work is in progress to convert them to official viewer categories
+          <em>(Discussion, Sports, Live DJ, Live Music, Commercial, Nightlife/Entertainment, Games/Contests, Pageants, Education, Arts and Culture, Charity/Support Groups)</em>.
+        </p>
+      </li>
+    </ul>
+
+    <p>Other formats are possible, but they would require an analysis and the development of a specific parser.</p>
+
+    <p align=right><a href="#"><button>Back to top</button></a></p>
+
+    <hr>
+    <center><small>2do.directory is an implementation of Speculoos' <a href=https://2do.events>2do HYPEvents</a> and <a href="https://github.com/GuduleLapointe/flexible_helper_scripts">Flexible helper scripts</a>.
+      <br>These helpers are also available as a WordPress plugin <a href="https://w4os.org/">w4os Web interface for OpenSimulator</a>.</small></center>
+
+  </div>
+</body>
+</html>
