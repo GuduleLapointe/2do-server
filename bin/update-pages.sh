@@ -17,6 +17,7 @@ PGM=$(basename $0)
 TMP=/tmp/$PGM.$$
 BINDIR=$(dirname $(realpath $0))
 BASEDIR=$(dirname $BINDIR)
+[ -f $BASEDIR/venv/bin/activate ] && source $BASEDIR/venv/bin/activate
 [ ! -f "$BASEDIR/main.py" ] && echo "Program not found in $BASEDIR" && exit 1
 
 [ ! "$OUTPUT" ] && OUTPUT="$BASEDIR/html"

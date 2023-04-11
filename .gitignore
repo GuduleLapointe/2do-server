@@ -13,3 +13,4 @@ html/*.new
 *.log
 html/events.ics
 node_modules/
+venv/

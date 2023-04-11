@@ -1,0 +1,51 @@
+#!/bin/bash
+
+version=2.7.16
+venvdir=venv
+pydir=venv/python
+
+# repo=$(git rev-parse --show-toplevel) || exit $?
+repo=$(dirname $(dirname $(realpath $0)))
+cd "$repo" || exit $?
+
+export PATH=${PWD}/venv/bin:${PWD}/venv/python/bin:$PATH
+[ -f $venvdir/bin/activate ] && source $venvdir/bin/activate
+
+which python >/dev/null && python --version 2>&1 | grep -q " 2\."
+if [ $? -eq 0 ]
+then
+  echo "$(python --version 2>&1) present" >&2
+else
+  read -p "Install a local version of python2 from git? (y/N) " confirm
+  [ "$confirm" != "Y" -a "$confirm" != "y" ] && echo "Cancelled" && exit
+
+  tmp=$(mktemp -d) || exit $?
+  trap "rm -rf '$tmp'" EXIT
+  cd "$tmp" || exit $?
+  wget https://www.python.org/ftp/python/${version}/Python-${version}.tgz || exit $?
+  tar zxvf Python-$version.tgz || exit $?
+
+  cd Python-$version || exit $?
+  ./configure --prefix="$repo/$pydir" --with-ensurepip=install || exit $?
+  make && make install || exit $?
+fi
+python=$(which python)
+$python --version 2>&1 | grep -qv " 2\." && echo Still not v2. Something went wrong, aborting. >&2 && exit 1
+cd "$repo" || exit $?
+if [ -f ./$venvdir/bin/activate ]
+then
+  echo Virtual environment set in $(realpath $venvdir) with $($python --version 2>&1) >&2
+else
+  # sudo apt install python2-pip-whl python2-setuptools-whl || exit $?
+  # sudo apt install python2-pip-whl || exit $?
+  export PATH=$PWD/$pydir/bin:$PATH
+  virtualenv -p $python $venvdir \
+  && source ./$venvdir/bin/activate \
+  && pip install -U pip \
+  && pip install -U setuptools wheel \
+  && pip install icalendar lxml pystache==0.5.4 requests urllib3==1.23 \
+  || exit $?
+fi
+
+echo "To use the virtual environment, type
+  source ./$venvdir/bin/activate"  >&2
