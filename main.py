@@ -28,6 +28,7 @@ from lib.eventlist import EventList
 # will be discarded
 fetchers = [
     ("speculoosworldfetcher", "SpeculoosWorldFetcher", 0),
+    ("perfectlifefetcher", "PerfectLifeFetcher", 0),
     ("omnopolisfetcher", "OmnopolisFetcher", 0),
     ("oscc22fetcher", "OSCC22Fetcher", 0),
     ("thefactoryfetcher", "TheFactoryFetcher", 0),
