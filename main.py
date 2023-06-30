@@ -22,48 +22,18 @@ from lib.category import Category
 from lib.skiplist import Skiplist
 from lib.eventlist import EventList
 
-# sorted in order of preference
-# fetchers are run from begin of list to end, and events
-# added by later fetchers that are already fetched earlier
-# will be discarded
-fetchers = [
-    ("speculoosworldfetcher", "SpeculoosWorldFetcher", 0),
-    ("perfectlifefetcher", "PerfectLifeFetcher", 0),
-    ("omnopolisfetcher", "OmnopolisFetcher", 0),
-    ("oscc22fetcher", "OSCC22Fetcher", 0),
-    ("thefactoryfetcher", "TheFactoryFetcher", 0),
-    ("virtualgaypridefetcher", "VirtualGayPrideFetcher", 0),
-    ("oceangridfetcher", "OceanGridFetcher", 0),
-    ("tranquilitygridfetcher", "TranquilityGridFetcher", 0),
-    ("discoverygridfetcher", "DiscoveryGridFetcher", 0),
-    ("thirdlifefetcher", "ThirdLifeFetcher", 0),
-    ("arcanafetcher", "ArcanaFetcher", 0),
-    ("oscc15fetcher", "OSCC15Fetcher", 0),
-    ("islandoasisfetcher", "IslandOasisFetcher", 0),
-    ("theencoreescapefetcher", "TheEncoreEscapeFetcher", 0),
-    ("avatarfestfetcher", "AvatarFestFetcher", 0),
-    ("opensimlifefetcher", "OpenSimLifeFetcher", 0),
-    ("kitelyfetcher", "KitelyFetcher", 0),
-    ("metropolisfetcher", "MetropolisFetcher", 0),
-    ("francogridfetcher", "FrancoGridFetcher", 0),
-    ("thirdrockfetcher", "ThirdRockFetcher", 0),
-    ("lfgridfetcher", "LfGridFetcher", 0),
-    ("kalasiddhifetcher", "KalasiddhiFetcher", 0),
-    ("phaandoriafetcher", "PhaandoriaFetcher", 0),
-    ("vhsfetcher", "VHSFetcher", 0),
-    ("exolifefetcher", "ExoLifeFetcher", 0),
-    ("nextlifefetcher", "NextLifeFetcher", 0),
-    ("piratesatollfetcher", "PiratesAtollFetcher", 0),
-    ("narasnookfetcher", "NarasNookFetcher", 0),
-    ("snikyfetcher", "SnikyFetcher", 0),
-    ("miscfetcher", "MiscFetcher", 0),
-    # ("opensimworldfetcher", "OpenSimWorldFetcher", 0),
-
-    ## disabled, not working
-    # ("gridtalkfetcher", "GridTalkFetcher", 0),
-    # ("japanopenfetcher", "JapanOpenFetcher", 0),
-    # ("gcgfetcher", "GcgFetcher", 0),
-    ]
+def read_fetchers_from_file(filename):
+    fetchers = []
+    with open(filename, 'r') as file:
+        for line in file:
+            line = line.strip()
+            if line and not line.startswith("#") and not line.startswith(";"):
+                fetcher_info = line.split()
+                module_name = fetcher_info[0]
+                class_name = fetcher_info[1]
+                limit = int(fetcher_info[2]) if len(fetcher_info) >= 3 else 0
+                fetchers.append((module_name, class_name, limit))
+    return fetchers
 
 def main():
 
@@ -151,6 +121,7 @@ def main():
 
         f.write(str(exporter))
     elif args.fetch:
+        fetchers = read_fetchers_from_file("./fetcher.cfg")  # Provide the filename containing fetchers
         skiplist = None
         if useskiplist:
             skiplist = Skiplist('skiplist')

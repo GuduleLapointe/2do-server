@@ -1,6 +1,6 @@
 {
   "name": "2do-server",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "Fetch hypergrid calendars from different sources and generate the pages for the web interface and for the boards synchronisation",
   "main": "index.js",
   "directories": {
