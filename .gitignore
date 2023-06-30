@@ -14,3 +14,4 @@ html/*.new
 html/events.ics
 node_modules/
 venv/
+fetcher.cfg
