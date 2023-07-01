@@ -108,6 +108,7 @@
         var rv;
         switch(cat) {
             case "speculoosworld": rv = "Speculoos World"; break;
+            case "osgrid": rv = "OSGrid"; break;
             case "thefactory": rv = "The Factory"; break;
             case "virtualgaypride": rv = "Virtual Gay Pride"; break;
             case "oceangrid": rv = "Ocean Grid"; break;
