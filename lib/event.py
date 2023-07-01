@@ -57,7 +57,7 @@ class Event(object):
         self.get_grid_info()  # Call the grid info retrieval method
 
     def get_grid_info(self):
-        if self.hgurl == "-":
+        if self.hgurl is None or self.hgurl == "-":
             return
 
         # Extract hostname and port from hgurl
@@ -70,10 +70,9 @@ class Event(object):
 
         # Construct the grid info URL
         grid_info_url = "http://{}:{}/get_grid_info".format(hostname, port)
-        # grid_info_url = f"http://{hostname}:{port}/get_grid_info"
 
         try:
-            # Send a GET request to the grid info URL
+            # Fetch the grid info URL using the web cache
             response = self.webcache.fetch(grid_info_url, 24 * 3600, 48 * 3600)
             if response.status_code == 200:
                 # Parse the response as XML
