@@ -18,3 +18,4 @@ node_modules/
 venv/
 fetcher.cfg
 ical.cfg
+exclusions.txt
