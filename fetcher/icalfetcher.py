@@ -26,22 +26,22 @@ class IcalFetcher(object):
         return event
 
     def fetch(self, limit=0, tz=pytz.utc):
-        print "IcalFetcher: get url "+str(self.url)
-        print "IcalFetcher: timezone " + str(tz)
+        print("IcalFetcher: get url", self.url)
+        print("IcalFetcher: timezone", tz)
 
         #r = requests.get(self.url, headers={"user-agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0"})
         r = self.cache.fetch(self.url, self.minexpiry, self.maxexpiry)
 
         events = []
 
-        if r.status_code==200:
+        if r.status_code == 200:
             cal = icalendar.Calendar.from_ical(r.text)
             cal_events = cal.walk(name="VEVENT")
 
             for event in cal_events:
                 e = Event()
 
-                if self.categories!=None:
+                if self.categories is not None:
                     e.categories += self.categories
 
                 e.title = event.get('summary')
@@ -57,16 +57,16 @@ class IcalFetcher(object):
                 else:
                     e.end = e.start
 
-                if type(e.start)==datetime.date:
+                if type(e.start) == datetime.date:
                     e.start = datetime.datetime.combine(e.start, datetime.time())
 
-                if type(e.end)==datetime.date:
+                if type(e.end) == datetime.date:
                     e.end = datetime.datetime.combine(e.end, datetime.time())
 
-                if e.start.tzinfo==None or e.start.tzinfo.utcoffset(e.start)==None:
+                if e.start.tzinfo is None or e.start.tzinfo.utcoffset(e.start) is None:
                     e.start = self.tz_pacific.localize(e.start)
 
-                if e.end.tzinfo==None or e.end.tzinfo.utcoffset(e.end)==None:
+                if e.end.tzinfo is None or e.end.tzinfo.utcoffset(e.end) is None:
                     e.end = self.tz_pacific.localize(e.end)
 
                 try:
@@ -80,19 +80,19 @@ class IcalFetcher(object):
                     pass
 
                 # TODO: log event w/o location and ignore
-                if e.hgurl == None:
+                if e.hgurl is None:
                     e.hgurl = "-"
 
-                if not "RRULE" in event.keys():
+                if "RRULE" not in event.keys():
                     customized = self.customizeEvent(e)
-                    if customized!=None:
+                    if customized is not None:
                         self.eventlist.add(customized)
                 else:
                     rule = event.get('RRULE')
 
                     expander = RRULEExpander(event.get('RRULE'), e.start, event.get('EXDATE'))
 
-                        # calc event length
+                    # Calculate event length
                     eventlen = e.end - e.start
 
                     for instance in expander:
@@ -100,9 +100,9 @@ class IcalFetcher(object):
                         revent.start = instance
                         revent.end = instance + eventlen
                         customized = self.customizeEvent(revent)
-                        if customized != None:
+                        if customized is not None:
                             self.eventlist.add(customized)
-                        if limit>0 and len(events)>=limit:
+                        if limit > 0 and len(events) >= limit:
                             break
         
                 if limit>0 and len(events)>=limit:
