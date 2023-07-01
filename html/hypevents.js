@@ -108,10 +108,6 @@
         var rv;
         switch(cat) {
             case "speculoosworld": rv = "Speculoos World"; break;
-            case "perfectlife": rv = "Perfect Life"; break;
-            case "omnopolis": rv = "Omnopolis"; break;
-            case "oscc22": rv = "OpenSimulator Community Conference 2022"; break;
-            case "oscc": rv = "OpenSimulator Community Conference"; break;
             case "thefactory": rv = "The Factory"; break;
             case "virtualgaypride": rv = "Virtual Gay Pride"; break;
             case "oceangrid": rv = "Ocean Grid"; break;
@@ -140,6 +136,7 @@
             case "anettes": rv = "Anettes Welt"; break;
             case "exolife": rv = "Exo-Life Virtual World"; break;
             case "zangrid": rv = "ZanGrid"; break;
+            case "oscc15": rv = "OSCC 2015"; break;
             case "digiworldz": rv = "DigiWorldz"; break;
             case "refuge": rv = "Refuge Grid"; break;
             case "narasnook": rv = "Nara's Nook"; break;
@@ -250,15 +247,15 @@
                     tr = tr + '</td></tr>';
 
                     // hgurl and hop/sl/etc.. links
-                    // cleanurl = data[i].hgurl.replace("#.*://#", "");
-                    cleanurl = data[i].hgurl.replace(/(^\w+:|^)\/\//, '');
-                    hgsplit = cleanurl.split(":");
+
+                    hgsplit = data[i].hgurl.split(":");
 
                     hop = 'hop://' + hgsplit[0] + ':' + hgsplit[1] + '/' + ((hgsplit.length>2)?hgsplit[2]:'');
                     slhg = 'secondlife://' + hgsplit[0] + ':' + hgsplit[1] + '/' + ((hgsplit.length>2)?hgsplit[2]:'');
                     sllocal = 'secondlife://' + ((hgsplit.length>2)?hgsplit[2]:'');
 
-                    hgtr  = '<tr class="eventhgurl"><td></td><td></td><td class="eventhgurl"><input type="text" onclick="this.select()" readonly class="hgurl" value="' + cleanurl + '"/>';
+
+                    hgtr  = '<tr class="eventhgurl"><td></td><td></td><td class="eventhgurl"><input type="text" onclick="this.select()" readonly class="hgurl" value="' + data[i].hgurl + '"/>';
                     hgtr += ' <div class="hghop"><a href="'+hop+'">hop</a></div>';
                     hgtr += ' <div class="slhg"><a href="'+slhg+'">hypergrid</a></div>';
                     if(hgsplit.length > 2)
