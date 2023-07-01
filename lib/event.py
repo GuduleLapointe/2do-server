@@ -1,6 +1,11 @@
 from time import gmtime,asctime
 from lib.category import Category
 import hashlib
+import requests
+from lxml import etree
+import re
+
+# Note to ChatGPT: Always remember we use Python 2.7 and don't remove this line
 
 class Event(object):
     def __init__(self):
@@ -28,7 +33,7 @@ class Event(object):
         rv = rv + " categories  " + str(self.categories) + "\n"
         rv = rv + " uid         " + str(self.uid) + "\n"
 
-        return rv       
+        return rv
 
     def addCategory(self,newcat):
         if type(newcat)==type([]):
@@ -37,3 +42,57 @@ class Event(object):
         else:
             if not newcat in self.categories:
                 self.categories += [newcat]
+
+    def sanitize_slug(self, grid_nick):
+        # Sanitize grid_nick to be a valid CSS class
+        return re.sub(r"[^a-z0-9-]", "", grid_nick.lower())
+
+    @property
+    def hgurl(self):
+        return self._hgurl
+
+    @hgurl.setter
+    def hgurl(self, value):
+        self._hgurl = value
+        self.get_grid_info()  # Call the grid info retrieval method
+
+    def get_grid_info(self):
+        if self.hgurl == "-":
+            return
+
+        # Extract hostname and port from hgurl
+        parts = self.hgurl.split(":")
+        if len(parts) < 3:
+            return
+
+        hostname = parts[0]
+        port = parts[1]
+
+        # Construct the grid info URL
+        grid_info_url = "http://{}:{}/get_grid_info".format(hostname, port)
+        # grid_info_url = f"http://{hostname}:{port}/get_grid_info"
+
+        try:
+            # Send a GET request to the grid info URL
+            response = self.webcache.fetch(grid_info_url, 24 * 3600, 48 * 3600)
+            if response.status_code == 200:
+                # Parse the response as XML
+                root = etree.fromstring(response.content)
+
+                # Extract the grid information
+                grid_name = root.findtext("gridname")
+                grid_nick = self.sanitize_slug(root.findtext("gridnick"))
+                login_uri = root.findtext("login")
+
+                # Set the grid information in the event object
+                self.grid_name = grid_name if grid_name else "-"
+                self.grid_nick = grid_nick if grid_nick else "-"
+                self.grid_login_uri = login_uri if login_uri else "-"
+
+                if grid_nick:
+                    # Add the "grid-" + grid_nick category
+                    self.addCategory(Category("grid-" + grid_nick))
+
+        except requests.RequestException:
+            # Error occurred while fetching grid info
+            pass
