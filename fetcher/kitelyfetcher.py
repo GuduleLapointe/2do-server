@@ -3,7 +3,6 @@ from lib.event import Event
 from fetcher.icalfetcher import IcalFetcher
 import icalendar
 from lib.category import Category
-# from helper.kitely import KitelyHelper
 import re
 
 try:
