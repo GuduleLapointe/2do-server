@@ -116,6 +116,7 @@ function gridCatToString(cat) {
   var rv;
   switch(cat) {
     case "speculoosworld": rv = "Speculoos World"; break;
+    case "perfectlife": rv = "Perfect Life"; break;
     case "omnopolis": rv = "Omnopolis"; break;
     case "oscc22": rv = "OpenSimulator Community Conference 2022"; break;
     case "oscc": rv = "OpenSimulator Community Conference"; break;
@@ -137,7 +138,8 @@ function gridCatToString(cat) {
     case "littlefield": rv = "Littlefield Grid"; break;
     case "tranquility": rv = "Tranquility Grid"; break;
     case "avatarfest": rv = "AVATARfest"; break;
-    case "opensimworld": rv = "OpenSimWorld"; break;
+    // case "opensimworld": rv = "OpenSimWorld
+    //  break;
     case "kalasiddhi": rv = "Kalasiddhi Grid"; break;
     case "phaandoria": rv = "Phaandoria Grid"; break;
     case "digiworldz": rv = "Digiworldz"; break;

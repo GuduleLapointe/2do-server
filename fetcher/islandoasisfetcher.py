@@ -8,8 +8,16 @@ import pytz
 import datetime
 from lib.category import Category
 #from helper.islandoasis import IslandOasisHelper
-from helper.islandoasis import IslandOasisHelper
 import urllib
+import re
+
+try:
+    from helper import Helper
+except ImportError:
+    try:
+        from helper.helper import Helper
+    except ImportError:
+        raise ImportError("Failed to import Helper from both 'helper' and 'helper.helper' modules")
 
 class IslandOasisEvent(Event):
     tz_la = pytz.timezone('America/Los_Angeles')
@@ -144,3 +152,25 @@ if __name__=='__main__':
 
     for event in eventlist:
         print str(event)
+
+class IslandOasisHelper(Helper):
+    hgre = re.compile("^[^:]+:[0-9]+:[^:]+$")
+
+    titlere = re.compile('^[a-zA-Z]*\s*[0-9]+[apAP]m\s+(.*)$', flags=re.I)
+
+    badre = re.compile('Monarch.*s Winter Garden', flags=re.I)
+
+    hgexpr = {
+    }
+
+    def customizeEvent(self, event):
+        event = super(IslandOasisHelper, self).customizeEvent(event)
+
+        if IslandOasisHelper.badre.search(event.title):
+            return None
+
+        match = IslandOasisHelper.titlere.search(event.title)
+        if match is not None:
+            event.title = match.group(1)
+
+        return event

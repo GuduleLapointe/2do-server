@@ -7,7 +7,14 @@ import sys
 import pytz
 import datetime
 from lib.category import Category
-from helper.helper import Helper
+
+try:
+    from helper import Helper
+except ImportError:
+    try:
+        from helper.helper import Helper
+    except ImportError:
+        raise ImportError("Failed to import Helper from both 'helper' and 'helper.helper' modules")
 
 class GridTalkEvent(Event):
     tz_berlin = pytz.timezone('Europe/Berlin')
@@ -107,7 +114,7 @@ class GridTalkFetcher:
                     event = self.helper.customizeEvent(event)
                     if event != None:
                         self.eventlist.add(event)
- 
+
                 nextUrlNode = tree.xpath('//div[@class="float_right"]/a[2]/@href')
 
                 if len(nextUrlNode)!=1:

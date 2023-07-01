@@ -7,7 +7,14 @@ import sys
 import pytz
 import datetime
 from lib.category import Category
-from helper.helper import Helper
+
+try:
+    from helper import Helper
+except ImportError:
+    try:
+        from helper.helper import Helper
+    except ImportError:
+        raise ImportError("Failed to import Helper from both 'helper' and 'helper.helper' modules")
 
 class MetropolisEvent(Event):
     tz_berlin = pytz.timezone('Europe/Berlin')
@@ -32,7 +39,7 @@ class MetropolisEvent(Event):
             tree = html.fromstring(r.text)
 
             self.title = tree.xpath('//h1[@class="entry-title"]')[0].text
-            
+
             content = tree.xpath('//div[@class="entry-content"]')[0].text_content()
 
             datematch = re.search('Datum: ([0-9]+)\.([0-9]+)\.([0-9]+)', content)
@@ -57,7 +64,7 @@ class MetropolisEvent(Event):
                 	self.start = self.tz_berlin.localize(parser.parse("%s-%s-%s %s" % (year,month,day,timestr)))
                 	timestr = timematch.group(2)
                 	self.end = self.tz_berlin.localize(parser.parse("%s-%s-%s %s" % (year,month,day,timestr)))
-                
+
 
             datematch = re.search('Datum: ([0-9]+)\.([0-9]+)\.([0-9]+)', content)
 

@@ -1,0 +1,202 @@
+body {
+  background-color: #eeeeee;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#header {
+  /* display: table-row; */
+  /* font-family: sans-serif; */
+  /* font-weight: normal; */
+}
+
+#header h1 {
+  display: none;
+  position: absolute;
+  font-size: 5em;
+  margin: 0;
+  padding: 0;
+  color: #666;
+  letter-spacing: -0.075em;
+  line-height: 1em;
+  text-transform: uppercase;
+  margin-right: -0.05em;
+  /* font-variant: small-caps; */
+  /* font-weight: 200; */
+}
+#header .logo {
+  display: inline;
+  padding-right: 10px;
+  /* position: absolute;
+  top: 10px; */
+}
+#header .catchword {
+  display: inline;
+  font-size: 3em;
+  position: absolute;
+  top: 10px;
+  /* float: right; */
+  /* font-family: sans-serif; */
+  /* font-weight: normal; */
+  line-height: 1.5em;
+}
+img, object, embed, video, audio {
+  max-width: 100%;
+}
+.gray {
+    color: #888;
+}
+
+div.mainrow {
+    /* border: 1px solid black; */
+    width: 80%;
+    margin: auto;
+    padding: 0 10px;
+    background-color: #ffffff;
+}
+
+div.mainrowsub {
+    border: 1px solid black;
+    width: 80%;
+    margin: auto;
+    padding: 1em;
+    background-color: #ffffff;
+}
+
+div#news {
+    height: 1em;
+}
+div.newsitem {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+div#news:hover {
+    cursor: pointer;
+}
+
+
+div#menu li {
+    list-style: none;
+    display: inline;
+    padding: 0 2em 0 2em;
+}
+div#menu li:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+div#menu a {
+    text-decoration: none;
+    color: #000000;
+}
+div#menu a:hover {
+    color: #ffffff;
+}
+
+div#timerow {
+    height: 1.5em;
+}
+div#clock {
+    float: right;
+}
+div#tzselect {
+    float: left;
+}
+div#catselect {
+    float: left;
+    margin-left: 1em;
+}
+
+
+tr.eventoverview {
+    cursor: pointer;
+}
+
+tr.eventdesc {
+    display: none;
+}
+tr.eventhgurl {
+    display: none;
+}
+tr.eventcats {
+    display: none;
+}
+td.eventhgurl {
+    padding: 1em;
+    border-left: 1px solid black;
+}
+tr.eventhgurl div {
+    display: inline;
+}
+input.hgurl {
+    border: 1px solid black;
+    padding: 0.2em;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    width: 25em;
+    text-align: center;
+}
+td.eventcats {
+    border-left: 1px solid black;
+    padding: 0.2em;
+}
+td.eventdesc {
+    border-left: 1px solid black;
+    padding-left: 1em;
+}
+
+ul#eventcats li {
+    display: inline;
+    list-style: none;
+    padding: 0.2em;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+td.eventdate {
+    width: 7em;
+    color: #888;
+}
+td.eventdatehi {
+    color: #000;
+}
+td.eventtime {
+    width: 13em;
+}
+td.eventtitle {
+    vertical-align: top;
+}
+
+
+span.eventon {
+    display: none;
+}
+span.eventoff {
+    display: inline;
+}
+span.eventtitle {
+    font-weight: bold;
+}
+span.eventgridname {
+    font-size: 0.8em;
+    color: #00f;
+    font-style: italic;
+}
+
+@media screen and (max-width: 880px) {
+  #header .catchword {
+    display: none;
+  }
+  div#tzselect,
+  div#catselect,
+  div#clock {
+    float: none;
+  }
+  div#menu ul,
+  div#menu li {
+    /* display: inline; */
+    list-style: none;
+    padding: 0 10px;
+  }
+}
+
