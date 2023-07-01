@@ -5,13 +5,13 @@ import icalendar
 import pytz
 import datetime
 from dateutil import rrule
-from copy import copy,deepcopy
+from copy import copy, deepcopy
 from lib.rrule import RRULEExpander
 
 class IcalFetcher(object):
     tz_pacific = pytz.timezone('US/Pacific')
 
-    def __init__(self,url,categories,eventlist,webcache=None,helper=None):
+    def __init__(self, url, categories, eventlist, webcache=None, helper=None):
         self.url = url
         self.categories = categories
         self.helper = helper
@@ -21,7 +21,7 @@ class IcalFetcher(object):
         self.maxexpiry = 3600
 
     def customizeEvent(self, event):
-        if self.helper!=None:
+        if self.helper is not None:
             return self.helper.customizeEvent(event)
         return event
 
@@ -29,7 +29,6 @@ class IcalFetcher(object):
         print("IcalFetcher: get url", self.url)
         print("IcalFetcher: timezone", tz)
 
-        #r = requests.get(self.url, headers={"user-agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0"})
         r = self.cache.fetch(self.url, self.minexpiry, self.maxexpiry)
 
         events = []
@@ -39,7 +38,7 @@ class IcalFetcher(object):
             cal_events = cal.walk(name="VEVENT")
 
             for event in cal_events:
-                e = Event()
+                e = Event(self.cache)
 
                 if self.categories is not None:
                     e.categories += self.categories
@@ -104,7 +103,7 @@ class IcalFetcher(object):
                             self.eventlist.add(customized)
                         if limit > 0 and len(events) >= limit:
                             break
-        
+
                 if limit>0 and len(events)>=limit:
                     break
 

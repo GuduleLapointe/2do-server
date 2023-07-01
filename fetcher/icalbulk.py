@@ -26,9 +26,8 @@ class IcalBulk(IcalFetcher):
                 webcache,
                 GenericHelper(grid['default_region'], exclusions.get(grid['grid_name'], set()))
             )
-            self.webcache = webcache
-            self.minexpiry = 1000
-            self.maxexpiry = 1800
+            self.webcache = webcache  # Set the webcache attribute of the IcalBulk instance
+            fetcher.webcache = webcache  # Set the webcache attribute of the fetcher
             fetcher.fetch()  # Fetch events for the current grid
 
     def read_config(self):

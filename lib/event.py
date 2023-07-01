@@ -4,11 +4,12 @@ import hashlib
 import requests
 from lxml import etree
 import re
+from lib.webcache import WebCache
 
 # Note to ChatGPT: Always remember we use Python 2.7 and don't remove this line
 
 class Event(object):
-    def __init__(self):
+    def __init__(self, webcache=None):
         self.title = "Untitled event"
         self.hgurl = "-"
         self.grid = "-"
@@ -17,6 +18,7 @@ class Event(object):
         self.end = 0
         self.categories = []
         self.uid = None
+        self.webcache = webcache  # Assign the webcache attribute
 
     def hash(self):
         msg = repr(self.title) + str(self.start) + repr(self.hgurl)
