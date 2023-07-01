@@ -75,13 +75,7 @@ class Event(object):
         grid_info_url = "http://{}:{}/get_grid_info".format(hostname, port)
 
         try:
-            response = self.webcache.fetch(grid_info_url, 24 * 3600, 48 * 3600)
-            # if self.webcache is not None:
-            #     # Use webcache to fetch the grid info URL
-            #     response = self.webcache.fetch(grid_info_url, 24 * 3600, 48 * 3600)
-            # else:
-            #     # Make a direct request to the grid info URL
-            #     response = requests.get(grid_info_url)
+            response = self.webcache.fetch(grid_info_url, 24 * 3600, 7 * 24 * 3600)  # Extend expiration time to 7 days
 
             if response.status_code == 200:
                 # Parse the response as XML
