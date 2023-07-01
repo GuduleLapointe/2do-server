@@ -1,4 +1,4 @@
-from time import gmtime,asctime
+from time import gmtime, asctime
 from lib.category import Category
 import hashlib
 import requests
@@ -67,13 +67,20 @@ class Event(object):
 
         hostname = parts[0]
         port = parts[1]
+        region = parts[2]
 
         # Construct the grid info URL
         grid_info_url = "http://{}:{}/get_grid_info".format(hostname, port)
 
         try:
-            # Fetch the grid info URL using the web cache
             response = self.webcache.fetch(grid_info_url, 24 * 3600, 48 * 3600)
+            # if self.webcache is not None:
+            #     # Use webcache to fetch the grid info URL
+            #     response = self.webcache.fetch(grid_info_url, 24 * 3600, 48 * 3600)
+            # else:
+            #     # Make a direct request to the grid info URL
+            #     response = requests.get(grid_info_url)
+
             if response.status_code == 200:
                 # Parse the response as XML
                 root = etree.fromstring(response.content)
