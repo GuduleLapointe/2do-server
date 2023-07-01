@@ -19,7 +19,8 @@ class OpenSimWorldEvent(Event):
     def __init__(self, webcache=None, url=None):
         super(OpenSimWorldEvent, self).__init__()
         self.id = None
-        self.categories += [Category("site-opensimworld")]
+        # self.categories += [Category("OpenSimWorld")]
+        # self.categories += [Category("OpenSimWorld")]
         self.webcache = webcache
         self.url = url
 
