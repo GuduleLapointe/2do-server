@@ -63,9 +63,11 @@ class OpenSimWorldFetcher:
                     url = event_row.xpath('.//td/b/a[starts-with(@href, "/hop/")]/@href')
                     description = event_row.xpath('.//div/small/text()')[0]
 
-                    event = Event()
+                    event = OpenSimWorldEvent(self.webcache, url[0] if url else None)
                     event.title = title[0] if title else None
                     event.description = description
+
+                    event.fetchHGUrl(event.url)
 
                     if datetime_str == "Upcoming Event":
                         event.start = datetime.datetime.now(self.tz_pst).replace(minute=0, second=0, microsecond=0)
