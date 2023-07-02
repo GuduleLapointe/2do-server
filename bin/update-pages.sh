@@ -1,5 +1,7 @@
 #!/bin/bash
 
+start=$(date +%s)
+
 # Fetch delta in days
 FETCHFROM=1
 FETCHTO=30
@@ -101,4 +103,13 @@ mv -v "${OUTPUT}/index.html.new" "${OUTPUT}/index.html"
 
 echo "=======> `date`"
 echo "$PGM: end processing"
-# done
+
+end=$(date +%s)
+process_time=$((end - start))
+
+# Convert process time to "HH:MM:SS" format
+formatted_time=$(date -u -d @${process_time} +"%H:%M:%S")
+
+# Display process time
+wc -l ${OUTPUT}/events.*
+echo "Process time: ${formatted_time}"
