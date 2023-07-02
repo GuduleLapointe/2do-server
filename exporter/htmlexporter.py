@@ -22,7 +22,15 @@ class HtmlExporter(Exporter):
             rv = rv + "  <tr>\n"
             rv = rv + "    <td>"+start.strftime("%Y-%m-%d %H:%M") + " - " + end.strftime("%H:%M")
             rv = rv + start.strftime(" %Z") + "</td>\n"
-            rv = rv + "    <td>" + cgi.escape(event.title.encode('utf-8')) + "</td>\n"
+
+            rv += "    <td>" + cgi.escape(event.title.encode('utf-8'))
+
+            # Check if grid_name is available and add it to the table
+            if event.grid_name:
+                rv += " <span class=\"eventgridname\">@ grid " + cgi.escape(event.grid_name.encode('utf-8')) + "</span>"
+
+            rv += "</td>\n"
+
             rv = rv + "    <td>" + cgi.escape(event.hgurl.encode('utf-8')) + "</td>\n"
             rv = rv + "    <td>" + cgi.escape(event.description.encode('utf-8')).replace("\n", "<br/>") + "</td>\n"
             rv = rv + "    <td>" + ','.join(map(lambda e: cgi.escape(str(e)), event.categories)) + "</td>\n"

@@ -151,7 +151,7 @@
             case "opensimlife": rv = "OpenSimLife"; break;
             case "discovery": rv = "Discovery Grid"; break;
             case "sniky": rv = "Sniky Grid"; break;
-            default: rv = null; break;
+            default: rv = cat; break;
         }
         return rv;
     }
@@ -229,7 +229,9 @@
                     tr = tr + '<td class="eventtitle"><span class="eventoff" id="eventoff'+String(i)+'">&#9654;</span>';
                     tr = tr + '<span class="eventon" id="eventon'+String(i)+'">&#9660;</span> ';
                     tr = tr + '<span class="eventtitle">' + data[i].title+'</span>';
-
+                    // if (data[i].eventgridname) {
+                    //   tr = tr + ' <span class="gridname">@' + data[i].eventgridname + '</span>';
+                    // }
                     var rawcats="";
 
                     for (var catidx in data[i].categories) {
@@ -237,7 +239,7 @@
                         if (cat.substring(0,"grid-".length)=='grid-') {
                             var grid = gridCatToString(cat.substring("grid-".length));
                             if (grid != null) {
-                                tr = tr + ' <span class="eventgridname">(' + grid + ')</span>';
+                                tr = tr + ' <span class="eventgridname">@' + grid + '</span>';
                             }
                         } else {
                             if(!(cat in categories)) categories[cat]=true;
