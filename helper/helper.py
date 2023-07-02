@@ -67,6 +67,8 @@ class Helper(object):
         ( re.compile('hop://([^:]+:[0-9]+(:|/)[^/]*)/', re.I | re.M), 1, ""),
         ( re.compile('OSGrid\s*-\sRegion\s+([^\n]+)$', re.I | re.M), 1, "hg.osgrid.org:80:"),
         ( re.compile('^([^:\n]+:[0-9]+:)(\s|$)', re.I | re.M), 1, ""),
+        (re.compile('.*HG:\s*([^:]+:[0-9]+(:|/).*)$', re.I | re.M), 1, ""),
+        (re.compile('^.*://\s*', re.I | re.M), 0, ""),
     ]
 
     # grid extraction
