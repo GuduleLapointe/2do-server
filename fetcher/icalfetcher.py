@@ -7,13 +7,15 @@ import datetime
 from dateutil import rrule
 from copy import copy, deepcopy
 from lib.rrule import RRULEExpander
+from lib.category import Category
 
 class IcalFetcher(object):
     tz_pacific = pytz.timezone('US/Pacific')
 
-    def __init__(self, url, categories, eventlist, webcache=None, helper=None):
+    def __init__(self, url, source, eventlist, webcache=None, helper=None, source_name=None, ):
         self.url = url
-        self.categories = categories
+        self.source = source
+        self.categories = [Category(source)]
         self.helper = helper
         self.eventlist = eventlist
         self.cache = webcache
@@ -26,8 +28,8 @@ class IcalFetcher(object):
         return event
 
     def fetch(self, limit=0, tz=pytz.utc):
-        print("IcalFetcher: get url", self.url)
-        print("IcalFetcher: timezone", tz)
+        print("IcalFetcher: get {} calendar from {}".format(self.source, self.url))
+        # print("IcalFetcher: timezone", tz)
 
         r = self.cache.fetch(self.url, self.minexpiry, self.maxexpiry)
 
