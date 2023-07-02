@@ -1,17 +1,11 @@
 import requests
 from lib.event import Event
 import datetime
-from datetime import timedelta
-from dateutil import parser, tz
 from dateutil import parser as date_parser
-
 from lxml import html
-import re
 import sys
 import pytz
 from lib.category import Category
-
-# Always remember Python 2.7 and never remove this line
 
 class OpenSimWorldEvent(Event):
     tz_pacific = pytz.timezone('US/Pacific')
@@ -19,13 +13,11 @@ class OpenSimWorldEvent(Event):
     def __init__(self, webcache=None, url=None):
         super(OpenSimWorldEvent, self).__init__()
         self.id = None
-        # self.categories += [Category("OpenSimWorld")]
-        # self.categories += [Category("OpenSimWorld")]
         self.webcache = webcache
         self.url = url
 
     def fetchHGUrl(self, url):
-        fullurl = "https://opensimworld.com" + url  # Prepend the main address of the website
+        fullurl = "https://opensimworld.com" + url
 
         if self.webcache is None:
             r = requests.get(fullurl)
@@ -43,7 +35,8 @@ class OpenSimWorldEvent(Event):
 
 class OpenSimWorldFetcher:
     events_page_url = "https://opensimworld.com/events/"
-    tz_pacific = pytz.timezone('US/Pacific')
+    tz_slt = pytz.timezone('Etc/GMT+8')  # SLT is GMT+8
+    tz_pst = pytz.timezone('America/Los_Angeles')  # PST is America/Los_Angeles
 
     def __init__(self, eventlist, webcache):
         self.eventlist = eventlist
@@ -65,31 +58,27 @@ class OpenSimWorldFetcher:
                 sys.stdout.flush()
 
                 try:
-                    title = event_row.xpath('.//h4/b/a/text()')  # Target the <h4> tag and extract the text
+                    title = event_row.xpath('.//h4/b/a/text()')
                     datetime_str = event_row.xpath('.//i[contains(@class,"glyphicon-time")]/following-sibling::text()')[0].strip()
                     url = event_row.xpath('.//td/b/a[starts-with(@href, "/hop/")]/@href')
                     description = event_row.xpath('.//div/small/text()')[0]
 
-                    # Create an OpenSimWorldEvent instance
-                    event = OpenSimWorldEvent(self.webcache, url[0] if url else None)
+                    event = Event()
                     event.title = title[0] if title else None
                     event.description = description
 
-                    # Fetch the full HGURL for the event
-                    event.fetchHGUrl(event.url)
-
-                    # Parse the datetime string using dateutil.parser
                     if datetime_str == "Upcoming Event":
-                        event.start = datetime.datetime.utcnow().replace(tzinfo=self.tz_pacific)
+                        event.start = datetime.datetime.now(self.tz_pst).replace(minute=0, second=0, microsecond=0)
                         event.end = event.start + datetime.timedelta(hours=2)
                     else:
                         datetime_parts = datetime_str.split("|")
                         if len(datetime_parts) >= 2:
-                            date_str = datetime_parts[1].strip().replace("SLT", "PST")
+                            date_str = datetime_parts[1].strip().replace("SLT", "")
                             if date_str:
-                                event.start = date_parser.parse(date_str).replace(tzinfo=self.tz_pacific)
+                                event.start = date_parser.parse(date_str).replace(tzinfo=self.tz_slt)
                                 if event.start is None:
                                     raise ValueError("Failed to parse event start time.")
+                                event.start = event.start.astimezone(self.tz_pst).replace(minute=0, second=0, microsecond=0)
                                 event.end = event.start + datetime.timedelta(hours=2)
                             else:
                                 raise ValueError("Invalid event start time.")
