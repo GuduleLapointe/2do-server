@@ -88,23 +88,30 @@ class Event(object):
             response = self.webcache.fetch(grid_info_url, 24 * 3600, 7 * 24 * 3600)  # Extend expiration time to 7 days
 
             if response.status_code == 200:
-                # Parse the response as XML
-                root = etree.fromstring(response.content)
+                try:
+                    # Parse the response as XML
+                    root = etree.fromstring(response.content)
 
-                # Extract the grid information
-                grid_name = root.findtext("gridname")
-                grid_nick = self.sanitize_slug(root.findtext("gridnick"))
-                login_uri = root.findtext("login")
+                    # Extract the grid information
+                    grid_name = root.findtext("gridname")
+                    grid_nick = self.sanitize_slug(root.findtext("gridnick"))
+                    login_uri = root.findtext("login")
 
-                # Set the grid information in the event object
-                self.grid_name = grid_name if grid_name else "-"
-                self.grid_nick = grid_nick if grid_nick else "-"
-                self.grid_login_uri = login_uri if login_uri else "-"
+                    # Set the grid information in the event object
+                    self.grid_name = grid_name if grid_name else "-"
+                    self.grid_nick = grid_nick if grid_nick else "-"
+                    self.grid_login_uri = login_uri if login_uri else "-"
 
-                if grid_nick:
-                    # Add the "grid-" + grid_nick category
-                    self.addCategory(Category("grid-" + grid_nick))
+                    if grid_nick:
+                        # Add the "grid-" + grid_nick category
+                        self.addCategory(Category("grid-" + grid_nick))
+                except etree.XMLSyntaxError as e:
+                    # Handle XML parsing errors
+                    print("Errog getting grid info for {} with {}".format(self.hgurl, grid_info_url))
+            else:
+                print("Grid info {} request failed with status code {}".format(grid_info_url, response.status_code))
 
-        except requests.RequestException:
-            # Error occurred while fetching grid info
+        except requests.RequestException as e:
+            # Handle request exceptions
+            print("Grid info request failed:", str(e))
             pass
