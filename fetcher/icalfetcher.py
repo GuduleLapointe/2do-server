@@ -12,7 +12,7 @@ from lib.category import Category
 class IcalFetcher(object):
     tz_pacific = pytz.timezone('US/Pacific')
 
-    def __init__(self, url, source, eventlist, webcache=None, helper=None, source_name=None, ):
+    def __init__(self, url, source, eventlist, webcache=None, helper=None, source_name=None, default_region=None):
         self.url = url
         self.source = source
         self.categories = [Category(source)]
@@ -21,6 +21,7 @@ class IcalFetcher(object):
         self.cache = webcache
         self.minexpiry = 1800
         self.maxexpiry = 3600
+        self.default_region = default_region
 
     def customizeEvent(self, event):
         if self.helper is not None:
@@ -29,7 +30,6 @@ class IcalFetcher(object):
 
     def fetch(self, limit=0, tz=pytz.utc):
         print("IcalFetcher: get {} calendar from {}".format(self.source, self.url))
-        # print("IcalFetcher: timezone", tz)
 
         r = self.cache.fetch(self.url, self.minexpiry, self.maxexpiry)
 
@@ -40,7 +40,12 @@ class IcalFetcher(object):
             cal_events = cal.walk(name="VEVENT")
 
             for event in cal_events:
-                e = Event(self.cache)
+                e = Event(self.cache, self.default_region)  # Pass default_region to Event constructor
+                # e = Event(self.cache, default_region=self.default_region)  # Pass default_region to Event constructor
+                # e = Event(self.cache)
+                # e.default_region = self.default_region  # Set the default_region attribute
+
+                e.default_region = self.default_region  # Set the default region in the Event object
 
                 if self.categories is not None:
                     e.categories += self.categories

@@ -27,7 +27,8 @@ class IcalBulk(IcalFetcher):
                 grid['source_name'],
                 eventlist,
                 webcache,
-                GenericHelper(grid['default_region'], exclusions.get(grid['source_name'], set()))
+                GenericHelper(grid['default_region'], exclusions.get(grid['source_name'], set())),
+                default_region=grid['default_region'],  # Pass the default region to IcalFetcher
             )
             self.webcache = webcache  # Set the webcache attribute of the IcalBulk instance
             fetcher.webcache = webcache  # Set the webcache attribute of the fetcher

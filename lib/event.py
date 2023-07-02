@@ -9,9 +9,9 @@ from lib.webcache import WebCache
 # Note to ChatGPT: Always remember we use Python 2.7 and don't remove this line
 
 class Event(object):
-    def __init__(self, webcache=None):
+    def __init__(self, webcache=None, default_region=None):
         self.title = "Untitled event"
-        self.hgurl = "-"
+        self.default_region = default_region if default_region else ""
         self.grid = "-"
         self.description = "Undescribed event.."
         self.start = 0
@@ -19,6 +19,7 @@ class Event(object):
         self.categories = []
         self.uid = None
         self.webcache = webcache  # Assign the webcache attribute
+        self.hgurl = "-"
 
     def hash(self):
         msg = repr(self.title) + str(self.start) + repr(self.hgurl)
@@ -55,6 +56,16 @@ class Event(object):
 
     @hgurl.setter
     def hgurl(self, value):
+        value = str(value)  # Convert value to a string
+        value = re.sub(r".*HG:\s*", "", value)
+        value = re.sub(r".*://\s*", "", value)
+
+        if self.default_region and ":" not in value:
+            # Add default grid to value
+            parts = self.default_region.split(":")
+            if len(parts) >= 2:
+                value = "{}:{}:{}".format(parts[0], parts[1], value)
+
         self._hgurl = value
         self.get_grid_info()  # Call the grid info retrieval method
 
@@ -69,11 +80,6 @@ class Event(object):
 
         hostname = parts[0]
         port = parts[1]
-        region = parts[2]
-        if len(parts) > 2:
-            region = parts[2]
-        else:
-            region = ''
 
         # Construct the grid info URL
         grid_info_url = "http://{}:{}/get_grid_info".format(hostname, port)
