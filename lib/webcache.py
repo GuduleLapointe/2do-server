@@ -11,14 +11,14 @@ class WebCache(Cache):
         self.hits = 0
         self.miss = 0
 
-    def fetch(self, url, min_expiry=None, max_expiry=None):
+    def fetch(self, url, min_expiry=None, max_expiry=None, timeout=10):
         if self.exists(url):
             self.hits += 1
             return self.retrieve(url)
 
         self.miss += 1
 
-        r = requests.get(url, headers={"user-agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0"})
+        r = requests.get(url, headers={"user-agent":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0"}, timeout=timeout)
 
         if r.status_code==200:
             if max_expiry!=None and min_expiry!=None:
