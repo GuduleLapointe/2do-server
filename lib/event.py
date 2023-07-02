@@ -57,6 +57,9 @@ class Event(object):
     @hgurl.setter
     def hgurl(self, value):
         value = str(value)  # Convert value to a string
+        value = value.replace("%20", " ")  # Replace %20 with spaces
+        value = re.sub(r"(.*[a-z].*)\s+hg.osgrid.org(:80)?", r"hg.osgrid.org:80:\1", value)
+        value = re.sub(r"(hg|login)\.osgrid\.org(:80)?/([\w\s]+)/.*", r"hg.osgrid.org:80:\3", value)
         value = re.sub(r".*HG:\s*", "", value)
         value = re.sub(r".*://\s*", "", value)
 
