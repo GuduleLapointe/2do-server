@@ -25,25 +25,25 @@ class Event(object):
         return hashlib.md5(msg).hexdigest()
 
     def __str__(self):
-        rv = "Event "+self.hash()+" :\n"
-        rv = rv + " title       " + repr(self.title) + "\n"
-        rv = rv + " hgurl       " + repr(self.hgurl) + "\n"
-        rv = rv + " grid        " + repr(self.grid) + "\n"
-        rv = rv + " description " + repr(self.description) + "\n"
-        rv = rv + " start       " + str(self.start) + "\n"
-        rv = rv + " end         " + str(self.end) + "\n"
-        rv = rv + " categories  " + str(self.categories) + "\n"
-        rv = rv + " uid         " + str(self.uid) + "\n"
+        rv = "Event " + self.hash() + " :\n"
+        rv += " title       " + repr(self.title) + "\n"
+        rv += " hgurl       " + repr(self.hgurl) + "\n"
+        rv += " grid        " + repr(self.grid) + "\n"
+        rv += " description " + repr(self.description) + "\n"
+        rv += " start       " + str(self.start) + "\n"
+        rv += " end         " + str(self.end) + "\n"
+        rv += " categories  " + str(self.categories) + "\n"
+        rv += " uid         " + str(self.uid) + "\n"
 
         return rv
 
-    def addCategory(self,newcat):
-        if type(newcat)==type([]):
+    def addCategory(self, newcat):
+        if isinstance(newcat, list):
             for cat in newcat:
                 self.addCategory(cat)
         else:
-            if not newcat in self.categories:
-                self.categories += [newcat]
+            if newcat not in self.categories:
+                self.categories.append(newcat)
 
     def sanitize_slug(self, grid_nick):
         # Sanitize grid_nick to be a valid CSS class
@@ -64,12 +64,16 @@ class Event(object):
 
         # Extract hostname and port from hgurl
         parts = self.hgurl.split(":")
-        if len(parts) < 3:
+        if len(parts) < 2:
             return
 
         hostname = parts[0]
         port = parts[1]
         region = parts[2]
+        if len(parts) > 2:
+            region = parts[2]
+        else:
+            region = ''
 
         # Construct the grid info URL
         grid_info_url = "http://{}:{}/get_grid_info".format(hostname, port)
