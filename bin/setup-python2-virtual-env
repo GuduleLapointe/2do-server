@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version=2.7.16
+version=2.7.18
 venvdir=venv
 pydir=venv/python
 
@@ -11,13 +11,17 @@ cd "$repo" || exit $?
 export PATH=${PWD}/venv/bin:${PWD}/venv/python/bin:$PATH
 [ -f $venvdir/bin/activate ] && source $venvdir/bin/activate
 
-which python >/dev/null && python --version 2>&1 | grep -q " 2\."
-if [ $? -eq 0 ]
-then
-  echo "$(python --version 2>&1) present" >&2
-else
+which python >/dev/null && python --version 2>&1 | grep " 2\." && exit
+
+  echo "Make sure these packages are installed:" 
+  echo "  asdf openssl readline sqlite3 xz zlib"
   read -p "Install a local version of python2 from git? (y/N) " confirm
   [ "$confirm" != "Y" -a "$confirm" != "y" ] && echo "Cancelled" && exit
+
+  export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
+  export CFLAGS="-I/usr/local/opt/zlib/include"
+  export LDFLAGS="-L/usr/local/opt/zlib/lib"
+  export CPPFLAGS="-I/usr/local/opt/zlib/include"
 
   tmp=$(mktemp -d) || exit $?
   trap "rm -rf '$tmp'" EXIT
@@ -39,13 +43,12 @@ else
   # sudo apt install python2-pip-whl python2-setuptools-whl || exit $?
   # sudo apt install python2-pip-whl || exit $?
   export PATH=$PWD/$pydir/bin:$PATH
-  virtualenv -p $python $venvdir \
+  pip install -U pip \
+  && pip install -U setuptools wheel virtualenv \
+  && python -m virtualenv $venvdir \
   && source ./$venvdir/bin/activate \
-  && pip install -U pip \
-  && pip install -U setuptools wheel \
-  && pip install icalendar lxml pystache==0.5.4 requests urllib3==1.23 \
   || exit $?
-fi
+  # && pip install icalendar lxml pystache==0.5.4 requests urllib3==1.23 \
 
 echo "To use the virtual environment, type
   source ./$venvdir/bin/activate"  >&2

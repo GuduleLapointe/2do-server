@@ -1,0 +1,9 @@
+pip
+virtualenv
+setuptools
+wheel
+icalendar 
+lxml
+pystache==0.5.4
+requests
+urllib3==1.23
