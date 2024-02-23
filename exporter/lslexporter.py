@@ -21,13 +21,13 @@ class LslExporter(Exporter):
                 title = unidecode(title.encode('utf-8'))
                 # title = title.encode('ascii', 'ignore').decode('ascii')
 
-                lslevents += title + "\n"
-                lslevents += start.strftime("%I:%M%p") + "\n"
-                lslevents += event.hgurl.encode('utf-8') + "\n"
+                lslevents.append(title)
+                lslevents.append(start.strftime("%I:%M%p"))
+                lslevents.append(event.hgurl.encode('utf-8'))
 
-                nevents = nevents + 1
+                nevents += 1
 
             if nevents==14:
                 break
-            
-        return lslevents
+
+        return "\n".join(lslevents)

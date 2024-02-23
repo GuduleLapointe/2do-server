@@ -32,16 +32,14 @@ class Lsl2Exporter(Exporter):
                 title = unidecode(title.encode('utf-8'))
                 # title = title.encode('ascii', 'ignore').decode('ascii')
 
-                lslevents += title + "\n"
-                lslevents += start.strftime("%I:%M%p~%Y-%m-%d~") + str(int(round(ts_start))) + "~"
-                lslevents += end.strftime("%I:%M%p~%Y-%m-%d~") + str(int(round(ts_end)))
+                lslevents.append(title)
+                lslevents.append(start.strftime("%I:%M%p~%Y-%m-%d~") + str(int(round(ts_start))))
+                lslevents.append(end.strftime("%I:%M%p~%Y-%m-%d~") + str(int(round(ts_end))))
+                lslevents.append(event.hgurl.encode('utf-8'))
 
-                lslevents += "\n"
-                lslevents += event.hgurl.encode('utf-8') + "\n"
-
-                nevents = nevents + 1
+                nevents += 1
 
             if nevents==25:
                 break
 
-        return lslevents
+        return "\n".join(lslevents)
