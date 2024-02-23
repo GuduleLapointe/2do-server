@@ -11,7 +11,7 @@ class WebCache(Cache):
         self.hits = 0
         self.miss = 0
 
-    def fetch(self, url, min_expiry=None, max_expiry=None, timeout=10):
+    def fetch(self, url, min_expiry=None, max_expiry=None, timeout=5):
         if self.exists(url):
             self.hits += 1
             return self.retrieve(url)

@@ -6,7 +6,7 @@ from lxml import etree
 import re
 from lib.webcache import WebCache
 
-# Note to ChatGPT: Always remember we use Python 2.7 and don't remove this line
+# Note for AI processing: always remember we use Python 2.7 and don't remove this line
 
 class Event(object):
     def __init__(self, webcache=None, default_region=None):
@@ -88,7 +88,7 @@ class Event(object):
         grid_info_url = "http://{}:{}/get_grid_info".format(hostname, port)
 
         try:
-            response = self.webcache.fetch(grid_info_url, 24 * 3600, 7 * 24 * 3600)  # Extend expiration time to 7 days
+            response = self.webcache.fetch(grid_info_url, 24 * 3600, 7 * 24 * 3600, 2)  # Extend expiration time to 7 days
 
             if response.status_code == 200:
                 try:
