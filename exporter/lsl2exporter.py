@@ -2,6 +2,7 @@ import json
 from exporter import Exporter
 import pytz
 import datetime
+from unidecode import unidecode
 
 class Lsl2Exporter(Exporter):
     def __str__(self):
@@ -25,11 +26,13 @@ class Lsl2Exporter(Exporter):
                 utc_end = pytz.utc.normalize(event.end.astimezone(pytz.utc))
                 ts_end = (utc_end-epoch).total_seconds()
 
-		title = event.title
-		title = title.replace("\n", " ")
-		title = title.replace("\r", " ")
+                title = event.title
+                title = title.replace("\n", " ")
+                title = title.replace("\r", " ")
+                title = unidecode(title.encode('utf-8'))
+                # title = title.encode('ascii', 'ignore').decode('ascii')
 
-                lslevents += title.encode('utf-8') + "\n"
+                lslevents += title + "\n"
                 lslevents += start.strftime("%I:%M%p~%Y-%m-%d~") + str(int(round(ts_start))) + "~"
                 lslevents += end.strftime("%I:%M%p~%Y-%m-%d~") + str(int(round(ts_end)))
 
