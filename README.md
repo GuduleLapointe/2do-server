@@ -1,5 +1,12 @@
 # 2DO HYPEvents server
 
+THIS PROJECT IS DEPRECATED. Please use [2do Aggregator](https://github.com/GuduleLapointe/2do-aggregator) instead, the new implementation.
+
+The PHP port is way more efficient than this version (processing speed multiplied at least by 10, modular, scalable and less prone to crash), and it integrates smoothly with other related project like [Flexible Helper Scripts](https://github.com/GuduleLapointe/flexible_helper_scripts) or [w4os Web interface for OpenSimulator](https://w4os.org)
+
+Therefore, the python version will most probably not be maintained anymore.
+The repo is maintained only for historical purpose, and in the unlikely case a good reason appear to go back to python.
+
 - Version 1.2.5
 - Donate: <https://magiiic.com/support/2do+HYPEvents>
 
