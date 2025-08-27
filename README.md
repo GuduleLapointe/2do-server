@@ -1,4 +1,4 @@
-# 2DO HYPEvents server
+# [DEPRECATED] 2DO HYPEvents server
 
 THIS PROJECT IS DEPRECATED. Please use [2do Aggregator](https://github.com/GuduleLapointe/2do-aggregator) instead, the new implementation.
 
